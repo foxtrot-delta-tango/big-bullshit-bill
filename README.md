@@ -1,6 +1,6 @@
 # Big 🐘💩 Bill
 
-The only thing necessary for the triumph of evil is for good men to do nothing.
+The only thing necessary for the triumph of evil is for good men to do nothing.
 
 ## To Run
 
