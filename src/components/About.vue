@@ -47,6 +47,10 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1em;
+
+    @media (max-width: 768px) {
+        padding: 2em 1em;
+    }
 }
 
 section {
