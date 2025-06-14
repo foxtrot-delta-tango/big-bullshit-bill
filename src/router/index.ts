@@ -59,7 +59,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/big-bullshit-bill/'),
   routes
 })
 
