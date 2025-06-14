@@ -27,9 +27,17 @@
             </p>
         </section>
         <section>
+            <h1>Coming Soon</h1>
+            <ul>
+                <li>Verification of all information by human viewers.</li>
+                <li>Tags and filtering.</li>
+            </ul>
+        </section>
+        <section>
             <h1>Contact Us</h1>
             <a href='https://github.com/foxtrot-delta-tango' target='_blank'>GitHub</a>
             <a href='https://bsky.app/profile/big-bullshit-bill.bsky.social' target='_blank'>BlueSky</a>
+            <a href='mailto:big.bullshid.bill@gmail.com'>Email</a>
         </section>
     </div>
 </template>
@@ -95,6 +103,27 @@ section {
 
             &.verified {
                 border-color: var(--color-primary);
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        li {
+            color: var(--color-text-light);
+            line-height: 1.7;
+            text-indent: 1.5em;
+
+            &::before {
+                content: '•';
+                color: var(--color-primary);
+                margin-right: 0.5em;
             }
         }
     }
