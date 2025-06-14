@@ -22,10 +22,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies and build
-        run: |
-          npm install
-          grunt  # If you're still using Grunt
-          npm run build  # Make sure this outputs to ./dist
+        run: npm install grunt
+             npm run build
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.2.0
