@@ -3,40 +3,53 @@
     <div class="header">      
       <h1 @click="navigateToToc" :title="showingTableOfContents ? 'Big Bullshit Bill' : 'Back to Table of Contents'">Big 🐘💩 Bill</h1>
   
-      <div class="selectors">
+      <div v-show="showingBillView || showingTableOfContents" class="selectors">
         <BaseSelector
-          v-if="TITLE_FILES.length > 0"
-          label="Title"
-          :options="TITLES"
-          :value="selectedTitle"
-          @update="navigateToTitle"
+        v-if="TITLE_FILES.length > 0"
+        label="Title"
+        :options="TITLES"
+        :value="selectedTitle"
+        @update="navigateToTitle"
         />
         
-        <BaseSelector
-          label="Subtitle"
-          :options="showingTableOfContents ? [] : subtitles"
-          :value="selectedSubtitle"
-          :disabled="!selectedTitle || !subtitles.length"
-          @update="navigateToSubtitle"
-        />
+        <template v-if="showingBillView">
           <BaseSelector
-            label="Part"
-            :options="showingTableOfContents ? [] : parts"
-            :value="selectedPart"
-            @update="selectPart"
-            :disabled="!parts.length || !selectedSubtitle"
+            label="Subtitle"
+            :options="subtitles"
+            :value="selectedSubtitle"
+            :disabled="!selectedTitle || !subtitles.length"
+            @update="navigateToSubtitle"
           />
-          <BaseSelector
-            label="Subpart"
-            :options="showingTableOfContents ? [] : subparts"
-            :value="selectedSubpart"
-            @update="selectSubpart"
-            :disabled="!subparts.length || !selectedPart"
-          />
+
+          <template v-if="parts.length > 0">
+            <BaseSelector
+              label="Part"
+              :options="parts"
+              :value="selectedPart"
+              @update="selectPart"
+              :disabled="!selectedSubtitle"
+            />
+
+            <BaseSelector
+              label="Subpart"
+              :options="subparts"
+              :value="selectedSubpart"
+              @update="selectSubpart"
+              :disabled="!subparts.length || !selectedPart"
+            />
+          </template>
+        </template>
       </div>
     </div>
 
     <RouterView />
+    <footer>
+      <section class='links'>
+        <router-link to='/fightback' title="Suggestions on how to make a difference">How to Make a Difference</router-link>
+        <router-link to='/about' title='About the Big Bullshit Bill project'>About B💩B</router-link>
+      </section>
+      <i @click='backToTheTop' role='button' aria-label='Go back to the top' title='Go back to the top'>☝</i>
+    </footer>
   </div>
 </template>
 
@@ -66,7 +79,8 @@ const {
   selectSubpart,
 } = useBill();
 
-const showingTableOfContents = computed(() => route.path === '/toc');
+const showingTableOfContents = computed(() => route.path === '/');
+const showingBillView = computed(() => route.name === 'bill');
 
 const navigateToTitle = (title: string) => {
   router.push({ path: `/${title}` });
@@ -77,7 +91,7 @@ const navigateToSubtitle = (subtitle: string) => {
 };
 
 const navigateToToc = () => {
-  router.push({ path: '/toc' });
+  router.push({ path: '/' });
 };
 
 const setDataFromUrl = () => {
@@ -96,6 +110,10 @@ const setDataFromUrl = () => {
   } else {
     selectTitle('');
   }
+};
+
+const backToTheTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 onMounted(() => {
@@ -142,6 +160,7 @@ watch(subparts, () => {
     width: 100%;
 
     h1 {
+      font-variant: small-caps;
       font-size: 3.2em;
       margin: 0;
       cursor: pointer;
@@ -150,14 +169,54 @@ watch(subparts, () => {
       &:hover {
         color: var(--color-primary);
       }
+
+      @media (max-width: 600px) {
+        font-size: 2.4em;
+      }
     }
 
     .selectors {
       display: flex;
-      flex-direction: row;
-      gap: var(--spacing-sm);
+      gap: 0 var(--spacing-md);
       justify-content: center;
+      flex-wrap: wrap;
     }
-  }  
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: var(--spacing-xs);
+  padding: var(--spacing-sm) 0;
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      color: var(--color-text-light);
+      text-decoration: none;
+      margin-right: var(--spacing-md);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  
+  i {
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    transition: color 0.1s ease-in-out;
+
+    &:hover {
+      filter: drop-shadow(0 0 10px var(--color-primary)) drop-shadow(0 0 10px var(--color-primary));
+    }
+  }
 }
 </style>

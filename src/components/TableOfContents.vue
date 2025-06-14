@@ -1,5 +1,14 @@
 <template>
   <div class="table-of-contents">
+    <h2>Table of Contents</h2>
+    <div class="toc-intro">
+      <p>
+        Explore the titles below to get started, or navigate directly to a specific section of the bill using the dropdowns above.  You can click on any section header to jump directly into it.
+      </p>
+      <p>
+        To read the full source text of H.R.1, the so-called 'Big Beautiful Bill', visit <a href="https://www.congress.gov/bill/119th-congress/house-bill/1" target="_blank" rel="noopener noreferrer">Congress.gov</a>.
+      </p>
+    </div>
     <div class="toc-content">
       <ExpandableSection 
         v-for="title in tocData.titles" 
@@ -10,7 +19,7 @@
         <template #title>
           <div class="title-header">
             <span class="title-number">TITLE {{ title.number }}</span>
-            <span class="title-name">{{ title.name }}</span>
+            <span class="title-name">COMMITTEE ON <span class='title-subject'>{{ title.name }}&nbsp;</span></span>
           </div>
         </template>
 
@@ -23,15 +32,15 @@
           >
             <template #title>
               <div class="subtitle-header">
-                <span class="subtitle-letter">Subtitle {{ subtitle.letter }}</span>
-                <span class="subtitle-name">{{ subtitle.name }}</span>
+                <span>Subtitle <span class="subtitle-letter">{{ subtitle.letter }}</span></span>
+                <span class="subtitle-name">&nbsp;{{ subtitle.name }}&nbsp;&nbsp;</span>
               </div>
             </template>
 
             <div v-for="section in getSectionsForTitleSubtitle(title, subtitle.letter)" 
                 :key="section.number" 
                 class="section">
-              <div class="section-header" @click="navigateToSection(title.number, subtitle.letter, section.number)">
+              <div class="section-header" @click="navigateToSection(section.number)">
                 Sec. {{ section.number }}. {{ section.title }}
               </div>
             </div>
@@ -55,7 +64,7 @@
                 <div v-for="section in getSectionsForTitleSubtitlePart(title, subtitle.letter, part.number)" 
                     :key="section.number" 
                     class="section">
-                  <div class="section-header" @click="navigateToSection(title.number, subtitle.letter, section.number)">
+                  <div class="section-header" @click="navigateToSection(section.number)">
                     Sec. {{ section.number }}. {{ section.title }}
                   </div>
                 </div>
@@ -76,7 +85,7 @@
                     <div v-for="section in getSectionsForTitleSubtitlePartSubpart(title, subtitle.letter, part.number, subpart.letter)" 
                         :key="section.number" 
                         class="section">
-                      <div class="section-header" @click="navigateToSection(title.number, subtitle.letter, section.number)">
+                      <div class="section-header" @click="navigateToSection(section.number)">
                         Sec. {{ section.number }}. {{ section.title }}
                       </div>
                     </div>
@@ -88,7 +97,7 @@
         </template>
         <template v-else>
           <div v-for="section in getSectionsForTitle(title)" :key="section.number" class="section">
-            <div class="section-header" @click="navigateToSection(title.number, '', section.number)">
+            <div class="section-header" @click="navigateToSection(section.number)">
               Sec. {{ section.number }}. {{ section.title }}
             </div>
           </div>
@@ -99,12 +108,13 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
+import { useRouter, type Router } from 'vue-router';
 import tocData from '../assets/data/toc.json';
-import type { Router } from 'vue-router';
 import ExpandableSection from './ExpandableSection.vue';
+import { useBill } from '../composables/bill';
 
 const router: Router = useRouter();
+const { TITLE_FILES } = useBill();
 
 type Section = {
   number: string;
@@ -163,11 +173,16 @@ const getSectionsForTitleSubtitlePartSubpart = (
   );
 }
 
-const navigateToSection = (title: string, subtitle: string, section: string) => {
+const navigateToSection = (sectionNumber: string) => {
+  const section = TITLE_FILES.flatMap(t => t.data).find(t => t.sectionNumber === sectionNumber);
+  if (!section) return;
+
+  const { titleNumber: title, subtitle } = section;
+
   router.push({
     name: 'bill',
     params: { title, subtitle },
-    query: { section }
+    query: { section: sectionNumber }
   });
 }
 </script>
@@ -179,12 +194,37 @@ const navigateToSection = (title: string, subtitle: string, section: string) => 
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 
+  .toc-intro {
+    text-align: center;
+    color: var(--color-text-light);
+    margin: 0 10em;
+
+    @media (max-width: 1200px) {
+      margin: 0 1em;
+    }
+  }
+
+  h2 {    
+    color: var(--color-text);
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+
+  > p {
+    color: var(--color-text-secondary);
+    text-align: center;
+  }
+
   .toc-content {
     .title {
       margin-bottom: var(--spacing-md);
 
       .title-header {
+        display: flex;
         font-size: 1.3em;
+        transition: font-size 0.1s ease-in-out, color 0.1s ease-in-out;
 
         .title-number {
           font-weight: bold;
@@ -195,11 +235,29 @@ const navigateToSection = (title: string, subtitle: string, section: string) => 
           font-size: 0.8em;
           font-weight: normal;
           color: var(--color-text);
+
+          .title-subject {
+            font-weight: bold;
+            transition: font-size 0.05s ease-in-out, color 0.1s ease-in-out;
+          }
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: column;
         }
       }
 
       &:hover .title-header {
         color: var(--color-primary);
+            
+        .title-subject {
+          color: var(--color-primary);
+          font-size: 1.2em;
+          text-decoration: underline dashed;
+          text-decoration-thickness: 1px;;
+          text-underline-offset: 6px;
+          text-decoration-color: var(--color-text);
+        }
       }
     }
 
@@ -209,23 +267,34 @@ const navigateToSection = (title: string, subtitle: string, section: string) => 
 
       .subtitle-header {
         font-weight: bold;
-        color: var(--color-text);
+        color: var(--color-text-light);
+        display: flex;
 
         .subtitle-letter {
-          font-size: 1.05em;
           font-weight: bold;
-          margin-right: var(--spacing-xs);
+          margin-right: calc(var(--spacing-xs) * 0.5);
+          color: var(--color-text);
         }
 
         .subtitle-name {
-          font-size: 0.95em;
-          font-weight: normal;
+          font-size: 1.2em;
           color: var(--color-text);
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: column;
         }
       }
 
-      &:hover .subtitle-letter {
-        color: var(--color-primary);
+      &:hover {
+        .subtitle-name {
+          color: var(--color-primary);
+          font-weight: bold;
+          text-decoration: underline dashed;
+          text-decoration-thickness: 1px;;
+          text-underline-offset: 6px;
+          text-decoration-color: var(--color-text);
+        }
       }
     }
 

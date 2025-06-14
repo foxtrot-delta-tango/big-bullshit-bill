@@ -2,7 +2,7 @@
   "titles": [
   {
     "number": "I",
-    "name": "COMMITTEE ON AGRICULTURE",
+    "name": "AGRICULTURE",
     "subtitles": [
       {
         "letter": "A",
@@ -167,7 +167,7 @@
   },
   {
     "number": "II",
-    "name": "COMMITTEE ON ARMED SERVICES",
+    "name": "ARMED SERVICES",
     "subtitles": [],
     "sections": [
       {
@@ -286,7 +286,7 @@
   },
   {
     "number": "III",
-    "name": "COMMITTEE ON EDUCATION AND WORKFORCE",
+    "name": "EDUCATION AND WORKFORCE",
     "subtitles": [
       {
         "letter": "A",
@@ -928,7 +928,7 @@
   },
   {
     "number": "V",
-    "name": "COMMITTEE ON FINANCIAL SERVICES",
+    "name": "FINANCIAL SERVICES",
     "subtitles": [],
     "sections": [
       {
@@ -970,7 +970,7 @@
   },
   {
     "number": "VI",
-    "name": "COMMITTEE ON HOMELAND SECURITY",
+    "name": "HOMELAND SECURITY",
     "subtitles": [],
     "sections": [
       {
@@ -1019,7 +1019,7 @@
   },
   {
     "number": "VII",
-    "name": "COMMITTEE ON THE JUDICIARY",
+    "name": "THE JUDICIARY",
     "subtitles": [
       {
         "letter": "A",
@@ -1417,7 +1417,7 @@
   },
   {
     "number": "VIII",
-    "name": "COMMITTEE ON NATURAL RESOURCES",
+    "name": "NATURAL RESOURCES",
     "subtitles": [
       {
         "letter": "A",
@@ -1724,7 +1724,7 @@
   },
   {
     "number": "IX",
-    "name": "COMMITTEE ON OVERSIGHT AND GOVERNMENT REFORM",
+    "name": "OVERSIGHT AND GOVERNMENT REFORM",
     "subtitles": [],
     "sections": [
       {
@@ -1759,7 +1759,7 @@
   },
   {
     "number": "X",
-    "name": "COMMITTEE ON TRANSPORTATION AND INFRASTRUCTURE",
+    "name": "TRANSPORTATION AND INFRASTRUCTURE",
     "subtitles": [],
     "sections": [
       {
@@ -1822,7 +1822,7 @@
   },
   {
     "number": "XI",
-    "name": "COMMITTEE ON WAYS AND MEANS, \"THE ONE, BIG, BEAUTIFUL BILL\"",
+    "name": "WAYS AND MEANS, \"THE ONE, BIG, BEAUTIFUL BILL\"",
     "subtitles": [
       {
         "letter": "A",

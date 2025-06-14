@@ -12,8 +12,9 @@
   --color-bg-secondary: #2a2a2a;
   --color-bg-hover: #333;
   --color-primary: #42b883;
-  --color-accent: #747bff;
-  --color-accent-hover: #8589ff;
+  --color-accent: #8b5c2a;
+  --color-accent-hover: #8b5c2a;
+  --color-warning: #ffcc00;
   --color-section-bg: #242424;
 
   /* Spacing */
@@ -41,12 +42,34 @@
 
 a {
   font-weight: 500;
-  color: var(--color-accent);
-  text-decoration: inherit;
-}
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-duration);
 
-a:hover {
-  color: var(--color-accent-hover);
+  &::before {
+    content: '';
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--color-accent);
+    text-decoration: none;
+    outline: none;
+
+    &::before {
+      content: '💩';
+      opacity: 1;
+    }
+
+    &::after {
+      content: '💩';
+      opacity: 1;
+    }
+  }
 }
 
 html {

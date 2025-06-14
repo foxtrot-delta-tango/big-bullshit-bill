@@ -1,21 +1,39 @@
 <template>
-  <div>
+  <div ref='sectionElement'>
     <ExpandableSection>
       <template #title>
-        <div class="section-header">
+        <div class="section-header" @click.stop>
+          <i
+            v-if='section.checkedByHumansDate'
+            class='verified'
+            title='This section has been verified for quality and accuracy by a human reviewer.'
+          >
+            ✔
+          </i>
+          <i
+            v-else
+            title='This section has not yet been reviewed by a human and should be independently verified before being cited as a source anywhere else.  Please see the "About" section at the bottom of the page to contribute as a reviewer.'
+          >
+            ?
+          </i>
           <span class="title">
             &nbsp;{{ `Sec. ${section.sectionNumber}: ${section.sectionTitle}` }}&nbsp;
           </span>
         </div>
         <p class="summary">{{ section.summary }}</p>
-        <div class="section-tags">
+        <!--
+          disabling tags for now, we'll release soon
+          ps. if ur reading this, welcome 2 costco ily ♥
+          you can help out at https://github.com/foxtrot-delta-tango/
+        -->
+        <div v-if='false' class="section-tags">
           <span v-for="tag in section.tags" :key="tag" class="tag">
             {{ tag }}
           </span>
         </div>
       </template>
       <div class="section">        
-        <div class="section-content">          
+        <div class="section-content">
           <h3>Impact&nbsp;</h3>
           <p>{{ section.impact }}</p>
           
@@ -39,10 +57,34 @@
 <script setup lang="ts">
 import ExpandableSection from './ExpandableSection.vue';
 import type { BillSectionData } from '../composables/bill';
+import { ref, watch } from 'vue';
+import { useRouter } from 'vue-router';
 
-defineProps<{
+const router = useRouter();
+
+const props = defineProps<{
   section: BillSectionData;
 }>();
+
+const sectionElement = ref<HTMLElement | null>(null);
+
+watch(sectionElement, () => {
+  if (sectionElement.value) {
+    const section = router.currentRoute.value.query.section as string | undefined;
+
+    if (section) {
+      if (section === props.section.sectionNumber) {
+        sectionElement.value?.scrollIntoView({ block: 'start' });
+        setTimeout(() => {
+          const header = sectionElement.value?.querySelector('button.header') as HTMLElement;
+          if (header) header.click();
+        }, 150);
+      } else {
+        router.push({ query: {} });
+      }
+    }
+  }
+}, { immediate: true });
 </script>
 
 <style lang="scss" scoped>
@@ -53,8 +95,6 @@ defineProps<{
 
 .section-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
 
   .title {
@@ -63,6 +103,23 @@ defineProps<{
     text-underline-offset: 6px;
     text-decoration-color: var(--color-primary);
     text-transform: uppercase;
+    max-width: 80%;
+  }
+
+  i {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid;
+    background-color: var(--color-bg);
+    cursor: help;
+
+    &.verified {
+      border-color: var(--color-primary);
+    }
   }
 }
 

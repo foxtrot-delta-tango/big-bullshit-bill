@@ -19,9 +19,14 @@
           <template v-else>
             <div v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)" :key="part.number" class="part">
               <template v-if="!part.subparts.length">
-                <h4>
-                  Part {{ part.number }} {{ part.title }}
-                </h4>
+                  <div class="headers">
+                    <strong>
+                      Part {{ part.number }}
+                    </strong>
+                    <span class='highlight'>
+                      {{ part.title }}
+                    </span>
+                  </div>
                 <div class="content">
                   <BillSection v-for="(section, index) in sections.filter(s => s.part === part.number)" :key="index" :section="section" />
                 </div>
@@ -29,11 +34,14 @@
               <template v-else>
                 <div v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())" :key="subpart.letter" class="subpart">
                   <div class="headers">
-                    <span>
-                      Part {{ part.number }} {{ part.title }}
+                    <strong>
+                      Part {{ part.number }}{{ subpart.letter }}
+                    </strong>
+                    <span class='highlight'>
+                      {{ part.title }}
                     </span>
                     <span>
-                      Subpart {{ subpart.letter }} {{ subpart.title }}
+                      {{ subpart.title }}
                     </span>
                   </div>
                   <div class="content">
@@ -100,6 +108,10 @@ const titleData = computed(() => {
   flex-direction: column;
   gap: var(--spacing-md);
   margin-top: var(--spacing-xs);
+
+  @media (max-width: 768px) {
+    gap: var(--spacing-sm);
+  }
 }
 
 .title {
@@ -108,6 +120,8 @@ const titleData = computed(() => {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-xs);
+  max-width: 80%;
+  margin: 0 auto;
 
   span:first-child {
     font-size: 2rem;
@@ -125,20 +139,26 @@ const titleData = computed(() => {
   h3 {
     text-align: center;
     font-size: 1.25rem;
+    text-transform: uppercase;
   }
 
   .part {
     h4 {
       padding: var(--spacing-xs);
     }
+    
+    .headers {
+      display: flex !important;
+      flex: 1;
+      align-items: center;
+      padding: var(--spacing-xs);
+      gap: var(--spacing-xs);
+      margin: var(--spacing-sm) 0;
 
-    .subpart {
-      .headers {
-        display: flex !important;
-        flex: 1;
-        justify-content: space-between;
-        align-items: center;
-        padding: var(--spacing-xs);
+      .highlight {
+        color: var(--color-primary);
+        font-weight: bold;
+        text-transform: uppercase;
       }
     }
   }
