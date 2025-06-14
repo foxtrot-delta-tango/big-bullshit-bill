@@ -113,6 +113,7 @@ const TITLE_FILES: { title: string, subtitle: string, data: BillSectionData[] }[
   {title: 'V', subtitle: '', data: titleV},
   {title: 'VI', subtitle: '', data: titleVI},
   {title: 'VII', subtitle: 'A', data: titleVIISubtitleA},
+  // @ts-ignore
   {title: 'VII', subtitle: 'B', data: titleVIISubtitleB},
   {title: 'VII', subtitle: 'C', data: titleVIISubtitleC},
   {title: 'VIII', subtitle: 'A', data: titleVIIISubtitleA},
@@ -122,7 +123,9 @@ const TITLE_FILES: { title: string, subtitle: string, data: BillSectionData[] }[
   {title: 'X', subtitle: '', data: titleX},
   {title: 'XI', subtitle: 'A', data: titleXISubtitleA},
   {title: 'XI', subtitle: 'B', data: titleXISubtitleB},
+  // @ts-ignore
   {title: 'XI', subtitle: 'C', data: titleXISubtitleC},
+  // @ts-ignore
   {title: 'XI', subtitle: 'D', data: titleXISubtitleD},
 ];
 
