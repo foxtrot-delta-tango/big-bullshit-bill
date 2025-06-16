@@ -47,17 +47,23 @@ const toggle = () => {
     .title {
       font-weight: 600;
       color: var(--color-text);
-      width: 100%;
       margin-right: var(--spacing-sm);
     }
 
     .icon {
-      font-size: 0.8rem;
-      transition: transform var(--transition-duration) ease;
+      font-size: 0.9rem;
+      transition: transform var(--transition-duration) ease, color var(--transition-duration) ease;
       color: var(--color-text-light);
+      margin-right: var(--spacing-xs);
 
       &.is-expanded {
         transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      .icon {
+        color: var(--color-primary);
       }
     }
   }
