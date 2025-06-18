@@ -40,7 +40,7 @@ export type BillSectionData = {
   sectionText: string;
   summary: string;
   impact: string | string[];
-  additionalReferences: string[];
+  additionalReferences?: string[];  // make not nullable after fixing the data files
   tags?: string[];  // make not nullable after fixing the data files
   checkedByHumansDate?: string;
 }
