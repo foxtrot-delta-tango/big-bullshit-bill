@@ -3,19 +3,18 @@
     <h2>Table of Contents</h2>
     <div class="toc-intro">
       <p>
-        Explore the titles below to get started, or navigate directly to a specific section of the bill using the dropdowns above.  You can click on any section header to jump directly into it.
+        Explore the titles below to get started, or navigate directly to a specific section of the bill using the
+        dropdowns above. You can click on any section header to jump directly into it.
       </p>
       <p>
-        To read the full source text of H.R.1, the so-called 'Big Beautiful Bill', visit <a href="https://www.congress.gov/bill/119th-congress/house-bill/1" target="_blank" rel="noopener noreferrer">Congress.gov</a>.
+        To read the full source text of H.R.1, the so-called 'Big Beautiful Bill', visit <a
+          href="https://www.congress.gov/bill/119th-congress/house-bill/1" target="_blank"
+          rel="noopener noreferrer">Congress.gov</a>.
       </p>
     </div>
     <div class="toc-content">
-      <ExpandableSection 
-        v-for="title in tocData.titles" 
-        :key="title.number"
-        :title="`Title ${title.number} - ${title.name}`"
-        class="title"
-      >
+      <ExpandableSection v-for="title in tocData.titles" :key="title.number"
+        :title="`Title ${title.number} - ${title.name}`" class="title">
         <template #title>
           <div class="title-header">
             <span class="title-number">TITLE {{ title.number }}</span>
@@ -24,12 +23,8 @@
         </template>
 
         <template v-if="title.subtitles.length > 0">
-          <ExpandableSection
-            v-for="subtitle in title.subtitles"
-            :key="subtitle.letter"
-            :title="`Subtitle ${subtitle.letter} - ${subtitle.name}`"
-            class="subtitle"
-          >
+          <ExpandableSection v-for="subtitle in title.subtitles" :key="subtitle.letter"
+            :title="`Subtitle ${subtitle.letter} - ${subtitle.name}`" class="subtitle">
             <template #title>
               <div class="subtitle-header">
                 <span>Subtitle <span class="subtitle-letter">{{ subtitle.letter }}</span></span>
@@ -37,21 +32,16 @@
               </div>
             </template>
 
-            <div v-for="section in getSectionsForTitleSubtitle(title, subtitle.letter)" 
-                :key="section.number" 
-                class="section">
+            <div v-for="section in getSectionsForTitleSubtitle(title, subtitle.letter)" :key="section.number"
+              class="section">
               <div class="section-header" @click="navigateToSection(section.number)">
                 Sec. {{ section.number }}. {{ section.title }}
               </div>
             </div>
 
             <template v-if="subtitle.parts && subtitle.parts.length > 0">
-              <ExpandableSection
-                v-for="part in subtitle.parts"
-                :key="part.number"
-                :title="`Part ${part.number}${part.title ? ` - ${part.title}` : ''}`"
-                class="part"
-              >
+              <ExpandableSection v-for="part in subtitle.parts" :key="part.number"
+                :title="`Part ${part.number}${part.title ? ` - ${part.title}` : ''}`" class="part">
                 <template #title>
                   <div v-if="part.title" class="part-header">
                     Part {{ part.number }}--{{ part.title }}
@@ -61,31 +51,27 @@
                   </div>
                 </template>
 
-                <div v-for="section in getSectionsForTitleSubtitlePart(title, subtitle.letter, part.number)" 
-                    :key="section.number" 
-                    class="section">
+                <div v-for="section in getSectionsForTitleSubtitlePart(title, subtitle.letter, part.number)"
+                  :key="section.number" class="section">
                   <div class="section-header" @click="navigateToSection(section.number)">
                     Sec. {{ section.number }}. {{ section.title }}
                   </div>
                 </div>
 
                 <template v-if="part.subparts && part.subparts.length > 0">
-                  <ExpandableSection
-                    v-for="subpart in part.subparts"
-                    :key="subpart.letter"
-                    :title="`Subpart ${subpart.letter} - ${subpart.title}`"
-                    class="subpart"
-                  >
+                  <ExpandableSection v-for="subpart in part.subparts" :key="subpart.letter"
+                    :title="`Subpart ${subpart.letter} - ${subpart.title}`" class="subpart">
                     <template #title>
                       <div class="subpart-header">
                         Subpart {{ subpart.letter }}--{{ subpart.title }}
                       </div>
                     </template>
 
-                    <div v-for="section in getSectionsForTitleSubtitlePartSubpart(title, subtitle.letter, part.number, subpart.letter)" 
-                        :key="section.number" 
-                        class="section">
+                    <div
+                      v-for="section in getSectionsForTitleSubtitlePartSubpart(title, subtitle.letter, part.number, subpart.letter)"
+                      :key="section.number" class="section">
                       <div class="section-header" @click="navigateToSection(section.number)">
+                        {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }}
                         Sec. {{ section.number }}. {{ section.title }}
                       </div>
                     </div>
@@ -109,7 +95,7 @@
 
 <script setup lang="ts">
 import { useRouter, type Router } from 'vue-router';
-import tocData from '../assets/data/toc.json';
+import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
 import { useBill } from '../composables/bill';
 
@@ -147,34 +133,38 @@ const getSectionsForTitle = (title: Title) => {
 }
 
 const getSectionsForTitleSubtitle = (title: Title, subtitleLetter: string) => {
-  return title.sections.filter(section => 
+  return title.sections.filter(section =>
     section.subtitle === subtitleLetter && !section.part
   );
 }
 
 const getSectionsForTitleSubtitlePart = (title: Title, subtitleLetter: string, partNumber: string) => {
-  return title.sections.filter(section => 
-    section.subtitle === subtitleLetter && 
-    section.part === partNumber && 
+  return title.sections.filter(section =>
+    section.subtitle === subtitleLetter &&
+    section.part === partNumber &&
     !section.subpart
   );
 }
 
 const getSectionsForTitleSubtitlePartSubpart = (
-  title: Title, 
-  subtitleLetter: string, 
-  partNumber: string, 
+  title: Title,
+  subtitleLetter: string,
+  partNumber: string,
   subpartLetter: string
 ) => {
-  return title.sections.filter(section => 
-    section.subtitle === subtitleLetter && 
-    section.part === partNumber && 
+  return title.sections.filter(section =>
+    section.subtitle === subtitleLetter &&
+    section.part === partNumber &&
     section.subpart === subpartLetter
   );
 }
 
+const getSection = (sectionNumber: string) => {
+  return TITLE_FILES.flatMap(t => t.data).find(t => t.sectionNumber === sectionNumber);
+}
+
 const navigateToSection = (sectionNumber: string) => {
-  const section = TITLE_FILES.flatMap(t => t.data).find(t => t.sectionNumber === sectionNumber);
+  const section = getSection(sectionNumber);
   if (!section) return;
 
   const { titleNumber: title, subtitle } = section;
@@ -204,15 +194,21 @@ const navigateToSection = (sectionNumber: string) => {
     }
   }
 
-  h2 {    
+  h2 {
     color: var(--color-text);
     margin: 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 2em;
+    white-space: nowrap;
+
+    @media (max-width: 600px) {
+      font-size: 1.75em;
+      letter-spacing: -1px;
+    }
   }
 
-  > p {
+  >p {
     color: var(--color-text-secondary);
     text-align: center;
   }
@@ -230,7 +226,7 @@ const navigateToSection = (sectionNumber: string) => {
           font-weight: bold;
           margin-right: var(--spacing-xs);
         }
-        
+
         .title-name {
           font-size: 0.8em;
           font-weight: normal;
@@ -249,12 +245,12 @@ const navigateToSection = (sectionNumber: string) => {
 
       &:hover .title-header {
         color: var(--color-primary);
-            
+
         .title-subject {
           color: var(--color-primary);
           font-size: 1.2em;
           text-decoration: underline dashed;
-          text-decoration-thickness: 1px;;
+          text-decoration-thickness: 1px;
           text-underline-offset: 6px;
           text-decoration-color: var(--color-text);
         }
@@ -291,7 +287,7 @@ const navigateToSection = (sectionNumber: string) => {
           color: var(--color-primary);
           font-weight: bold;
           text-decoration: underline dashed;
-          text-decoration-thickness: 1px;;
+          text-decoration-thickness: 1px;
           text-underline-offset: 6px;
           text-decoration-color: var(--color-text);
         }
@@ -333,4 +329,4 @@ const navigateToSection = (sectionNumber: string) => {
     }
   }
 }
-</style> 
+</style>

@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "name": "Big Bullshit Bill",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "vue.codeActions.enabled": true,
+    "vue.complete.casing.tags": "pascal",
+    "vue.complete.casing.props": "kebab",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+      "vue",
+      "javascript",
+      "typescript"
+    ],
+    "eslint.probe": [
+      "javascript",
+      "typescript",
+      "html",
+      "vue"
+    ],
+    "files.associations": {
+      "*.vue": "vue"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "Vue.volar",
+      "eslint.vscode-eslint"
+    ]
+  }
+}

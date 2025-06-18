@@ -1,42 +1,23 @@
 <template>
   <div class="container">
-    <div class="header">      
-      <h1 @click="navigateToToc" :title="showingTableOfContents ? 'Big Bullshit Bill' : 'Back to Table of Contents'">Big 🐘💩 Bill</h1>
-  
+    <div class="header">
+      <h1 @click="navigateToToc" :title="showingTableOfContents ? 'Big Bullshit Bill' : 'Back to Table of Contents'">Big
+        🐘💩 Bill</h1>
+
       <div v-show="showingBillView || showingTableOfContents" class="selectors">
-        <BaseSelector
-        v-if="TITLE_FILES.length > 0"
-        label="Title"
-        :options="TITLES"
-        :value="selectedTitle"
-        @update="navigateToTitle"
-        />
-        
+        <BaseSelector v-if="TITLE_FILES.length > 0" label="Title" :options="TITLES" :value="selectedTitle"
+          @update="navigateToTitle" />
+
         <template v-if="showingBillView">
-          <BaseSelector
-            label="Subtitle"
-            :options="subtitles"
-            :value="selectedSubtitle"
-            :disabled="!selectedTitle || !subtitles.length"
-            @update="navigateToSubtitle"
-          />
+          <BaseSelector label="Subtitle" :options="subtitles" :value="selectedSubtitle"
+            :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
 
           <template v-if="parts.length > 0">
-            <BaseSelector
-              label="Part"
-              :options="parts"
-              :value="selectedPart"
-              @update="selectPart"
-              :disabled="!selectedSubtitle"
-            />
+            <BaseSelector label="Part" :options="parts" :value="selectedPart" @update="selectPart"
+              :disabled="!selectedSubtitle" />
 
-            <BaseSelector
-              label="Subpart"
-              :options="subparts"
-              :value="selectedSubpart"
-              @update="selectSubpart"
-              :disabled="!subparts.length || !selectedPart"
-            />
+            <BaseSelector label="Subpart" :options="subparts" :value="selectedSubpart" @update="selectSubpart"
+              :disabled="!subparts.length || !selectedPart" />
           </template>
         </template>
       </div>
@@ -45,7 +26,8 @@
     <RouterView />
     <footer>
       <section class='links'>
-        <router-link to='/fightback' title="Suggestions on how to make a difference">How to Make a Difference</router-link>
+        <router-link to='/fightback' title="Suggestions on how to make a difference">How to Make a
+          Difference</router-link>
         <router-link to='/about' title='About the Big Bullshit Bill project'>About B💩B</router-link>
       </section>
       <i @click='backToTheTop' role='button' aria-label='Go back to the top' title='Go back to the top'>☝</i>
@@ -57,8 +39,8 @@
 import { RouterView } from 'vue-router';
 import BaseSelector from './components/BaseSelector.vue';
 import { useBill } from './composables/bill';
-import { useRouter, useRoute} from 'vue-router';
-import { computed, nextTick, onMounted, watch } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import { computed, nextTick, onMounted, onUnmounted, watch } from 'vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -87,7 +69,7 @@ const navigateToTitle = (title: string) => {
 };
 
 const navigateToSubtitle = (subtitle: string) => {
-  router.push({ name: 'bill', params: { title: selectedTitle.value, subtitle } });
+  router.push({ path: `/${selectedTitle.value}/${subtitle}` });
 };
 
 const navigateToToc = () => {
@@ -99,7 +81,7 @@ const setDataFromUrl = () => {
   const subtitle = route.params.subtitle as string;
   if (title && TITLES.includes(title)) {
     selectTitle(title);
-    
+
     nextTick(() => {
       if (subtitle && subtitles.value.includes(subtitle)) {
         selectSubtitle(subtitle);
@@ -207,7 +189,7 @@ footer {
       }
     }
   }
-  
+
   i {
     cursor: pointer;
     font-size: 1.25rem;

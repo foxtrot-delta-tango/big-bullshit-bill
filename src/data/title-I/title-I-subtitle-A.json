@@ -1,0 +1,170 @@
+[
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10001",
+    "sectionTitle": "Thrifty food plan",
+    "sectionText": "SEC. 10001. THRIFTY FOOD PLAN.\r\n\r\n    Section 3(u) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2012(u)) is amended to read as follows:\r\n    ``(u)(1) `Thrifty food plan' means the diet required to feed a \r\nfamily of 4 persons consisting of a man and a woman 20 through 50, a \r\nchild 6 through 8, and a child 9 through 11 years of age, based on \r\nrelevant market baskets that shall only be changed pursuant to \r\nparagraph (3). The cost of such diet shall be the basis for uniform \r\nallotments for all households regardless of their actual composition. \r\nThe Secretary shall only adjust the cost of the diet as specified in \r\nparagraphs (2) and (4).\r\n    ``(2) Household Adjustments.--The Secretary shall make household-\r\nsize adjustments based on the following ratios of household size as a \r\npercentage of the maximum 4-person allotment:\r\n            ``(A) For a 1-person household, 30 percent.\r\n            ``(B) For a 2-person household, 55 percent.\r\n            ``(C) For a 3-person household, 79 percent.\r\n            ``(D) For a 4-person household, 100 percent.\r\n            ``(E) For a 5-person household, 119 percent.\r\n            ``(F) For a 6-person household, 143 percent.\r\n            ``(G) For a 7-person household, 158 percent.\r\n            ``(H) For an 8-person household, 180 percent.\r\n            ``(I) For a 9-person household, 203 percent.\r\n            ``(J) For a 10-person household, 224 percent.\r\n            ``(K) For households with more than 10 persons, such \r\n        adjustment for each additional person shall be 224 percent plus \r\n        the product of 21 percent and the difference in the number of \r\n        persons in the household and 10.\r\n            ``(3) Reevaluation of market baskets.--\r\n                    ``(A) Evaluation.--Not earlier than October 1, \r\n                2028, and at not more frequently than 5-year intervals \r\n                thereafter, the Secretary may reevaluate the market \r\n                baskets of the thrifty food plan taking into \r\n                consideration current food prices, food composition \r\n                data, consumption patterns, and dietary guidance.\r\n                    ``(B) Notice.--Prior to any update of the market \r\n                baskets of the thrifty food plan based on a \r\n                reevaluation pursuant to subparagraph (A), the \r\n                methodology and results of any such revelation shall be \r\n                published in the Federal Register with an opportunity \r\n                for comment of not less than 60 days.\r\n                    ``(C) Cost neutrality.--The Secretary shall not \r\n                increase the cost of the thrifty food plan based on a \r\n                reevaluation or update under this paragraph.\r\n            ``(4) Allowable cost adjustments.--On October 1 immediately \r\n        following the effective date of this paragraph and on each \r\n        October 1 thereafter, the Secretary shall--\r\n                    ``(A) adjust the cost of the thrifty food plan to \r\n                reflect changes in the Consumer Price Index for All \r\n                Urban Consumers, published by the Bureau of Labor \r\n                Statistics of the Department of Labor, for the most \r\n                recent 12-month period ending in June;\r\n                    ``(B) make cost adjustments in the thrifty food \r\n                plan for urban and rural parts of Hawaii and urban and \r\n                rural parts of Alaska to reflect the cost of food in \r\n                urban and rural Hawaii and urban and rural Alaska \r\n                provided such cost adjustment shall not exceed the rate \r\n                of increase described in the Consumer Price Index for \r\n                All Urban Consumers, published by the Bureau of Labor \r\n                Statistics of the Department of Labor, for the most \r\n                recent 12-month period ending in June; and\r\n                    ``(C) make cost adjustments in the separate thrifty \r\n                food plans for Guam and the Virgin Islands of the \r\n                United States to reflect the cost of food in those \r\n                States, but not to exceed the cost of food in the 50 \r\n                States and the District of Columbia, provided that such \r\n                cost adjustment shall not exceed the rate of increase \r\n                described in the Consumer Price Index for All Urban \r\n                Consumers, published by the Bureau of Labor Statistics \r\n                of the Department of Labor, for the most recent 12-\r\n                month period ending in June.''.",
+    "summary": "This section revises the definition of the Thrifty Food Plan (TFP), a USDA food budgeting tool used to calculate SNAP benefits. It removes ability for the USDA to periodically adjust the reference values used to calculate assistance, eliminating the USDA’s authority to update the TFP to reflect evolving dietary guidelines, demographic diversity, or market conditions unless the changes are explicitly cost-neutral or inflation-based.",
+    "impact": "The 2021 TFP reevaluation under the Biden administration increased average SNAP benefits by 21%. This new language would reverse such updates and prevent future discretionary recalculations, regardless of real-world food cost increases. Millions of SNAP recipients—particularly children, seniors, and individuals with non-standard family configurations—would likely see stagnant or reduced benefits over time.  After 2028, USDA can still rewrite the market-baskets, but only if it leaves the total dollar amount unchanged.  Annual updates are now pegged to overall inflation rather than actual food-price changes—effectively creating a slow squeeze on SNAP purchasing power over time while ending the flexibility the agency used in 2021 to boost benefits.  Critics argue this could worsen food insecurity and increase downstream public health costs due to malnutrition-related issues.",
+    "additionalReferences": [
+      "https://www.fns.usda.gov/snap/thriftyfoodplan",
+      "https://en.wikipedia.org/wiki/Market_basket",
+      "https://www.fns.usda.gov/research/cnpp/usda-food-plans",
+      "https://www.cbpp.org/research/food-assistance/millions-of-low-income-households-would-lose-food-aid-under-proposed-house#massive-cuts-would-result-in-cbpp-anchor",
+      "https://www.cbpp.org/research/food-assistance/usda-announces-important-snap-benefit-modernization",
+      "https://www.govinfo.gov/content/pkg/COMPS-10331/pdf/COMPS-10331.pdf"
+    ],
+    "tags": [
+      "SNAP",
+      "USDA",
+      "food"
+    ],
+    "checkedByHumansDate": "2025-06-15"
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10002",
+    "sectionTitle": "Able bodied adults without dependents work requirements",
+    "sectionText": "SEC. 10002. ABLE BODIED ADULTS WITHOUT DEPENDENTS WORK REQUIREMENTS.\r\n\r\n    (a) Section 6(o)(3) of the Food and Nutrition Act of 2008 is \r\namended to read as follows:\r\n            ``(3) Exception.--Paragraph (2) shall not apply to an \r\n        individual if the individual is--\r\n                    ``(A) under 18 or over 65 years of age;\r\n                    ``(B) medically certified as physically or mentally \r\n                unfit for employment;\r\n                    ``(C) a parent or other member of a household with \r\n                responsibility for a dependent child under 7 years of \r\n                age;\r\n                    ``(D) otherwise exempt under subsection (d)(2);\r\n                    ``(E) a pregnant woman;\r\n                    ``(F) currently homeless;\r\n                    ``(G) a veteran;\r\n                    ``(H) 24 years of age or younger and was in foster \r\n                care under the responsibility of a State on the date of \r\n                attaining 18 years of age or such higher age as the \r\n                State has elected under section 475(8)(B)(iii) of the \r\n                Social Security Act (42 U.S.C. 675(8)(B)(iii)); or\r\n                    ``(I) responsible for a dependent child 7 years of \r\n                age or older and is married to, and resides with, an \r\n                individual who is in compliance with the requirements \r\n                of paragraph (2).''.\r\n    (b) Sunset Provision.--The exceptions in subparagraphs (F) through \r\n(H) shall cease to have effect on October 1, 2030.",
+    "summary": "This section narrows SNAP work requirements for able-bodied adults without dependents by raising the maximum age for exceptions from 55 (in 2025) to 65 and limiting 'responsibility for a dependent child' to include only guardians of children under the age of 7 unless the individual is both married to AND living with someone who is meeting the work requirements.  It also removes exceptions for the homeless, veterans, and former wards of the state who are currently between the ages of 18 and 24 starting on October 1st, 2030.",
+    "impact": "An estimated 6 million individuals (11 million households) would be at risk of losing some or all of their SNAP benefits from the new criteria. The change places more burden on older low-income workers in regions with few job opportunities, and children over the age of 7, to whose family the exemptions previously applied until they were legally adults.  Hunger and food insecurity may increase among this age group unless they can secure compliant work or training slots.",
+    "additionalReferences": [
+      "https://www.fns.usda.gov/snap/work-requirements",
+      "https://www.govinfo.gov/content/pkg/COMPS-10331/pdf/COMPS-10331.pdf",
+      "https://www.cbpp.org/research/food-assistance/worsening-snaps-harsh-work-requirement-would-take-food-assistance-away"
+    ],
+    "tags": [
+      "SNAP",
+      "USDA",
+      "food",
+      "seniors",
+      "childcare"
+    ],
+    "checkedByHumansDate": "2025-06-15"
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10003",
+    "sectionTitle": "Able bodied adults without dependents waivers",
+    "sectionText": "SEC. 10003. ABLE BODIED ADULTS WITHOUT DEPENDENTS WAIVERS.\r\n\r\n    Section 6(o) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2015(o)) is amended--\r\n            (1) by amending paragraph (4)(A) to read as follows:\r\n                    ``(A) In general.--On the request of a State agency \r\n                and with the support of the chief executive officer of \r\n                the State, the Secretary may waive the applicability of \r\n                paragraph (2) for not more than 12 consecutive months \r\n                to any group of individuals in the State if the \r\n                Secretary makes a determination that the county, or \r\n                county-equivalent (as recognized by the Census Bureau) \r\n                in which the individuals reside has an unemployment \r\n                rate of over 10 percent.''; and\r\n            (2) in paragraph (6)(F) by striking ``8 percent'' and \r\n        inserting ``1 percent''.",
+    "summary": "This section narrows the conditions under which states can request waivers from SNAP ABAWD work requirements. It sets stricter criteria for job availability metrics and centralizes authority with the federal government.",
+    "impact": "Historically, 30+ states received partial waivers for regions with chronic underemployment. With tighter criteria, millions may lose access to SNAP if they live in economically distressed counties that no longer qualify for relief. State agencies will have reduced flexibility in responding to localized economic hardship.",
+    "additionalReferences": [
+      "https://www.fns.usda.gov/snap/able-bodied-adults-without-dependents-abawds"
+    ]
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10004",
+    "sectionTitle": "Availability of standard utility allowances based on receipt of energy assistance",
+    "sectionText": "SEC. 10004. AVAILABILITY OF STANDARD UTILITY ALLOWANCES BASED ON \r\n              RECEIPT OF ENERGY ASSISTANCE.\r\n\r\n    (a) Allowance to Recipients of Energy Assistance.--\r\n            (1) Standard utility allowance.--Section 5(e)(6)(C)(iv)(I) \r\n        of the of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n        2014(e)(6)(C)(iv)(I)) is amended by inserting ``with an elderly \r\n        or disabled member'' after ``households''.\r\n            (2) Conforming amendments.--Section 2605(f)(2)(A) of the \r\n        Low-Income Home Energy Assistance Act is amended by inserting \r\n        ``received by a household with an elderly or disabled member'' \r\n        before ``, consistent with section 5(e)(6)(C)(iv)(I)''.\r\n    (b) Third-party Energy Assistance Payments.--Section 5(k)(4) of the \r\nFood and Nutrition Act of 2008 (7 U.S.C. 2014(k)(4)) is amended--\r\n            (1) in subparagraph (A) by inserting ``without an elderly \r\n        or disabled member'' after ``household'' the 1st place it \r\n        appears; and\r\n            (2) in subparagraph (B) by inserting ``with an elderly or \r\n        disabled member'' after ``household'' the 1st place it appears.",
+    "summary": "Restricts how SNAP applicants can use utility costs to increase benefit amounts. It targets the 'Heat and Eat' loophole, where states issue small energy payments solely to qualify recipients for higher SNAP deductions through SUAs.",
+    "impact": "Could reduce monthly SNAP benefits for hundreds of thousands of households, particularly in states where small LIHEAP-style payments were used to maximize eligibility. Particularly affects low-income seniors and individuals with disabilities living alone.",
+    "additionalReferences": [
+      "https://www.cbpp.org/research/food-assistance/heat-and-eat-snap-policy"
+    ]
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10005",
+    "sectionTitle": "Restrictions on internet expenses",
+    "sectionText": "SEC. 10005. RESTRICTIONS ON INTERNET EXPENSES.\r\n\r\n    Section 5(e)(6) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2014(e)(6)) is amended by adding at the end the following:\r\n                    ``(E) Restrictions on internet expenses.--Service \r\n                fees associated with internet connection, including, \r\n                but not limited to, monthly subscriber fees (i.e., the \r\n                base rate paid by the household each month in order to \r\n                receive service, which may include high-speed \r\n                internet), taxes and fees charged to the household by \r\n                the provider that recur on regular bills, the cost of \r\n                modem rentals, and fees charged by the provider for \r\n                initial installation, shall not be used in computing \r\n                the excess shelter expense deduction.''.",
+    "summary": "Establishes that internet service costs are not considered allowable SNAP deductions. This limits potential benefit increases from modern household utility costs.",
+    "impact": "May particularly affect rural households and students who depend on internet access for education, employment, and telehealth. Could marginally reduce benefit amounts or make it harder to qualify for some recipients.",
+    "additionalReferences": []
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10006",
+    "sectionTitle": "Matching funds requirements",
+    "sectionText": "SEC. 10006. MATCHING FUNDS REQUIREMENTS.\r\n\r\n    (a) In General.--Section 4(a) of the Food and Nutrition Act of 2008 \r\n(7 U.S.C. 2013(a)) is amended--\r\n            (1) by striking ``(a) Subject to'' and inserting the \r\n        following:\r\n    ``(a) Program.--\r\n            ``(1) Establishment.--Subject to''; and\r\n            (2) by adding at the end the following:\r\n    ``(2) Matching Funds Requirements.--\r\n            ``(A) In general.--\r\n                    ``(i) Federal share.--Subject to subparagraph (B), \r\n                the Federal share of the cost of allotments described \r\n                in paragraph (1) in a fiscal year shall be--\r\n                            ``(I) for each of fiscal years 2026 and \r\n                        2027, 100 percent; and\r\n                            ``(II) for fiscal year 2028 and each fiscal \r\n                        year thereafter, 95 percent.\r\n                    ``(ii) State share.--Subject to subparagraph (B), \r\n                the State share of the cost of allotments described in \r\n                paragraph (1) in a fiscal year shall be--\r\n                            ``(I) for each of fiscal years 2026 and \r\n                        2027, 0 percent; and\r\n                            ``(II) for fiscal year 2028 and each fiscal \r\n                        year thereafter, 5 percent.\r\n            ``(B) State quality control incentive.--Beginning in fiscal \r\n        year 2028, any State that has a payment error rate, as defined \r\n        in section 16, for the most recent complete fiscal year for \r\n        which data is available, of--\r\n                    ``(i) equal to or greater than 6 percent but less \r\n                than 8 percent, shall have its Federal share of the \r\n                cost of allotments described in paragraph (1) for the \r\n                current fiscal year equal 85 percent, and its State \r\n                share equal 15 percent;\r\n                    ``(ii) equal to or greater than 8 percent but less \r\n                than 10 percent, shall have its Federal share of the \r\n                cost of allotments described in paragraph (1) for the \r\n                current fiscal year equal 80 percent, and its State \r\n                share equal 20 percent; and\r\n                    ``(iii) equal to or greater than 10 percent, shall \r\n                have its Federal share of the cost of allotments \r\n                described in paragraph (1) for the current fiscal year \r\n                equal 75 percent, and its State share equal 25 \r\n                percent.''.\r\n    (b) Rule of Construction.--The Secretary of Agriculture may not pay \r\ntowards the cost of allotments described in paragraph (1) of section \r\n4(a) of the Food and Nutrition Act of 2008 (7 U.S.C. 2013(a)), as \r\ndesignated by subsection (a), an amount greater than the applicable \r\nFederal share described in paragraph (2) of such section 4(a), as added \r\nby subsection (a).",
+    "summary": "Establishes state cost-sharing requirements for the SNAP program, reducing the federal share of benefit costs over time. This imposes financial obligations on states to maintain or expand benefit levels.",
+    "impact": "States with budget shortfalls may face pressure to cut SNAP enrollment or reduce benefit generosity. Could result in uneven access to SNAP based on state wealth or political priorities.",
+    "additionalReferences": []
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10007",
+    "sectionTitle": "Administrative cost sharing",
+    "sectionText": "SEC. 10007. ADMINISTRATIVE COST SHARING.\r\n\r\n    Section 16(a) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2025(a)) is amended by striking ``50 per centum'' and inserting ``25 \r\npercent''.",
+    "summary": "Increases the share of SNAP administrative costs that must be borne by states, reducing the federal burden.",
+    "impact": "State agencies could face staffing or service reductions unless additional funds are allocated. Could impact application processing times or program oversight capacity.",
+    "additionalReferences": []
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10008",
+    "sectionTitle": "General work requirement age",
+    "sectionText": "SEC. 10008. GENERAL WORK REQUIREMENT AGE.\r\n\r\n    Section 6(d) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2015(d)) is amended--\r\n            (1) in paragraph (1)(A), in the matter preceding clause \r\n        (i), by striking ``over the age of 15 and under the age of 60'' \r\n        and inserting ``over the age of 17 and under the age of 65''; \r\n        and\r\n            (2) in paragraph (2)--\r\n                    (A) by striking ``child under age six'' and \r\n                inserting ``child under age seven''; and\r\n                    (B) by striking ``between 1 and 6 years of age'' \r\n                and inserting ``between 1 and 7 years of age''.",
+    "summary": "Expands the age range of individuals required to work or participate in training to qualify for SNAP.",
+    "impact": "Older individuals nearing retirement age but without stable employment may face new barriers to food assistance.",
+    "additionalReferences": []
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10009",
+    "sectionTitle": "National Accuracy Clearinghouse",
+    "sectionText": "SEC. 10009. NATIONAL ACCURACY CLEARINGHOUSE.\r\n\r\n    Section 11(x)(2) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2020(x)(2)) is amended by adding at the end the following:\r\n                    ``(D) Data sharing to prevent other multiple \r\n                issuances.--A State agency shall use each indication of \r\n                multiple issuance, or each indication that an \r\n                individual receiving supplemental nutrition assistance \r\n                program benefits in 1 State has applied to receive \r\n                supplemental nutrition assistance program benefits in \r\n                another State, to prevent multiple issuances of other \r\n                Federal and State assistance program benefits that a \r\n                State agency administers through the integrated \r\n                eligibility system that the State uses to administer \r\n                the supplemental nutrition assistance program in the \r\n                State.''.",
+    "summary": "Establishes a centralized verification system to reduce duplicate or fraudulent SNAP claims across state lines.",
+    "impact": "Could reduce fraud and administrative waste, but raises concerns over false positives and access disruptions from database errors.",
+    "additionalReferences": [
+      "https://www.fns.usda.gov/snap/national-accuracy-clearinghouse"
+    ]
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10010",
+    "sectionTitle": "Quality control zero tolerance",
+    "sectionText": "SEC. 10010. QUALITY CONTROL ZERO TOLERANCE.\r\n\r\n    Section 16(c)(1)(A)(ii) of the Food and Nutrition Act of 2008 (7 \r\nU.S.C. 2025(c)(1)(A)(ii)) is amended--\r\n            (1) in subclause (I), by striking ``and'' at the end;\r\n            (2) in subclause (II)--\r\n                    (A) by striking ``fiscal year thereafter'' and \r\n                inserting ``of fiscal years 2015 through 2025''; and\r\n                    (B) by striking the period at the end and inserting \r\n                ``; and''; and\r\n            (3) by adding at the end the following:\r\n                                    ``(III) for each fiscal year \r\n                                thereafter, $0.''.",
+    "summary": "Raises pressure on states to reduce error rates in SNAP payments and eligibility determinations.",
+    "impact": "May discourage states from enrolling marginally eligible households due to fear of penalties. Could increase administrative burden.",
+    "additionalReferences": []
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10011",
+    "sectionTitle": "National education and obesity prevention grant program repealer",
+    "sectionText": "SEC. 10011. NATIONAL EDUCATION AND OBESITY PREVENTION GRANT PROGRAM \r\n              REPEALER.\r\n\r\n    The Food and Nutrition Act of 2008 (7 U.S.C. 2011 et seq.) is \r\namended by striking section 28 (7 U.S.C. 2036a).",
+    "summary": "Eliminates a long-standing USDA program aimed at helping SNAP recipients make healthier dietary choices.",
+    "impact": "May increase long-term healthcare costs and worsen nutrition outcomes among low-income populations, especially children and pregnant women.",
+    "additionalReferences": [
+      "https://snaped.fns.usda.gov/"
+    ]
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10012",
+    "sectionTitle": "Alien SNAP eligibility",
+    "sectionText": "SEC. 10012. ALIEN SNAP ELIGIBILITY.\r\n\r\n    Section 6(f) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2015(f)) is amended to read as follows:\r\n    ``(f) No individual who is a member of a household otherwise \r\neligible to participate in the supplemental nutrition assistance \r\nprogram under this section shall be eligible to participate in the \r\nsupplemental nutrition assistance program as a member of that or any \r\nother household unless he or she is--\r\n            ``(1) a resident of the United States; and\r\n            ``(2) either--\r\n                    ``(A) a citizen or national of the United States;\r\n                    ``(B) an alien lawfully admitted for permanent \r\n                residence as an immigrant as defined by sections \r\n                101(a)(15) and 101(a)(20) of the Immigration and \r\n                Nationality Act, excluding, among others, alien \r\n                visitors, tourists, diplomats, and students who enter \r\n                the United States temporarily with no intention of \r\n                abandoning their residence in a foreign country;\r\n                    ``(C) an alien who is a citizen or national of the \r\n                Republic of Cuba and who--\r\n                            ``(i) is the beneficiary of an approved \r\n                        petition under section 203(a) of the \r\n                        Immigration and Nationality Act;\r\n                            ``(ii) meets all eligibility requirements \r\n                        for an immigrant visa but for whom such a visa \r\n                        is not immediately available;\r\n                            ``(iii) is not otherwise inadmissible under \r\n                        section 212(a) of such Act; and\r\n                            ``(iv) is physically present in the United \r\n                        States pursuant to a grant of parole in \r\n                        furtherance of the commitment of the United \r\n                        States to the minimum level of annual legal \r\n                        migration of Cuban nationals to the United \r\n                        States specified in the U.S.-Cuba Joint \r\n                        Communique on Migration, done at New York \r\n                        September 9, 1994, and reaffirmed in the Cuba-\r\n                        United States: Joint Statement on Normalization \r\n                        of Migration, Building on the Agreement of \r\n                        September 9, 1994, done at New York May 2, \r\n                        1995; or\r\n                    ``(D) an individual who lawfully resides in the \r\n                United States in accordance with a Compact of Free \r\n                Association referred to in section 402(b)(2)(G) of the \r\n                Personal Responsibility and Work Opportunity \r\n                Reconciliation Act of 1996.\r\n        The income (less, at State option, a pro rata share) and \r\n        financial resources of the individual rendered ineligible to \r\n        participate in the supplemental nutrition assistance program \r\n        under this subsection shall be considered in determining the \r\n        eligibility and the value of the allotment of the household of \r\n        which such individual is a member.''.",
+    "summary": "Removes eligibility protections for multiple groups of legal immigrants previously able to access food assistance under federal discretion.",
+    "impact": "May increase food insecurity among legal non-citizens, including refugees and long-term U.S. residents. Likely to reduce SNAP enrollment among immigrant populations even beyond those directly affected.",
+    "additionalReferences": []
+  },
+  {
+    "titleNumber": "I",
+    "subtitle": "A",
+    "sectionNumber": "10013",
+    "sectionTitle": "Emergency food assistance",
+    "sectionText": "SEC. 10013. EMERGENCY FOOD ASSISTANCE.\r\n\r\n    Section 203D(d)(5) of the Emergency Food Assistance Act of 1983 (7 \r\nU.S.C. 7507(d)(5)) is amended by striking ``2024'' and inserting \r\n``2031''.",
+    "summary": "Extends TEFAP’s authority to issue competitive infrastructure grants (for freezers, trucks, warehouse upgrades, etc.) from FY 2024 to FY 2031.",
+    "impact": "• **Unfunded promise.** Congress last earmarked money for these grants in FY 2010; since then only one‑off pandemic or ARPA infusions have arrived. Unless appropriators add new dollars, the seven‑year extension is largely symbolic and may be touted as a fix while needs remain unmet.\n\n• **Opportunity cost inside tight caps.** Future appropriations would count against discretionary spending limits. Directing scarce dollars to capital projects could come at the expense of TEFAP food purchases or SNAP benefits, meaning food banks might get new refrigerators but fewer commodities to put in them.\n\n• **Potential equity gap.** Competitive or cost‑share rules tend to favor large urban food banks with dedicated grant staff; small rural, tribal, and frontier pantries could struggle to compete, widening service disparities.\n\n• **Misses urgent shortfalls.** Advocates’ top asks for TEFAP are more entitlement commodities and higher administrative reimbursements. Infrastructure is valuable, but without parallel increases in food and operating funds, shelves can stay bare and overtime budgets unfunded.\n\n• **Long horizon, volatile demand.** Locking in authority through 2031 provides planning certainty, yet demand for emergency food has proven highly cyclical (e.g., COVID‑19, inflation spikes). A multi‑year extension without automatic funding triggers may leave feeding networks exposed when the next shock arrives.",
+    "additionalReferences": [
+      "https://sgp.fas.org/crs/misc/R45408.pdf",
+      "https://www.fns.usda.gov/emergency-food-assistance-program-tefap-general-infrastructure-grant",
+      "https://feedingamericaaction.org/learn/issue-areas/tefap/",
+      "https://kffhealthnews.org/news/article/food-banks-snap-benefits-federal-cuts-rural-needs/"
+    ]
+  }
+]

@@ -8,31 +8,37 @@
       <BillSection v-for="(section, index) in sections" :key="index" :section="section" />
     </template>
     <template v-else>
-      <div v-for="subtitle in titleData.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)" :key="subtitle.letter" class="subtitle">
+      <div v-for="subtitle in titleData.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)"
+        :key="subtitle.letter" class="subtitle">
         <h3>
           Subtitle {{ subtitle.letter }} &mdash; {{ subtitle.name }}
         </h3>
         <div class="content">
           <template v-if="!subtitle.parts.length">
-            <BillSection v-for="(section, index) in sections.filter(s => s.subtitle === subtitle.letter)" :key="index" :section="section" />
+            <BillSection v-for="(section, index) in sections.filter(s => s.subtitle === subtitle.letter)" :key="index"
+              :section="section" />
           </template>
           <template v-else>
-            <div v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)" :key="part.number" class="part">
+            <div v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
+              :key="part.number" class="part">
               <template v-if="!part.subparts.length">
-                  <div class="headers">
-                    <strong>
-                      Part {{ part.number }}
-                    </strong>
-                    <span class='highlight'>
-                      {{ part.title }}
-                    </span>
-                  </div>
+                <div class="headers">
+                  <strong>
+                    Part {{ part.number }}
+                  </strong>
+                  <span class='highlight'>
+                    {{ part.title }}
+                  </span>
+                </div>
                 <div class="content">
-                  <BillSection v-for="(section, index) in sections.filter(s => s.part === part.number)" :key="index" :section="section" />
+                  <BillSection v-for="(section, index) in sections.filter(s => s.part === part.number)" :key="index"
+                    :section="section" />
                 </div>
               </template>
               <template v-else>
-                <div v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())" :key="subpart.letter" class="subpart">
+                <div
+                  v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())"
+                  :key="subpart.letter" class="subpart">
                   <div class="headers">
                     <strong>
                       Part {{ part.number }}{{ subpart.letter }}
@@ -45,7 +51,9 @@
                     </span>
                   </div>
                   <div class="content">
-                    <BillSection v-for="(section, index) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)" :key="index" :section="section" />
+                    <BillSection
+                      v-for="(section, index) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)"
+                      :key="index" :section="section" />
                   </div>
                 </div>
               </template>
@@ -61,7 +69,7 @@
 import BillSection from './BillSection.vue';
 import { useBill, type TitleToc } from '../composables/bill';
 import { computed } from 'vue';
-import tocData from '../assets/data/toc.json';
+import tocData from '../data/toc.json';
 
 const {
   jsonData,
@@ -94,7 +102,7 @@ const titleData = computed(() => {
   if (selectedTitle.value) {
     const currentTitle = tocData.titles.find(t => t.number === selectedTitle.value) as TitleToc;
     if (!currentTitle) return result;
-    
+
     result = currentTitle;
   }
 
@@ -146,7 +154,7 @@ const titleData = computed(() => {
     h4 {
       padding: var(--spacing-xs);
     }
-    
+
     .headers {
       display: flex !important;
       flex: 1;
@@ -164,7 +172,10 @@ const titleData = computed(() => {
   }
 }
 
-h2, h3, h4, h5 {
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 </style>

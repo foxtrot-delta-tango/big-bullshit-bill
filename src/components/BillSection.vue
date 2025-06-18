@@ -3,48 +3,55 @@
     <ExpandableSection>
       <template #title>
         <div class="section-header" @click.stop>
-          <i
-            v-if='section.checkedByHumansDate'
-            class='verified'
-            title='This section has been verified for quality and accuracy by a human reviewer.'
-          >
+          <i v-if='section.checkedByHumansDate' class='verified'
+            :title='`This section was verified for accuracy by a human reviewer on ${verificationDate}.`'>
             ✔
           </i>
-          <i
-            v-else
-            title='This section has not yet been reviewed by a human and should be independently verified before being cited as a source anywhere else.  Please see the "About" section at the bottom of the page to contribute as a reviewer.'
-          >
+          <i v-else
+            title='This section has not yet been reviewed by a human and should be independently verified before being cited as a source anywhere else.  Please see the "About" section at the bottom of the page to contribute as a reviewer.'>
             ?
           </i>
           <span class="title">
-            &nbsp;{{ `Sec. ${section.sectionNumber}: ${section.sectionTitle}` }}&nbsp;
+            &nbsp;{{ `Sec. ${section.sectionNumber}` }} <span class='section-title'>{{ section.sectionTitle
+            }}&nbsp;</span>
           </span>
         </div>
-        <p class="summary">{{ section.summary }}</p>
-        <!--
-          disabling tags for now, we'll release soon
-          ps. if ur reading this, welcome 2 costco ily ♥
-          you can help out at https://github.com/foxtrot-delta-tango/
-        -->
-        <div v-if='false' class="section-tags">
+        <p class="summary" @click.stop='showFullSummary = !showFullSummary' role='button'
+          :aria-expanded='showFullSummary'>
+          <span :class='showFullSummary ? "expanded" : ""'>
+            {{ section.summary }}
+          </span>
+          <!-- <span role='button' :aria-expanded='showFullSummary'>
+            Show {{ showFullSummary ? 'Less' : 'More' }}
+          </span> -->
+        </p>
+        <div class="section-tags">
           <span v-for="tag in section.tags" :key="tag" class="tag">
             {{ tag }}
           </span>
         </div>
       </template>
-      <div class="section">        
+      <div class="section">
         <div class="section-content">
           <h3>Impact&nbsp;</h3>
-          <p>{{ section.impact }}</p>
-          
+          <p v-if='section.impact && typeof section.impact === "string"'>
+            {{ section.impact }}
+          </p>
+          <template v-else>
+            <p v-for='paragraph in section.impact'>
+              {{ paragraph }}
+            </p>
+          </template>
+
           <h3>Section Text&nbsp;</h3>
           <div class="bill-text">
             <pre v-html="section.sectionText" />
           </div>
-          
+
           <h3>References&nbsp;</h3>
           <div class="references">
-            <a v-for="(reference, index) in section.additionalReferences" :key="index" :href="reference" target="_blank">
+            <a v-for="(reference, index) in section.additionalReferences" :key="index" :href="reference"
+              target="_blank">
               {{ reference }}
             </a>
           </div>
@@ -57,7 +64,7 @@
 <script setup lang="ts">
 import ExpandableSection from './ExpandableSection.vue';
 import type { BillSectionData } from '../composables/bill';
-import { ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -67,6 +74,10 @@ const props = defineProps<{
 }>();
 
 const sectionElement = ref<HTMLElement | null>(null);
+
+const showFullSummary = ref(true);
+
+const verificationDate = computed(() => props.section.checkedByHumansDate ? new Date(props.section.checkedByHumansDate).toLocaleDateString('en-US') : '');
 
 watch(sectionElement, () => {
   if (sectionElement.value) {
@@ -91,11 +102,42 @@ watch(sectionElement, () => {
 .summary {
   font-weight: normal;
   margin-bottom: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+
+  :first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-height: 4em;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    transition: max-height 0.3s ease-in-out;
+
+    &.expanded {
+      max-height: 100vh;
+      line-clamp: unset;
+      -webkit-line-clamp: unset;
+    }
+  }
+
+  :last-child {
+    color: var(--color-text-light);
+  }
+
+  &:hover {
+    :last-child {
+      color: var(--color-primary);
+    }
+  }
 }
 
 .section-header {
   display: flex;
-  width: 100%;
+  pointer-events: none;
 
   .title {
     font-size: 1.2rem;
@@ -104,6 +146,12 @@ watch(sectionElement, () => {
     text-decoration-color: var(--color-primary);
     text-transform: uppercase;
     max-width: 80%;
+
+    .section-title {
+      font-weight: 400;
+      white-space: break-spaces;
+      color: var(--color-primary);
+    }
   }
 
   i {
@@ -116,6 +164,7 @@ watch(sectionElement, () => {
     border: 3px solid;
     background-color: var(--color-bg);
     cursor: help;
+    pointer-events: all;
 
     &.verified {
       border-color: var(--color-primary);
@@ -130,7 +179,7 @@ watch(sectionElement, () => {
   flex-wrap: wrap;
 
 
-  > * {
+  >* {
     font-size: 0.8rem;
     padding: calc(0.5 * var(--spacing-xs)) var(--spacing-sm);
     background-color: var(--color-section-bg);
@@ -171,14 +220,20 @@ watch(sectionElement, () => {
       margin: 0;
       line-height: 1.5;
       color: var(--color-text);
+
+      &:not(:last-child) {
+        margin-bottom: var(--spacing-xs);
+      }
     }
 
     .bill-text {
-      width: 100%;
       overflow-y: auto;
+      background-color: var(--color-bg);
+      border-radius: var(--border-radius);
 
       &::-webkit-scrollbar {
         width: 8px;
+        height: 8px;
       }
 
       &::-webkit-scrollbar-track {
@@ -195,7 +250,7 @@ watch(sectionElement, () => {
         margin: 0 auto;
         padding: var(--spacing-sm);
         border-radius: var(--border-radius);
-        max-width: 78ch;
+        width: 78ch;
         max-height: max(200px, 50vh);
       }
     }
@@ -206,4 +261,4 @@ watch(sectionElement, () => {
     }
   }
 }
-</style> 
+</style>

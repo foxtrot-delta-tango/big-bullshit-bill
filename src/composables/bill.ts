@@ -1,34 +1,34 @@
 import { computed, ref } from 'vue';
 
-import tocData from '../assets/data/toc.json';
-import titleISubtitleA from '../assets/data/output/title-I/title-I-subtitle-A.json';
-import titleISubtitleB from '../assets/data/output/title-I/title-I-subtitle-B.json';
-import titleII from '../assets/data/output/title-II/title-II.json';
-import titleIIISubtitleA from '../assets/data/output/title-III/title-III-subtitle-A.json';
-import titleIIISubtitleB from '../assets/data/output/title-III/title-III-subtitle-B.json';
-import titleIIISubtitleC from '../assets/data/output/title-III/title-III-subtitle-C.json';
-import titleIIISubtitleD from '../assets/data/output/title-III/title-III-subtitle-D.json';
-import titleIIISubtitleE from '../assets/data/output/title-III/title-III-subtitle-E.json';
-import titleIIISubtitleF from '../assets/data/output/title-III/title-III-subtitle-F.json';
-import titleIIISubtitleG from '../assets/data/output/title-III/title-III-subtitle-G.json';
-import titleIVSubtitleA from '../assets/data/output/title-IV/title-IV-subtitle-A.json';
-import titleIVSubtitleB from '../assets/data/output/title-IV/title-IV-subtitle-B.json';
-import titleIVSubtitleC from '../assets/data/output/title-IV/title-IV-subtitle-C.json';
-import titleIVSubtitleD from '../assets/data/output/title-IV/title-IV-subtitle-D.json';
-import titleV from '../assets/data/output/title-V/title-V.json';
-import titleVI from '../assets/data/output/title-VI/title-VI.json';
-import titleVIISubtitleA from '../assets/data/output/title-VII/title-VII-subtitle-A.json';
-import titleVIISubtitleB from '../assets/data/output/title-VII/title-VII-subtitle-B.json';
-import titleVIISubtitleC from '../assets/data/output/title-VII/title-VII-subtitle-C.json';
-import titleVIIISubtitleA from '../assets/data/output/title-VIII/title-VIII-subtitle-A.json';
-import titleVIIISubtitleB from '../assets/data/output/title-VIII/title-VIII-subtitle-B.json';
-import titleVIIISubtitleC from '../assets/data/output/title-VIII/title-VIII-subtitle-C.json';
-import titleIX from '../assets/data/output/title-IX/title-IX.json';
-import titleX from '../assets/data/output/title-X/title-X.json';
-import titleXISubtitleA from '../assets/data/output/title-XI/title-XI-subtitle-A.json';
-import titleXISubtitleB from '../assets/data/output/title-XI/title-XI-subtitle-B.json';
-import titleXISubtitleC from '../assets/data/output/title-XI/title-XI-subtitle-C.json';
-import titleXISubtitleD from '../assets/data/output/title-XI/title-XI-subtitle-D.json';
+import tocData from '../data/toc.json';
+import titleISubtitleA from '../data/title-I/title-I-subtitle-A.json';
+import titleISubtitleB from '../data/title-I/title-I-subtitle-B.json';
+import titleII from '../data/title-II/title-II.json';
+import titleIIISubtitleA from '../data/title-III/title-III-subtitle-A.json';
+import titleIIISubtitleB from '../data/title-III/title-III-subtitle-B.json';
+import titleIIISubtitleC from '../data/title-III/title-III-subtitle-C.json';
+import titleIIISubtitleD from '../data/title-III/title-III-subtitle-D.json';
+import titleIIISubtitleE from '../data/title-III/title-III-subtitle-E.json';
+import titleIIISubtitleF from '../data/title-III/title-III-subtitle-F.json';
+import titleIIISubtitleG from '../data/title-III/title-III-subtitle-G.json';
+import titleIVSubtitleA from '../data/title-IV/title-IV-subtitle-A.json';
+import titleIVSubtitleB from '../data/title-IV/title-IV-subtitle-B.json';
+import titleIVSubtitleC from '../data/title-IV/title-IV-subtitle-C.json';
+import titleIVSubtitleD from '../data/title-IV/title-IV-subtitle-D.json';
+import titleV from '../data/title-V/title-V.json';
+import titleVI from '../data/title-VI/title-VI.json';
+import titleVIISubtitleA from '../data/title-VII/title-VII-subtitle-A.json';
+import titleVIISubtitleB from '../data/title-VII/title-VII-subtitle-B.json';
+import titleVIISubtitleC from '../data/title-VII/title-VII-subtitle-C.json';
+import titleVIIISubtitleA from '../data/title-VIII/title-VIII-subtitle-A.json';
+import titleVIIISubtitleB from '../data/title-VIII/title-VIII-subtitle-B.json';
+import titleVIIISubtitleC from '../data/title-VIII/title-VIII-subtitle-C.json';
+import titleIX from '../data/title-IX/title-IX.json';
+import titleX from '../data/title-X/title-X.json';
+import titleXISubtitleA from '../data/title-XI/title-XI-subtitle-A.json';
+import titleXISubtitleB from '../data/title-XI/title-XI-subtitle-B.json';
+import titleXISubtitleC from '../data/title-XI/title-XI-subtitle-C.json';
+import titleXISubtitleD from '../data/title-XI/title-XI-subtitle-D.json';
 
 export type BillSectionData = {
   titleNumber: string;
@@ -39,7 +39,7 @@ export type BillSectionData = {
   sectionTitle: string;
   sectionText: string;
   summary: string;
-  impact: string;
+  impact: string | string[];
   additionalReferences: string[];
   tags?: string[];  // make not nullable after fixing the data files
   checkedByHumansDate?: string;
@@ -77,57 +77,54 @@ type SubpartToc = {
   title: string;
 }
 
-const TABLE_OF_CONTENTS: TitleToc[] = 
-tocData.titles.map(t => ({
-  number: t.number,
-  name: t.name,
-  subtitles: t.subtitles.map(s => ({
-    letter: s.letter,
-    name: s.name,
-    parts: s.parts.map(p => ({
-      number: p.number,
-      title: p.title,
-      subparts: p.subparts.map(sp => ({
-        letter: sp.letter,
-        title: sp.title,
+const TABLE_OF_CONTENTS: TitleToc[] =
+  tocData.titles.map(t => ({
+    number: t.number,
+    name: t.name,
+    subtitles: t.subtitles.map(s => ({
+      letter: s.letter,
+      name: s.name,
+      parts: s.parts.map(p => ({
+        number: p.number,
+        title: p.title,
+        subparts: p.subparts.map(sp => ({
+          letter: sp.letter,
+          title: sp.title,
+        })),
       })),
     })),
-  })),
-  sections: t.sections,
-}));
+    sections: t.sections,
+  }));
 
 const TITLE_FILES: { title: string, subtitle: string, data: BillSectionData[] }[] = [
-  {title: 'I', subtitle: 'A', data: titleISubtitleA},
-  {title: 'I', subtitle: 'B', data: titleISubtitleB},
-  {title: 'II', subtitle: '', data: titleII},
-  {title: 'III', subtitle: 'A', data: titleIIISubtitleA},
-  {title: 'III', subtitle: 'B', data: titleIIISubtitleB},
-  {title: 'III', subtitle: 'C', data: titleIIISubtitleC},
-  {title: 'III', subtitle: 'D', data: titleIIISubtitleD},
-  {title: 'III', subtitle: 'E', data: titleIIISubtitleE},
-  {title: 'III', subtitle: 'F', data: titleIIISubtitleF},
-  {title: 'III', subtitle: 'G', data: titleIIISubtitleG},
-  {title: 'IV', subtitle: 'A', data: titleIVSubtitleA},
-  {title: 'IV', subtitle: 'B', data: titleIVSubtitleB},
-  {title: 'IV', subtitle: 'C', data: titleIVSubtitleC},
-  {title: 'IV', subtitle: 'D', data: titleIVSubtitleD},
-  {title: 'V', subtitle: '', data: titleV},
-  {title: 'VI', subtitle: '', data: titleVI},
-  {title: 'VII', subtitle: 'A', data: titleVIISubtitleA},
-  // @ts-ignore
-  {title: 'VII', subtitle: 'B', data: titleVIISubtitleB},
-  {title: 'VII', subtitle: 'C', data: titleVIISubtitleC},
-  {title: 'VIII', subtitle: 'A', data: titleVIIISubtitleA},
-  {title: 'VIII', subtitle: 'B', data: titleVIIISubtitleB},
-  {title: 'VIII', subtitle: 'C', data: titleVIIISubtitleC},
-  {title: 'IX', subtitle: '', data: titleIX},
-  {title: 'X', subtitle: '', data: titleX},
-  {title: 'XI', subtitle: 'A', data: titleXISubtitleA},
-  {title: 'XI', subtitle: 'B', data: titleXISubtitleB},
-  // @ts-ignore
-  {title: 'XI', subtitle: 'C', data: titleXISubtitleC},
-  // @ts-ignore
-  {title: 'XI', subtitle: 'D', data: titleXISubtitleD},
+  { title: 'I', subtitle: 'A', data: titleISubtitleA },
+  { title: 'I', subtitle: 'B', data: titleISubtitleB },
+  { title: 'II', subtitle: '', data: titleII },
+  { title: 'III', subtitle: 'A', data: titleIIISubtitleA },
+  { title: 'III', subtitle: 'B', data: titleIIISubtitleB },
+  { title: 'III', subtitle: 'C', data: titleIIISubtitleC },
+  { title: 'III', subtitle: 'D', data: titleIIISubtitleD },
+  { title: 'III', subtitle: 'E', data: titleIIISubtitleE },
+  { title: 'III', subtitle: 'F', data: titleIIISubtitleF },
+  { title: 'III', subtitle: 'G', data: titleIIISubtitleG },
+  { title: 'IV', subtitle: 'A', data: titleIVSubtitleA },
+  { title: 'IV', subtitle: 'B', data: titleIVSubtitleB },
+  { title: 'IV', subtitle: 'C', data: titleIVSubtitleC },
+  { title: 'IV', subtitle: 'D', data: titleIVSubtitleD },
+  { title: 'V', subtitle: '', data: titleV },
+  { title: 'VI', subtitle: '', data: titleVI },
+  { title: 'VII', subtitle: 'A', data: titleVIISubtitleA },
+  { title: 'VII', subtitle: 'B', data: titleVIISubtitleB },
+  { title: 'VII', subtitle: 'C', data: titleVIISubtitleC },
+  { title: 'VIII', subtitle: 'A', data: titleVIIISubtitleA },
+  { title: 'VIII', subtitle: 'B', data: titleVIIISubtitleB },
+  { title: 'VIII', subtitle: 'C', data: titleVIIISubtitleC },
+  { title: 'IX', subtitle: '', data: titleIX },
+  { title: 'X', subtitle: '', data: titleX },
+  { title: 'XI', subtitle: 'A', data: titleXISubtitleA },
+  { title: 'XI', subtitle: 'B', data: titleXISubtitleB },
+  { title: 'XI', subtitle: 'C', data: titleXISubtitleC },
+  { title: 'XI', subtitle: 'D', data: titleXISubtitleD },
 ];
 
 const TITLES = TITLE_FILES.reduce((acc, curr) => {
@@ -152,13 +149,13 @@ const subtitles = computed(() => {
 
     return subtitles;
   }
-  
+
   return [];
 });
 
 const parts = computed(() => {
   const parts: string[] = [];
-  
+
   if (selectedSubtitle.value) {
     jsonData.value?.data.forEach(d => {
       if (d.part && !parts.includes(d.part))
@@ -171,7 +168,7 @@ const parts = computed(() => {
 
 const subparts = computed(() => {
   const subparts: string[] = [];
-  
+
   if (selectedPart.value) {
     jsonData.value?.data.forEach(d => {
       if (d.part === selectedPart.value && d.subpart && !subparts.includes(d.subpart))
@@ -182,9 +179,9 @@ const subparts = computed(() => {
   return subparts;
 });
 
-const jsonData = computed(() => 
+const jsonData = computed(() =>
   TITLE_FILES
-    .filter(f => 
+    .filter(f =>
       (!selectedTitle.value || f.title === selectedTitle.value)
       && (!selectedSubtitle.value || !f.subtitle || f.subtitle === selectedSubtitle.value)
     )
