@@ -219,6 +219,7 @@ const navigateToSection = (sectionNumber: string) => {
 
       .title-header {
         display: flex;
+        align-items: baseline;
         font-size: 1.3em;
         transition: font-size 0.1s ease-in-out, color 0.1s ease-in-out;
 
