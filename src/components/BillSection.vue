@@ -16,9 +16,9 @@
             }}&nbsp;</span>
           </span>
         </div>
-        <p class="summary" @click.stop='showFullSummary = !showFullSummary' role='button'
-          :aria-expanded='showFullSummary'>
-          <span :class='showFullSummary ? "expanded" : ""'>
+        <!-- <p class="summary" @click.stop='showFullSummary = !showFullSummary' role='button' -->
+        <p class="summary">
+          <span class="expanded">
             {{ section.summary }}
           </span>
           <!-- <span role='button' :aria-expanded='showFullSummary'>
@@ -124,15 +124,15 @@ watch(sectionElement, () => {
     }
   }
 
-  :last-child {
-    color: var(--color-text-light);
-  }
+  // :last-child {
+  //   color: var(--color-text-light);
+  // }
 
-  &:hover {
-    :last-child {
-      color: var(--color-primary);
-    }
-  }
+  // &:hover {
+  //   :last-child {
+  //     color: var(--color-primary);
+  //   }
+  // }
 }
 
 .section-header {

@@ -3,7 +3,8 @@
     <section>
       <h1>How can I fight back?</h1>
       <p>
-        Are you <a href='https://www.youtube.com/watch?v=rGIY5Vyj4YM' target='_blank' rel='noopener noreferrer'>mad as hell</a>?
+        Are you <a href='https://www.youtube.com/watch?v=rGIY5Vyj4YM' target='_blank' rel='noopener noreferrer'>mad as
+          hell</a>?
         Are you not going to take this anymore?
       </p>
       <p>
@@ -11,17 +12,23 @@
       </p>
       <p>
         Well, you’re not alone!
-        Many Americans are feeling the 🔥 right now.  
+        Many Americans are feeling the 🔥 right now.
       </p>
       <p>
         Here are a list of suggestions on how to channel your energy into action:
       </p>
       <ul>
-        <li>Contact your representatives to make your voice heard with the help of a utility like <a href='https://5calls.org/' target="_blank">5Calls.org</a>, a fantastic website that helps provide you with prompts and information to easily make five calls to your representatives.</li>
-        <li>Visit the <router-link to="/about">About</router-link> page to learn more about this project and volunteer to help improve it.</li>
-        <li>Get involved with local activist groups, such as <a href='https://www.indivisible.org/' target="_blank">Indivisible</a> or <a href='https://www.50501.org'>50501</a>.</li>
-        <li>Check out news aggregates like <a href='https://ground.news/' target="_blank">Ground News</a> to better evaluate the news you are consuming.</li>
-        <li>Even if you do not cannot participate in person or volunteer, try to do your best to take care of the people around you, and keep your spirits up!  We are all in this together.  🌎</li>
+        <li>Contact your representatives to make your voice heard with the help of a utility like <a
+            href='https://5calls.org/' target="_blank">5Calls.org</a>, a fantastic website that helps provide you with
+          prompts and information to easily make five calls to your representatives.</li>
+        <li>Visit the <router-link to="/about">About</router-link> page to learn more about this project and volunteer
+          to help improve it.</li>
+        <li>Get involved with local activist groups, such as <a href='https://www.indivisible.org/'
+            target="_blank">Indivisible</a> or <a href='https://www.50501.org'>50501</a>.</li>
+        <li>Check out news aggregates like <a href='https://ground.news/' target="_blank">Ground News</a> to better
+          evaluate the news you are consuming.</li>
+        <li>Even if you do not cannot participate in person or volunteer, try to do your best to take care of the people
+          around you, and keep your spirits up! We are all in this together. 🌎</li>
       </ul>
     </section>
     <section class="cta">
@@ -33,7 +40,6 @@
       </p>
       <p>
         Together, <strong>we can make a difference</strong>.
-        Thanks!
       </p>
     </section>
   </div>
@@ -42,7 +48,11 @@
 <style scoped lang='scss'>
 .whats-next {
   padding: 1em 10em;
-  
+  padding-bottom: 0 !important;
+  overflow-y: auto;
+  background: var(--color-section-bg);
+  border-radius: var(--border-radius);
+
   @media (max-width: 1200px) {
     padding: 1em;
 
@@ -53,8 +63,6 @@
 }
 
 section {
-  background: var(--color-section-bg);
-  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
 
@@ -83,7 +91,12 @@ section {
   }
 
   &.cta {
-    padding-bottom: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    position: sticky;
+    background-color: var(--color-section-bg);
+    bottom: 0;
+
     strong {
       color: var(--color-primary);
       font-weight: bold;
@@ -92,6 +105,10 @@ section {
 
     em {
       color: var(--color-primary);
+    }
+
+    p {
+      text-indent: 0;
     }
   }
 }

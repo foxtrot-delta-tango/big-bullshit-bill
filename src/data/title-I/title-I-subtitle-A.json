@@ -50,11 +50,19 @@
     "sectionNumber": "10003",
     "sectionTitle": "Able bodied adults without dependents waivers",
     "sectionText": "SEC. 10003. ABLE BODIED ADULTS WITHOUT DEPENDENTS WAIVERS.\r\n\r\n    Section 6(o) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2015(o)) is amended--\r\n            (1) by amending paragraph (4)(A) to read as follows:\r\n                    ``(A) In general.--On the request of a State agency \r\n                and with the support of the chief executive officer of \r\n                the State, the Secretary may waive the applicability of \r\n                paragraph (2) for not more than 12 consecutive months \r\n                to any group of individuals in the State if the \r\n                Secretary makes a determination that the county, or \r\n                county-equivalent (as recognized by the Census Bureau) \r\n                in which the individuals reside has an unemployment \r\n                rate of over 10 percent.''; and\r\n            (2) in paragraph (6)(F) by striking ``8 percent'' and \r\n        inserting ``1 percent''.",
-    "summary": "This section narrows the conditions under which states can request waivers from SNAP ABAWD work requirements. It sets stricter criteria for job availability metrics and centralizes authority with the federal government.",
-    "impact": "Historically, 30+ states received partial waivers for regions with chronic underemployment. With tighter criteria, millions may lose access to SNAP if they live in economically distressed counties that no longer qualify for relief. State agencies will have reduced flexibility in responding to localized economic hardship.",
+    "summary": "This section narrows the conditions under which states can request waivers from SNAP work requirements by limiting waivers to a 12 month period, removing an exception for areas which do 'not have a sufficient number of jobs to provide employment for the individuals,' and reducing the amount of waivers allowed from a maximum of 8% of covered individuals to only 1%.",
+    "impact": "Historically, 30+ states received partial waivers for regions with chronic underemployment. With tighter criteria, millions may lose access to SNAP if they live in economically distressed counties that no longer qualify for relief despite not actually having jobs for people to work. State agencies will have reduced flexibility in responding to localized economic hardship.",
     "additionalReferences": [
-      "https://www.fns.usda.gov/snap/able-bodied-adults-without-dependents-abawds"
-    ]
+      "https://www.govinfo.gov/content/pkg/COMPS-10331/pdf/COMPS-10331.pdf#page=46",
+      "https://www.cbpp.org/research/food-assistance/waivers-add-key-state-flexibility-to-snaps-three-month-time-limit",
+      "https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-2021-guide-supporting-abawd-time-limit-waiver-requests.pdf"
+    ],
+    "tags": [
+      "SNAP",
+      "USDA",
+      "food"
+    ],
+    "checkedByHumansDate": "2025-06-18"
   },
   {
     "titleNumber": "I",
@@ -62,10 +70,12 @@
     "sectionNumber": "10004",
     "sectionTitle": "Availability of standard utility allowances based on receipt of energy assistance",
     "sectionText": "SEC. 10004. AVAILABILITY OF STANDARD UTILITY ALLOWANCES BASED ON \r\n              RECEIPT OF ENERGY ASSISTANCE.\r\n\r\n    (a) Allowance to Recipients of Energy Assistance.--\r\n            (1) Standard utility allowance.--Section 5(e)(6)(C)(iv)(I) \r\n        of the of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n        2014(e)(6)(C)(iv)(I)) is amended by inserting ``with an elderly \r\n        or disabled member'' after ``households''.\r\n            (2) Conforming amendments.--Section 2605(f)(2)(A) of the \r\n        Low-Income Home Energy Assistance Act is amended by inserting \r\n        ``received by a household with an elderly or disabled member'' \r\n        before ``, consistent with section 5(e)(6)(C)(iv)(I)''.\r\n    (b) Third-party Energy Assistance Payments.--Section 5(k)(4) of the \r\nFood and Nutrition Act of 2008 (7 U.S.C. 2014(k)(4)) is amended--\r\n            (1) in subparagraph (A) by inserting ``without an elderly \r\n        or disabled member'' after ``household'' the 1st place it \r\n        appears; and\r\n            (2) in subparagraph (B) by inserting ``with an elderly or \r\n        disabled member'' after ``household'' the 1st place it appears.",
-    "summary": "Restricts how SNAP applicants can use utility costs to increase benefit amounts. It targets the 'Heat and Eat' loophole, where states issue small energy payments solely to qualify recipients for higher SNAP deductions through SUAs.",
+    "summary": "Restricts how SNAP applicants can use utility costs to increase benefit amounts to only households with elderly or disabled members. It targets the 'Heat and Eat' loophole, where states issue small energy payments solely to qualify recipients for higher SNAP deductions through standard utility allowances.",
     "impact": "Could reduce monthly SNAP benefits for hundreds of thousands of households, particularly in states where small LIHEAP-style payments were used to maximize eligibility. Particularly affects low-income seniors and individuals with disabilities living alone.",
     "additionalReferences": [
-      "https://www.cbpp.org/research/food-assistance/heat-and-eat-snap-policy"
+      "https://www.cbpp.org/research/out-in-the-cold-how-much-liheap-funding-will-be-needed-to-protect-beneficiaries-from",
+      "https://www.govinfo.gov/content/pkg/COMPS-10331/pdf/COMPS-10331.pdf#page=18",
+      "https://www.govinfo.gov/content/pkg/COMPS-10331/pdf/COMPS-10331.pdf#page=28"
     ]
   },
   {

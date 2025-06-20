@@ -3,64 +3,68 @@
     <span>{{ titleData.number }}</span>
     <span>{{ titleData.name }}</span>
   </h2>
-  <div v-if="jsonData" class="content">
-    <template v-if="!titleData.subtitles.length">
+  <div v-if="jsonData" class="viewer">
+    <div v-if="!titleData.subtitles.length" class="sections">
       <BillSection v-for="(section, index) in sections" :key="index" :section="section" />
-    </template>
+    </div>
     <template v-else>
-      <div v-for="subtitle in titleData.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)"
-        :key="subtitle.letter" class="subtitle">
+      <template v-for="subtitle in titleData.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)"
+        :key="subtitle.letter">
         <h3>
-          Subtitle {{ subtitle.letter }} &mdash; {{ subtitle.name }}
+          Subtitle
+          <span>
+            {{ subtitle.letter }}
+          </span>
+          <span>
+            {{ subtitle.name }}
+          </span>
         </h3>
-        <div class="content">
-          <template v-if="!subtitle.parts.length">
-            <BillSection v-for="(section, index) in sections.filter(s => s.subtitle === subtitle.letter)" :key="index"
-              :section="section" />
-          </template>
-          <template v-else>
-            <div v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
-              :key="part.number" class="part">
-              <template v-if="!part.subparts.length">
+        <div v-if="!subtitle.parts.length" class="sections">
+          <BillSection v-for="(section, index) in sections.filter(s => s.subtitle === subtitle.letter)" :key="index"
+            :section="section" />
+        </div>
+        <template v-else>
+          <template v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
+            :key="part.number">
+            <template v-if="!part.subparts.length">
+              <div class="headers">
+                <strong>
+                  Part {{ part.number }}
+                </strong>
+                <span class='highlight'>
+                  {{ part.title }}
+                </span>
+              </div>
+              <div class="sections">
+                <BillSection v-for="(section, index) in sections.filter(s => s.part === part.number)" :key="index"
+                  :section="section" />
+              </div>
+            </template>
+            <template v-else>
+              <template
+                v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())"
+                :key="subpart.letter">
                 <div class="headers">
                   <strong>
-                    Part {{ part.number }}
+                    Part {{ part.number }}{{ subpart.letter }}
                   </strong>
                   <span class='highlight'>
                     {{ part.title }}
                   </span>
+                  <span>
+                    {{ subpart.title }}
+                  </span>
                 </div>
-                <div class="content">
-                  <BillSection v-for="(section, index) in sections.filter(s => s.part === part.number)" :key="index"
-                    :section="section" />
-                </div>
-              </template>
-              <template v-else>
-                <div
-                  v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())"
-                  :key="subpart.letter" class="subpart">
-                  <div class="headers">
-                    <strong>
-                      Part {{ part.number }}{{ subpart.letter }}
-                    </strong>
-                    <span class='highlight'>
-                      {{ part.title }}
-                    </span>
-                    <span>
-                      {{ subpart.title }}
-                    </span>
-                  </div>
-                  <div class="content">
-                    <BillSection
-                      v-for="(section, index) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)"
-                      :key="index" :section="section" />
-                  </div>
+                <div class="sections">
+                  <BillSection
+                    v-for="(section, index) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)"
+                    :key="index" :section="section" />
                 </div>
               </template>
-            </div>
+            </template>
           </template>
-        </div>
-      </div>
+        </template>
+      </template>
     </template>
   </div>
 </template>
@@ -111,14 +115,22 @@ const titleData = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.content {
+.viewer {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-xs);
+  overflow-y: hidden;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  overflow-y: auto;
+  padding: 0 var(--spacing-xs);
 
   @media (max-width: 768px) {
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
   }
 }
 
@@ -141,33 +153,50 @@ const titleData = computed(() => {
     text-underline-offset: 4px;
     margin-bottom: 4px;
   }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
-.subtitle {
-  h3 {
-    text-align: center;
-    font-size: 1.25rem;
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  gap: var(--spacing-xs);
+
+  span:first-child {
+    font-size: 1.5rem;
+  }
+
+  span:last-child {
+    color: var(--color-primary);
+  }
+}
+
+.headers {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-xs);
+
+  .highlight {
+    color: var(--color-primary);
+    font-weight: bold;
     text-transform: uppercase;
   }
 
-  .part {
-    h4 {
-      padding: var(--spacing-xs);
-    }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    row-gap: 0;
 
-    .headers {
-      display: flex !important;
-      flex: 1;
-      align-items: center;
-      padding: var(--spacing-xs);
-      gap: var(--spacing-xs);
-      margin: var(--spacing-sm) 0;
-
-      .highlight {
-        color: var(--color-primary);
-        font-weight: bold;
-        text-transform: uppercase;
-      }
+    strong {
+      font-size: 1.25rem;
     }
   }
 }

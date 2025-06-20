@@ -24,13 +24,14 @@
     </div>
 
     <RouterView />
+
     <footer>
       <section class='links'>
-        <router-link to='/fightback' title="Suggestions on how to make a difference">How to Make a
-          Difference</router-link>
+        <router-link to='/fightback' title="Suggestions on how to make a difference">
+          How to Make a Difference
+        </router-link>
         <router-link to='/about' title='About the Big Bullshit Bill project'>About B💩B</router-link>
       </section>
-      <i @click='backToTheTop' role='button' aria-label='Go back to the top' title='Go back to the top'>☝</i>
     </footer>
   </div>
 </template>
@@ -40,7 +41,7 @@ import { RouterView } from 'vue-router';
 import BaseSelector from './components/BaseSelector.vue';
 import { useBill } from './composables/bill';
 import { useRouter, useRoute } from 'vue-router';
-import { computed, nextTick, onMounted, onUnmounted, watch } from 'vue';
+import { computed, nextTick, onMounted, watch } from 'vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -86,16 +87,13 @@ const setDataFromUrl = () => {
       if (subtitle && subtitles.value.includes(subtitle)) {
         selectSubtitle(subtitle);
       } else {
-        selectSubtitle('');
+        const firstSubtitle = subtitles.value[0];
+        selectSubtitle(firstSubtitle || '');
       }
     });
   } else {
     selectTitle('');
   }
-};
-
-const backToTheTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 onMounted(() => {
@@ -131,14 +129,15 @@ watch(subparts, () => {
   flex-direction: column;
   max-width: min(1200px, 80%);
   margin: 0 auto;
-  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-sm) var(--spacing-lg);
   text-align: left;
+  overflow: hidden;
 
   .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
     width: 100%;
 
     h1 {
@@ -164,6 +163,11 @@ watch(subparts, () => {
       flex-wrap: wrap;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-sm);
+    max-width: 90%;
+  }
 }
 
 footer {
@@ -171,8 +175,7 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: var(--spacing-xs);
-  padding: var(--spacing-sm) 0;
+  padding: 0.5em 0;
 
   .links {
     display: flex;
@@ -187,17 +190,6 @@ footer {
       &:hover {
         color: var(--color-primary);
       }
-    }
-  }
-
-  i {
-    cursor: pointer;
-    font-size: 1.25rem;
-    color: var(--color-text-light);
-    transition: color 0.1s ease-in-out;
-
-    &:hover {
-      filter: drop-shadow(0 0 10px var(--color-primary)) drop-shadow(0 0 10px var(--color-primary));
     }
   }
 }

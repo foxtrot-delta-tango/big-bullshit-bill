@@ -35,6 +35,7 @@
             <div v-for="section in getSectionsForTitleSubtitle(title, subtitle.letter)" :key="section.number"
               class="section">
               <div class="section-header" @click="navigateToSection(section.number)">
+                <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
                 Sec. {{ section.number }}. {{ section.title }}
               </div>
             </div>
@@ -43,17 +44,16 @@
               <ExpandableSection v-for="part in subtitle.parts" :key="part.number"
                 :title="`Part ${part.number}${part.title ? ` - ${part.title}` : ''}`" class="part">
                 <template #title>
-                  <div v-if="part.title" class="part-header">
-                    Part {{ part.number }}--{{ part.title }}
-                  </div>
-                  <div v-else class="part-header">
-                    Part {{ part.number }}
+                  <div class="part-header">
+                    Part <span class="part-number">{{ part.number }}</span> <span class="part-title">{{ part.title
+                    }}</span>
                   </div>
                 </template>
 
                 <div v-for="section in getSectionsForTitleSubtitlePart(title, subtitle.letter, part.number)"
                   :key="section.number" class="section">
                   <div class="section-header" @click="navigateToSection(section.number)">
+                    <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
                     Sec. {{ section.number }}. {{ section.title }}
                   </div>
                 </div>
@@ -63,7 +63,8 @@
                     :title="`Subpart ${subpart.letter} - ${subpart.title}`" class="subpart">
                     <template #title>
                       <div class="subpart-header">
-                        Subpart {{ subpart.letter }}--{{ subpart.title }}
+                        Subpart <span class="subpart-letter">{{ subpart.letter }}</span> <span class="subpart-title">{{
+                          subpart.title }}</span>
                       </div>
                     </template>
 
@@ -71,7 +72,7 @@
                       v-for="section in getSectionsForTitleSubtitlePartSubpart(title, subtitle.letter, part.number, subpart.letter)"
                       :key="section.number" class="section">
                       <div class="section-header" @click="navigateToSection(section.number)">
-                        {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }}
+                        <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
                         Sec. {{ section.number }}. {{ section.title }}
                       </div>
                     </div>
@@ -84,6 +85,7 @@
         <template v-else>
           <div v-for="section in getSectionsForTitle(title)" :key="section.number" class="section">
             <div class="section-header" @click="navigateToSection(section.number)">
+              <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
               Sec. {{ section.number }}. {{ section.title }}
             </div>
           </div>
@@ -179,10 +181,14 @@ const navigateToSection = (sectionNumber: string) => {
 
 <style lang="scss" scoped>
 .table-of-contents {
-  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md) var(--spacing-xs);
+  padding-top: 0;
   background: var(--color-section-bg);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  overflow: auto;
 
   .toc-intro {
     text-align: center;
@@ -201,6 +207,11 @@ const navigateToSection = (sectionNumber: string) => {
     text-transform: uppercase;
     font-size: 2em;
     white-space: nowrap;
+    position: sticky;
+    top: 0;
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    background-color: var(--color-section-bg);
 
     @media (max-width: 600px) {
       font-size: 1.75em;
@@ -214,6 +225,12 @@ const navigateToSection = (sectionNumber: string) => {
   }
 
   .toc-content {
+    padding: 0 var(--spacing-sm);
+
+    @media (min-width: 1200px) {
+      overflow-y: auto;
+    }
+
     .title {
       margin-bottom: var(--spacing-md);
 
@@ -266,6 +283,7 @@ const navigateToSection = (sectionNumber: string) => {
         font-weight: bold;
         color: var(--color-text-light);
         display: flex;
+        align-items: baseline;
 
         .subtitle-letter {
           font-weight: bold;
@@ -276,6 +294,7 @@ const navigateToSection = (sectionNumber: string) => {
         .subtitle-name {
           font-size: 1.2em;
           color: var(--color-text);
+          transition: color 0.1s ease-in-out;
         }
 
         @media (max-width: 768px) {
@@ -301,7 +320,27 @@ const navigateToSection = (sectionNumber: string) => {
 
       .part-header {
         font-weight: 600;
-        color: var(--color-text);
+        color: var(--color-text-light);
+
+        .part-title {
+          color: var(--color-text);
+        }
+
+        >* {
+          transition: color 0.1s ease-in-out;
+        }
+      }
+
+      &:hover {
+        .part-number {
+          color: var(--color-text);
+          font-weight: bold;
+        }
+
+        .part-title {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
       }
     }
 
@@ -311,7 +350,27 @@ const navigateToSection = (sectionNumber: string) => {
 
       .subpart-header {
         font-weight: 500;
-        color: var(--color-text);
+        color: var(--color-text-light);
+
+        .subpart-title {
+          color: var(--color-text);
+        }
+
+        >* {
+          transition: color 0.1s ease-in-out;
+        }
+      }
+
+      &:hover {
+        .subpart-letter {
+          color: var(--color-text);
+          font-weight: bold;
+        }
+
+        .subpart-title {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
       }
     }
 
@@ -321,6 +380,7 @@ const navigateToSection = (sectionNumber: string) => {
         border-radius: 0.67rem;
         color: var(--color-text);
         cursor: pointer;
+        transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
 
         &:hover {
           color: var(--color-primary);
