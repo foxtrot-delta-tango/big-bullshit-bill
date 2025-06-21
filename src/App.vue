@@ -1,25 +1,27 @@
 <template>
   <div class="container">
     <div class="header">
-      <h1 @click="navigateToToc" :title="showingTableOfContents ? 'Big Bullshit Bill' : 'Back to Table of Contents'">Big
+      <h1 @click="handleTitleClick" :title="getHeaderTitle()">Big
         🐘💩 Bill</h1>
+      <div v-show='showingBillView' class="menu" :class="{ 'visible': shouldShowSelectors }">
+        <div class="selectors">
+          <BaseSelector v-if="TITLE_FILES.length > 0" label="Title" :options="TITLES" :value="selectedTitle"
+            @update="navigateToTitle" />
 
-      <div v-show="showingBillView || showingTableOfContents" class="selectors">
-        <BaseSelector v-if="TITLE_FILES.length > 0" label="Title" :options="TITLES" :value="selectedTitle"
-          @update="navigateToTitle" />
+          <template v-if="showingBillView">
+            <BaseSelector label="Subtitle" :options="subtitles" :value="selectedSubtitle"
+              :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
 
-        <template v-if="showingBillView">
-          <BaseSelector label="Subtitle" :options="subtitles" :value="selectedSubtitle"
-            :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
+            <template v-if="parts.length > 0">
+              <BaseSelector label="Part" :options="parts" :value="selectedPart" @update="selectPart"
+                :disabled="!selectedSubtitle" />
 
-          <template v-if="parts.length > 0">
-            <BaseSelector label="Part" :options="parts" :value="selectedPart" @update="selectPart"
-              :disabled="!selectedSubtitle" />
-
-            <BaseSelector label="Subpart" :options="subparts" :value="selectedSubpart" @update="selectSubpart"
-              :disabled="!subparts.length || !selectedPart" />
+              <BaseSelector label="Subpart" :options="subparts" :value="selectedSubpart" @update="selectSubpart"
+                :disabled="!subparts.length || !selectedPart" />
+            </template>
           </template>
-        </template>
+        </div>
+        <router-link to='/'>Back to Table of Contents</router-link>
       </div>
     </div>
 
@@ -41,7 +43,7 @@ import { RouterView } from 'vue-router';
 import BaseSelector from './components/BaseSelector.vue';
 import { useBill } from './composables/bill';
 import { useRouter, useRoute } from 'vue-router';
-import { computed, nextTick, onMounted, watch } from 'vue';
+import { computed, nextTick, onMounted, ref, watch } from 'vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -62,8 +64,31 @@ const {
   selectSubpart,
 } = useBill();
 
+const selectorsVisible = ref(false);
+
 const showingTableOfContents = computed(() => route.path === '/');
 const showingBillView = computed(() => route.name === 'bill');
+
+const shouldShowSelectors = computed(() => showingBillView.value && selectorsVisible.value);
+
+const getHeaderTitle = () => {
+  if (showingTableOfContents.value) return 'Big Bullshit Bill';
+  if (showingBillView.value) {
+    return selectorsVisible.value ? 'Hide navigation' : 'Show navigation';
+  }
+
+  return 'Back to Table of Contents';
+};
+
+const handleTitleClick = () => {
+  if (showingTableOfContents.value) {
+    return;
+  } else if (showingBillView.value) {
+    selectorsVisible.value = !selectorsVisible.value;
+  } else {
+    navigateToToc();
+  }
+};
 
 const navigateToTitle = (title: string) => {
   router.push({ path: `/${title}` });
@@ -102,6 +127,10 @@ onMounted(() => {
 
 watch(route, () => {
   setDataFromUrl();
+
+  if (showingBillView.value) {
+    selectorsVisible.value = false;
+  }
 });
 
 watch(subtitles, () => {
@@ -156,11 +185,38 @@ watch(subparts, () => {
       }
     }
 
-    .selectors {
+    .menu {
       display: flex;
-      gap: 0 var(--spacing-md);
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.25s ease-out;
+      gap: var(--spacing-xs);
+
+      .selectors {
+        display: flex;
+        gap: 0 var(--spacing-md);
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      >:last-child {
+        color: var(--color-text-light);
+        font-style: italic;
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.1s ease-in-out;
+
+        &:hover,
+        &:focus {
+          color: var(--color-primary);
+        }
+      }
+
+      &.visible {
+        max-height: 500px;
+      }
     }
   }
 

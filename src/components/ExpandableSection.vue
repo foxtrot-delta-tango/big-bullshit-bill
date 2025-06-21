@@ -74,7 +74,7 @@ const toggle = () => {
     transition: max-height var(--transition-duration) ease-out;
 
     &.is-expanded {
-      max-height: 2000px;
+      max-height: 10000px;
       transition: max-height 0.5s ease-in;
     }
 
@@ -83,7 +83,15 @@ const toggle = () => {
       background-color: var(--color-bg);
       color: var(--color-text);
       text-align: left;
+
+      @media (max-width: 768px) {
+        padding: var(--spacing-xs);
+      }
+
+      @media (max-width: 425px) {
+        padding: calc(var(--spacing-xs) / 2);
+      }
     }
   }
 }
-</style> 
+</style>

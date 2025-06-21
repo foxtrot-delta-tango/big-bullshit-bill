@@ -34,9 +34,7 @@
       <div class="section">
         <div class="section-content">
           <h3>Impact&nbsp;</h3>
-          <p v-if='section.impact && typeof section.impact === "string"'>
-            {{ section.impact }}
-          </p>
+          <p v-if='section.impact && typeof section.impact === "string"' v-html="markdownImpact" />
           <template v-else>
             <p v-for='paragraph in section.impact'>
               {{ paragraph }}
@@ -66,6 +64,7 @@ import ExpandableSection from './ExpandableSection.vue';
 import type { BillSectionData } from '../composables/bill';
 import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
+import { marked } from 'marked';
 
 const router = useRouter();
 
@@ -78,6 +77,16 @@ const sectionElement = ref<HTMLElement | null>(null);
 const showFullSummary = ref(true);
 
 const verificationDate = computed(() => props.section.checkedByHumansDate ? new Date(props.section.checkedByHumansDate).toLocaleDateString('en-US') : '');
+
+const markdownImpact = computed(() => {
+  const impact = props.section.impact;
+  if (typeof impact === 'string') {
+    return marked(impact);
+  } else if (Array.isArray(impact)) {
+    return marked(impact.join('\n\n'));
+  }
+  return '';
+});
 
 watch(sectionElement, () => {
   if (sectionElement.value) {
@@ -121,6 +130,37 @@ watch(sectionElement, () => {
       max-height: 100vh;
       line-clamp: unset;
       -webkit-line-clamp: unset;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    code {
+      background-color: var(--color-section-bg);
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+
+    ul,
+    ol {
+      margin: 0.5em 0;
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin: 0.2em 0;
     }
   }
 
