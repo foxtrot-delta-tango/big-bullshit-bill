@@ -25,11 +25,7 @@
             Show {{ showFullSummary ? 'Less' : 'More' }}
           </span> -->
         </p>
-        <div class="section-tags">
-          <span v-for="tag in section.tags" :key="tag" class="tag">
-            {{ tag }}
-          </span>
-        </div>
+        <Tags v-if='section.tags' :tags="section.tags" />
       </template>
       <div class="section">
         <div class="section-content">
@@ -65,6 +61,7 @@ import type { BillSectionData } from '../composables/bill';
 import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { marked } from 'marked';
+import Tags from './Tags.vue';
 
 const router = useRouter();
 
@@ -209,22 +206,6 @@ watch(sectionElement, () => {
     &.verified {
       border-color: var(--color-primary);
     }
-  }
-}
-
-.section-tags {
-  display: flex;
-  margin-left: auto;
-  gap: var(--spacing-xs);
-  flex-wrap: wrap;
-
-
-  >* {
-    font-size: 0.8rem;
-    padding: calc(0.5 * var(--spacing-xs)) var(--spacing-sm);
-    background-color: var(--color-section-bg);
-    border-radius: 0.8em;
-    text-transform: uppercase;
   }
 }
 

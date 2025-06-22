@@ -11,6 +11,16 @@
       "https://www.brookings.edu/articles/a-new-risk-sharing-proposal-to-hold-colleges-accountable/",
       "https://www.gao.gov/products/gao-23-104707",
       "https://www.crs.gov/Reports/R45418"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "risk sharing",
+      "accountability",
+      "institutions",
+      "repayment",
+      "public assistance",
+      "loan reimbursement"
     ]
   },
   {
@@ -24,6 +34,14 @@
     "additionalReferences": [
       "https://www.urban.org/sites/default/files/2022-11/Promising%20Practices%20for%20College%20Promise%20Programs.pdf",
       "https://sites.ed.gov/nudgingforsuccess/files/2017/05/SHEEO_affordability.pdf"
+    ],
+    "tags": [
+      "education",
+      "higher education",
+      "student aid",
+      "grants",
+      "public assistance",
+      "metrics"
     ]
   }
 ]

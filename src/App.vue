@@ -8,18 +8,14 @@
           <BaseSelector v-if="TITLE_FILES.length > 0" label="Title" :options="TITLES" :value="selectedTitle"
             @update="navigateToTitle" />
 
-          <template v-if="showingBillView">
-            <BaseSelector label="Subtitle" :options="subtitles" :value="selectedSubtitle"
-              :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
+          <BaseSelector label="Subtitle" :options="subtitles" :value="selectedSubtitle"
+            :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
 
-            <template v-if="parts.length > 0">
-              <BaseSelector label="Part" :options="parts" :value="selectedPart" @update="selectPart"
-                :disabled="!selectedSubtitle" />
+          <BaseSelector label="Part" :options="parts" :value="selectedPart" @update="selectPart"
+            :disabled="!parts.length || !selectedSubtitle" />
 
-              <BaseSelector label="Subpart" :options="subparts" :value="selectedSubpart" @update="selectSubpart"
-                :disabled="!subparts.length || !selectedPart" />
-            </template>
-          </template>
+          <BaseSelector label="Subpart" :options="subparts" :value="selectedSubpart" @update="selectSubpart"
+            :disabled="!subparts.length || !selectedPart" />
         </div>
         <router-link to='/'>Back to Table of Contents</router-link>
       </div>
@@ -48,6 +44,8 @@ import { computed, nextTick, onMounted, ref, watch } from 'vue';
 const router = useRouter();
 const route = useRoute();
 
+const SHOW_SELECTORS_SETTING_KEY = 'show-selectors';
+
 const {
   TITLE_FILES,
   TITLES,
@@ -64,7 +62,7 @@ const {
   selectSubpart,
 } = useBill();
 
-const selectorsVisible = ref(false);
+const selectorsVisible = ref((localStorage.getItem(SHOW_SELECTORS_SETTING_KEY) ?? 'true') === 'true');
 
 const showingTableOfContents = computed(() => route.path === '/');
 const showingBillView = computed(() => route.name === 'bill');
@@ -127,10 +125,6 @@ onMounted(() => {
 
 watch(route, () => {
   setDataFromUrl();
-
-  if (showingBillView.value) {
-    selectorsVisible.value = false;
-  }
 });
 
 watch(subtitles, () => {
@@ -149,6 +143,10 @@ watch(subparts, () => {
   if (subparts.value.length) {
     selectSubpart(subparts.value[0]);
   }
+});
+
+watch(selectorsVisible, (newValue) => {
+  localStorage.setItem(SHOW_SELECTORS_SETTING_KEY, newValue.toString());
 });
 </script>
 

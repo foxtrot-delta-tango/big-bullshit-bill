@@ -10,6 +10,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R48442",
       "https://fsapartners.ed.gov/knowledge-center/library/handbooks"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "immigration",
+      "citizenship",
+      "higher education",
+      "public assistance"
     ]
   },
   {
@@ -24,6 +32,13 @@
       "https://www.gao.gov/products/gao-23-104708",
       "https://www.newamerica.org/education-policy/edcentral/the-median-cost-of-attendance-plan-a-recipe-for-student-aid-chaos/",
       "https://nces.ed.gov/ipeds/cipcode/"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "higher education",
+      "public assistance",
+      "assets"
     ]
   }
 ]

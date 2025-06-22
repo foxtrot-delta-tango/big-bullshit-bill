@@ -10,6 +10,21 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-105797",
       "https://www.axios.com/2024/02/07/military-barracks-living-conditions-bases-congress"
+    ],
+    "tags": [
+      "DoD",
+      "housing",
+      "infrastructure",
+      "childcare",
+      "education",
+      "workforce",
+      "public assistance",
+      "households",
+      "Army",
+      "Navy",
+      "Air Force",
+      "Marine Corps",
+      "Space Force"
     ]
   },
   {
@@ -23,6 +38,19 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/RL/RL32665",
       "https://comptroller.defense.gov/Portals/45/Documents/defbudget/FY2025/FY2025_Budget_Request_Overview_Book.pdf"
+    ],
+    "tags": [
+      "DoD",
+      "infrastructure",
+      "procurement",
+      "supply chain",
+      "manufacturing",
+      "workforce",
+      "technology",
+      "grants",
+      "Navy",
+      "Marine Corps",
+      "defense contracts"
     ]
   },
   {
@@ -35,6 +63,18 @@
     "impact": "Strengthens deterrence against Russian/Chinese hypersonics, yet GAO finds DoD’s hypersonic portfolio already at high risk of cost and schedule overruns. Space-layer programs may trigger arms-race dynamics and invite ASAT counter-measures; sensor fusion and data-rights conflicts could delay operational testing. Directed-energy lines depend on immature power-scaling tech and rare-earth supply chains.",
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-106792"
+    ],
+    "tags": [
+      "DoD",
+      "technology",
+      "infrastructure",
+      "workforce",
+      "national security",
+      "R&D",
+      "space",
+      "homeland security",
+      "missile defense",
+      "Army"
     ]
   },
   {
@@ -47,6 +87,21 @@
     "impact": "Large multiyear contracts can stabilize suppliers but risk single-source dependence if second-source initiatives slip. GAO flags that DoD industrial-base reporting omits key risk priorities, hindering Congress’s ability to track bottlenecks. Critical-mineral loans may overlap with DOE programs, and environmental permitting delays could nullify near-term output goals. Rapid automation rollout could disrupt an aging skilled-labor cohort before new training pipelines mature.",
     "additionalReferences": [
       "https://files.gao.gov/reports/GAO-25-107215/index.html"
+    ],
+    "tags": [
+      "DoD",
+      "manufacturing",
+      "infrastructure",
+      "workforce",
+      "supply chain",
+      "technology",
+      "grants",
+      "munitions",
+      "critical minerals",
+      "Navy",
+      "Marine Corps",
+      "Army",
+      "Air Force"
     ]
   },
   {
@@ -60,6 +115,17 @@
     "additionalReferences": [
       "https://comptroller.defense.gov/Portals/45/Documents/defbudget/FY2025/FY2025_Budget_Request_Overview_Book.pdf",
       "https://files.gao.gov/reports/GAO-25-107215/index.html"
+    ],
+    "tags": [
+      "DoD",
+      "technology",
+      "workforce",
+      "infrastructure",
+      "AI",
+      "military communications",
+      "cybersecurity",
+      "grants",
+      "weapons development"
     ]
   },
   {
@@ -72,6 +138,17 @@
     "impact": "Could advance DoD’s long-overdue clean-audit goal, but GAO notes persistent data-quality gaps and systems-integration failures across services. Automation may replace legacy clerical roles before retraining paths exist, prompting workforce pushback. Cyber tool-sprawl without common data standards risks duplicative R&D and weak interoperability.",
     "additionalReferences": [
       "https://www.gao.gov/products/gao-25-107421"
+    ],
+    "tags": [
+      "DoD",
+      "technology",
+      "AI",
+      "workforce",
+      "automation",
+      "audit",
+      "personnel",
+      "information systems",
+      "cybersecurity"
     ]
   },
   {
@@ -84,6 +161,16 @@
     "impact": "Extending legacy fleets (F-15E/F-22) buys time for sixth-generation designs but sustains high sustainment costs and parts obsolescence. New CCA autonomy tech faces policy, safety-certification and rules of engagement uncertainties. Production lines must juggle simultaneous export and U.S. demand, heightening supply-chain stress.",
     "additionalReferences": [
       "https://comptroller.defense.gov/Portals/45/Documents/defbudget/FY2025/FY2025_Budget_Request_Overview_Book.pdf"
+    ],
+    "tags": [
+      "DoD",
+      "aviation",
+      "infrastructure",
+      "technology",
+      "logistics",
+      "modernization",
+      "Navy",
+      "Air Force"
     ]
   },
   {
@@ -98,6 +185,16 @@
       "https://crsreports.congress.gov/product/pdf/R/R48194",
       "https://www.reuters.com/world/us/us-nuclear-force-costs-projected-soar-946-billion-through-2034-cbo-says-2025-04-24/",
       "https://en.wikipedia.org/wiki/LGM-35_Sentinel"
+    ],
+    "tags": [
+      "DoD",
+      "infrastructure",
+      "nuclear",
+      "modernization",
+      "technology",
+      "national security",
+      "weapons development",
+      "NNSA"
     ]
   },
   {
@@ -110,6 +207,22 @@
     "impact": "Bolsters deterrence posture but risks duplicative MILCON without host-nation agreements. Forward fuel and munitions stockpiles remain vulnerable to missile strikes, and dispersed basing increases sustainment costs. Allies may view economic-competition funds as industrial policy favoring U.S. firms, complicating coalition buy-in.",
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF12604"
+    ],
+    "tags": [
+      "DoD",
+      "infrastructure",
+      "alliances",
+      "deterrence",
+      "workforce",
+      "technology",
+      "cybersecurity",
+      "space",
+      "regional security",
+      "Indo-Pacific",
+      "Marine Corps",
+      "Army",
+      "Air Force",
+      "Space Force"
     ]
   },
   {
@@ -123,6 +236,22 @@
     "additionalReferences": [
       "https://files.gao.gov/reports/GAO-25-107215/index.html",
       "https://comptroller.defense.gov/Portals/45/Documents/defbudget/FY2025/FY2025_Budget_Request_Overview_Book.pdf"
+    ],
+    "tags": [
+      "DoD",
+      "infrastructure",
+      "workforce",
+      "logistics",
+      "aviation",
+      "modernization",
+      "personnel",
+      "National Guard",
+      "ground vehicles",
+      "military readiness",
+      "Navy",
+      "Marine Corps",
+      "Army",
+      "Air Force"
     ]
   },
   {
@@ -135,6 +264,18 @@
     "impact": "GAO warns that prolonged border support degrades unit-level readiness and lacks clear cost-benefit metrics. Expanded detention operations could expose DoD to legal challenges over Posse Comitatus limits and humanitarian standards, while diverting specialized aviation assets from global contingencies.",
     "additionalReferences": [
       "https://www.gao.gov/products/gao-21-356"
+    ],
+    "tags": [
+      "DoD",
+      "border security",
+      "infrastructure",
+      "workforce",
+      "law enforcement",
+      "personnel",
+      "aviation",
+      "readiness",
+      "detention",
+      "counter-narcotics"
     ]
   },
   {
@@ -147,6 +288,18 @@
     "impact": "Should sharpen decision-advantage, yet classification levels hinder Congressional benchmarking of cost and schedule. Rapid AI adoption may outpace validation of training data, increasing the risk of false-positive target identification and allied data-sharing friction.",
     "additionalReferences": [
       "https://comptroller.defense.gov/Portals/45/Documents/defbudget/FY2025/FY2025_Budget_Request_Overview_Book.pdf"
+    ],
+    "tags": [
+      "DoD",
+      "military intelligence",
+      "technology",
+      "AI",
+      "cybersecurity",
+      "space",
+      "personnel",
+      "national security",
+      "data analysis",
+      "classified programs"
     ]
   },
   {
@@ -159,6 +312,17 @@
     "impact": "Boosts oversight but funding equals <0.02 % of new Title II spending, raising concern that IG staffing will be outmatched by the program scope. GAO notes DoD’s lagging record in closing open recommendations, highlighting execution-risk persistence.",
     "additionalReferences": [
       "https://www.gao.gov/assets/gao-24-107327.pdf"
+    ],
+    "tags": [
+      "DoD",
+      "oversight",
+      "Inspector General",
+      "supply chain",
+      "accountability",
+      "monitoring",
+      "technology",
+      "program evaluation",
+      "risk management"
     ]
   },
   {
@@ -171,6 +335,15 @@
     "impact": "Early transparency can deter scope-creep, yet compressed 30-day planning windows risk incomplete cost estimates. Projects delayed by environmental impact statements could lose contractor bids in a hot construction market, pushing unit-costs higher.",
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R47582"
+    ],
+    "tags": [
+      "DoD",
+      "infrastructure",
+      "accountability",
+      "environmental review",
+      "cost estimates",
+      "military construction",
+      "grants"
     ]
   },
   {
@@ -183,6 +356,16 @@
     "impact": "Improves accountability, but historical delays in NNSA reporting suggest timelines may slip. Misalignment between DoD and DOE accounting systems could complicate unified reporting, obscuring true burn-rates.",
     "additionalReferences": [
       "https://www.gao.gov/products/gao-25-107421"
+    ],
+    "tags": [
+      "DoD",
+      "accountability",
+      "reporting",
+      "compliance",
+      "NNSA",
+      "DOE",
+      "financial management",
+      "annual reports"
     ]
   },
   {
@@ -195,6 +378,14 @@
     "impact": "Creates a hard sunset that guards against indefinite projects but may incentivize end-of-period spending spikes (‘use-it-or-lose-it’) that historically drive contracting errors and cost overruns. Pandemic-like disruptions could force costly reprogramming requests if schedules slip past the cut-off.",
     "additionalReferences": [
       "https://www.gao.gov/products/gao-25-107215"
+    ],
+    "tags": [
+      "DoD",
+      "appropriations",
+      "funding limits",
+      "obligations",
+      "financial management",
+      "compliance"
     ]
   }
 ]

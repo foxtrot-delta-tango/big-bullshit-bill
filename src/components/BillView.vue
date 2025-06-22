@@ -1,15 +1,14 @@
 <template>
   <h2 class="title">
-    <span>{{ titleData.number }}</span>
-    <span>{{ titleData.name }}</span>
+    <span>{{ title.number }}</span>
+    <span>{{ title.name }}</span>
   </h2>
-  <div v-if="jsonData" class="viewer">
-    <div v-if="!titleData.subtitles.length" class="sections">
-      <BillSection v-for="(section, index) in sections" :key="index" :section="section" />
+  <div class="viewer">
+    <div v-if="!title.subtitles.length" class="sections">
+      <BillSection v-for="(section, key) in sections" :key :section />
     </div>
     <template v-else>
-      <template v-for="subtitle in titleData.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)"
-        :key="subtitle.letter">
+      <template v-for="subtitle in title.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)">
         <h3>
           Subtitle
           <span>
@@ -20,8 +19,7 @@
           </span>
         </h3>
         <div v-if="!subtitle.parts.length" class="sections">
-          <BillSection v-for="(section, index) in sections.filter(s => s.subtitle === subtitle.letter)" :key="index"
-            :section="section" />
+          <BillSection v-for="(section, key) in sections.filter(s => s.subtitle === subtitle.letter)" :key :section />
         </div>
         <template v-else>
           <template v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
@@ -36,8 +34,7 @@
                 </span>
               </div>
               <div class="sections">
-                <BillSection v-for="(section, index) in sections.filter(s => s.part === part.number)" :key="index"
-                  :section="section" />
+                <BillSection v-for="(section, key) in sections.filter(s => s.part === part.number)" :key :section />
               </div>
             </template>
             <template v-else>
@@ -57,8 +54,8 @@
                 </div>
                 <div class="sections">
                   <BillSection
-                    v-for="(section, index) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)"
-                    :key="index" :section="section" />
+                    v-for="(section, key) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)" :key
+                    :section />
                 </div>
               </template>
             </template>
@@ -76,14 +73,14 @@ import { computed } from 'vue';
 import tocData from '../data/toc.json';
 
 const {
-  jsonData,
+  subtitleData,
   selectedTitle,
   selectedSubtitle,
   selectedPart,
   selectedSubpart
 } = useBill();
 
-const sections = computed(() => jsonData.value?.data
+const sections = computed(() => subtitleData.value
   .filter(d => {
     if (selectedPart.value && selectedSubpart.value) {
       return d.part === selectedPart.value && d.subpart === selectedSubpart.value
@@ -95,7 +92,7 @@ const sections = computed(() => jsonData.value?.data
   })
 );
 
-const titleData = computed(() => {
+const title = computed(() => {
   let result: TitleToc = {
     number: '',
     name: '',

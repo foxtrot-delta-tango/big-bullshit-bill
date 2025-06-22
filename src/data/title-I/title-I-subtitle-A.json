@@ -18,8 +18,13 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "food security",
+      "nutrition",
+      "cost of living",
+      "public assistance",
+      "food policy",
+      "inflation",
+      "households"
     ],
     "checkedByHumansDate": "2025-06-15"
   },
@@ -39,10 +44,14 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
+      "work requirements",
       "seniors",
       "childcare",
-      "public assistance"
+      "public assistance",
+      "employment",
+      "eligibility",
+      "poverty",
+      "food security"
     ],
     "checkedByHumansDate": "2025-06-15"
   },
@@ -62,8 +71,14 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "work requirements",
+      "waivers",
+      "state policy",
+      "unemployment",
+      "eligibility",
+      "public assistance",
+      "poverty",
+      "food security"
     ],
     "checkedByHumansDate": "2025-06-18"
   },
@@ -84,8 +99,14 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "utilities",
+      "energy assistance",
+      "public assistance",
+      "LIHEAP",
+      "food security",
+      "seniors",
+      "households",
+      "poverty"
     ],
     "checkedByHumansDate": "2025-06-21"
   },
@@ -101,8 +122,13 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "utilities",
+      "internet access",
+      "public assistance",
+      "education",
+      "households",
+      "cost of living",
+      "food security"
     ]
   },
   {
@@ -123,8 +149,13 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "state funding",
+      "public assistance",
+      "cost sharing",
+      "payment errors",
+      "state policy",
+      "program integrity",
+      "food security"
     ],
     "checkedByHumansDate": "2025-06-21"
   },
@@ -143,8 +174,13 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "state funding",
+      "public assistance",
+      "administration",
+      "staffing",
+      "cost sharing",
+      "state policy",
+      "program integrity"
     ],
     "checkedByHumansDate": "2025-06-21"
   },
@@ -162,9 +198,14 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
+      "work requirements",
       "public assistance",
-      "seniors"
+      "seniors",
+      "eligibility",
+      "age limits",
+      "employment",
+      "households",
+      "food security"
     ]
   },
   {
@@ -173,7 +214,7 @@
     "sectionNumber": "10009",
     "sectionTitle": "National Accuracy Clearinghouse",
     "sectionText": "SEC. 10009. NATIONAL ACCURACY CLEARINGHOUSE.\r\n\r\n    Section 11(x)(2) of the Food and Nutrition Act of 2008 (7 U.S.C. \r\n2020(x)(2)) is amended by adding at the end the following:\r\n                    ``(D) Data sharing to prevent other multiple \r\n                issuances.--A State agency shall use each indication of \r\n                multiple issuance, or each indication that an \r\n                individual receiving supplemental nutrition assistance \r\n                program benefits in 1 State has applied to receive \r\n                supplemental nutrition assistance program benefits in \r\n                another State, to prevent multiple issuances of other \r\n                Federal and State assistance program benefits that a \r\n                State agency administers through the integrated \r\n                eligibility system that the State uses to administer \r\n                the supplemental nutrition assistance program in the \r\n                State.''.",
-    "summary": "Adds a clause at the end of the existing National Accuracy Clearinghouse legislation allowing the State to freeze other Federal and State benefits if an individual is found to be collecting SNAP in more than one state at the same time.",
+    "summary": "Adds a clause at the end of the existing National Accuracy Clearinghouse legislation allowing the State to freeze other Federal and State benefits in addition to SNAP if an individual is found to be collecting SNAP in more than one state at the same time.",
     "impact": "Could reduce fraud and administrative waste, but raises concerns over false positives and access disruptions from database errors.  May discourage states from enrolling marginally eligible households due to fear of penalties. Could increase administrative burden right when the Federal government will be contributing less for administrative costs (see Sec. 10007).",
     "additionalReferences": [
       "https://www.govinfo.gov/content/pkg/COMPS-10331/pdf/COMPS-10331.pdf#page=90",
@@ -182,8 +223,13 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "fraud prevention",
+      "public assistance",
+      "program integrity",
+      "state policy",
+      "administration",
+      "data sharing",
+      "eligibility"
     ]
   },
   {
@@ -200,8 +246,11 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
-      "public assistance"
+      "program integrity",
+      "public assistance",
+      "oversight",
+      "state policy",
+      "eligibility"
     ]
   },
   {
@@ -219,10 +268,13 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
       "public assistance",
       "education",
-      "childcare"
+      "nutrition",
+      "children",
+      "food security",
+      "health",
+      "schools"
     ]
   },
   {
@@ -239,9 +291,12 @@
     "tags": [
       "SNAP",
       "USDA",
-      "food",
       "public assistance",
-      "immigration"
+      "immigration",
+      "refugees",
+      "eligibility",
+      "food security",
+      "non-citizens"
     ]
   },
   {
@@ -259,10 +314,14 @@
       "https://kffhealthnews.org/news/article/food-banks-snap-benefits-federal-cuts-rural-needs/"
     ],
     "tags": [
-      "USDA",
       "TEFAP",
-      "food",
-      "public assistance"
+      "USDA",
+      "food security",
+      "public assistance",
+      "infrastructure",
+      "grants",
+      "emergency aid",
+      "nutrition"
     ]
   }
 ]

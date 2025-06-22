@@ -10,6 +10,16 @@
     "additionalReferences": [
       "https://nces.ed.gov/pubs2023/2023145.pdf",
       "https://www.crs.gov/Reports/R46506"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "higher education",
+      "public assistance",
+      "credit requirements",
+      "family income",
+      "higher education",
+      "grants"
     ]
   },
   {
@@ -23,6 +33,13 @@
     "additionalReferences": [
       "https://www.brookings.edu/research/short-term-credentials/",
       "https://www.cbo.gov/publication/59895"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "grants",
+      "workforce",
+      "higher education"
     ]
   },
   {
@@ -35,6 +52,16 @@
     "impact": "• **Program solvency** – According to the Congressional Budget Office the Pell fund faced a $6.3 B cumulative shortfall by FY 2028 under current law; the increases here close that gap and create a small surplus through 2031, reducing pressure on annual appropriations.\n• **Predictability for students & colleges** – Minimises risk of mid-year proration or eligibility cuts as occurred in 2011-12.\n• **Budgetary trade-off** – Increases mandatory outlays by ~$12 B over ten years, partially offset by eligibility restrictions elsewhere in the subtitle.",
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2024-03/59031-PellBaseline.pdf"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "public assistance",
+      "appropriations",
+      "program solvency",
+      "reserve funds",
+      "higher education",
+      "grants"
     ]
   }
 ]

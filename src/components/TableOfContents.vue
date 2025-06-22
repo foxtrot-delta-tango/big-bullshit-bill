@@ -28,6 +28,7 @@
             <span class="sections-list">
               {{ getSectionListText(title) }}
             </span>
+            <Tags :tags="getTags(title).map(t => t.tag)" :max-shown='5' color='light' :active-tags='selectedTags' />
           </div>
         </template>
 
@@ -37,12 +38,14 @@
             <template #title>
               <div class="subtitle-header">
                 <span class="subtitle-text">
-                  <span>Subtitle <span class="subtitle-letter">{{ subtitle.letter }}</span></span>
-                  <span class="subtitle-name">&nbsp;{{ subtitle.name }}&nbsp;</span>
+                  <span>Subtitle <span class="subtitle-letter">{{ subtitle.letter }}&nbsp;</span></span>
+                  <span class="subtitle-name">{{ subtitle.name }}</span>
                 </span>
                 <span class="sections-list">
                   {{ getSectionListText(title, subtitle.letter) }}
                 </span>
+                <Tags :tags="getTags(title, subtitle.letter).map(t => t.tag)" :max-shown='5' color='light'
+                  :active-tags='selectedTags' />
               </div>
             </template>
 
@@ -53,11 +56,13 @@
                   <div class="part-header">
                     <span class="part-text">
                       Part <span class="part-number">{{ part.number }}</span> <span class="part-title">{{ part.title
-                      }}</span>
+                        }}</span>
                     </span>
                     <div class="sections-list">
                       {{ getSectionListText(title, subtitle.letter, part.number) }}
                     </div>
+                    <Tags :tags="getTags(title, subtitle.letter, part.number).map(t => t.tag)" :max-shown='5'
+                      color='light' :active-tags='selectedTags' />
                   </div>
                 </template>
 
@@ -75,6 +80,8 @@
                         <div class="sections-list">
                           {{ getSectionListText(title, subtitle.letter, part.number, subpart.letter) }}
                         </div>
+                        <Tags :tags="getTags(title, subtitle.letter, part.number, subpart.letter).map(t => t.tag)"
+                          :max-shown='5' color='light' :active-tags='selectedTags' />
                       </div>
                     </template>
 
@@ -109,7 +116,7 @@
           </ExpandableSection>
         </template>
         <template v-else>
-          <template v-for="section in getSections(title)" :key="section.number">
+          <template v-for="section in title.sections" :key="section.number">
             <div class="section" @click="navigateToSection(section.number)">
               <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
               <span>Sec. {{ section.number }}.</span> <span>{{ section.title }}</span>
@@ -122,41 +129,19 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useRouter, type Router } from 'vue-router';
 import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
-import { useBill } from '../composables/bill';
+import { useBill, type TitleToc } from '../composables/bill';
+import Tags from './Tags.vue';
 
 const router: Router = useRouter();
-const { TITLE_FILES } = useBill();
+const { ALL_TAGS, getSection, getTags } = useBill();
 
-type Section = {
-  number: string;
-  title: string;
-  subtitle?: string;
-  part?: string;
-  subpart?: string;
-}
+const selectedTags = ref<string[]>([]);
 
-type Title = {
-  number: string;
-  name: string;
-  subtitles: Array<{
-    letter: string;
-    name: string;
-    parts: Array<{
-      number: string;
-      title: string;
-      subparts: Array<{
-        letter: string;
-        title: string;
-      }>;
-    }>;
-  }>;
-  sections: Section[];
-}
-
-const getSections = (title: Title, subtitle?: string, part?: string, subpart?: string) => {
+const getSections = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
   return title.sections.filter(s => {
     if (subtitle && s.subtitle !== subtitle) return false;
     if (part && s.part !== part) return false;
@@ -165,17 +150,13 @@ const getSections = (title: Title, subtitle?: string, part?: string, subpart?: s
   });
 };
 
-const getSectionListText = (title: Title, subtitle?: string, part?: string, subpart?: string) => {
+const getSectionListText = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
   const sections = getSections(title, subtitle, part, subpart);
 
   if (sections.length === 0) return '';
   if (sections.length === 1) return `Sec. ${sections[0].number}`;
 
   return `Sec. ${sections[0].number} - ${sections[sections.length - 1].number}`;
-};
-
-const getSection = (sectionNumber: string) => {
-  return TITLE_FILES.flatMap(t => t.data).find(t => t.sectionNumber === sectionNumber);
 };
 
 const navigateToSection = (sectionNumber: string) => {
@@ -205,7 +186,13 @@ const navigateToSection = (sectionNumber: string) => {
 
   .toc-intro {
     text-align: center;
-    margin: 0 10em;
+    margin: 0 8em;
+    margin-bottom: 0.5em;
+    color: var(--color-text-light);
+
+    >p {
+      margin: 0.5em 0;
+    }
 
     @media (max-width: 1200px) {
       margin: 0 1em;
@@ -250,7 +237,6 @@ const navigateToSection = (sectionNumber: string) => {
         display: flex;
         flex-direction: column;
         font-size: 1.3em;
-        transition: font-size 0.1s ease-in-out, color 0.1s ease-in-out;
 
         .title-text {
           display: flex;
@@ -278,6 +264,8 @@ const navigateToSection = (sectionNumber: string) => {
               }
             }
           }
+
+          @media (max-width: 960px) {}
         }
 
         .sections-list {
@@ -293,13 +281,17 @@ const navigateToSection = (sectionNumber: string) => {
         .title-header {
           .title-subject {
             color: var(--color-primary);
-            font-size: 1.2em;
-            text-decoration: underline dashed;
+            font-size: 1.15em;
+            text-decoration: underline;
             text-decoration-thickness: 1px;
             text-underline-offset: 4px;
             text-decoration-color: var(--color-text);
           }
         }
+      }
+
+      @media (max-width: 960px) {
+        margin-bottom: var(--spacing-xs);
       }
     }
 
@@ -341,6 +333,11 @@ const navigateToSection = (sectionNumber: string) => {
           text-decoration-color: var(--color-text);
         }
       }
+
+      @media (max-width: 960px) {
+        margin-left: var(--spacing-xs);
+        margin-bottom: var(--spacing-xs);
+      }
     }
 
     .part {
@@ -369,7 +366,15 @@ const navigateToSection = (sectionNumber: string) => {
 
         .part-title {
           color: var(--color-primary);
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          text-decoration-color: var(--color-text-light);
         }
+      }
+
+      @media (max-width: 960px) {
+        margin-left: var(--spacing-xs);
+        margin-bottom: var(--spacing-xs);
       }
     }
 
@@ -396,7 +401,7 @@ const navigateToSection = (sectionNumber: string) => {
           }
 
           >* {
-            transition: color 0.1s ease-in-out, font-weight 0.1s ease-in-out;
+            transition: color 0.1s ease-in-out;
           }
         }
 
@@ -407,13 +412,21 @@ const navigateToSection = (sectionNumber: string) => {
       }
 
       &:hover {
-        .subpart-letter {
-          color: var(--color-text);
-        }
+        .subpart-header {
+          .subpart-letter {
+            color: var(--color-text);
+          }
 
-        .subpart-title {
-          color: var(--color-primary);
+          .subpart-title {
+            color: var(--color-primary);
+            font-weight: 500;
+          }
         }
+      }
+
+      @media (max-width: 960px) {
+        margin-left: var(--spacing-xs);
+        margin-bottom: var(--spacing-xs);
       }
     }
 
@@ -422,7 +435,7 @@ const navigateToSection = (sectionNumber: string) => {
       border-radius: 0.67rem;
       color: var(--color-text);
       cursor: pointer;
-      transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+      transition: background-color 0.1s ease-in-out;
       display: flex;
       align-items: baseline;
       column-gap: var(--spacing-xs);
@@ -463,6 +476,10 @@ const navigateToSection = (sectionNumber: string) => {
       font-weight: 400;
       font-variant: small-caps;
       font-style: italic;
+    }
+
+    .tags {
+      margin-top: 0.5em;
     }
 
     @media (max-width: 960px) {

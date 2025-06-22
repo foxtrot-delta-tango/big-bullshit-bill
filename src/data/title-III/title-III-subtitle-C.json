@@ -11,6 +11,13 @@
       "https://crsreports.congress.gov/product/pdf/R/R47586",
       "https://www.cbo.gov/publication/59895",
       "https://www.gao.gov/products/gao-24-106080"
+    ],
+    "tags": [
+      "education",
+      "student loans",
+      "student aid",
+      "loan forgiveness",
+      "public assistance"
     ]
   },
   {
@@ -24,6 +31,14 @@
     "additionalReferences": [
       "https://www.urban.org/sites/default/files/publication/103600/broken-safety-net.pdf",
       "https://files.consumerfinance.gov/f/documents/cfpb_student-loan-forbearance-abuse_report_2022-04.pdf"
+    ],
+    "tags": [
+      "education",
+      "student loans",
+      "student aid",
+      "deferment",
+      "public assistance",
+      "higher education"
     ]
   },
   {
@@ -37,6 +52,14 @@
     "additionalReferences": [
       "https://www2.ed.gov/offices/OSFAP/defaultmanagement/collection.html",
       "https://pewtrusts.org/en/research-and-analysis/issue-briefs/2023/06/loan-rehabilitation"
+    ],
+    "tags": [
+      "education",
+      "higher education",
+      "student loans",
+      "student aid",
+      "public assistance",
+      "borrower protections"
     ]
   },
   {
@@ -49,6 +72,16 @@
     "impact": "• Positive: prevents loss of credit for RAP users, smoothing the pathway for teachers, social-service workers and military personnel.\n• Negative: Roughly 24 k medical residents per cohort rely on PSLF; excluding post-2025 cohorts could steer graduates away from nonprofit hospitals and rural residency slots already experiencing shortages, according to the AAMC.﻿⁸\n• Equity: New veterinarian, nurse-practitioner and other health-profession residencies remain eligible, creating uneven treatment across medical professions.",
     "additionalReferences": [
       "https://www.aamc.org/media/99076/download"
+    ],
+    "tags": [
+      "education",
+      "higher education",
+      "student loans",
+      "student aid",
+      "public service",
+      "loan forgiveness",
+      "healthcare workforce",
+      "public assistance"
     ]
   },
   {
@@ -61,6 +94,15 @@
     "impact": "• ED estimates transitioning every borrower file to the NextGen servicing platform will cost $1.1 B through 2027; the appropriation covers ~90 % of the near-term gap but leaves no dedicated funds after FY 2026. A funding cliff could delay full deployment of borrower-facing dashboards and income-data sharing with IRS.﻿⁹\n• Without sustained resources, servicers may re-impose call-time limits and trim outreach, undermining RAP uptake and default-aversion initiatives.\n• If appropriations committees offset discretionary servicing dollars in response, total administrative capacity could remain flat, muting the intended improvement.",
     "additionalReferences": [
       "https://www.ed.gov/sites/default/files/ocfo/documents/fy2025-budget-justification.pdf"
+    ],
+    "tags": [
+      "education",
+      "higher education",
+      "student loans",
+      "student aid",
+      "public assistance",
+      "technology",
+      "counseling"
     ]
   }
 ]

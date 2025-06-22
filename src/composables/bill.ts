@@ -45,19 +45,11 @@ export type BillSectionData = {
   checkedByHumansDate?: string;
 }
 
-type SectionToc = {
-  number: string;
-  title: string;
-  subtitle?: string;
-  part?: string;
-  subpart?: string;
-}
-
 export type TitleToc = {
   number: string;
   name: string;
   subtitles: Array<SubtitleToc>
-  sections: SectionToc[] | BillSectionData[];
+  sections: SectionToc[];
 }
 
 type SubtitleToc = {
@@ -75,6 +67,14 @@ type PartToc = {
 type SubpartToc = {
   letter: string;
   title: string;
+}
+
+type SectionToc = {
+  number: string;
+  title: string;
+  subtitle?: string;
+  part?: string;
+  subpart?: string;
 }
 
 const TABLE_OF_CONTENTS: TitleToc[] =
@@ -96,35 +96,35 @@ const TABLE_OF_CONTENTS: TitleToc[] =
     sections: t.sections,
   }));
 
-const TITLE_FILES: { title: string, subtitle: string, data: BillSectionData[] }[] = [
-  { title: 'I', subtitle: 'A', data: titleISubtitleA },
-  { title: 'I', subtitle: 'B', data: titleISubtitleB },
-  { title: 'II', subtitle: '', data: titleII },
-  { title: 'III', subtitle: 'A', data: titleIIISubtitleA },
-  { title: 'III', subtitle: 'B', data: titleIIISubtitleB },
-  { title: 'III', subtitle: 'C', data: titleIIISubtitleC },
-  { title: 'III', subtitle: 'D', data: titleIIISubtitleD },
-  { title: 'III', subtitle: 'E', data: titleIIISubtitleE },
-  { title: 'III', subtitle: 'F', data: titleIIISubtitleF },
-  { title: 'III', subtitle: 'G', data: titleIIISubtitleG },
-  { title: 'IV', subtitle: 'A', data: titleIVSubtitleA },
-  { title: 'IV', subtitle: 'B', data: titleIVSubtitleB },
-  { title: 'IV', subtitle: 'C', data: titleIVSubtitleC },
-  { title: 'IV', subtitle: 'D', data: titleIVSubtitleD },
-  { title: 'V', subtitle: '', data: titleV },
-  { title: 'VI', subtitle: '', data: titleVI },
-  { title: 'VII', subtitle: 'A', data: titleVIISubtitleA },
-  { title: 'VII', subtitle: 'B', data: titleVIISubtitleB },
-  { title: 'VII', subtitle: 'C', data: titleVIISubtitleC },
-  { title: 'VIII', subtitle: 'A', data: titleVIIISubtitleA },
-  { title: 'VIII', subtitle: 'B', data: titleVIIISubtitleB },
-  { title: 'VIII', subtitle: 'C', data: titleVIIISubtitleC },
-  { title: 'IX', subtitle: '', data: titleIX },
-  { title: 'X', subtitle: '', data: titleX },
-  { title: 'XI', subtitle: 'A', data: titleXISubtitleA },
-  { title: 'XI', subtitle: 'B', data: titleXISubtitleB },
-  { title: 'XI', subtitle: 'C', data: titleXISubtitleC },
-  { title: 'XI', subtitle: 'D', data: titleXISubtitleD },
+const TITLE_FILES: { title: string, subtitle: string, sections: BillSectionData[] }[] = [
+  { title: 'I', subtitle: 'A', sections: titleISubtitleA },
+  { title: 'I', subtitle: 'B', sections: titleISubtitleB },
+  { title: 'II', subtitle: '', sections: titleII },
+  { title: 'III', subtitle: 'A', sections: titleIIISubtitleA },
+  { title: 'III', subtitle: 'B', sections: titleIIISubtitleB },
+  { title: 'III', subtitle: 'C', sections: titleIIISubtitleC },
+  { title: 'III', subtitle: 'D', sections: titleIIISubtitleD },
+  { title: 'III', subtitle: 'E', sections: titleIIISubtitleE },
+  { title: 'III', subtitle: 'F', sections: titleIIISubtitleF },
+  { title: 'III', subtitle: 'G', sections: titleIIISubtitleG },
+  { title: 'IV', subtitle: 'A', sections: titleIVSubtitleA },
+  { title: 'IV', subtitle: 'B', sections: titleIVSubtitleB },
+  { title: 'IV', subtitle: 'C', sections: titleIVSubtitleC },
+  { title: 'IV', subtitle: 'D', sections: titleIVSubtitleD },
+  { title: 'V', subtitle: '', sections: titleV },
+  { title: 'VI', subtitle: '', sections: titleVI },
+  { title: 'VII', subtitle: 'A', sections: titleVIISubtitleA },
+  { title: 'VII', subtitle: 'B', sections: titleVIISubtitleB },
+  { title: 'VII', subtitle: 'C', sections: titleVIISubtitleC },
+  { title: 'VIII', subtitle: 'A', sections: titleVIIISubtitleA },
+  { title: 'VIII', subtitle: 'B', sections: titleVIIISubtitleB },
+  { title: 'VIII', subtitle: 'C', sections: titleVIIISubtitleC },
+  { title: 'IX', subtitle: '', sections: titleIX },
+  { title: 'X', subtitle: '', sections: titleX },
+  { title: 'XI', subtitle: 'A', sections: titleXISubtitleA },
+  { title: 'XI', subtitle: 'B', sections: titleXISubtitleB },
+  { title: 'XI', subtitle: 'C', sections: titleXISubtitleC },
+  { title: 'XI', subtitle: 'D', sections: titleXISubtitleD },
 ];
 
 const TITLES = TITLE_FILES.reduce((acc, curr) => {
@@ -134,10 +134,37 @@ const TITLES = TITLE_FILES.reduce((acc, curr) => {
   return acc;
 }, [] as string[]);
 
+const ALL_TAGS = TITLE_FILES.reduce((tags, currentTitle) => {
+  const { sections } = currentTitle;
+
+  if (sections.length) {
+    sections.forEach(section => {
+      if (section.tags?.length) {
+        section.tags.forEach(tag => {
+          if (!tags.includes(tag)) {
+            tags.push(tag);
+          }
+        });
+      }
+    });
+  }
+
+  return tags;
+}, [] as string[]);
+
 const selectedTitle = ref('');
 const selectedSubtitle = ref('');
 const selectedPart = ref('');
 const selectedSubpart = ref('');
+
+const titleData = computed(() =>
+  TITLE_FILES
+    .filter(f => f.title === selectedTitle.value)
+    .reduce((acc, curr) => {
+      acc.push(...curr.sections);
+      return acc;
+    }, [] as BillSectionData[])
+);
 
 const subtitles = computed(() => {
   const subtitles: string[] = [];
@@ -153,11 +180,23 @@ const subtitles = computed(() => {
   return [];
 });
 
+const subtitleData = computed(() =>
+  TITLE_FILES
+    .filter(f =>
+      (!selectedTitle.value || f.title === selectedTitle.value)
+      && (!selectedSubtitle.value || !f.subtitle || f.subtitle === selectedSubtitle.value)
+    )
+    .reduce((acc, curr) => {
+      acc.push(...curr.sections);
+      return acc;
+    }, [] as BillSectionData[])
+);
+
 const parts = computed(() => {
   const parts: string[] = [];
 
   if (selectedSubtitle.value) {
-    jsonData.value?.data.forEach(d => {
+    subtitleData.value?.forEach(d => {
       if (d.part && !parts.includes(d.part))
         parts.push(d.part);
     });
@@ -166,32 +205,49 @@ const parts = computed(() => {
   return parts;
 });
 
+const partData = computed(() => subtitleData.value.filter(s => !selectedPart.value || s.part === selectedPart.value));
+
 const subparts = computed(() => {
   const subparts: string[] = [];
 
   if (selectedPart.value) {
-    jsonData.value?.data.forEach(d => {
-      if (d.part === selectedPart.value && d.subpart && !subparts.includes(d.subpart))
-        subparts.push(d.subpart);
+    partData.value?.forEach(p => {
+      if (p.part === selectedPart.value && p.subpart && !subparts.includes(p.subpart))
+        subparts.push(p.subpart);
     });
   }
 
   return subparts;
 });
 
-const jsonData = computed(() =>
-  TITLE_FILES
-    .filter(f =>
-      (!selectedTitle.value || f.title === selectedTitle.value)
-      && (!selectedSubtitle.value || !f.subtitle || f.subtitle === selectedSubtitle.value)
-    )
-    .reduce((acc, curr) => {
-      acc.data.push(...curr.data);
-      return acc;
-    }, {
-      data: [] as BillSectionData[]
-    })
-);
+const subpartData = computed(() => partData.value.filter(s => !selectedSubpart.value || s.subpart === selectedSubpart.value));
+
+const currentTags = computed(() => {
+  let data = [] as BillSectionData[];
+
+  if (selectedSubpart.value) {
+    data = subpartData.value;
+  } else if (selectedPart.value) {
+    data = partData.value;
+  } else if (selectedSubtitle.value) {
+    data = subtitleData.value;
+  } else {
+    data = titleData.value;
+  }
+
+  const tags: string[] = [];
+  data.forEach(section => {
+    if (section.tags) {
+      section.tags.forEach(tag => {
+        if (!tags.includes(tag)) {
+          tags.push(tag);
+        }
+      });
+    }
+  });
+
+  return tags;
+});
 
 const selectTitle = (title: string) => {
   selectedTitle.value = title;
@@ -215,22 +271,62 @@ const selectSubpart = (subpart: string) => {
   selectedSubpart.value = subpart;
 };
 
+const getSection = (sectionNumber: string) => {
+  return TITLE_FILES.flatMap(t => t.sections).find(t => t.sectionNumber === sectionNumber);
+};
+
+const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
+  const tags: { tag: string, count: number }[] = [];
+
+  const sections = TITLE_FILES.filter(t => t.title === title.number)
+    .flatMap(t => t.sections)
+    .filter(s => {
+      if (subtitle && s.subtitle !== subtitle) return false;
+      if (part && s.part !== part) return false;
+      if (subpart && s.subpart?.toLowerCase() !== subpart) return false;
+      return true;
+    });
+
+  sections.forEach(section => {
+    if (section.tags) {
+      section.tags.forEach(tag => {
+        const existingTag = tags.find(t => t.tag === tag)
+        if (existingTag) {
+          existingTag.count++;
+        } else {
+          tags.push({ tag, count: 1 });
+        }
+      });
+    }
+  });
+
+  tags.sort((a, b) => b.count - a.count);
+  return tags;
+};
+
 export function useBill() {
   return {
     TABLE_OF_CONTENTS,
     TITLE_FILES,
+    ALL_TAGS,
     TITLES,
-    subtitles,
-    jsonData,
-    parts,
-    subparts,
     selectedTitle,
     selectedSubtitle,
     selectedPart,
     selectedSubpart,
+    titleData,
+    subtitles,
+    subtitleData,
+    parts,
+    partData,
+    subparts,
+    subpartData,
+    currentTags,
     selectTitle,
     selectSubtitle,
     selectPart,
-    selectSubpart
+    selectSubpart,
+    getSection,
+    getTags
   };
 } 
