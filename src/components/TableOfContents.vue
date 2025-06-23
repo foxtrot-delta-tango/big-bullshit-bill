@@ -208,6 +208,7 @@ const navigateToSection = (sectionNumber: string) => {
     white-space: nowrap;
     position: sticky;
     top: 0;
+    z-index: 1;
     padding-top: var(--spacing-xs);
     padding-bottom: var(--spacing-xs);
     background-color: var(--color-section-bg);

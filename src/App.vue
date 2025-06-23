@@ -1,24 +1,17 @@
 <template>
   <div class="container">
     <div class="header">
-      <h1 @click="handleTitleClick" :title="getHeaderTitle()">Big
-        🐘💩 Bill</h1>
-      <div v-show='showingBillView' class="menu" :class="{ 'visible': shouldShowSelectors }">
-        <div class="selectors">
-          <BaseSelector v-if="TITLE_FILES.length > 0" label="Title" :options="TITLES" :value="selectedTitle"
-            @update="navigateToTitle" />
-
-          <BaseSelector label="Subtitle" :options="subtitles" :value="selectedSubtitle"
-            :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
-
-          <BaseSelector label="Part" :options="parts" :value="selectedPart" @update="selectPart"
-            :disabled="!parts.length || !selectedSubtitle" />
-
-          <BaseSelector label="Subpart" :options="subparts" :value="selectedSubpart" @update="selectSubpart"
-            :disabled="!subparts.length || !selectedPart" />
-        </div>
-        <router-link to='/'>Back to Table of Contents</router-link>
-      </div>
+      <button :class='{ "visible": showingBillView && !selectorsVisible }' @click.stop='toggleNavigationPopup'
+        title='Show navigation popup'>
+        📝
+      </button>
+      <h1 @click="handleTitleClick" :title="getHeaderTitle()" :disabled='showingTableOfContents ? true : undefined'>
+        Big 🐘💩 Bill
+      </h1>
+      <button :class='{ "visible": !showingTableOfContents && !selectorsVisible }' @click.stop='navigateToToc'
+        title='Return to Table of Contents'>
+        🏠
+      </button>
     </div>
 
     <RouterView />
@@ -36,67 +29,52 @@
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
-import BaseSelector from './components/BaseSelector.vue';
 import { useBill } from './composables/bill';
+import { useMenu } from './composables/menu';
 import { useRouter, useRoute } from 'vue-router';
 import { computed, nextTick, onMounted, ref, watch } from 'vue';
 
 const router = useRouter();
 const route = useRoute();
 
-const SHOW_SELECTORS_SETTING_KEY = 'show-selectors';
-
 const {
-  TITLE_FILES,
   TITLES,
   subtitles,
   parts,
   subparts,
-  selectedTitle,
-  selectedSubtitle,
-  selectedPart,
-  selectedSubpart,
   selectTitle,
   selectSubtitle,
   selectPart,
   selectSubpart,
 } = useBill();
 
-const selectorsVisible = ref((localStorage.getItem(SHOW_SELECTORS_SETTING_KEY) ?? 'true') === 'true');
+const {
+  selectorsVisible,
+  toggleNavigationPopup
+} = useMenu();
 
 const showingTableOfContents = computed(() => route.path === '/');
 const showingBillView = computed(() => route.name === 'bill');
 
-const shouldShowSelectors = computed(() => showingBillView.value && selectorsVisible.value);
-
 const getHeaderTitle = () => {
   if (showingTableOfContents.value) return 'Big Bullshit Bill';
-  if (showingBillView.value) {
-    return selectorsVisible.value ? 'Hide navigation' : 'Show navigation';
-  }
-
-  return 'Back to Table of Contents';
+  return 'Return to Table of Contents';
 };
 
 const handleTitleClick = () => {
   if (showingTableOfContents.value) {
     return;
-  } else if (showingBillView.value) {
-    selectorsVisible.value = !selectorsVisible.value;
   } else {
     navigateToToc();
   }
 };
 
-const navigateToTitle = (title: string) => {
-  router.push({ path: `/${title}` });
-};
-
-const navigateToSubtitle = (subtitle: string) => {
-  router.push({ path: `/${selectedTitle.value}/${subtitle}` });
-};
-
 const navigateToToc = () => {
+  if (showingBillView.value) {
+    const verify = confirm('Do you want to go back to the Table of Contents?');
+    if (!verify) return;
+  }
+
   router.push({ path: '/' });
 };
 
@@ -144,10 +122,6 @@ watch(subparts, () => {
     selectSubpart(subparts.value[0]);
   }
 });
-
-watch(selectorsVisible, (newValue) => {
-  localStorage.setItem(SHOW_SELECTORS_SETTING_KEY, newValue.toString());
-});
 </script>
 
 <style lang="scss" scoped>
@@ -162,7 +136,7 @@ watch(selectorsVisible, (newValue) => {
 
   .header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-xs);
     width: 100%;
@@ -174,8 +148,14 @@ watch(selectorsVisible, (newValue) => {
       cursor: pointer;
       transition: color 0.1s ease-in-out;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--color-primary);
+      }
+
+      &[disabled] {
+        cursor: default;
+        color: unset;
       }
 
       @media (max-width: 600px) {
@@ -183,37 +163,16 @@ watch(selectorsVisible, (newValue) => {
       }
     }
 
-    .menu {
+    button {
+      opacity: 0;
+      pointer-events: none;
+      width: 2.4em;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.25s ease-out;
-      gap: var(--spacing-xs);
-
-      .selectors {
-        display: flex;
-        gap: 0 var(--spacing-md);
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      >:last-child {
-        color: var(--color-text-light);
-        font-style: italic;
-        text-decoration: none;
-        font-weight: 400;
-        transition: color 0.1s ease-in-out;
-
-        &:hover,
-        &:focus {
-          color: var(--color-primary);
-        }
-      }
+      justify-content: center;
 
       &.visible {
-        max-height: 500px;
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }

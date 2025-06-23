@@ -40,9 +40,10 @@ const toggle = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
     cursor: pointer;
     text-align: left;
+    outline: none;
+    border-color: transparent;
 
     .title {
       font-weight: 600;
@@ -61,7 +62,10 @@ const toggle = () => {
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
+      background-color: var(--color-bg-hover);
+
       .icon {
         color: var(--color-primary);
       }
@@ -71,11 +75,13 @@ const toggle = () => {
   .content {
     max-height: 0;
     overflow: hidden;
+    pointer-events: none;
     transition: max-height var(--transition-duration) ease-out;
 
     &.is-expanded {
       max-height: 10000px;
       transition: max-height 0.5s ease-in;
+      pointer-events: all;
     }
 
     .content-inner {
