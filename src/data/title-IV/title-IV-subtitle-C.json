@@ -12,6 +12,19 @@
       "https://www.ntia.gov/spectrum-management",
       "https://docs.fcc.gov/public/attachments/DOC-397203A1.pdf",
       "https://www.ctia.org/news/midband-spectrum-will-drive-the-u-s-5g-economy"
+    ],
+    "tags": [
+      "technology",
+      "telecommunications",
+      "spectrum",
+      "FCC",
+      "NTIA",
+      "auction",
+      "infrastructure",
+      "appropriations",
+      "commerce",
+      "DoD",
+      "NOAA"
     ]
   },
   {
@@ -27,6 +40,19 @@
       "https://crsreports.congress.gov/product/pdf/IF/IF12294",
       "https://www.nist.gov/itl/ai-risk-management-framework",
       "https://www.whitehouse.gov/ostp/ai-bill-of-rights/"
+    ],
+    "tags": [
+      "technology",
+      "AI",
+      "information systems",
+      "cybersecurity",
+      "administration",
+      "appropriations",
+      "commerce",
+      "federal pre-emption",
+      "consumer protection",
+      "civil rights",
+      "data sharing"
     ]
   }
 ]

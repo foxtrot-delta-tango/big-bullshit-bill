@@ -1,14 +1,23 @@
 <template>
   <div class="expandable-section">
     <button class="header" @click="toggle">
-      <span class="title">
-        <slot name="title">{{ title }}</slot>
-      </span>
+      <div class="info">
+        <span class="title">
+          <slot name="title">{{ title }}</slot>
+        </span>
+        <!-- <p class="summary" @click.stop='showFullSummary = !showFullSummary' role='button' -->
+        <p class="summary">
+          <slot name="summary" />
+          <!-- <span>
+            Show {{ showFullSummary ? 'Less' : 'More' }}
+          </span> -->
+        </p>
+      </div>
       <span class="icon" :class="{ 'is-expanded': isExpanded }">▼</span>
     </button>
     <div class="content" :class="{ 'is-expanded': isExpanded }">
       <div class="content-inner">
-        <slot></slot>
+        <slot />
       </div>
     </div>
   </div>
@@ -45,11 +54,27 @@ const toggle = () => {
     outline: none;
     border-color: transparent;
 
-    .title {
-      font-weight: 600;
-      color: var(--color-text);
+    .info {
+      display: flex;
+      flex-direction: column;
       margin-right: var(--spacing-sm);
+
+      .title {
+        font-weight: 600;
+        color: var(--color-text);
+      }
+
+      .summary {
+        color: var(--color-text-light);
+        margin: 0;
+        transition: color var(--transition-duration) ease;
+
+        &.expanded {
+          color: var(--color-text);
+        }
+      }
     }
+
 
     .icon {
       font-size: 0.9rem;

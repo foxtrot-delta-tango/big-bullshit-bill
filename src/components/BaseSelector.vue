@@ -1,19 +1,11 @@
 <template>
   <div class="base-selector">
-    <label :for="label">{{ label }}</label>
-    <select 
-      :id="label" 
-      :value
-      @change="handleChange"
-      class="select-dropdown"
-      :disabled="disabled"
-      :placeholder="placeholder"
-    >
-      <option 
-        v-for="option in options" 
-        :key="option" 
-        :value="option"
-      >
+    <label :for="label">
+      {{ label }}
+    </label>
+    <select :id="label" :value @change="handleChange" class="select-dropdown" :disabled="disabled"
+      :placeholder="placeholder">
+      <option v-for="option in options" :key="option" :value="option">
         {{ option }}
       </option>
     </select>
@@ -22,9 +14,9 @@
 
 <script setup lang="ts">
 defineProps<{
-  label: string;
   options: string[];
   value: string;
+  label?: string;
   disabled?: boolean;
   placeholder?: string;
 }>();
@@ -66,4 +58,4 @@ label {
   font-weight: bold;
   white-space: nowrap;
 }
-</style> 
+</style>

@@ -42,15 +42,16 @@
                 Those which are unverified will have a <i>?</i>.
             </p>
             <p>
-                If you would like to volunteer to join us (please, please help, lol), just send us a message at one of
+                If you would like to volunteer to join us (please, please help 😀), just send us a message at one of
                 our contacts (listed below) with what you'd be available to help with, and we'll go from there.
             </p>
         </section>
         <section>
             <h1>Coming Soon</h1>
             <ul>
-                <li>Verification of all information by human viewers.</li>
-                <li>Tags and filtering.</li>
+                <li>Filtering by tag.</li>
+                <li>Viewing sections from more than one title/subtitle/part/subpart simultaneously.</li>
+                <li>Verification of all information by human reviewers.</li>
             </ul>
         </section>
         <section class='contact'>
@@ -78,6 +79,11 @@ h1 {
     flex-direction: column;
     gap: 1em;
     overflow-y: auto;
+
+    @media (max-width: 1200px) {
+        padding: 4em;
+    }
+
 
     @media (max-width: 768px) {
         padding: 1em;
@@ -151,14 +157,12 @@ section {
         }
     }
 
-    @media (max-width: 768px) {
-        &.contact>div {
-            flex-direction: row;
+    &.contact>div {
+        display: flex;
 
-            >a {
-                margin: 0 0.25em;
-                text-decoration: none;
-            }
+        >a {
+            margin: 0 0.25em;
+            text-decoration: none;
         }
     }
 }

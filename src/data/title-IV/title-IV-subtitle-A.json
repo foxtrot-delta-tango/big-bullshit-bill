@@ -13,6 +13,18 @@
       "https://crsreports.congress.gov/product/pdf/IN/IN12049",
       "https://www.whitehouse.gov/cleanenergy/",
       "https://www.utilitydive.com/news/ira-transmission-grants-section-50152-50153/699834/"
+    ],
+    "tags": [
+      "energy",
+      "DOE",
+      "appropriations",
+      "infrastructure",
+      "program funding",
+      "public investment",
+      "manufacturing",
+      "climate",
+      "rural development",
+      "tribal policy"
     ]
   },
   {
@@ -28,6 +40,18 @@
       "https://www.energy.gov/fe/services/natural-gas-regulation",
       "https://sgp.fas.org/crs/misc/R46460.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF12242"
+    ],
+    "tags": [
+      "energy",
+      "DOE",
+      "appropriations",
+      "infrastructure",
+      "program funding",
+      "public investment",
+      "manufacturing",
+      "climate",
+      "rural development",
+      "tribal policy"
     ]
   },
   {
@@ -42,6 +66,18 @@
     "additionalReferences": [
       "https://www.energy.gov/sites/default/files/2015/04/f21/ANGPA%20-%20Public%20Law%20108-324.pdf",
       "https://crsreports.congress.gov/product/pdf/R/R43936"
+    ],
+    "tags": [
+      "energy",
+      "DOE",
+      "appropriations",
+      "infrastructure",
+      "program funding",
+      "public investment",
+      "manufacturing",
+      "climate",
+      "rural development",
+      "tribal policy"
     ]
   },
   {
@@ -57,6 +93,18 @@
       "https://www.ferc.gov/industries-data/natural-gas",
       "https://crsreports.congress.gov/product/pdf/LSB/LSB10555",
       "https://www.whitehouse.gov/wp-content/uploads/2022/01/Modernizing_NEPA_Implementation.pdf"
+    ],
+    "tags": [
+      "energy",
+      "DOE",
+      "permitting",
+      "infrastructure",
+      "regulations",
+      "fees",
+      "FERC",
+      "environmental review",
+      "judicial review",
+      "natural gas"
     ]
   },
   {
@@ -72,6 +120,18 @@
       "https://www.energy.gov/policy/office-policy",
       "https://crsreports.congress.gov/product/pdf/R/R45660",
       "https://www.gao.gov/products/gao-23-105750"
+    ],
+    "tags": [
+      "energy",
+      "DOE",
+      "appropriations",
+      "infrastructure",
+      "cost sharing",
+      "insurance",
+      "fossil fuels",
+      "nuclear",
+      "program funding",
+      "risk management"
     ]
   },
   {
@@ -87,6 +147,18 @@
       "https://www.energy.gov/fe/strategic-petroleum-reserve-spr",
       "https://crsreports.congress.gov/product/pdf/R/R46355",
       "https://www.eia.gov/tools/faqs/faq.php?id=38&t=6"
+    ],
+    "tags": [
+      "energy",
+      "DOE",
+      "appropriations",
+      "infrastructure",
+      "strategic reserves",
+      "petroleum",
+      "program funding",
+      "maintenance",
+      "supply chain",
+      "readiness"
     ]
   }
 ]

@@ -10,6 +10,15 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-106893",
       "https://www.biologicaldiversity.org/news/press_releases/2024/border-wall-01-17-2024.html"
+    ],
+    "tags": [
+      "border security",
+      "infrastructure",
+      "environmental review",
+      "law enforcement",
+      "border wall",
+      "wildlife",
+      "tribal lands"
     ]
   },
   {
@@ -23,6 +32,15 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-107029",
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-10/OIG-24-02-Oct23.pdf"
+    ],
+    "tags": [
+      "border security",
+      "personnel",
+      "law enforcement",
+      "recruitment",
+      "staffing",
+      "training",
+      "retention"
     ]
   },
   {
@@ -36,6 +54,16 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-105959",
       "https://oig.dhs.gov/sites/default/files/assets/2024-03/OIG-24-19-Mar24.pdf"
+    ],
+    "tags": [
+      "border security",
+      "technology",
+      "AI",
+      "surveillance",
+      "drug trafficking",
+      "biometrics",
+      "CBP",
+      "infrastructure"
     ]
   },
   {
@@ -49,6 +77,14 @@
     "additionalReferences": [
       "https://www.texastribune.org/2025/02/11/texas-reimbursement-operation-lone-star-border-abbott/",
       "https://www.gao.gov/products/gao-22-104536"
+    ],
+    "tags": [
+      "border security",
+      "state policy",
+      "immigration",
+      "law enforcement funding",
+      "accountability",
+      "reimbursement"
     ]
   },
   {
@@ -62,6 +98,14 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2019-11/OIG-20-02-Nov19.pdf",
       "https://crsreports.congress.gov/product/pdf/IN/IN12101"
+    ],
+    "tags": [
+      "homeland security",
+      "law enforcement funding",
+      "emergency aid",
+      "cost sharing",
+      "state funding",
+      "Secret Service"
     ]
   },
   {
@@ -75,6 +119,16 @@
     "additionalReferences": [
       "https://www.fema.gov/grants/tools/authorized-equipment-list/03oe-07-suad",
       "https://www.oig.dhs.gov/sites/default/files/assets/2018-10/OIG-18-72-Sep18.pdf"
+    ],
+    "tags": [
+      "homeland security",
+      "state funding",
+      "grants",
+      "law enforcement funding",
+      "surveillance",
+      "public events",
+      "Olympics",
+      "Stonegarden"
     ]
   }
 ]

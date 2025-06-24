@@ -150,12 +150,13 @@ const ALL_TAGS = TITLE_FILES.reduce((tags, currentTitle) => {
   }
 
   return tags;
-}, [] as string[]);
+}, [] as string[]).sort((a, b) => a.localeCompare(b));
 
 const selectedTitle = ref('');
 const selectedSubtitle = ref('');
 const selectedPart = ref('');
 const selectedSubpart = ref('');
+const selectedTags = ref<string[]>([]);
 
 const titleData = computed(() =>
   TITLE_FILES
@@ -271,6 +272,10 @@ const selectSubpart = (subpart: string) => {
   selectedSubpart.value = subpart;
 };
 
+const setTags = (tags: string[]) => {
+  selectedTags.value = tags;
+};
+
 const getSection = (sectionNumber: string) => {
   return TITLE_FILES.flatMap(t => t.sections).find(t => t.sectionNumber === sectionNumber);
 };
@@ -304,6 +309,18 @@ const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: st
   return tags;
 };
 
+const toggleTag = (tag: string) => {
+  const index = selectedTags.value.indexOf(tag);
+  const tags = [...selectedTags.value];
+  if (index > -1) {
+    tags.splice(index, 1);
+  } else {
+    tags.push(tag);
+  }
+
+  setTags(tags);
+};
+
 export function useBill() {
   return {
     TABLE_OF_CONTENTS,
@@ -314,6 +331,7 @@ export function useBill() {
     selectedSubtitle,
     selectedPart,
     selectedSubpart,
+    selectedTags,
     titleData,
     subtitles,
     subtitleData,
@@ -326,7 +344,9 @@ export function useBill() {
     selectSubtitle,
     selectPart,
     selectSubpart,
+    setTags,
     getSection,
-    getTags
+    getTags,
+    toggleTag,
   };
 } 

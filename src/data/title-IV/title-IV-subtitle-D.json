@@ -13,6 +13,17 @@
       "https://www.federalregister.gov/documents/2023/09/21/2023-18752/streamlining-medicaid-medicare-savings-program-eligibility-determination-and-enrollment",
       "https://www.gao.gov/products/gao-18-597",
       "https://www.gao.gov/products/gao-24-107660"
+    ],
+    "tags": [
+      "health",
+      "Medicare",
+      "Medicaid",
+      "CMS",
+      "enrollment",
+      "administration",
+      "federalism",
+      "elderly",
+      "equity"
     ]
   },
   {
@@ -30,6 +41,17 @@
       "https://www.gao.gov/products/b-336198",
       "https://www.gao.gov/products/gao-24-106307",
       "https://www.macpac.gov/wp-content/uploads/2024/04/April2024_MACPAC_Report.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "Basic Health Program",
+      "CMS",
+      "children",
+      "enrollment",
+      "administration",
+      "equity"
     ]
   },
   {
@@ -47,6 +69,15 @@
       "https://oig.hhs.gov/oas/reports/region4/41806110.asp",
       "https://www.gao.gov/products/gao-23-105881",
       "https://www.macpac.gov/wp-content/uploads/2022/06/June2022_MACPAC_Report.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "fraud",
+      "administration",
+      "data matching",
+      "states"
     ]
   },
   {
@@ -63,6 +94,15 @@
       "https://oig.ssa.gov/assets/uploads/A-06-18-50432.pdf",
       "https://www.gao.gov/products/gao-20-344",
       "https://www.ssa.gov/dataexchange/request_dmf.html"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "fraud",
+      "administration",
+      "SSA",
+      "states"
     ]
   },
   {
@@ -78,6 +118,15 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-105395",
       "https://www.cms.gov/files/document/updatedmedicaidterminations.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "provider",
+      "fraud",
+      "CMS",
+      "administration"
     ]
   },
   {
@@ -93,6 +142,14 @@
     "additionalReferences": [
       "https://oig.hhs.gov/oei/reports/oei-03-19-00100.pdf",
       "https://www.gao.gov/products/gao-20-344"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "provider",
+      "fraud",
+      "SSA"
     ]
   },
   {
@@ -108,6 +165,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-107660",
       "https://www.medicaid.gov/medicaid/program-integrity/payment-error-rate-measurement-perm/index.html"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CMS",
+      "fraud",
+      "administration",
+      "budget"
     ]
   },
   {
@@ -124,6 +189,16 @@
       "https://www.urban.org/sites/default/files/2023-09/Medicaid-Churn-brief.pdf",
       "https://www.rand.org/pubs/working_papers/WRA1234-1.html",
       "https://www.cms.gov/files/document/actuarial-redetermination-memo.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "ACA",
+      "Basic Health Program",
+      "enrollment",
+      "administration",
+      "churn",
+      "budget"
     ]
   },
   {
@@ -139,6 +214,16 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-20-111",
       "https://www.ers.usda.gov/webdocs/publications/106168/err-325.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "long-term care",
+      "estate recovery",
+      "assets",
+      "elderly",
+      "agriculture",
+      "equity"
     ]
   },
   {
@@ -155,6 +240,16 @@
       "https://www.gao.gov/products/gao-22-105291",
       "https://www.whitehouse.gov/wp-content/uploads/2023/03/budget_fy2024.pdf#page=124",
       "https://www.macpac.gov/publication/dsh-allotments-and-targets-fy2024/"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "immigration",
+      "citizenship",
+      "federalism",
+      "budget",
+      "access"
     ]
   },
   {
@@ -171,6 +266,16 @@
       "https://www.kff.org/medicaid/issue-brief/health-coverage-of-immigrants/",
       "https://www.gao.gov/products/gao-24-105882",
       "https://lao.ca.gov/Publications/Report/4782"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "ACA",
+      "immigration",
+      "federalism",
+      "budget",
+      "access",
+      "equity"
     ]
   },
   {
@@ -187,6 +292,17 @@
       "https://public-inspection.federalregister.gov/2024-09905.pdf",
       "https://www.cms.gov/files/document/long-term-care-minimum-staffing-final-rule-fact-sheet.pdf",
       "https://www.kff.org/medicaid/issue-brief/understanding-the-minimum-nursing-home-staffing-rule/"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "Medicare",
+      "CMS",
+      "long-term care",
+      "workforce",
+      "transparency",
+      "elderly",
+      "administration"
     ]
   },
   {
@@ -202,6 +318,16 @@
     "additionalReferences": [
       "https://www.medicaid.gov/federal-policy-guidance/downloads/sho20002.pdf",
       "https://www.macpac.gov/wp-content/uploads/2018/05/Reducing-Medicaid-Retroactive-Eligibility.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "retroactive eligibility",
+      "budget",
+      "access",
+      "equity",
+      "administration"
     ]
   },
   {
@@ -217,6 +343,17 @@
     "additionalReferences": [
       "https://oig.hhs.gov/reports-and-publications/featured-topics/medicaid-drug-pricing/",
       "https://www.macpac.gov/publication/state-use-of-pharmacy-benefit-managers/"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "pharmacy",
+      "PBM",
+      "transparency",
+      "drug pricing",
+      "CMS",
+      "fraud",
+      "administration"
     ]
   },
   {
@@ -232,6 +369,15 @@
     "additionalReferences": [
       "https://www.macpac.gov/wp-content/uploads/2022/01/Medicaid-Pharmacy-Benefits-and-Pharmacy-Benefit-Managers.pdf",
       "https://www.kff.org/medicaid/issue-brief/spread-pricing-in-medicaid/"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "PBM",
+      "pharmacy",
+      "drug pricing",
+      "CMS",
+      "transparency"
     ]
   },
   {
@@ -248,6 +394,15 @@
       "https://williamsinstitute.law.ucla.edu/publications/transgender-medicaid-coverage/",
       "https://doi.org/10.1001/jamanetworkopen.2022.14117",
       "https://pediatrics.aappublications.org/content/148/2/e2021052228"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "LGBTQ",
+      "gender-affirming care",
+      "civil rights",
+      "access"
     ]
   },
   {
@@ -264,6 +419,16 @@
       "https://www.guttmacher.org/article/2023/08/abortion-restrictions-and-contraceptive-care",
       "https://www.hhs.gov/opa/sites/default/files/title-x-nprm.pdf",
       "https://www.gao.gov/assets/680/671511.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "abortion",
+      "Planned Parenthood",
+      "women's health",
+      "access",
+      "federalism",
+      "civil rights"
     ]
   },
   {
@@ -279,6 +444,15 @@
     "additionalReferences": [
       "https://www.kff.org/report-section/medicaid-budget-and-policy-basics-fmap/",
       "https://www.cbpp.org/research/health/arp-medicaid-expansion-incentive"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "ACA",
+      "FMAP",
+      "equity",
+      "access",
+      "federalism"
     ]
   },
   {
@@ -294,6 +468,13 @@
     "additionalReferences": [
       "https://www.macpac.gov/publication/medicaid-provider-taxes/",
       "https://crsreports.congress.gov/product/pdf/IF/IF11971"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "provider-tax",
+      "states",
+      "administration"
     ]
   },
   {
@@ -309,6 +490,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-21-98",
       "https://oig.hhs.gov/reports-and-publications/top-challenges/2022/#medicaid"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "provider",
+      "managed care",
+      "federalism",
+      "administration"
     ]
   },
   {
@@ -324,6 +513,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R46272",
       "https://www.macpac.gov/wp-content/uploads/2019/06/Medicaid-Provider-Taxes.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "provider-tax",
+      "budget",
+      "states",
+      "administration"
     ]
   },
   {
@@ -339,6 +536,15 @@
     "additionalReferences": [
       "https://www.medicaid.gov/medicaid/section-1115-demo/downloads/1115-demonstration-monitoring-reporting-guidance.pdf",
       "https://www.kff.org/medicaid/issue-brief/trends-in-medicaid-section-1115-waivers-focus-on-work-requirements/"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "budget",
+      "Section 1115",
+      "waivers",
+      "administration",
+      "federalism"
     ]
   },
   {
@@ -355,6 +561,17 @@
       "https://www.cbo.gov/system/files/2019-05/55151-Medicaid.pdf",
       "https://www.healthaffairs.org/doi/10.1377/hlthaff.2020.00538",
       "https://khn.org/news/article/arkansas-medicaid-work-requirement-coverage-loss/"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "ACA",
+      "workforce",
+      "work requirements",
+      "access",
+      "states",
+      "federalism",
+      "civil rights"
     ]
   },
   {
@@ -371,6 +588,16 @@
       "https://www.macpac.gov/wp-content/uploads/2022/01/Medicaid-Cost-Sharing-Policies.pdf",
       "https://aspe.hhs.gov/sites/default/files/private/pdf/265486/medicaid-premiums-cost-sharing-brief.pdf",
       "https://www.healthaffairs.org/doi/10.1377/hlthaff.2018.05446"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "ACA",
+      "cost-sharing",
+      "premium",
+      "access",
+      "budget",
+      "states"
     ]
   },
   {
@@ -387,6 +614,19 @@
       "https://aspe.hhs.gov/reports/marketplace-enrollment-reconciliation-issues",
       "https://www.kff.org/medicaid/issue-brief/how-premium-payment-policies-affect-marketplace-enrollment/",
       "https://www.federalregister.gov/d/2019-08330/p-2001"
+    ],
+    "tags": [
+      "health",
+      "ACA",
+      "insurance",
+      "exchange",
+      "LGBTQ",
+      "immigration",
+      "premium",
+      "CSR",
+      "drug pricing",
+      "administration",
+      "access"
     ]
   },
   {
@@ -401,6 +641,16 @@
     "additionalReferences": [
       "https://www.urban.org/sites/default/files/publication/94891/cost-sharing-reductions_1.pdf",
       "https://www.cms.gov/files/document/csr-payment-reduction-analysis.pdf"
+    ],
+    "tags": [
+      "health",
+      "ACA",
+      "CSR",
+      "premium",
+      "abortion",
+      "insurance",
+      "budget",
+      "states"
     ]
   },
   {
@@ -415,6 +665,15 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF12075",
       "https://www.fda.gov/media/119885/download"
+    ],
+    "tags": [
+      "health",
+      "Medicare",
+      "Part D",
+      "drug pricing",
+      "rare disease",
+      "FDA",
+      "budget"
     ]
   },
   {
@@ -428,6 +687,15 @@
     "impact": "•  Speeds payment to children’s hospitals, trauma centers, and rare-disease specialists that routinely serve patients crossing state lines.\n•  Reduces duplicative screening, lowering administrative burden and accelerating access to specialty care.\n•  Slightly increases fraud-control risk, though limited to providers already vetted by Medicare or another state.",
     "additionalReferences": [
       "https://www.medicaid.gov/federal-policy-guidance/downloads/sho20002.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "CHIP",
+      "provider",
+      "children",
+      "access",
+      "administration"
     ]
   },
   {
@@ -441,6 +709,14 @@
     "impact": "•  Preserves roughly $16 billion in federal DSH payments during FY 2026-2028, stabilizing finances for rural and urban safety-net facilities.\n•  Raises federal spending relative to current law; offsets would be required to maintain budget neutrality.\n•  Delays CMS leverage to transition hospitals toward alternative uncompensated-care support models.",
     "additionalReferences": [
       "https://www.macpac.gov/wp-content/uploads/2023/03/March-2023-Report-to-Congress-on-Medicaid-and-CHIP.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicaid",
+      "DSH",
+      "hospital",
+      "budget",
+      "access"
     ]
   },
   {
@@ -454,6 +730,14 @@
     "impact": "•  Slows erosion of real Medicare physician payments, potentially improving beneficiary access to clinicians.\n•  Raises Part B spending and beneficiary premiums/coinsurance relative to current law.\n•  Still well below full inflation, so long-term pressure on practice margins remains.",
     "additionalReferences": [
       "https://www.ama-assn.org/system/files/medicare-physician-payment-schedule.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicare",
+      "provider",
+      "physician",
+      "budget",
+      "access"
     ]
   },
   {
@@ -464,10 +748,20 @@
     "sectionTitle": "Modernizing and Ensuring PBM Accountability",
     "sectionText": "SEC. 44305. MODERNIZING AND ENSURING PBM ACCOUNTABILITY.\r\n\r\n    (a) In General.--\r\n            (1) Prescription drug plans.--Section 1860D-12 of the \r\n        Social Security Act (42 U.S.C. 1395w-112) is amended by adding \r\n        at the end the following new subsection:\r\n    ``(h) Requirements Relating to Pharmacy Benefit Managers.--For plan \r\nyears beginning on or after January 1, 2028:\r\n            ``(1) Agreements with pharmacy benefit managers.--Each \r\n        contract entered into with a PDP sponsor under this part with \r\n        respect to a prescription drug plan offered by such sponsor \r\n        shall provide that any pharmacy benefit manager acting on \r\n        behalf of such sponsor has a written agreement with the PDP \r\n        sponsor under which the pharmacy benefit manager, and any \r\n        affiliates of such pharmacy benefit manager, as applicable, \r\n        agree to meet the following requirements:\r\n                    ``(A) No income other than bona fide service \r\n                fees.--\r\n                            ``(i) In general.--The pharmacy benefit \r\n                        manager and any affiliate of such pharmacy \r\n                        benefit manager shall not derive any \r\n                        remuneration with respect to any services \r\n                        provided on behalf of any entity or individual, \r\n                        in connection with the utilization of covered \r\n                        part D drugs, from any such entity or \r\n                        individual other than bona fide service fees, \r\n                        subject to clauses (ii) and (iii).\r\n                            ``(ii) Incentive payments.--For the \r\n                        purposes of this subsection, an incentive \r\n                        payment (as determined by the Secretary) paid \r\n                        by a PDP sponsor to a pharmacy benefit manager \r\n                        (or an affiliate of such pharmacy benefit \r\n                        manager) that is performing services on behalf \r\n                        of such sponsor shall be deemed a `bona fide \r\n                        service fee' (even if such payment does not \r\n                        otherwise meet the definition of such term \r\n                        under paragraph (7)(B)) if such payment is a \r\n                        flat dollar amount, is consistent with fair \r\n                        market value (as specified by the Secretary), \r\n                        is related to services actually performed by \r\n                        the pharmacy benefit manager or affiliate of \r\n                        such pharmacy benefit manager, on behalf of the \r\n                        PDP sponsor making such payment, in connection \r\n                        with the utilization of covered part D drugs, \r\n                        and meets additional requirements, if any, as \r\n                        determined appropriate by the Secretary.\r\n                            ``(iii) Clarification on rebates and \r\n                        discounts used to lower costs for covered part \r\n                        d drugs.--Rebates, discounts, and other price \r\n                        concessions received by a pharmacy benefit \r\n                        manager or an affiliate of a pharmacy benefit \r\n                        manager from manufacturers, even if such price \r\n                        concessions are calculated as a percentage of a \r\n                        drug's price, shall not be considered a \r\n                        violation of the requirements of clause (i) if \r\n                        they are fully passed through to a PDP sponsor \r\n                        and are compliant with all regulatory and \r\n                        subregulatory requirements related to direct \r\n                        and indirect remuneration for manufacturer \r\n                        rebates under this part, including in cases \r\n                        where a PDP sponsor is acting as a pharmacy \r\n                        benefit manager on behalf of a prescription \r\n                        drug plan offered by such PDP sponsor.\r\n                            ``(iv) Evaluation of remuneration \r\n                        arrangements.--Components of subsets of \r\n                        remuneration arrangements (such as fees or \r\n                        other forms of compensation paid to or retained \r\n                        by the pharmacy benefit manager or affiliate of \r\n                        such pharmacy benefit manager), as determined \r\n                        appropriate by the Secretary, between pharmacy \r\n                        benefit managers or affiliates of such pharmacy \r\n                        benefit managers, as applicable, and other \r\n                        entities involved in the dispensing or \r\n                        utilization of covered part D drugs (including \r\n                        PDP sponsors, manufacturers, and pharmacies) \r\n                        shall be subject to review by the Secretary, in \r\n                        consultation with the Office of the Inspector \r\n                        General of the Department of Health and Human \r\n                        Services, as determined appropriate by the \r\n                        Secretary. The Secretary, in consultation with \r\n                        the Office of the Inspector General, shall \r\n                        review whether remuneration under such \r\n                        arrangements is consistent with fair market \r\n                        value (as specified by the Secretary) through \r\n                        reviews and assessments of such remuneration, \r\n                        as determined appropriate.\r\n                            ``(v) Disgorgement.--The pharmacy benefit \r\n                        manager shall disgorge any remuneration paid to \r\n                        such pharmacy benefit manager or an affiliate \r\n                        of such pharmacy benefit manager in violation \r\n                        of this subparagraph to the PDP sponsor.\r\n                            ``(vi) Additional requirements.--The \r\n                        pharmacy benefit manager shall--\r\n                                    ``(I) enter into a written \r\n                                agreement with any affiliate of such \r\n                                pharmacy benefit manager, under which \r\n                                the affiliate shall identify and \r\n                                disgorge any remuneration described in \r\n                                clause (v) to the pharmacy benefit \r\n                                manager; and\r\n                                    ``(II) attest, subject to any \r\n                                requirements determined appropriate by \r\n                                the Secretary, that the pharmacy \r\n                                benefit manager has entered into a \r\n                                written agreement described in \r\n                                subclause (I) with any relevant \r\n                                affiliate of the pharmacy benefit \r\n                                manager.\r\n                    ``(B) Transparency regarding guarantees and cost \r\n                performance evaluations.--The pharmacy benefit manager \r\n                shall--\r\n                            ``(i) define, interpret, and apply, in a \r\n                        fully transparent and consistent manner for \r\n                        purposes of calculating or otherwise evaluating \r\n                        pharmacy benefit manager performance against \r\n                        pricing guarantees or similar cost performance \r\n                        measurements related to rebates, discounts, \r\n                        price concessions, or net costs, terms such \r\n                        as--\r\n                                    ``(I) `generic drug', in a manner \r\n                                consistent with the definition of the \r\n                                term under section 423.4 of title 42, \r\n                                Code of Federal Regulations, or a \r\n                                successor regulation;\r\n                                    ``(II) `brand name drug', in a \r\n                                manner consistent with the definition \r\n                                of the term under section 423.4 of \r\n                                title 42, Code of Federal Regulations, \r\n                                or a successor regulation;\r\n                                    ``(III) `specialty drug';\r\n                                    ``(IV) `rebate'; and\r\n                                    ``(V) `discount';\r\n                            ``(ii) identify any drugs, claims, or price \r\n                        concessions excluded from any pricing guarantee \r\n                        or other cost performance measure in a clear \r\n                        and consistent manner; and\r\n                            ``(iii) where a pricing guarantee or other \r\n                        cost performance measure is based on a pricing \r\n                        benchmark other than the wholesale acquisition \r\n                        cost (as defined in section 1847A(c)(6)(B)) of \r\n                        a drug, calculate and provide a wholesale \r\n                        acquisition cost-based equivalent to the \r\n                        pricing guarantee or other cost performance \r\n                        measure.\r\n                    ``(C) Provision of information.--\r\n                            ``(i) In general.--Not later than July 1 of \r\n                        each year, beginning in 2028, the pharmacy \r\n                        benefit manager shall submit to the PDP \r\n                        sponsor, and to the Secretary, a report, in \r\n                        accordance with this subparagraph, and shall \r\n                        make such report available to such sponsor at \r\n                        no cost to such sponsor in a format specified \r\n                        by the Secretary under paragraph (5). Each such \r\n                        report shall include, with respect to such PDP \r\n                        sponsor and each plan offered by such sponsor, \r\n                        the following information with respect to the \r\n                        previous plan year:\r\n                                    ``(I) A list of all drugs covered \r\n                                by the plan that were dispensed \r\n                                including, with respect to each such \r\n                                drug--\r\n                                            ``(aa) the brand name, \r\n                                        generic or non-proprietary \r\n                                        name, and National Drug Code;\r\n                                            ``(bb) the number of plan \r\n                                        enrollees for whom the drug was \r\n                                        dispensed, the total number of \r\n                                        prescription claims for the \r\n                                        drug (including original \r\n                                        prescriptions and refills, \r\n                                        counted as separate claims), \r\n                                        and the total number of dosage \r\n                                        units of the drug dispensed;\r\n                                            ``(cc) the number of \r\n                                        prescription claims described \r\n                                        in item (bb) by each type of \r\n                                        dispensing channel through \r\n                                        which the drug was dispensed, \r\n                                        including retail, mail order, \r\n                                        specialty pharmacy, long term \r\n                                        care pharmacy, home infusion \r\n                                        pharmacy, or other types of \r\n                                        pharmacies or providers;\r\n                                            ``(dd) the average \r\n                                        wholesale acquisition cost, \r\n                                        listed as cost per day's \r\n                                        supply, cost per dosage unit, \r\n                                        and cost per typical course of \r\n                                        treatment (as applicable);\r\n                                            ``(ee) the average \r\n                                        wholesale price for the drug, \r\n                                        listed as price per day's \r\n                                        supply, price per dosage unit, \r\n                                        and price per typical course of \r\n                                        treatment (as applicable);\r\n                                            ``(ff) the total out-of-\r\n                                        pocket spending by plan \r\n                                        enrollees on such drug after \r\n                                        application of any benefits \r\n                                        under the plan, including plan \r\n                                        enrollee spending through \r\n                                        copayments, coinsurance, and \r\n                                        deductibles;\r\n                                            ``(gg) total rebates paid \r\n                                        by the manufacturer on the drug \r\n                                        as reported under the Detailed \r\n                                        DIR Report (or any successor \r\n                                        report) submitted by such \r\n                                        sponsor to the Centers for \r\n                                        Medicare & Medicaid Services;\r\n                                            ``(hh) all other direct or \r\n                                        indirect remuneration on the \r\n                                        drug as reported under the \r\n                                        Detailed DIR Report (or any \r\n                                        successor report) submitted by \r\n                                        such sponsor to the Centers for \r\n                                        Medicare & Medicaid Services;\r\n                                            ``(ii) the average pharmacy \r\n                                        reimbursement amount paid by \r\n                                        the plan for the drug in the \r\n                                        aggregate and disaggregated by \r\n                                        dispensing channel identified \r\n                                        in item (cc);\r\n                                            ``(jj) the average National \r\n                                        Average Drug Acquisition Cost \r\n                                        (NADAC); and\r\n                                            ``(kk) total manufacturer-\r\n                                        derived revenue, inclusive of \r\n                                        bona fide service fees, \r\n                                        attributable to the drug and \r\n                                        retained by the pharmacy \r\n                                        benefit manager and any \r\n                                        affiliate of such pharmacy \r\n                                        benefit manager.\r\n                                    ``(II) In the case of a pharmacy \r\n                                benefit manager that has an affiliate \r\n                                that is a retail, mail order, or \r\n                                specialty pharmacy, with respect to \r\n                                drugs covered by such plan that were \r\n                                dispensed, the following information:\r\n                                            ``(aa) The percentage of \r\n                                        total prescriptions that were \r\n                                        dispensed by pharmacies that \r\n                                        are an affiliate of the \r\n                                        pharmacy benefit manager for \r\n                                        each drug.\r\n                                            ``(bb) The interquartile \r\n                                        range of the total combined \r\n                                        costs paid by the plan and plan \r\n                                        enrollees, per dosage unit, per \r\n                                        course of treatment, per 30-day \r\n                                        supply, and per 90-day supply \r\n                                        for each drug dispensed by \r\n                                        pharmacies that are not an \r\n                                        affiliate of the pharmacy \r\n                                        benefit manager and that are \r\n                                        included in the pharmacy \r\n                                        network of such plan.\r\n                                            ``(cc) The interquartile \r\n                                        range of the total combined \r\n                                        costs paid by the plan and plan \r\n                                        enrollees, per dosage unit, per \r\n                                        course of treatment, per 30-day \r\n                                        supply, and per 90-day supply \r\n                                        for each drug dispensed by \r\n                                        pharmacies that are an \r\n                                        affiliate of the pharmacy \r\n                                        benefit manager and that are \r\n                                        included in the pharmacy \r\n                                        network of such plan.\r\n                                            ``(dd) The lowest total \r\n                                        combined cost paid by the plan \r\n                                        and plan enrollees, per dosage \r\n                                        unit, per course of treatment, \r\n                                        per 30-day supply, and per 90-\r\n                                        day supply, for each drug that \r\n                                        is available from any pharmacy \r\n                                        included in the pharmacy \r\n                                        network of such plan.\r\n                                            ``(ee) The difference \r\n                                        between the average acquisition \r\n                                        cost of the affiliate, such as \r\n                                        a pharmacy or other entity that \r\n                                        acquires prescription drugs, \r\n                                        that initially acquires the \r\n                                        drug and the amount reported \r\n                                        under subclause (I)(jj) for \r\n                                        each drug.\r\n                                            ``(ff) A list inclusive of \r\n                                        the brand name, generic or non-\r\n                                        proprietary name, and National \r\n                                        Drug Code of covered part D \r\n                                        drugs subject to an agreement \r\n                                        with a covered entity under \r\n                                        section 340B of the Public \r\n                                        Health Service Act for which \r\n                                        the pharmacy benefit manager or \r\n                                        an affiliate of the pharmacy \r\n                                        benefit manager had a contract \r\n                                        or other arrangement with such \r\n                                        a covered entity in the service \r\n                                        area of such plan.\r\n                                    ``(III) Where a drug approved under \r\n                                section 505(c) of the Federal Food, \r\n                                Drug, and Cosmetic Act (referred to in \r\n                                this subclause as the `listed drug') is \r\n                                covered by the plan, the following \r\n                                information:\r\n                                            ``(aa) A list of currently \r\n                                        marketed generic drugs approved \r\n                                        under section 505(j) of the \r\n                                        Federal Food, Drug, and \r\n                                        Cosmetic Act pursuant to an \r\n                                        application that references \r\n                                        such listed drug that are not \r\n                                        covered by the plan, are \r\n                                        covered on the same formulary \r\n                                        tier or a formulary tier \r\n                                        typically associated with \r\n                                        higher cost-sharing than the \r\n                                        listed drug, or are subject to \r\n                                        utilization management that the \r\n                                        listed drug is not subject to.\r\n                                            ``(bb) The estimated \r\n                                        average beneficiary cost-\r\n                                        sharing under the plan for a \r\n                                        30-day supply of the listed \r\n                                        drug.\r\n                                            ``(cc) Where a generic drug \r\n                                        listed under item (aa) is on a \r\n                                        formulary tier typically \r\n                                        associated with higher cost-\r\n                                        sharing than the listed drug, \r\n                                        the estimated average cost-\r\n                                        sharing that a beneficiary \r\n                                        would have paid for a 30-day \r\n                                        supply of each of the generic \r\n                                        drugs described in item (aa), \r\n                                        had the plan provided coverage \r\n                                        for such drugs on the same \r\n                                        formulary tier as the listed \r\n                                        drug.\r\n                                            ``(dd) A written \r\n                                        justification for providing \r\n                                        more favorable coverage of the \r\n                                        listed drug than the generic \r\n                                        drugs described in item (aa).\r\n                                            ``(ee) The number of \r\n                                        currently marketed generic \r\n                                        drugs approved under section \r\n                                        505(j) of the Federal Food, \r\n                                        Drug, and Cosmetic Act pursuant \r\n                                        to an application that \r\n                                        references such listed drug.\r\n                                    ``(IV) Where a reference product \r\n                                (as defined in section 351(i) of the \r\n                                Public Health Service Act) is covered \r\n                                by the plan, the following information:\r\n                                            ``(aa) A list of currently \r\n                                        marketed biosimilar biological \r\n                                        products licensed under section \r\n                                        351(k) of the Public Health \r\n                                        Service Act pursuant to an \r\n                                        application that refers to such \r\n                                        reference product that are not \r\n                                        covered by the plan, are \r\n                                        covered on the same formulary \r\n                                        tier or a formulary tier \r\n                                        typically associated with \r\n                                        higher cost-sharing than the \r\n                                        reference product, or are \r\n                                        subject to utilization \r\n                                        management that the reference \r\n                                        product is not subject to.\r\n                                            ``(bb) The estimated \r\n                                        average beneficiary cost-\r\n                                        sharing under the plan for a \r\n                                        30-day supply of the reference \r\n                                        product.\r\n                                            ``(cc) Where a biosimilar \r\n                                        biological product listed under \r\n                                        item (aa) is on a formulary \r\n                                        tier typically associated with \r\n                                        higher cost-sharing than the \r\n                                        reference product, the \r\n                                        estimated average cost-sharing \r\n                                        that a beneficiary would have \r\n                                        paid for a 30-day supply of \r\n                                        each of the biosimilar \r\n                                        biological products described \r\n                                        in item (aa), had the plan \r\n                                        provided coverage for such \r\n                                        products on the same formulary \r\n                                        tier as the reference product.\r\n                                            ``(dd) A written \r\n                                        justification for providing \r\n                                        more favorable coverage of the \r\n                                        reference product than the \r\n                                        biosimilar biological product \r\n                                        described in item (aa).\r\n                                            ``(ee) The number of \r\n                                        currently marketed biosimilar \r\n                                        biological products licensed \r\n                                        under section 351(k) of the \r\n                                        Public Health Service Act, \r\n                                        pursuant to an application that \r\n                                        refers to such reference \r\n                                        product.\r\n                                    ``(V) Total gross spending on \r\n                                covered part D drugs by the plan, not \r\n                                net of rebates, fees, discounts, or \r\n                                other direct or indirect remuneration.\r\n                                    ``(VI) The total amount retained by \r\n                                the pharmacy benefit manager or an \r\n                                affiliate of such pharmacy benefit \r\n                                manager in revenue related to \r\n                                utilization of covered part D drugs \r\n                                under that plan, inclusive of bona fide \r\n                                service fees.\r\n                                    ``(VII) The total spending on \r\n                                covered part D drugs net of rebates, \r\n                                fees, discounts, or other direct and \r\n                                indirect remuneration by the plan.\r\n                                    ``(VIII) An explanation of any \r\n                                benefit design parameters under such \r\n                                plan that encourage plan enrollees to \r\n                                fill prescriptions at pharmacies that \r\n                                are an affiliate of such pharmacy \r\n                                benefit manager, such as mail and \r\n                                specialty home delivery programs, and \r\n                                retail and mail auto-refill programs.\r\n                                    ``(IX) The following information:\r\n                                            ``(aa) A list of all \r\n                                        brokers, consultants, advisors, \r\n                                        and auditors that receive \r\n                                        compensation from the pharmacy \r\n                                        benefit manager or an affiliate \r\n                                        of such pharmacy benefit \r\n                                        manager for referrals, \r\n                                        consulting, auditing, or other \r\n                                        services offered to PDP \r\n                                        sponsors related to pharmacy \r\n                                        benefit management services.\r\n                                            ``(bb) The amount of \r\n                                        compensation provided by such \r\n                                        pharmacy benefit manager or \r\n                                        affiliate to each such broker, \r\n                                        consultant, advisor, and \r\n                                        auditor.\r\n                                            ``(cc) The methodology for \r\n                                        calculating the amount of \r\n                                        compensation provided by such \r\n                                        pharmacy benefit manager or \r\n                                        affiliate, for each such \r\n                                        broker, consultant, advisor, \r\n                                        and auditor.\r\n                                    ``(X) A list of all affiliates of \r\n                                the pharmacy benefit manager.\r\n                                    ``(XI) A summary document submitted \r\n                                in a standardized template developed by \r\n                                the Secretary that includes such \r\n                                information described in subclauses (I) \r\n                                through (X).\r\n                            ``(ii) Written explanation of contracts or \r\n                        agreements with drug manufacturers.--\r\n                                    ``(I) In general.--The pharmacy \r\n                                benefit manager shall, not later than \r\n                                30 days after the finalization of any \r\n                                contract or agreement between such \r\n                                pharmacy benefit manager or an \r\n                                affiliate of such pharmacy benefit \r\n                                manager and a drug manufacturer (or \r\n                                subsidiary, agent, or entity affiliated \r\n                                with such drug manufacturer) that makes \r\n                                rebates, discounts, payments, or other \r\n                                financial incentives related to one or \r\n                                more covered part D drugs or other \r\n                                prescription drugs, as applicable, of \r\n                                the manufacturer directly or indirectly \r\n                                contingent upon coverage, formulary \r\n                                placement, or utilization management \r\n                                conditions on any other covered part D \r\n                                drugs or other prescription drugs, as \r\n                                applicable, submit to the PDP sponsor a \r\n                                written explanation of such contract or \r\n                                agreement.\r\n                                    ``(II) Requirements.--A written \r\n                                explanation under subclause (I) shall--\r\n                                            ``(aa) include the \r\n                                        manufacturer subject to the \r\n                                        contract or agreement, all \r\n                                        covered part D drugs and other \r\n                                        prescription drugs, as \r\n                                        applicable, subject to the \r\n                                        contract or agreement and the \r\n                                        manufacturers of such drugs, \r\n                                        and a high-level description of \r\n                                        the terms of such contract or \r\n                                        agreement and how such terms \r\n                                        apply to such drugs; and\r\n                                            ``(bb) be certified by the \r\n                                        Chief Executive Officer, Chief \r\n                                        Financial Officer, or General \r\n                                        Counsel of such pharmacy \r\n                                        benefit manager, or affiliate \r\n                                        of such pharmacy benefit \r\n                                        manager, as applicable, or an \r\n                                        individual delegated with the \r\n                                        authority to sign on behalf of \r\n                                        one of these officers, who \r\n                                        reports directly to the \r\n                                        officer.\r\n                                    ``(III) Definition of other \r\n                                prescription drugs.--For purposes of \r\n                                this clause, the term `other \r\n                                prescription drugs' means prescription \r\n                                drugs covered as supplemental benefits \r\n                                under this part or prescription drugs \r\n                                paid outside of this part.\r\n                    ``(D) Audit rights.--\r\n                            ``(i) In general.--Not less than once a \r\n                        year, at the request of the PDP sponsor, the \r\n                        pharmacy benefit manager shall allow for an \r\n                        audit of the pharmacy benefit manager to ensure \r\n                        compliance with all terms and conditions under \r\n                        the written agreement described in this \r\n                        paragraph and the accuracy of information \r\n                        reported under subparagraph (C).\r\n                            ``(ii) Auditor.--The PDP sponsor shall have \r\n                        the right to select an auditor. The pharmacy \r\n                        benefit manager shall not impose any \r\n                        limitations on the selection of such auditor.\r\n                            ``(iii) Provision of information.--The \r\n                        pharmacy benefit manager shall make available \r\n                        to such auditor all records, data, contracts, \r\n                        and other information necessary to confirm the \r\n                        accuracy of information provided under \r\n                        subparagraph (C), subject to reasonable \r\n                        restrictions on how such information must be \r\n                        reported to prevent redisclosure of such \r\n                        information.\r\n                            ``(iv) Timing.--The pharmacy benefit \r\n                        manager must provide information under clause \r\n                        (iii) and other information, data, and records \r\n                        relevant to the audit to such auditor within 6 \r\n                        months of the initiation of the audit and \r\n                        respond to requests for additional information \r\n                        from such auditor within 30 days after the \r\n                        request for additional information.\r\n                            ``(v) Information from affiliates.--The \r\n                        pharmacy benefit manager shall be responsible \r\n                        for providing to such auditor information \r\n                        required to be reported under subparagraph (C) \r\n                        or under clause (iii) of this subparagraph that \r\n                        is owned or held by an affiliate of such \r\n                        pharmacy benefit manager.\r\n            ``(2) Enforcement.--\r\n                    ``(A) In general.--Each PDP sponsor shall--\r\n                            ``(i) disgorge to the Secretary any amounts \r\n                        disgorged to the PDP sponsor by a pharmacy \r\n                        benefit manager under paragraph (1)(A)(v);\r\n                            ``(ii) require, in a written agreement with \r\n                        any pharmacy benefit manager acting on behalf \r\n                        of such sponsor or affiliate of such pharmacy \r\n                        benefit manager, that such pharmacy benefit \r\n                        manager or affiliate reimburse the PDP sponsor \r\n                        for any civil money penalty imposed on the PDP \r\n                        sponsor as a result of the failure of the \r\n                        pharmacy benefit manager or affiliate to meet \r\n                        the requirements of paragraph (1) that are \r\n                        applicable to the pharmacy benefit manager or \r\n                        affiliate under the agreement; and\r\n                            ``(iii) require, in a written agreement \r\n                        with any such pharmacy benefit manager acting \r\n                        on behalf of such sponsor or affiliate of such \r\n                        pharmacy benefit manager, that such pharmacy \r\n                        benefit manager or affiliate be subject to \r\n                        punitive remedies for breach of contract for \r\n                        failure to comply with the requirements \r\n                        applicable under paragraph (1).\r\n                    ``(B) Reporting of alleged violations.--The \r\n                Secretary shall make available and maintain a mechanism \r\n                for manufacturers, PDP sponsors, pharmacies, and other \r\n                entities that have contractual relationships with \r\n                pharmacy benefit managers or affiliates of such \r\n                pharmacy benefit managers to report, on a confidential \r\n                basis, alleged violations of paragraph (1)(A) or \r\n                subparagraph (C).\r\n                    ``(C) Anti-retaliation and anti-coercion.--\r\n                Consistent with applicable Federal or State law, a PDP \r\n                sponsor shall not--\r\n                            ``(i) retaliate against an individual or \r\n                        entity for reporting an alleged violation under \r\n                        subparagraph (B); or\r\n                            ``(ii) coerce, intimidate, threaten, or \r\n                        interfere with the ability of an individual or \r\n                        entity to report any such alleged violations.\r\n            ``(3) Certification of compliance.--\r\n                    ``(A) In general.--Each PDP sponsor shall furnish \r\n                to the Secretary (at a time and in a manner specified \r\n                by the Secretary) an annual certification of compliance \r\n                with this subsection, as well as such information as \r\n                the Secretary determines necessary to carry out this \r\n                subsection.\r\n                    ``(B) Implementation.--The Secretary may implement \r\n                this paragraph by program instruction or otherwise.\r\n            ``(4) Rule of construction.--Nothing in this subsection \r\n        shall be construed as--\r\n                    ``(A) prohibiting flat dispensing fees or \r\n                reimbursement or payment for ingredient costs \r\n                (including customary, industry-standard discounts \r\n                directly related to drug acquisition that are retained \r\n                by pharmacies or wholesalers) to entities that acquire \r\n                or dispense prescription drugs; or\r\n                    ``(B) modifying regulatory requirements or sub-\r\n                regulatory program instruction or guidance related to \r\n                pharmacy payment, reimbursement, or dispensing fees.\r\n            ``(5) Standard formats.--\r\n                    ``(A) In general.--Not later than June 1, 2027, the \r\n                Secretary shall specify standard, machine-readable \r\n                formats for pharmacy benefit managers to submit annual \r\n                reports required under paragraph (1)(C)(i).\r\n                    ``(B) Implementation.--The Secretary may implement \r\n                this paragraph by program instruction or otherwise.\r\n            ``(6) Confidentiality.--\r\n                    ``(A) In general.--Information disclosed by a \r\n                pharmacy benefit manager, an affiliate of a pharmacy \r\n                benefit manager, a PDP sponsor, or a pharmacy under \r\n                this subsection that is not otherwise publicly \r\n                available or available for purchase shall not be \r\n                disclosed by the Secretary or a PDP sponsor receiving \r\n                the information, except that the Secretary may disclose \r\n                the information for the following purposes:\r\n                            ``(i) As the Secretary determines necessary \r\n                        to carry out this part.\r\n                            ``(ii) To permit the Comptroller General to \r\n                        review the information provided.\r\n                            ``(iii) To permit the Executive Director of \r\n                        the Medicare Payment Advisory Commission to \r\n                        review the information provided.\r\n                            ``(iv) To the Attorney General for the \r\n                        purposes of conducting oversight and \r\n                        enforcement under this title.\r\n                            ``(v) To the Inspector General of the \r\n                        Department of Health and Human Services in \r\n                        accordance with its authorities under the \r\n                        Inspector General Act of 1978 (section 406 of \r\n                        title 5, United States Code), and other \r\n                        applicable statutes.\r\n                    ``(B) Restriction on use of information.--The \r\n                Secretary, the Comptroller General, and the Executive \r\n                Director of the Medicare Payment Advisory Commission \r\n                shall not report on or disclose information disclosed \r\n                pursuant to subparagraph (A) to the public in a manner \r\n                that would identify--\r\n                            ``(i) a specific pharmacy benefit manager, \r\n                        affiliate, pharmacy, manufacturer, wholesaler, \r\n                        PDP sponsor, or plan; or\r\n                            ``(ii) contract prices, rebates, discounts, \r\n                        or other remuneration for specific drugs in a \r\n                        manner that may allow the identification of \r\n                        specific contracting parties or of such \r\n                        specific drugs.\r\n            ``(7) Definitions.--For purposes of this subsection:\r\n                    ``(A) Affiliate.--The term `affiliate' means, with \r\n                respect to any pharmacy benefit manager or PDP sponsor, \r\n                any entity that, directly or indirectly--\r\n                            ``(i) owns or is owned by, controls or is \r\n                        controlled by, or is otherwise related in any \r\n                        ownership structure to such pharmacy benefit \r\n                        manager or PDP sponsor; or\r\n                            ``(ii) acts as a contractor, principal, or \r\n                        agent to such pharmacy benefit manager or PDP \r\n                        sponsor, insofar as such contractor, principal, \r\n                        or agent performs any of the functions \r\n                        described under subparagraph (C).\r\n                    ``(B) Bona fide service fee.--The term `bona fide \r\n                service fee' means a fee that is reflective of the fair \r\n                market value (as specified by the Secretary, through \r\n                notice and comment rulemaking) for a bona fide, \r\n                itemized service actually performed on behalf of an \r\n                entity, that the entity would otherwise perform (or \r\n                contract for) in the absence of the service arrangement \r\n                and that is not passed on in whole or in part to a \r\n                client or customer, whether or not the entity takes \r\n                title to the drug. Such fee must be a flat dollar \r\n                amount and shall not be directly or indirectly based \r\n                on, or contingent upon--\r\n                            ``(i) drug price, such as wholesale \r\n                        acquisition cost or drug benchmark price (such \r\n                        as average wholesale price);\r\n                            ``(ii) the amount of discounts, rebates, \r\n                        fees, or other direct or indirect remuneration \r\n                        with respect to covered part D drugs dispensed \r\n                        to enrollees in a prescription drug plan, \r\n                        except as permitted pursuant to paragraph \r\n                        (1)(A)(ii);\r\n                            ``(iii) coverage or formulary placement \r\n                        decisions or the volume or value of any \r\n                        referrals or business generated between the \r\n                        parties to the arrangement; or\r\n                            ``(iv) any other amounts or methodologies \r\n                        prohibited by the Secretary.\r\n                    ``(C) Pharmacy benefit manager.--The term `pharmacy \r\n                benefit manager' means any person or entity that, \r\n                either directly or through an intermediary, acts as a \r\n                price negotiator or group purchaser on behalf of a PDP \r\n                sponsor or prescription drug plan, or manages the \r\n                prescription drug benefits provided by such sponsor or \r\n                plan, including the processing and payment of claims \r\n                for prescription drugs, the performance of drug \r\n                utilization review, the processing of drug prior \r\n                authorization requests, the adjudication of appeals or \r\n                grievances related to the prescription drug benefit, \r\n                contracting with network pharmacies, controlling the \r\n                cost of covered part D drugs, or the provision of \r\n                related services. Such term includes any person or \r\n                entity that carries out one or more of the activities \r\n                described in the preceding sentence, irrespective of \r\n                whether such person or entity calls itself a `pharmacy \r\n                benefit manager'.''.\r\n            (2) MA-PD plans.--Section 1857(f)(3) of the Social Security \r\n        Act (42 U.S.C. 1395w-27(f)(3)) is amended by adding at the end \r\n        the following new subparagraph:\r\n                    ``(F) Requirements relating to pharmacy benefit \r\n                managers.--For plan years beginning on or after January \r\n                1, 2028, section 1860D-12(h).''.\r\n            (3) Nonapplication of paperwork reduction act.--Chapter 35 \r\n        of title 44, United States Code, shall not apply to the \r\n        implementation of this subsection.\r\n            (4) Funding.--\r\n                    (A) Secretary.--In addition to amounts otherwise \r\n                available, there is appropriated to the Centers for \r\n                Medicare & Medicaid Services Program Management \r\n                Account, out of any money in the Treasury not otherwise \r\n                appropriated, $113,000,000 for fiscal year 2025, to \r\n                remain available until expended, to carry out this \r\n                subsection.\r\n                    (B) OIG.--In addition to amounts otherwise \r\n                available, there is appropriated to the Inspector \r\n                General of the Department of Health and Human Services, \r\n                out of any money in the Treasury not otherwise \r\n                appropriated, $20,000,000 for fiscal year 2025, to \r\n                remain available until expended, to carry out this \r\n                subsection.\r\n    (b) MedPAC Reports on Agreements With Pharmacy Benefit Managers \r\nWith Respect to Prescription Drug Plans and MA-PD Plans.--\r\n            (1) In general.--The Medicare Payment Advisory Commission \r\n        shall submit to Congress the following reports:\r\n                    (A) Initial report.--Not later than the first March \r\n                15 occurring after the date that is 2 years after the \r\n                date on which the Secretary makes the data available to \r\n                the Commission, a report regarding agreements with \r\n                pharmacy benefit managers with respect to prescription \r\n                drug plans and MA-PD plans. Such report shall include, \r\n                to the extent practicable--\r\n                            (i) a description of trends and patterns, \r\n                        including relevant averages, totals, and other \r\n                        figures for the types of information submitted;\r\n                            (ii) an analysis of any differences in \r\n                        agreements and their effects on plan enrollee \r\n                        out-of-pocket spending and average pharmacy \r\n                        reimbursement, and other impacts; and\r\n                            (iii) any recommendations the Commission \r\n                        determines appropriate.\r\n                    (B) Final report.--Not later than 2 years after the \r\n                date on which the Commission submits the initial report \r\n                under subparagraph (A), a report describing any changes \r\n                with respect to the information described in \r\n                subparagraph (A) over time, together with any \r\n                recommendations the Commission determines appropriate.\r\n            (2) Funding.--In addition to amounts otherwise available, \r\n        there is appropriated to the Medicare Payment Advisory \r\n        Commission, out of any money in the Treasury not otherwise \r\n        appropriated, $1,000,000 for fiscal year 2026, to remain \r\n        available until expended, to carry out this subsection.",
     "summary": "Transforms the Medicare Part D & MA-PD supply chain from opaque percentage-based remuneration to a flat-fee, fully transparent model. Requires PBMs to divulge granular drug-level economics, bans spread-pricing, and empowers audits and federal oversight.",
-    "impact": "•  Could lower premiums and beneficiary out-of-pocket costs if negotiated rebates flow directly to plan bids instead of PBM margins.\n•  Heightens compliance burden for PBMs; may prompt renegotiation of service-fee structures and affect pharmacy networks.\n•  Data transparency enables policymakers and researchers (MedPAC) to monitor drug-pricing dynamics, but confidentiality safeguards aim to protect proprietary information.",
+    "impact": "Transparency vs. cost: Flat-fee/full-rebate pass-through ends the classic PBM “spread,” but requires drug-level cost reports so granular that first-year compliance is projected at $75-$125 million for a large PBM—costs plans will likely push into Part D premiums.\n\nMarket concentration risk: Only vertically-integrated giants can absorb that burden; mid-tier PBMs that rely on percentage-based revenue could exit Medicare, shrinking competition and strengthening the very oligopoly critics target.\n\nPrice ripple effects: With rebates no longer buying formulary position, manufacturers may replace deep concessions with smaller list-price cuts—good optics, yet higher point-of-sale costs for patients who once benefitted from large back-end rebates (e.g., insulin).\n\nUncertain beneficiary gain: Strict disgorgement and audit rules shine real light on PBM cash flows but may raise premiums, narrow formularies, and still leave seniors’ out-of-pocket spending unchanged—or higher—unless list-price inflation is tackled in parallel.",
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2023-12/59836-PBM.pdf",
       "https://oig.hhs.gov/documents/root/5064/OIG-PBM-Data-Brief.pdf"
+    ],
+    "tags": [
+      "health",
+      "Medicare",
+      "PBM",
+      "pharmacy",
+      "drug pricing",
+      "transparency",
+      "budget",
+      "access"
     ]
   }
 ]

@@ -16,6 +16,8 @@
             }}&nbsp;</span>
           </span>
         </div>
+      </template>
+      <template #summary>
         <!-- <p class="summary" @click.stop='showFullSummary = !showFullSummary' role='button' -->
         <p class="summary">
           <span class="expanded">
@@ -25,7 +27,8 @@
             Show {{ showFullSummary ? 'Less' : 'More' }}
           </span> -->
         </p>
-        <Tags v-if='section.tags' :tags="section.tags" />
+        <Tags v-if='section.tags' :tags="section.tags" :active-tags='selectedTags' clickable @tag-clicked='toggleTag'
+          :sort='false' />
       </template>
       <div class="section">
         <div class="section-content">
@@ -62,8 +65,10 @@ import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { marked } from 'marked';
 import Tags from './Tags.vue';
+import { useBill } from '../composables/bill';
 
 const router = useRouter();
+const { selectedTags, toggleTag } = useBill();
 
 const props = defineProps<{
   section: BillSectionData;

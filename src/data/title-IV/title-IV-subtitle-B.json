@@ -21,7 +21,13 @@
       "environment",
       "health",
       "EPA",
-      "transportation"
+      "transportation",
+      "public assistance",
+      "appropriations",
+      "subsidies",
+      "infrastructure",
+      "climate",
+      "manufacturing"
     ]
   },
   {
@@ -43,7 +49,13 @@
       "environment",
       "health",
       "EPA",
-      "transportation"
+      "transportation",
+      "public assistance",
+      "appropriations",
+      "infrastructure",
+      "ports",
+      "air pollution",
+      "grants"
     ]
   },
   {
@@ -64,7 +76,14 @@
     "tags": [
       "environment",
       "health",
-      "EPA"
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "climate",
+      "finance",
+      "clean energy",
+      "community development"
     ]
   },
   {
@@ -86,7 +105,13 @@
       "environment",
       "health",
       "EPA",
-      "transportation"
+      "transportation",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "diesel",
+      "air pollution",
+      "rural development"
     ]
   },
   {
@@ -102,6 +127,18 @@
       "https://www.epa.gov/inflation-reduction-act/air-quality-monitoring-capacity-building-grants",
       "https://www.nature.com/articles/d41586-023-02106-w",
       "https://crsreports.congress.gov/product/pdf/IN/IN12192"
+    ],
+    "tags": [
+      "environment",
+      "health",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "air pollution",
+      "community development",
+      "monitoring",
+      "data collection"
     ]
   },
   {
@@ -117,6 +154,18 @@
       "https://www.epa.gov/inflation-reduction-act/cleaner-air-schools",
       "https://www.childrensdefense.org/wp-content/uploads/2023/05/clean-air-in-schools-factsheet.pdf",
       "https://crsreports.congress.gov/product/pdf/IN/IN12214"
+    ],
+    "tags": [
+      "environment",
+      "health",
+      "EPA",
+      "schools",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "air pollution",
+      "infrastructure",
+      "HVAC"
     ]
   },
   {
@@ -132,6 +181,18 @@
       "https://www.epa.gov/inflation-reduction-act/low-emissions-electricity-program",
       "https://crsreports.congress.gov/product/pdf/IN/IN12190",
       "https://www.utilitydive.com/news/epa-ira-low-emission-electricity-program/651973/"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "electricity",
+      "utilities",
+      "energy",
+      "industry",
+      "methane"
     ]
   },
   {
@@ -147,6 +208,18 @@
       "https://www.epa.gov/renewable-fuel-standard-program",
       "https://sgp.fas.org/crs/misc/R45416.pdf",
       "https://www.reuters.com/world/us/us-epa-seeks-rite-staffing-fix-biofuel-program-with-ira-funds-2023-03-15/"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "data collection",
+      "biofuels",
+      "energy",
+      "staffing",
+      "rulemaking",
+      "RFS"
     ]
   },
   {
@@ -162,6 +235,18 @@
       "https://www.epa.gov/climate-hfcs-reduction",
       "https://crsreports.congress.gov/product/pdf/IF/IF11880",
       "https://www.greentechmedia.com/articles/read/epas-hfc-rule-key-to-us-climate-goal"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "air pollution",
+      "climate",
+      "refrigerants",
+      "rulemaking",
+      "compliance"
     ]
   },
   {
@@ -177,6 +262,18 @@
       "https://www.epa.gov/compliance",
       "https://www.gao.gov/products/gao-23-106600",
       "https://www.epa.gov/system/files/documents/2023-06/irainvestments-enforcement.pdf"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "compliance",
+      "technology",
+      "data collection",
+      "reporting",
+      "monitoring",
+      "enforcement"
     ]
   },
   {
@@ -192,6 +289,18 @@
       "https://www.epa.gov/ghgreporting",
       "https://www.sec.gov/news/press-release/2022-46",
       "https://crsreports.congress.gov/product/pdf/IF/IF11804"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "data collection",
+      "reporting",
+      "GHG",
+      "climate",
+      "corporate reporting",
+      "disclosure",
+      "rulemaking"
     ]
   },
   {
@@ -207,6 +316,18 @@
       "https://www.epa.gov/greenerproducts/epas-environmental-product-declaration-assistance-program",
       "https://www.whitehouse.gov/briefing-room/statements-releases/2022/09/15/fact-sheet-biden-harris-administration-advances-buy-clean-initiative/",
       "https://crsreports.congress.gov/product/pdf/IF/IF12249"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "industry",
+      "manufacturing",
+      "carbon",
+      "product labeling",
+      "exports"
     ]
   },
   {
@@ -222,6 +343,18 @@
       "https://www.epa.gov/controlling-air-pollution-oil-and-natural-gas-industry",
       "https://crsreports.congress.gov/product/pdf/IN/IN11947",
       "https://www.iea.org/reports/methane-tracker-2024"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "air pollution",
+      "methane",
+      "oil and gas",
+      "compliance",
+      "rulemaking"
     ]
   },
   {
@@ -237,6 +370,18 @@
       "https://www.epa.gov/inflation-reduction-act/climate-pollution-reduction-grants-program",
       "https://crsreports.congress.gov/product/pdf/IN/IN12250",
       "https://www.brookings.edu/articles/epa-grants-could-help-cities-transform-climate-ambition-into-action/"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "air pollution",
+      "climate",
+      "infrastructure",
+      "state policy",
+      "GHG"
     ]
   },
   {
@@ -252,6 +397,18 @@
       "https://www.epa.gov/nepa",
       "https://sgp.fas.org/crs/misc/R46624.pdf",
       "https://www.whitehouse.gov/wp-content/uploads/2023/09/Permitting-Action-Plan-Progress-Update.pdf"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "staffing",
+      "technology",
+      "environmental review",
+      "permitting",
+      "infrastructure",
+      "rulemaking"
     ]
   },
   {
@@ -267,6 +424,18 @@
       "https://www.whitehouse.gov/briefing-room/statements-releases/2023/12/06/fact-sheet-advancing-the-buy-clean-initiative/",
       "https://www.epa.gov/system/files/documents/2023-02/irainvestments-lowembodiedcarbon.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF12249"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "industry",
+      "carbon",
+      "product labeling",
+      "infrastructure",
+      "procurement",
+      "construction"
     ]
   },
   {
@@ -282,6 +451,18 @@
       "https://www.epa.gov/inflation-reduction-act/environmental-and-climate-justice-block-grants",
       "https://crsreports.congress.gov/product/pdf/IN/IN12274",
       "https://www.hsph.harvard.edu/c-change/news/irablockgrants/"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "public assistance",
+      "appropriations",
+      "grants",
+      "health",
+      "community development",
+      "infrastructure",
+      "climate",
+      "disparities"
     ]
   },
   {
@@ -297,6 +478,18 @@
       "https://www.epa.gov/regulations-emissions-vehicles-and-engines/final-rule-2023-and-later-light-duty-vehicle-ghg-standards",
       "https://www.epa.gov/regulations-emissions-vehicles-and-engines/multi-pollutant-emissions-standards-model-years-2027-and",
       "https://crsreports.congress.gov/product/pdf/IF/IF12014"
+    ],
+    "tags": [
+      "environment",
+      "EPA",
+      "transportation",
+      "public assistance",
+      "GHG",
+      "regulations",
+      "emissions",
+      "oil",
+      "rulemaking",
+      "automotive"
     ]
   },
   {
@@ -312,6 +505,18 @@
       "https://www.nhtsa.gov/corporate-average-fuel-economy",
       "https://crsreports.congress.gov/product/pdf/IF/IF12030",
       "https://www.federalregister.gov/documents/2024/06/24/2024-12381/corporate-average-fuel-economy-standards-for-passenger-cars-and-light-trucks-model-years-2027-and"
+    ],
+    "tags": [
+      "environment",
+      "transportation",
+      "public assistance",
+      "rulemaking",
+      "fuel economy",
+      "emissions",
+      "oil",
+      "NHTSA",
+      "GHG",
+      "automotive"
     ]
   }
 ]

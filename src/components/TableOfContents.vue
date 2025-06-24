@@ -28,7 +28,7 @@
             <span class="sections-list">
               {{ getSectionListText(title) }}
             </span>
-            <Tags :tags="getTags(title).map(t => t.tag)" :max-shown='5' color='light' :active-tags='selectedTags' />
+            <Tags :tags="getTags(title).map(t => t.tag)" :max-shown='5' color='light' />
           </div>
         </template>
 
@@ -44,8 +44,7 @@
                 <span class="sections-list">
                   {{ getSectionListText(title, subtitle.letter) }}
                 </span>
-                <Tags :tags="getTags(title, subtitle.letter).map(t => t.tag)" :max-shown='5' color='light'
-                  :active-tags='selectedTags' />
+                <Tags :tags="getTags(title, subtitle.letter).map(t => t.tag)" :max-shown='5' color='light' />
               </div>
             </template>
 
@@ -55,14 +54,15 @@
                 <template #title>
                   <div class="part-header">
                     <span class="part-text">
-                      Part <span class="part-number">{{ part.number }}</span> <span class="part-title">{{ part.title
-                        }}</span>
+                      Part <span class="part-number">{{ part.number }}</span> <span class="part-title">
+                        {{ part.title }}
+                      </span>
                     </span>
                     <div class="sections-list">
                       {{ getSectionListText(title, subtitle.letter, part.number) }}
                     </div>
                     <Tags :tags="getTags(title, subtitle.letter, part.number).map(t => t.tag)" :max-shown='5'
-                      color='light' :active-tags='selectedTags' />
+                      color='light' />
                   </div>
                 </template>
 
@@ -81,7 +81,7 @@
                           {{ getSectionListText(title, subtitle.letter, part.number, subpart.letter) }}
                         </div>
                         <Tags :tags="getTags(title, subtitle.letter, part.number, subpart.letter).map(t => t.tag)"
-                          :max-shown='5' color='light' :active-tags='selectedTags' />
+                          :max-shown='5' color='light' />
                       </div>
                     </template>
 
@@ -129,7 +129,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import { useRouter, type Router } from 'vue-router';
 import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
@@ -137,9 +136,7 @@ import { useBill, type TitleToc } from '../composables/bill';
 import Tags from './Tags.vue';
 
 const router: Router = useRouter();
-const { ALL_TAGS, getSection, getTags } = useBill();
-
-const selectedTags = ref<string[]>([]);
+const { getSection, getTags } = useBill();
 
 const getSections = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
   return title.sections.filter(s => {
@@ -179,6 +176,7 @@ const navigateToSection = (sectionNumber: string) => {
   flex-direction: column;
   padding: var(--spacing-md) var(--spacing-xs);
   padding-top: 0;
+  margin-top: var(--spacing-md);
   background: var(--color-section-bg);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);

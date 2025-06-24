@@ -8,11 +8,20 @@
     "summary": "Eliminates key federal accountability provisions for colleges: ▸ Repeals the 90/10 revenue test for proprietary schools. ▸ Strips all statutory references to “gainful employment,” removing the basis for debt-to-earnings accountability metrics. ▸ Vacates the 2022 borrower-defense and closed-school automatic-discharge regulations and revives the narrower 2020 framework. ▸ Bars the Education Department from re-issuing similar rules without new congressional authority.",
     "impact": "• For-profit colleges could rely entirely on federal aid, potentially encouraging aggressive recruiting of low-income students. \n• Removing gainful-employment language ends debt-to-earnings oversight, increasing the risk of low-value credentials. \n• Defrauded or stranded students would face higher hurdles to loan relief under the restored 2020 rules. \n• Taxpayers assume greater risk for future loan losses as borrower-defense discharges become rarer.",
     "additionalReferences": [
-      "https://www.federalregister.gov/documents/2022/11/01/2022-23426/program-integrity-and-student-loans",
+      "https://www.federalregister.gov/documents/2022/11/01/2022-23447/institutional-eligibility-under-the-higher-education-act-of-1965-as-amended-student-assistance",
       "https://www.federalregister.gov/documents/2019/09/23/2019-20505/student-assistance-general-provisions-loan-discharge-and-closed-school-and-false-certification-loan",
       "https://crsreports.congress.gov/product/pdf/R/R45969",
       "https://studentaid.gov/data-center/school/proprietary",
       "https://www2.ed.gov/about/offices/list/oig/auditreports/fy2023/a02sa0012.pdf"
+    ],
+    "tags": [
+      "education",
+      "student aid",
+      "public assistance",
+      "accountability",
+      "consumer protection",
+      "loan forgiveness",
+      "deferment"
     ]
   }
 ]

@@ -1,51 +1,43 @@
 <template>
     <div class="tags" :class='color'>
-        <span v-for="tag in tags" :key="tag"
-            :class='{ "active": props.activeTags?.includes(tag), "clickable": props.clickable }'
-            @click.stop='handleClick(tag)'>
+        <span v-for="tag in tags" :key="tag" :class='{ "active": selectedTags.includes(tag) }'
+            @click.stop='toggleTag(tag)'>
             {{ tag }}
         </span>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, toRefs } from 'vue';
+import { computed, toRefs } from 'vue';
+import { useBill } from '../composables/bill';
+
+const { selectedTags, toggleTag } = useBill();
 
 const props = withDefaults(defineProps<{
     tags: string[];
     color?: 'default' | 'light';
     maxShown?: number;
-    activeTags?: string[];
-    clickable?: boolean;
+    sort?: boolean;
 }>(), {
     color: 'default',
     activeTags: () => [],
+    sort: true,
 });
 
-const emit = defineEmits<{
-    (e: 'tag-clicked', tag: string): void;
-}>();
-
-const { clickable, activeTags } = toRefs(props);
+const { sort } = toRefs(props);
 
 const tags = computed(() => {
     const tags = [...props.tags];
-    if (!clickable.value && activeTags.value.length) {
+    if (sort.value && selectedTags.value.length) {
         tags.sort((a, b) => {
-            const aActive = activeTags.value.includes(a);
-            const bActive = activeTags.value.includes(b);
+            const aActive = selectedTags.value.includes(a);
+            const bActive = selectedTags.value.includes(b);
             return (bActive ? 1 : 0) - (aActive ? 1 : 0);
         });
     }
 
     return props.maxShown ? tags.slice(0, props.maxShown) : tags;
 });
-
-const handleClick = (tag: string) => {
-    if (props.clickable) {
-        emit('tag-clicked', tag);
-    }
-};
 </script>
 
 <style lang='scss' scoped>
@@ -63,13 +55,10 @@ const handleClick = (tag: string) => {
         background-color: var(--color-section-bg);
         border-radius: 0.5em;
         transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+        cursor: pointer;
+        user-select: none;
 
-        &.clickable {
-            cursor: pointer;
-            user-select: none;
-        }
-
-        &.clickable:hover,
+        &:hover,
         &.active {
             background-color: var(--color-bg);
             filter: drop-shadow(0 0 0.1em var(--color-text));
