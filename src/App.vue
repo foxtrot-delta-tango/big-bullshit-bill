@@ -195,6 +195,7 @@ onMounted(() => {
 
 watch(route, () => {
   setDataFromUrl();
+  showingNav.value = false;
 });
 
 watch(subtitles, () => {

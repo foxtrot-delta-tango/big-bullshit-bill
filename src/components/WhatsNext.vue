@@ -52,6 +52,7 @@
   overflow-y: auto;
   background: var(--color-section-bg);
   border-radius: var(--border-radius);
+  margin-top: 1em;
 
   @media (max-width: 1200px) {
     padding: 1em;
