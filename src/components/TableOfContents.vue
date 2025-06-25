@@ -1,16 +1,32 @@
 <template>
   <div class="table-of-contents">
     <h2>Table of Contents</h2>
-    <div class="toc-intro">
+    <div class="toc-intro" :class='{ "visible": showingWelcome }'>
       <p>
-        Explore the titles below to get started. You can click on any section header to jump directly into it.
+        Welcome!
+      </p>
+      <p>
+        This is a project that utilizes AI to help analyze the text of H.R.1, the so-called 'Big Beautiful Bill', the
+        budget bill currently moving through Congress. Each section of the bill is accompanied by a summary and impact
+        statement.
+      </p>
+      <p>
+        Click on the navigation link in the top left corner in order to jump directly to a particular part of the bill,
+        or explore the dropdowns below to get started. You can click on any section header to jump directly into it.
       </p>
       <p>
         To read the full source text of H.R.1, the so-called 'Big Beautiful Bill', visit <a
           href="https://www.congress.gov/bill/119th-congress/house-bill/1" target="_blank"
           rel="noopener noreferrer">Congress.gov</a>.
       </p>
+      <p>
+        For more information about the project or to volunteer, please visit our <router-link
+          to="/about">About</router-link> page.
+      </p>
     </div>
+    <button class="toggle-welcome" @click="toggleWelcomeMessage">
+      {{ showingWelcome ? 'Hide' : 'Show' }} Welcome
+    </button>
     <div class="toc-content">
       <ExpandableSection v-for="title in tocData.titles" :key="title.number"
         :title="`Title ${title.number} - ${title.name}`" class="title">
@@ -134,9 +150,13 @@ import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
 import { useBill, type TitleToc } from '../composables/bill';
 import Tags from './Tags.vue';
+import { ref } from 'vue';
 
 const router: Router = useRouter();
 const { getSection, getTags } = useBill();
+
+const WELCOME_SETTING_KEY = 'showWelcomeMessage';
+const showingWelcome = ref(localStorage.getItem(WELCOME_SETTING_KEY) !== 'false');
 
 const getSections = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
   return title.sections.filter(s => {
@@ -168,6 +188,11 @@ const navigateToSection = (sectionNumber: string) => {
     query: { section: sectionNumber }
   });
 };
+
+const toggleWelcomeMessage = () => {
+  showingWelcome.value = !showingWelcome.value;
+  localStorage.setItem(WELCOME_SETTING_KEY, String(showingWelcome.value));
+};
 </script>
 
 <style lang="scss" scoped>
@@ -183,17 +208,47 @@ const navigateToSection = (sectionNumber: string) => {
   overflow: auto;
 
   .toc-intro {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
     text-align: center;
     margin: 0 8em;
-    margin-bottom: 0.5em;
     color: var(--color-text-light);
+    transition: max-height 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
 
     >p {
-      margin: 0.5em 0;
+      margin: 0.25em 0;
     }
 
     @media (max-width: 1200px) {
       margin: 0 1em;
+
+      >p {
+        margin: 0;
+      }
+    }
+
+    &.visible {
+      max-height: 100vh;
+      pointer-events: all;
+      margin-bottom: 0.5em;
+      opacity: 1;
+    }
+  }
+
+  button.toggle-welcome {
+    border: none;
+    background: transparent;
+    color: var(--color-text-light);
+    font-style: italic;
+    font-weight: normal;
+    outline: none;
+
+    &:hover {
+      color: var(--color-primary);
     }
   }
 
