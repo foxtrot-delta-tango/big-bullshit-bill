@@ -193,9 +193,11 @@ onMounted(() => {
   setDataFromUrl();
 });
 
-watch(route, () => {
+watch(route, (current, prior) => {
   setDataFromUrl();
-  showingNav.value = false;
+
+  if (current.name !== prior.name)
+    showingNav.value = false;
 });
 
 watch(subtitles, () => {
