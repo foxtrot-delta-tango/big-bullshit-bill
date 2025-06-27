@@ -11,6 +11,16 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-10-24",
       "https://taxfoundation.org/bonus-depreciation-168k-explainer"
+    ],
+    "tags": [
+      "tax",
+      "depreciation",
+      "manufacturing",
+      "transportation",
+      "agriculture",
+      "investment",
+      "corporate tax",
+      "capital spending"
     ]
   },
   {
@@ -25,6 +35,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF12097",
       "https://www.jct.gov/publications/2024/jcx-12-24"
+    ],
+    "tags": [
+      "tax",
+      "R&D",
+      "expensing",
+      "corporate tax",
+      "foreign policy",
+      "code complexity"
     ]
   },
   {
@@ -39,6 +57,14 @@
     "additionalReferences": [
       "https://www.taxpolicycenter.org/briefing-book/what-interest-deduction-limitation",
       "https://home.treasury.gov/policy-issues/tax-policy/final-regulations-under-section-163j"
+    ],
+    "tags": [
+      "tax",
+      "interest deduction",
+      "corporate tax",
+      "retail",
+      "RV industry",
+      "leverage"
     ]
   },
   {
@@ -53,6 +79,14 @@
     "additionalReferences": [
       "https://www.oecd.org/tax/beps/",
       "https://www.cbo.gov/system/files/2024-04/57936-TaxProvisions.pdf"
+    ],
+    "tags": [
+      "tax",
+      "international taxation",
+      "FDII",
+      "GILTI",
+      "corporate tax",
+      "OECD"
     ]
   },
   {
@@ -67,6 +101,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IN/IN12101",
       "https://taxfoundation.org/base-erosion-anti-abuse-tax-beat-analysis"
+    ],
+    "tags": [
+      "tax",
+      "BEAT",
+      "international taxation",
+      "corporate tax",
+      "minimum tax",
+      "Pillar Two"
     ]
   },
   {
@@ -81,6 +123,13 @@
     "additionalReferences": [
       "https://www.irs.gov/pub/irs-drop/n-21-63.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF11869"
+    ],
+    "tags": [
+      "tax",
+      "business meals",
+      "hospitality",
+      "corporate tax",
+      "deductions"
     ]
   },
   {
@@ -95,6 +144,15 @@
     "additionalReferences": [
       "https://taxfoundation.org/structure-expensing-policy-analysis",
       "https://www.jct.gov/publications/2024/jcx-11-24"
+    ],
+    "tags": [
+      "tax",
+      "depreciation",
+      "manufacturing",
+      "agriculture",
+      "real estate",
+      "bonus depreciation",
+      "industrial policy"
     ]
   },
   {
@@ -109,6 +167,15 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF11583",
       "https://www.gao.gov/products/gao-23-106194"
+    ],
+    "tags": [
+      "tax",
+      "Opportunity Zones",
+      "rural development",
+      "community development",
+      "investment",
+      "reporting",
+      "compliance"
     ]
   },
   {
@@ -123,6 +190,14 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-14-24",
       "https://taxfoundation.org/section-179-expensing"
+    ],
+    "tags": [
+      "tax",
+      "expensing",
+      "small business",
+      "capital spending",
+      "construction",
+      "farming"
     ]
   },
   {
@@ -137,6 +212,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF12034",
       "https://www.jct.gov/publications/2024/jcx-13-24"
+    ],
+    "tags": [
+      "tax",
+      "reporting",
+      "gig economy",
+      "IRS",
+      "compliance",
+      "platforms"
     ]
   },
   {
@@ -151,6 +234,13 @@
     "additionalReferences": [
       "https://www.taxpolicycenter.org/taxvox/why-1099-reporting-matters",
       "https://www.irs.gov/pub/irs-soi/19prireport.pdf"
+    ],
+    "tags": [
+      "tax",
+      "reporting",
+      "small business",
+      "compliance",
+      "thresholds"
     ]
   },
   {
@@ -165,6 +255,14 @@
     "additionalReferences": [
       "https://www.federalreserve.gov/publications/files/sloansurvey-202401.pdf",
       "https://fas.org/sgp/crs/misc/R46768.pdf"
+    ],
+    "tags": [
+      "tax",
+      "agriculture",
+      "rural development",
+      "interest",
+      "real estate",
+      "finance"
     ]
   },
   {
@@ -179,6 +277,13 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF11310",
       "https://www.taxnotes.com/tax-notes-today-federal/credits-and-incentives/section-181-its-back/2019/09/23/2cqp0"
+    ],
+    "tags": [
+      "tax",
+      "entertainment",
+      "music",
+      "bonus depreciation",
+      "domestic production"
     ]
   },
   {
@@ -193,6 +298,15 @@
     "additionalReferences": [
       "https://www.novoco.com/resource-centers/affordable-housing-tax-credits/lihtc-basics",
       "https://www.gao.gov/assets/gao-24-107260.pdf"
+    ],
+    "tags": [
+      "tax",
+      "housing",
+      "LIHTC",
+      "affordable housing",
+      "rural development",
+      "tribal policy",
+      "bond financing"
     ]
   },
   {
@@ -204,7 +318,8 @@
     "sectionText": "SEC. 111109. INCREASED GROSS RECEIPTS THRESHOLD FOR SMALL MANUFACTURING \r\n              BUSINESSES.\r\n\r\n    (a) In General.--Section 448(c) is amended by redesignating \r\nparagraph (4) as paragraph (5) and by inserting after paragraph (3) the \r\nfollowing new paragraph:\r\n            ``(4) Gross receipts test for manufacturing taxpayers.--In \r\n        the case of a manufacturing taxpayer, paragraph (1) shall be \r\n        applied by substituting `$80,000,000' for `$25,000,000'.''.\r\n    (b) Inflation Adjustment.--Section 448(c)(5) (as so redesignated) \r\nis amended by striking ``the dollar amount in paragraph (1) shall be \r\nincreased'' and inserting ``the dollar amounts in paragraphs (1) and \r\n(4) shall each be increased''.\r\n    (c) Manufacturing Taxpayer Defined.--Section 448(d) is amended by \r\nredesignating paragraph (8) as paragraph (9) and by inserting after \r\nparagraph (7) the following new paragraph:\r\n            ``(8) Manufacturing taxpayer.--\r\n                    ``(A) In general.--The term `manufacturing \r\n                taxpayer' means a corporation or partnership \r\n                substantially all the gross receipts of which during \r\n                the 3-taxable-year period described in subsection \r\n                (c)(1) are derived from the lease, rental, license, \r\n                sale, exchange, or other disposition of qualified \r\n                products.\r\n                    ``(B) Qualified product.--For purposes of \r\n                subparagraph (A), the term `qualified product' means a \r\n                product that is both--\r\n                            ``(i) tangible personal property which is \r\n                        not a food or beverage prepared in the same \r\n                        building as a retail establishment in which \r\n                        substantially similar property is sold to the \r\n                        public, and\r\n                            ``(ii) produced or manufactured by the \r\n                        taxpayer in a manner which results in a \r\n                        substantial transformation (within the meaning \r\n                        of section 168(n)(2)(D)) of the property \r\n                        comprising the product.\r\n                    ``(C) Aggregation rule.--Solely for purposes of \r\n                determining whether a taxpayer is a manufacturing \r\n                taxpayer under subparagraph (A)--\r\n                            ``(i) gross receipts shall be determined \r\n                        under the rules of paragraphs (2) and (3) of \r\n                        subsection (c), and\r\n                            ``(ii) for purposes of subsection (c)(2), \r\n                        in applying section 52(b), the term `trade or \r\n                        business' shall include any activity treated as \r\n                        a trade or business under paragraph (5) or (6) \r\n                        of section 469(c) (determined without regard to \r\n                        the phrase `To the extent provided in \r\n                        regulations' in such paragraph (6)).''.\r\n    (d) Effective Date.--The amendments made by this section shall \r\napply to taxable years beginning after December 31, 2025.",
     "summary": "",
     "impact": "",
-    "additionalReferences": []
+    "additionalReferences": [],
+    "tags": []
   },
   {
     "titleNumber": "XI",
@@ -218,6 +333,14 @@
     "additionalReferences": [
       "https://home.treasury.gov/system/files/131/Territorial-Tax-Report-2023.pdf",
       "https://www.congress.gov/116/plaws/publ94/PLAW-116publ94.pdf"
+    ],
+    "tags": [
+      "tax",
+      "GILTI",
+      "international taxation",
+      "Virgin Islands",
+      "services",
+      "offshore"
     ]
   },
   {
@@ -232,6 +355,16 @@
     "additionalReferences": [
       "https://www.epa.gov/renewable-fuel-standard-program/lifecycle-analysis-greenhouse-gas-emissions",
       "https://sgp.fas.org/crs/misc/R46822.pdf"
+    ],
+    "tags": [
+      "tax",
+      "biofuels",
+      "clean fuel",
+      "GHG",
+      "climate",
+      "SAF",
+      "foreign ownership",
+      "energy"
     ]
   },
   {
@@ -246,6 +379,13 @@
     "additionalReferences": [
       "https://www.sec.gov/spotlight/reit-bulletin.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF10514"
+    ],
+    "tags": [
+      "tax",
+      "REIT",
+      "real estate",
+      "corporate tax",
+      "asset test"
     ]
   },
   {
@@ -260,6 +400,16 @@
     "additionalReferences": [
       "https://www.cms.gov/files/document/cms-3410-f2.pdf",
       "https://www.medpac.gov/wp-content/uploads/2023/12/Nov23_REH_IB_SEC.pdf"
+    ],
+    "tags": [
+      "Medicare",
+      "rural health",
+      "emergency care",
+      "hospital",
+      "health",
+      "facility fees",
+      "access",
+      "provider"
     ]
   }
 ]

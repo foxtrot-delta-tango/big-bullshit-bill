@@ -12,6 +12,14 @@
       "https://www.energy.gov/sites/default/files/2024-02/used_ev_tax_credit_factsheet.pdf",
       "https://about.bnef.com/electric-vehicle-outlook/",
       "https://afdc.energy.gov/data/10962"
+    ],
+    "tags": [
+      "EVs",
+      "used vehicles",
+      "tax credits",
+      "clean vehicles",
+      "emissions",
+      "affordability"
     ]
   },
   {
@@ -27,6 +35,14 @@
       "https://www.whitehouse.gov/briefing-room/statements-releases/2023/10/23/fact-sheet-ev-manufacturing-investments/",
       "https://theicct.org/publication/ev-price-parity-2030-oct23/",
       "https://www.congressionalbudgetoffice.gov/system/files/2023-12/58993-Deficits.pdf"
+    ],
+    "tags": [
+      "EVs",
+      "tax credits",
+      "clean vehicles",
+      "manufacturing",
+      "domestic production",
+      "emissions"
     ]
   },
   {
@@ -42,6 +58,13 @@
       "https://rmi.org/insight/electrifying-trucking-us-2023/",
       "https://afleet-web.es.anl.gov/evse/#",
       "https://rhodiumgroup.com/research/ira-year-one/"
+    ],
+    "tags": [
+      "clean vehicles",
+      "tax credits",
+      "commercial vehicles",
+      "emissions",
+      "infrastructure"
     ]
   },
   {
@@ -56,6 +79,13 @@
     "additionalReferences": [
       "https://afdc.energy.gov/fuels/laws/EV-charging-infrastructure",
       "https://www.nrel.gov/docs/fy24osti/87971.pdf"
+    ],
+    "tags": [
+      "EV charging",
+      "infrastructure",
+      "tax credits",
+      "rural access",
+      "clean vehicles"
     ]
   },
   {
@@ -70,6 +100,14 @@
     "additionalReferences": [
       "https://www.aceee.org/policy-brief/2023/09/home-energy-rebate-programs",
       "https://www.energy.gov/eere/wipo/better-energy-efficiency-retrofits"
+    ],
+    "tags": [
+      "home energy",
+      "tax credits",
+      "retrofits",
+      "energy efficiency",
+      "biofuels",
+      "fossil fuels"
     ]
   },
   {
@@ -84,6 +122,14 @@
     "additionalReferences": [
       "https://www.seia.org/research-resources/solar-market-insight-report-2023-q4",
       "https://emp.lbl.gov/publications/selling-sun-price-premium-solar-0"
+    ],
+    "tags": [
+      "clean energy",
+      "residential",
+      "solar",
+      "battery storage",
+      "tax credits",
+      "decarbonization"
     ]
   },
   {
@@ -98,6 +144,13 @@
     "additionalReferences": [
       "https://www.nrel.gov/docs/fy24osti/87888.pdf",
       "https://www.energy.gov/eere/buildings/zero-energy-ready-homes"
+    ],
+    "tags": [
+      "energy efficiency",
+      "housing",
+      "clean energy",
+      "tax credits",
+      "decarbonization"
     ]
   },
   {
@@ -113,6 +166,15 @@
       "https://www.eia.gov/outlooks/aeo",
       "https://www.goldmansachs.com/intelligence/pages/ira-one-year-later.html",
       "https://www.energy.gov/sites/default/files/2024-01/LPO_Cost_of_Capital_Impact.pdf"
+    ],
+    "tags": [
+      "clean energy",
+      "PTC",
+      "foreign entities",
+      "supply chain",
+      "nuclear",
+      "decarbonization",
+      "ITC"
     ]
   },
   {
@@ -128,6 +190,15 @@
       "https://www.woodmac.com/news/opinion/ira-anniversary-outlook/",
       "https://www.energy.gov/sites/default/files/2023-12/DOE%20Grid%20Storage%20Lifespan%20Report.pdf",
       "https://cleanpower.org/resources/clean-energy-labor-market-update-2024/"
+    ],
+    "tags": [
+      "ITC",
+      "clean energy",
+      "storage",
+      "supply chain",
+      "foreign entities",
+      "solar",
+      "decarbonization"
     ]
   },
   {
@@ -143,6 +214,15 @@
       "https://crsreports.congress.gov/product/pdf/IN/IN12162",
       "https://www.transportation.gov/topic/sustainable-aviation-fuel-grand-challenge",
       "https://www.nera.com/content/dam/nera/publications/2023/Tax_Credit_Market_Assessment.pdf"
+    ],
+    "tags": [
+      "clean fuel",
+      "transferability",
+      "tax credits",
+      "SAF",
+      "biofuels",
+      "RNG",
+      "emissions"
     ]
   },
   {
@@ -158,6 +238,14 @@
       "https://www.globalccsinstitute.com/resources/global-status-report/",
       "https://rff.org/publications/issue-briefs/financial-viability-of-carbon-capture-in-the-united-states/",
       "https://energy.gov/fecm/carbon-negative-shot"
+    ],
+    "tags": [
+      "carbon capture",
+      "CCS",
+      "tax credits",
+      "foreign entities",
+      "transferability",
+      "decarbonization"
     ]
   },
   {
@@ -172,6 +260,13 @@
     "additionalReferences": [
       "https://www.eia.gov/todayinenergy/detail.php?id=58619",
       "https://www.nea.fr/jcms/pl_50737/the-economics-of-long-term-operation-of-nuclear-power-plants"
+    ],
+    "tags": [
+      "nuclear",
+      "existing generation",
+      "tax credits",
+      "foreign entities",
+      "decarbonization"
     ]
   },
   {
@@ -186,6 +281,14 @@
     "additionalReferences": [
       "https://www.energy.gov/eere/fuelcells/hydrogen-shot",
       "https://www.utilitydive.com/news/45v-clean-hydrogen-guidance/701603/"
+    ],
+    "tags": [
+      "hydrogen",
+      "clean energy",
+      "tax credits",
+      "H2 hubs",
+      "DOE",
+      "decarbonization"
     ]
   },
   {
@@ -201,6 +304,15 @@
       "https://www.seia.org/research-resources/solar-manufacturing-roadmap",
       "https://rmi.org/insight/the-us-clean-energy-manufacturing-opportunity/",
       "https://crsreports.congress.gov/product/pdf/R/R47270"
+    ],
+    "tags": [
+      "advanced manufacturing",
+      "solar",
+      "wind",
+      "supply chain",
+      "tax credits",
+      "foreign entities",
+      "decarbonization"
     ]
   },
   {
@@ -215,6 +327,14 @@
     "additionalReferences": [
       "https://www.nrel.gov/docs/fy23osti/84332.pdf",
       "https://www.energy.gov/sites/default/files/2023-02/Transmission_Needs_Study.pdf"
+    ],
+    "tags": [
+      "grid modernization",
+      "transmission",
+      "ITC",
+      "HVDC",
+      "foreign entities",
+      "infrastructure"
     ]
   },
   {
@@ -229,6 +349,14 @@
     "additionalReferences": [
       "https://www.brookings.edu/articles/investment-in-carbon-capture-infrastructure/",
       "https://www.ey.com/en_us/energy-resources/why-hydrogen-transport-and-storage-are-crucial"
+    ],
+    "tags": [
+      "hydrogen",
+      "carbon capture",
+      "infrastructure",
+      "PTP",
+      "tax treatment",
+      "MLPs"
     ]
   },
   {
@@ -243,6 +371,13 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF11920",
       "https://www.taxpolicycenter.org/briefing-book/how-are-intangible-assets-treated-under-income-tax"
+    ],
+    "tags": [
+      "sports",
+      "tax treatment",
+      "intangibles",
+      "amortization",
+      "franchises"
     ]
   },
   {
@@ -257,6 +392,14 @@
     "additionalReferences": [
       "https://www.taxfoundation.org/research/all/federal/salt-cap/",
       "https://crsreports.congress.gov/product/pdf/IF/IF12012"
+    ],
+    "tags": [
+      "SALT",
+      "deductions",
+      "state taxes",
+      "tax treatment",
+      "marriage penalty",
+      "PTEs"
     ]
   },
   {
@@ -271,6 +414,13 @@
     "additionalReferences": [
       "https://www.congress.gov/110/plaws/publ343/PLAW-110publ343.pdf#page=115",
       "https://taxfoundation.org/blog/section-162m-executive-compensation-deductions/"
+    ],
+    "tags": [
+      "executive compensation",
+      "deductions",
+      "corporate tax",
+      "subsidiaries",
+      "compliance"
     ]
   },
   {
@@ -284,6 +434,14 @@
     "impact": "• **Sweeps in coaches, surgeons, money‑manager affiliates, and senior staff** who were previously outside the top‑5 window, increasing hit for major universities/hospital systems.  A 2023 GAO survey showed ~1,100 employees over $1 M; Treasury could now collect excise on 4‑5× that number.\n• **Back‑office headache.**  Organizations must maintain lifetime pay histories for all employees to police the $1 M line— significant for high‑turnover research hospitals.\n• **No carve‑out for governmental units.**  State universities remain exempt because they’re §511(a)(2)(B) entities, but quasi‑public nonprofits (athletic foundations etc.) now face the levy—likely passed on to students and donors.",
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R46180"
+    ],
+    "tags": [
+      "nonprofits",
+      "executive compensation",
+      "excise tax",
+      "universities",
+      "healthcare",
+      "501(c)(3)"
     ]
   },
   {
@@ -298,6 +456,14 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2017/jcx-4-17/",
       "https://www.aau.edu/sites/default/files/AAU-Files/Key-Issues/Taxation-Finance/Endowment-Tax.pdf"
+    ],
+    "tags": [
+      "universities",
+      "endowments",
+      "taxation",
+      "investment income",
+      "Bayh-Dole",
+      "religious exemption"
     ]
   },
   {
@@ -311,6 +477,13 @@
     "impact": "• **Hits mega‑foundations hardest.**  Gates Foundation (~$67 B) would see annual excise jump from ~$930 M over 10 years to >$6.7 B, reducing grant budgets unless offset by donors.\n• **Doubles down on payout‑rule tension.**  Higher tax encourages accelerated charitable spending to shrink asset base, but may simultaneously siphon funds available for programs.\n• **Asset aggregation eases avoidance but adds complexity**— foundations must monitor subsidiary LLCs and donor‑advised funds.\n• **Revenue modest (<$2 B/yr) compared to charitable‑sector disruption.**  Could spur lobbying for a carry‑forward credit for grantmaking.",
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R45446"
+    ],
+    "tags": [
+      "foundations",
+      "investment income",
+      "excise tax",
+      "philanthropy",
+      "progressive rates"
     ]
   },
   {
@@ -324,6 +497,13 @@
     "impact": "• **ESOP succession aid.**  Family companies with both an ESOP and a related foundation can retire shares without triggering punitive foundation excise, smoothing ownership transitions.\n• **Guardrails modest.**  No relief in first 10 years of a new ESOP; nonetheless could enable indefinitely high charitable ownership (~51 %) contrary to anti‑control policy.\n• **Revenue negligible; anti‑abuse regs needed** to track cumulative buybacks and prevent cyclical re‑issuance games.",
     "additionalReferences": [
       "https://www.esopassociation.org/"
+    ],
+    "tags": [
+      "ESOP",
+      "foundations",
+      "business succession",
+      "charity",
+      "ownership structure"
     ]
   },
   {
@@ -337,6 +517,14 @@
     "impact": "• **Déjà vu.**  IRS dropped the TCJA rule in 2019 retroactively; this bill reenacts it, imposing ~$0.8 B over 10 yrs per JCT.\n• **Administrative churn.**  Thousands of charities will again track employee parking valuations; complex for urban universities with shared garages.\n• **Selective carve‑out for churches risks neutrality concerns.**",
     "additionalReferences": [
       "https://home.treasury.gov/news/press-releases/1120191230"
+    ],
+    "tags": [
+      "nonprofits",
+      "fringe benefits",
+      "parking",
+      "UBTI",
+      "churches",
+      "501(c)(3)"
     ]
   },
   {
@@ -350,6 +538,13 @@
     "impact": "• **Targets pay‑for‑research contracts.**  University‑industry sponsored projects with NDAs now generate UBTI, pressuring nonprofit labs to choose between openness and tax.\n• **Modest revenue; big compliance burden**— institutions must segregate open‑access vs restricted revenue streams.\n• **Could chill corporate partnerships** in biotech/engineering sectors that rely on confidentiality.",
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/RL/RL33330"
+    ],
+    "tags": [
+      "nonprofits",
+      "UBTI",
+      "research",
+      "open access",
+      "proprietary research"
     ]
   },
   {
@@ -363,6 +558,13 @@
     "impact": "• **Hits high‑income real‑estate and hedge‑fund owners** who cycle large depreciation or mark‑to‑market losses.  Permanent cap scores $155 B/10 yrs (JCT Nov 2023).\n• **Smoother carryforward mechanics aid bookkeeping** but mean IRS must police cumulative tracking; taxpayers gain refund opportunities via §1341 claim‑of‑right coordination.\n• **Aligns individual passthrough loss limits more closely with corporate NOL rules**, reinforcing TCJA policy.",
     "additionalReferences": [
       "https://www.jct.gov/publications/2023/jcx-27-23/"
+    ],
+    "tags": [
+      "business losses",
+      "tax policy",
+      "passthroughs",
+      "NOL",
+      "TCJA"
     ]
   },
   {
@@ -377,6 +579,13 @@
     "additionalReferences": [
       "https://conference-board.org/us-giving-report",
       "https://www.jct.gov/publications/2024"
+    ],
+    "tags": [
+      "corporate philanthropy",
+      "charitable giving",
+      "deductions",
+      "tax treatment",
+      "C-corporations"
     ]
   },
   {
@@ -391,6 +600,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF11745",
       "https://home.treasury.gov/policy-issues/tax-policy"
+    ],
+    "tags": [
+      "international tax",
+      "foreign tax retaliation",
+      "DST",
+      "UTPR",
+      "multinationals",
+      "trade"
     ]
   },
   {
@@ -405,6 +622,14 @@
     "additionalReferences": [
       "https://www.atf.gov/file/169511/download",
       "https://www.gao.gov/assets/gao-20-648.pdf"
+    ],
+    "tags": [
+      "firearms",
+      "silencers",
+      "NFA",
+      "ATF",
+      "taxes",
+      "Second Amendment"
     ]
   },
   {
@@ -419,6 +644,15 @@
     "additionalReferences": [
       "https://www.cbp.gov/document/publication/section-321-data-pilot-federal-register-notice",
       "https://www.congress.gov/bill/118th-congress/house-bill/4148"
+    ],
+    "tags": [
+      "customs",
+      "de minimis",
+      "e-commerce",
+      "CBP",
+      "international trade",
+      "small business",
+      "tariffs"
     ]
   },
   {
@@ -433,6 +667,13 @@
     "additionalReferences": [
       "https://www.cbo.gov/publication/52859",
       "https://www.kff.org/racial-equity-and-health-policy/issue-brief/aca-exchanges-immigrants"
+    ],
+    "tags": [
+      "ACA",
+      "premium tax credit",
+      "immigration",
+      "eligibility",
+      "healthcare access"
     ]
   },
   {
@@ -446,6 +687,13 @@
     "impact": "• **Double lock‑out.**  New green‑card holders with incomes <138 % FPL (FPL in expansion states) will have **no affordable coverage pathway**—contradicting public‑health goals and likely increasing ER reliance.\n• **Modest budget effect** (<$1 B/decade per HHS estimates) but complicates state outreach and could reduce legal immigration attractiveness.\n• **Coordination headaches.**  IRS and exchanges must continually cross‑match state Medicaid files to ensure month‑by‑month PTC ineligibility, inviting gaps and IRS reconciliations.",
     "additionalReferences": [
       "https://www.macpac.gov/publication/medicaid-and-chip-eligibility-for-immigrants/"
+    ],
+    "tags": [
+      "Medicaid",
+      "premium tax credit",
+      "immigration",
+      "eligibility",
+      "healthcare access"
     ]
   },
   {
@@ -460,6 +708,13 @@
     "additionalReferences": [
       "https://www.cms.gov/files/document/enrollment-medicare-population-2021.pdf",
       "https://crsreports.congress.gov/product/pdf/R/R46599"
+    ],
+    "tags": [
+      "Medicare",
+      "immigration",
+      "eligibility",
+      "citizenship",
+      "healthcare access"
     ]
   },
   {
@@ -474,6 +729,13 @@
     "additionalReferences": [
       "https://www.pewresearch.org/short-reads/2023/02/14/remittance-flows-worldwide-in-2022/",
       "https://fsi.stanford.edu/publication/impact-remittance-fees"
+    ],
+    "tags": [
+      "remittances",
+      "excise tax",
+      "immigration",
+      "international finance",
+      "compliance"
     ]
   },
   {
@@ -488,6 +750,14 @@
     "additionalReferences": [
       "https://www.irs.gov/pub/irs-pdf/p970.pdf",
       "https://www.treasury.gov/tigta/auditreports/2020reports/202040022fr.pdf"
+    ],
+    "tags": [
+      "student aid",
+      "AOTC",
+      "education credits",
+      "SSN",
+      "immigration",
+      "compliance"
     ]
   },
   {
@@ -498,7 +768,15 @@
     "sectionTitle": "REQUIRING EXCHANGE VERIFICATION OF ELIGIBILITY FOR HEALTH PLAN.",
     "sectionText": "SEC. 112201. REQUIRING EXCHANGE VERIFICATION OF ELIGIBILITY FOR HEALTH \r\n              PLAN.\r\n\r\n    (a) In General.--Section 36B(c) is amended by adding at the end the \r\nfollowing new paragraphs:\r\n            ``(5) Exchange enrollment verification requirement.--\r\n                    ``(A) In general.--The term `coverage month' shall \r\n                not include, with respect to any individual covered by \r\n                a qualified health plan enrolled in through an \r\n                Exchange, any month beginning before the Exchange \r\n                verifies, using applicable enrollment information that \r\n                shall be provided or verified by the applicant, such \r\n                individual's eligibility--\r\n                            ``(i) to enroll in the plan through the \r\n                        Exchange,\r\n                            ``(ii) for any advance payment under \r\n                        section 1412 of the Patient Protection and \r\n                        Affordable Care Act of the credit allowed under \r\n                        this section, and\r\n                            ``(iii) for any reduced cost-sharing under \r\n                        section 1402 of such Act.\r\n                    ``(B) Applicable enrollment information.--For \r\n                purposes of subparagraph (A), applicable enrollment \r\n                information shall at least include affirmation of the \r\n                following information (to the extent relevant in \r\n                determining eligibility described in subparagraph (A)):\r\n                            ``(i) Income.\r\n                            ``(ii) Any immigration status.\r\n                            ``(iii) Any health coverage status or \r\n                        eligibility for coverage.\r\n                            ``(iv) Place of residence.\r\n                            ``(v) Family size.\r\n                            ``(vi) Such other information as may be \r\n                        determined by the Secretary (in consultation \r\n                        with the Secretary of Health and Human \r\n                        Services) as necessary to the verification \r\n                        prescribed under subparagraph (A).\r\n                    ``(C) Verification of past months.--In the case of \r\n                a month that begins before verification prescribed by \r\n                subparagraph (A), such month shall be treated as a \r\n                coverage month if, and only if, the Exchange verifies \r\n                for such month (using applicable enrollment information \r\n                that shall be provided or verified by the applicant) \r\n                such individual's eligibility to have so enrolled, for \r\n                any such advance payment, and for any such reduced \r\n                cost-sharing.\r\n                    ``(D) Exchange participation; coordination with \r\n                other procedures for determining eligibility.--An \r\n                individual shall not, solely by reason of failing to \r\n                meet the requirements of this paragraph with respect to \r\n                a month, be treated for such month as ineligible to \r\n                enroll in a qualified health plan through an Exchange.\r\n            ``(6) Exchange compliance with filing requirements.--The \r\n        term `coverage month' shall not include, with respect to any \r\n        individual covered by a qualified health plan enrolled in \r\n        through an Exchange, any month for which the Exchange does not \r\n        meet the requirements of section 155.305(f)(4) of title 45, \r\n        Code of Federal Regulations (as published in the Federal \r\n        Register on March 19, 2025 (90 FR 12942)), with respect to the \r\n        individual.''.\r\n    (b) Pre-enrollment Verification Process Required.--Section \r\n36B(c)(3)(A) is amended--\r\n            (1) by striking ``health plan.--The term'' and inserting \r\n        the following: ``health plan.--\r\n                            ``(i) In general.--The term'', and\r\n            (2) by adding at the end the following new clause:\r\n                            ``(ii) Pre-enrollment verification process \r\n                        required.--Such term shall not include any plan \r\n                        enrolled in through an Exchange, unless such \r\n                        Exchange provides a process for pre-enrollment \r\n                        verification through which any applicant may, \r\n                        beginning not later than August 1, verify with \r\n                        the Exchange the applicant's eligibility for \r\n                        enrollment in such plan for plan years \r\n                        beginning in the subsequent year, for any \r\n                        advance payment of the credit allowed under \r\n                        this section, and for reduced cost-sharing \r\n                        under section 1402 of the Patient Protection \r\n                        and Affordable Care Act.''.\r\n    (c) Regulations.--The Secretary of the Treasury and the Secretary \r\nof Health and Human Services may each prescribe such rules and other \r\nguidance as may be necessary or appropriate to carry out the amendments \r\nmade by this section.\r\n    (d) Effective Date.--The amendments made by this section shall \r\napply to taxable years beginning after December 31, 2027.",
     "summary": "Requires every ACA marketplace (Exchange) to finish **full pre‑enrollment verification**—income, immigration, residency, family size, etc.—before any month can qualify for the premium‑tax‑credit (PTC) or cost‑sharing reductions (CSR).  Months that precede verification are retro‑qualified only if the Exchange later validates eligibility.  In addition, an Exchange that fails to file §155.305(f)(4) monthly IRS data for a person loses creditability for that month.  Starting 2028, each Exchange must also offer a yearly ‘pre‑enrollment verification window’ (opening by Aug 1) so applicants can lock‑in eligibility for the next plan year.",
-    "impact": "• **Delays coverage subsidies.**  Manual document review already averages 2–4 weeks; a hard stop will defer APTC for ~3 M special‑enrollees annually, raising first‑month premium bills and likely increasing attrition.\n• **Exchange IT & staffing costs** (≈ $250 M Federal + state per CMS estimate) to build front‑end verification portals and back‑end IRS links.\n• **Savings** modest (~$1–2 B/10 yrs, JCT 2022) because most questionable attestations are eventually verified; risk of higher uninsured rate for low‑income movers.\n• **Implementation by 2028** may require revision of §1411/1412 regs and re‑bid of federal data‑services hub."
+    "impact": "• **Delays coverage subsidies.**  Manual document review already averages 2–4 weeks; a hard stop will defer APTC for ~3 M special‑enrollees annually, raising first‑month premium bills and likely increasing attrition.\n• **Exchange IT & staffing costs** (≈ $250 M Federal + state per CMS estimate) to build front‑end verification portals and back‑end IRS links.\n• **Savings** modest (~$1–2 B/10 yrs, JCT 2022) because most questionable attestations are eventually verified; risk of higher uninsured rate for low‑income movers.\n• **Implementation by 2028** may require revision of §1411/1412 regs and re‑bid of federal data‑services hub.",
+    "tags": [
+      "ACA",
+      "exchange",
+      "PTC",
+      "eligibility verification",
+      "healthcare",
+      "compliance"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -508,7 +786,15 @@
     "sectionText": "SEC. 112202. DISALLOWING PREMIUM TAX CREDIT IN CASE OF CERTAIN COVERAGE \r\n              ENROLLED IN DURING SPECIAL ENROLLMENT PERIOD.\r\n\r\n    (a) In General.--Section 36B(c)(3)(A), as amended by the preceding \r\nprovisions of this Act, is amended by adding at the end the following \r\nnew clause:\r\n                            ``(iii) Exception in case of certain \r\n                        special enrollment periods.--Such term shall \r\n                        not include any plan enrolled in during a \r\n                        special enrollment period provided for by an \r\n                        Exchange--\r\n                                    ``(I) on the basis of the \r\n                                relationship of the individual's \r\n                                expected household income to such a \r\n                                percentage of the poverty line (or such \r\n                                other amount) as is prescribed by the \r\n                                Secretary of Health and Human Services \r\n                                for purposes of such period, and\r\n                                    ``(II) not in connection with the \r\n                                occurrence of an event or change in \r\n                                circumstances specified by the \r\n                                Secretary of Health and Human Services \r\n                                for such purposes.''.\r\n    (b) Regulations.--The Secretary of Treasury and the Secretary of \r\nHealth and Human Services shall prescribe such rules (including interim \r\nfinal and temporary regulations) and other guidance as may be necessary \r\nto carry out the purposes of the amendments made by this section.\r\n    (c) Effective Date.--The amendments made by this section shall \r\napply with respect to plans enrolled in during calendar months \r\nbeginning after the third calendar month ending after the date of the \r\nenactment of this Act.",
     "sectionTitle": "DISALLOWING PREMIUM TAX CREDIT IN CASE OF CERTAIN COVERAGE ENROLLED IN DURING SPECIAL ENROLLMENT PERIOD.",
     "summary": "Eliminates PTC eligibility for plans chosen in **income‑based special‑enrollment periods** (SEPs) that are *not* triggered by a life event (e.g., loss of coverage, marriage).  Applies to enrollments starting three months after enactment.",
-    "impact": "Cuts off subsidies for approx. 600 k low‑income adults who currently use the federal SEP for ≤150 % FPL income, reversing 2022 Biden‑era flexibility.  CBO scored similar repeal at <$0.5 B/yr but predicts 0.2 M drop in exchange enrollment."
+    "impact": "Cuts off subsidies for approx. 600 k low‑income adults who currently use the federal SEP for ≤150 % FPL income, reversing 2022 Biden‑era flexibility.  CBO scored similar repeal at <$0.5 B/yr but predicts 0.2 M drop in exchange enrollment.",
+    "tags": [
+      "ACA",
+      "PTC",
+      "SEPs",
+      "low-income",
+      "healthcare access",
+      "eligibility"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -518,7 +804,15 @@
     "sectionTitle": "ELIMINATING LIMITATION ON RECAPTURE OF ADVANCE PAYMENT OF PREMIUM TAX CREDIT.",
     "sectionText": "SEC. 112203. ELIMINATING LIMITATION ON RECAPTURE OF ADVANCE PAYMENT OF \r\n              PREMIUM TAX CREDIT.\r\n\r\n    (a) In General.--Section 36B(f)(2) is amended by striking \r\nsubparagraph (B).\r\n    (b) Conforming Amendments.--\r\n            (1) Section 36B(f)(2) is amended by striking ``advance \r\n        payments.--'' and all that follows through ``If the advance \r\n        payments'' and inserting the following: ``advance payments.--If \r\n        the advance payments''.\r\n            (2) Section 35(g)(12)(B)(ii) is amended by striking ``then \r\n        section 36B(f)(2)(B) shall be applied by substituting the \r\n        amount determined under clause (i) for the amount determined \r\n        under section 36B(f)(2)(A)'' and inserting ``then the amount \r\n        determined under clause (i) shall be substituted for the amount \r\n        determined under section 36B(f)(2)''.\r\n    (c) Effective Date.--The amendment made by this section shall apply \r\nto taxable years beginning after December 31, 2025.",
     "summary": "Removes the dollar caps (§36B (f)(2)(B)) that currently limit how much of an excess advance PTC the IRS can claw back at year‑end for low‑ and middle‑income households.  Full repayment liability applies starting TY 2026.",
-    "impact": "Roughly 2 M filers each year who underestimate income will owe larger ‘true‑up’ bills (median increase ≈ $500).  JCT previously scored full‑recapture at $13 B/10 yrs but expects higher collections only if IRS enforcement improves."
+    "impact": "Roughly 2 M filers each year who underestimate income will owe larger ‘true‑up’ bills (median increase ≈ $500).  JCT previously scored full‑recapture at $13 B/10 yrs but expects higher collections only if IRS enforcement improves.",
+    "tags": [
+      "ACA",
+      "PTC",
+      "recapture",
+      "IRS",
+      "healthcare",
+      "compliance"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -528,7 +822,14 @@
     "sectionTitle": "IMPLEMENTING ARTIFICIAL INTELLIGENCE TOOLS FOR PURPOSES OF REDUCING AND RECOUPING IMPROPER PAYMENTS UNDER MEDICARE.",
     "sectionText": "SEC. 112204. IMPLEMENTING ARTIFICIAL INTELLIGENCE TOOLS FOR PURPOSES OF \r\n              REDUCING AND RECOUPING IMPROPER PAYMENTS UNDER MEDICARE.\r\n\r\n    (a) In General.--Part E of title XVIII of the Social Security Act \r\n(42 U.S.C. 1395x et seq.), as amended by the preceding provisions of \r\nthis Act, is amended by adding at the end the following new section:\r\n\r\n``SEC. 1899D. IMPLEMENTING ARTIFICIAL INTELLIGENCE TOOLS FOR PURPOSES \r\n              OF REDUCING AND RECOUPING IMPROPER PAYMENTS.\r\n\r\n    ``(a) In General.--Not later than January 1, 2027, the Secretary \r\nshall implement such artificial intelligence tools determined \r\nappropriate by the Secretary for purposes of--\r\n            ``(1) reducing improper payments made under parts A and B; \r\n        and\r\n            ``(2) identifying any such improper payments so made.\r\n    ``(b) Contracts.--The Secretary shall seek to contract with a \r\nvendor of artificial intelligence tools and with data scientists for \r\npurposes of implementing the artificial intelligence tools required \r\nunder subsection (a).\r\n    ``(c) Recoupment.--The Secretary shall, to the extent practicable, \r\nrecoup payments identified using the artificial intelligence tools \r\nimplemented under subsection (a).\r\n    ``(d) Report.--Not later than January 1, 2029, and not less \r\nfrequently than annually thereafter, the Secretary shall report to \r\nCongress on the implementation of artificial intelligence tools under \r\nsubsection (a) and the recoupment of improper payments under subsection \r\n(c). Such report shall include--\r\n            ``(1) a description of any opportunities for further \r\n        reducing rates of improper payments described in subsection \r\n        (a)(1) or further increasing rates of recoupment of such \r\n        payments;\r\n            ``(2) the total dollar amount of improper payments recouped \r\n        in the most recent year for which data is available; and\r\n            ``(3) in the case that the Secretary fails to reduce the \r\n        rate of improper payments by 50 percent in such most recent \r\n        year as compared to the year prior to such most recent year, a \r\n        description of the reasons for such failure.''.\r\n    (b) Implementation Funding.--\r\n            (1) Federal hospital insurance trust fund.--The Secretary \r\n        of Health and Human Services shall provide for the transfer \r\n        from the Federal Hospital Insurance Trust Fund established \r\n        under section 1817 of the Social Security Act (42 U.S.C. 1395i) \r\n        to the Centers for Medicare & Medicaid Services Program \r\n        Management Account of $12,500,000 for fiscal year 2025 for \r\n        purposes of carrying out the amendment made by this section, to \r\n        remain available until expended.\r\n            (2) Federal supplementary medical insurance trust fund.--\r\n        The Secretary of Health and Human Services shall provide for \r\n        the transfer, from the Federal Supplementary Medical Insurance \r\n        Trust Fund established under section 1841 of the Social \r\n        Security Act (42 U.S.C. 1395t) to the Centers for Medicare & \r\n        Medicaid Services Program Management Account of $12,500,000 for \r\n        fiscal year 2025 for purposes of carrying out the amendment \r\n        made by this section, to remain available until expended.",
     "summary": "Directs HHS to procure AI analytics by 1 Jan 2027 to flag and recover improper fee‑for‑service payments; goal is a 50 % reduction in error rate.  Authorizes $25 M (split from Parts A & B trust funds) for FY 2025 start‑up and requires annual progress reports.",
-    "impact": "• **CMS already pilots AI** (e.g., Fraud Prevention System); extra funds expand scope.  If target met, GAO estimates could save ≥ $10 B/yr.\n• Privacy & algorithmic‑bias safeguards are not specified; oversight needed."
+    "impact": "• **CMS already pilots AI** (e.g., Fraud Prevention System); extra funds expand scope.  If target met, GAO estimates could save ≥ $10 B/yr.\n• Privacy & algorithmic‑bias safeguards are not specified; oversight needed.",
+    "tags": [
+      "Medicare",
+      "improper payments",
+      "AI",
+      "fraud prevention",
+      "data analysis"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -538,7 +839,15 @@
     "sectionTitle": "ENFORCEMENT PROVISIONS WITH RESPECT TO COVID‑RELATED EMPLOYEE RETENTION CREDITS.",
     "sectionText": "SEC. 112205. ENFORCEMENT PROVISIONS WITH RESPECT TO COVID-RELATED \r\n              EMPLOYEE RETENTION CREDITS.\r\n\r\n    (a) Increase in Assessable Penalty on COVID-ERTC Promoters for \r\nAiding and Abetting Understatements of Tax Liability.--\r\n            (1) In general.--If any COVID-ERTC promoter is subject to \r\n        penalty under section 6701(a) of the Internal Revenue Code of \r\n        1986 with respect to any COVID-ERTC document, notwithstanding \r\n        paragraphs (1) and (2) of section 6701(b) of such Code, the \r\n        amount of the penalty imposed under such section 6701(a) shall \r\n        be the greater of--\r\n                    (A) $200,000 ($10,000, in the case of a natural \r\n                person), or\r\n                    (B) 75 percent of the gross income derived (or to \r\n                be derived) by such promoter with respect to the aid, \r\n                assistance, or advice referred to in section 6701(a)(1) \r\n                of such Code with respect to such document.\r\n            (2) No inference.--Paragraph (1) shall not be construed to \r\n        create any inference with respect to the proper application of \r\n        the knowledge requirement of section 6701(a)(3) of the Internal \r\n        Revenue Code of 1986.\r\n    (b) Failure to Comply With Due Diligence Requirements Treated as \r\nKnowledge for Purposes of Assessable Penalty for Aiding and Abetting \r\nUnderstatement of Tax Liability.--In the case of any COVID-ERTC \r\npromoter, the knowledge requirement of section 6701(a)(3) of the \r\nInternal Revenue Code of 1986 shall be treated as satisfied with \r\nrespect to any COVID-ERTC document with respect to which such promoter \r\nprovided aid, assistance, or advice, if such promoter fails to comply \r\nwith the due diligence requirements referred to in subsection (c)(1).\r\n    (c) Assessable Penalty for Failure to Comply With Due Diligence \r\nRequirements.--\r\n            (1) In general.--Any COVID-ERTC promoter which provides \r\n        aid, assistance, or advice with respect to any COVID-ERTC \r\n        document and which fails to comply with due diligence \r\n        requirements imposed by the Secretary with respect to \r\n        determining eligibility for, or the amount of, any COVID-\r\n        related employee retention tax credit, shall pay a penalty of \r\n        $1,000 for each such failure.\r\n            (2) Due diligence requirements.--Except as otherwise \r\n        provided by the Secretary, the due diligence requirements \r\n        referred to in paragraph (1) shall be similar to the due \r\n        diligence requirements imposed under section 6695(g) of the \r\n        Internal Revenue Code of 1986.\r\n            (3) Restriction to documents used in connection with \r\n        returns or claims for refund.--Paragraph (1) shall not apply \r\n        with respect to any COVID-ERTC document unless such document \r\n        constitutes, or relates to, a return or claim for refund.\r\n            (4) Treatment as assessable penalty, etc.--For purposes of \r\n        the Internal Revenue Code of 1986, the penalty imposed under \r\n        paragraph (1) shall be treated in the same manner as a penalty \r\n        imposed under section 6695(g) of such Code.\r\n            (5) Secretary.--For purposes of this subsection, the term \r\n        ``Secretary'' means the Secretary of the Treasury or the \r\n        Secretary's delegate.\r\n    (d) Assessable Penalties for Failure to Disclose Information, \r\nMaintain Client Lists, etc.--For purposes of sections 6111, 6112, 6707 \r\nand 6708 of the Internal Revenue Code of 1986--\r\n            (1) any COVID-related employee retention tax credit \r\n        (whether or not the taxpayer claims such COVID-related employee \r\n        retention tax credit) shall be treated as a listed transaction \r\n        (and as a reportable transaction) with respect to any COVID-\r\n        ERTC promoter if such promoter provides any aid, assistance, or \r\n        advice with respect to any COVID-ERTC document relating to such \r\n        COVID-related employee retention tax credit, and\r\n            (2) such COVID-ERTC promoter shall be treated as a material \r\n        advisor with respect to such transaction.\r\n    (e) COVID-ERTC Promoter.--For purposes of this section--\r\n            (1) In general.--The term ``COVID-ERTC promoter'' means, \r\n        with respect to any COVID-ERTC document, any person which \r\n        provides aid, assistance, or advice with respect to such \r\n        document if--\r\n                    (A) such person charges or receives a fee for such \r\n                aid, assistance, or advice which is based on the amount \r\n                of the refund or credit with respect to such document \r\n                and, with respect to such person's taxable year in \r\n                which such person provided such assistance or the \r\n                preceding taxable year, the aggregate gross receipts of \r\n                such person for aid, assistance, and advice with \r\n                respect to all COVID-ERTC documents exceeds 20 percent \r\n                of the gross receipts of such person for such taxable \r\n                year, or\r\n                    (B) with respect to such person's taxable year in \r\n                which such person provided such assistance or the \r\n                preceding taxable year--\r\n                            (i) the aggregate gross receipts of such \r\n                        person for aid, assistance, and advice with \r\n                        respect to all COVID-ERTC documents exceeds 50 \r\n                        percent of the gross receipts of such person \r\n                        for such taxable year, or\r\n                            (ii) both--\r\n                                    (I) such aggregate gross receipts \r\n                                exceeds 20 percent of the gross \r\n                                receipts of such person for such \r\n                                taxable year, and\r\n                                    (II) the aggregate gross receipts \r\n                                of such person for aid, assistance, and \r\n                                advice with respect to all COVID-ERTC \r\n                                documents (determined after application \r\n                                of paragraph (3)) exceeds $500,000.\r\n            (2) Exception for certified professional employer \r\n        organizations.--The term ``COVID-ERTC promoter'' shall not \r\n        include a certified professional employer organization (as \r\n        defined in section 7705 of the Internal Revenue Code of 1986).\r\n            (3) Aggregation rule.--For purposes of paragraph \r\n        (1)(B)(ii)(II), all persons treated as a single employer under \r\n        subsection (a) or (b) of section 52 of the Internal Revenue \r\n        Code of 1986, or subsection (m) or (o) of section 414 of such \r\n        Code, shall be treated as 1 person.\r\n            (4) Short taxable years.--In the case of any taxable year \r\n        of less than 12 months, paragraph (1) shall be applied with \r\n        respect to the calendar year in which such taxable year begins \r\n        (in addition to applying to such taxable year).\r\n    (f) COVID-ERTC Document.--For purposes of this section, the term \r\n``COVID-ERTC document'' means any return, affidavit, claim, or other \r\ndocument related to any COVID-related employee retention tax credit, \r\nincluding any document related to eligibility for, or the calculation \r\nor determination of any amount directly related to any COVID-related \r\nemployee retention tax credit.\r\n    (g) COVID-related Employee Retention Tax Credit.--For purposes of \r\nthis section, the term ``COVID-related employee retention tax credit'' \r\nmeans--\r\n            (1) any credit, or advance payment, under section 3134 of \r\n        the Internal Revenue Code of 1986, and\r\n            (2) any credit, or advance payment, under section 2301 of \r\n        the CARES Act.\r\n    (h) Limitation on Credit and Refund of COVID-related Employee \r\nRetention Tax Credits.--Notwithstanding section 6511 of the Internal \r\nRevenue Code of 1986, no credit or refund of any COVID-related employee \r\nretention tax credit shall be allowed or made after the date of the \r\nenactment of this Act, unless a claim for such credit or refund is \r\nfiled by the taxpayer on or before January 31, 2024.\r\n    (i) Amendments to Extend Limitation on Assessment.--\r\n            (1) In general.--Section 3134(l) is amended to read as \r\n        follows:\r\n    ``(l) Extension of Limitation on Assessment.--\r\n            ``(1) In general.--Notwithstanding section 6501, the \r\n        limitation on the time period for the assessment of any amount \r\n        attributable to a credit claimed under this section shall not \r\n        expire before the date that is 6 years after the latest of--\r\n                    ``(A) the date on which the original return which \r\n                includes the calendar quarter with respect to which \r\n                such credit is determined is filed,\r\n                    ``(B) the date on which such return is treated as \r\n                filed under section 6501(b)(2), or\r\n                    ``(C) the date on which the claim for credit or \r\n                refund with respect to such credit is made.\r\n            ``(2) Deduction for wages taken into account in determining \r\n        improperly claimed credit.--\r\n                    ``(A) In general.--Notwithstanding section 6511, in \r\n                the case of an assessment attributable to a credit \r\n                claimed under this section, the limitation on the time \r\n                period for credit or refund of any amount attributable \r\n                to a deduction for improperly claimed ERTC wages shall \r\n                not expire before the time period for such assessment \r\n                expires under paragraph (1).\r\n                    ``(B) Improperly claimed ertc wages.--For purposes \r\n                of this paragraph, the term `improperly claimed ERTC \r\n                wages' means, with respect to an assessment \r\n                attributable to a credit claimed under this section, \r\n                the wages with respect to which a deduction would not \r\n                have been allowed if the portion of the credit to which \r\n                such assessment relates had been properly claimed.''.\r\n            (2) Application to cares act credit.--Section 2301 of the \r\n        CARES Act is amended by adding at the end the following new \r\n        subsection:\r\n    ``(o) Extension of Limitation on Assessment.--\r\n            ``(1) In general.--Notwithstanding section 6501 of the \r\n        Internal Revenue Code of 1986, the limitation on the time \r\n        period for the assessment of any amount attributable to a \r\n        credit claimed under this section shall not expire before the \r\n        date that is 6 years after the latest of--\r\n                    ``(A) the date on which the original return which \r\n                includes the calendar quarter with respect to which \r\n                such credit is determined is filed,\r\n                    ``(B) the date on which such return is treated as \r\n                filed under section 6501(b)(2) of such Code, or\r\n                    ``(C) the date on which the claim for credit or \r\n                refund with respect to such credit is made.\r\n            ``(2) Deduction for wages taken into account in determining \r\n        improperly claimed credit.--\r\n                    ``(A) In general.--Notwithstanding section 6511 of \r\n                such Code, in the case of an assessment attributable to \r\n                a credit claimed under this section, the limitation on \r\n                the time period for credit or refund of any amount \r\n                attributable to a deduction for improperly claimed ERTC \r\n                wages shall not expire before the time period for such \r\n                assessment expires under paragraph (1).\r\n                    ``(B) Improperly claimed ertc wages.--For purposes \r\n                of this paragraph, the term `improperly claimed ERTC \r\n                wages' means, with respect to an assessment \r\n                attributable to a credit claimed under this section, \r\n                the wages with respect to which a deduction would not \r\n                have been allowed if the portion of the credit to which \r\n                such assessment relates had been properly claimed.''.\r\n    (j) Effective Dates.--\r\n            (1) In general.--Except as otherwise provided in this \r\n        subsection, the provisions of this section shall apply to aid, \r\n        assistance, and advice provided after March 12, 2020.\r\n            (2) Due diligence requirements.--Subsections (b) and (c) \r\n        shall apply to aid, assistance, and advice provided after the \r\n        date of the enactment of this Act.\r\n            (3) Limitation on credit and refund of covid-related \r\n        employee retention tax credits.--Subsection (h) shall apply to \r\n        credits and refunds allowed or made after the date of the \r\n        enactment of this Act.\r\n            (4) Amendments to extend limitation on assessment.--The \r\n        amendments made by subsection (i) shall apply to assessments \r\n        made after the date of the enactment of this Act.\r\n    (k) Transition Rule With Respect to Requirements to Disclose \r\nInformation, Maintain Client Lists, etc.--Any return under section 6111 \r\nof the Internal Revenue Code of 1986, or list under section 6112 of \r\nsuch Code, required by reason of subsection (d) of this section to be \r\nfiled or maintained, respectively, with respect to any aid, assistance, \r\nor advice provided by a COVID-ERTC promoter with respect to a COVID-\r\nERTC document before the date of the enactment of this Act, shall not \r\nbe required to be so filed or maintained (with respect to such aid, \r\nassistance or advice) before the date which is 90 days after the date \r\nof the enactment of this Act.\r\n    (l) Provisions Not to Be Construed to Create Negative Inferences.--\r\n            (1) No inference with respect to application of knowledge \r\n        requirement to pre-enactment conduct of covid-ertc promoters, \r\n        etc.--Subsection (b) shall not be construed to create any \r\n        inference with respect to the proper application of section \r\n        6701(a)(3) of the Internal Revenue Code of 1986 with respect to \r\n        any aid, assistance, or advice provided by any COVID-ERTC \r\n        promoter on or before the date of the enactment of this Act (or \r\n        with respect to any other aid, assistance, or advice to which \r\n        such subsection does not apply).\r\n            (2) Requirements to disclose information, maintain client \r\n        lists, etc.--Subsections (d) and (k) shall not be construed to \r\n        create any inference with respect to whether any COVID-related \r\n        employee retention tax credit is (without regard to subsection \r\n        (d)) a listed transaction (or reportable transaction) with \r\n        respect to any COVID-ERTC promoter; and, for purposes of \r\n        subsection (k), a return or list shall not be treated as \r\n        required (with respect to such aid, assistance, or advice) by \r\n        reason of subsection (d) if such return or list would be so \r\n        required without regard to subsection (d).\r\n    (m) Regulations.--The Secretary (as defined in subsection (c)(5)) \r\nshall issue such regulations or other guidance as may be necessary or \r\nappropriate to carry out the purposes of this section (and the \r\namendments made by this section).",
     "summary": "Creates muscular enforcement regime against abusive ERTC promoters:  \n• Penalty under §6701 for aiding/abetting rises to **$200 k or 75 % of fees** (natural person $10 k).  \n• New $1 k per‑client due‑diligence penalty; knowledge presumed if duties ignored.  \n• Treats every ERTC as a *listed transaction* for promoters—triggering §§6111/6112 registration and client‑list rules.  \n• Bars new refund claims after 31 Jan 2024; extends IRS assessment window to 6 years; narrows NOL interaction.  \n• Defines ‘COVID‑ERTC promoter’ threshold (20 %+ of revenue or >$500 k).",
-    "impact": "Aims to curb rampant pop‑up mills; TIGTA estimates $2.8 B improper claims already paid.  Retroactive registration plus high penalties will chill marketing, but also ensnare legitimate small payroll shops.  Cut‑off date blocks claims still pending for 2020‑21 quarters; may spark litigation from bona‑fide late filers."
+    "impact": "Aims to curb rampant pop‑up mills; TIGTA estimates $2.8 B improper claims already paid.  Retroactive registration plus high penalties will chill marketing, but also ensnare legitimate small payroll shops.  Cut‑off date blocks claims still pending for 2020‑21 quarters; may spark litigation from bona‑fide late filers.",
+    "tags": [
+      "ERTC",
+      "fraud prevention",
+      "COVID",
+      "compliance",
+      "penalties",
+      "tax credits"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -548,7 +857,15 @@
     "sectionTitle": "EARNED INCOME TAX CREDIT REFORMS.",
     "sectionText": "SEC. 112206. EARNED INCOME TAX CREDIT REFORMS.\r\n\r\n    (a) Earned Income Tax Credit Certification Program.--\r\n            (1) Establishment of program.--\r\n                    (A) In general.--Chapter 77 is amended by adding at \r\n                the end the following new section:\r\n\r\n``SEC. 7531. EARNED INCOME TAX CREDIT CERTIFICATION PROGRAM.\r\n\r\n    ``(a) In General.--To avoid duplicative and other erroneous claims \r\nunder section 32 with respect to a child of the taxpayer, for taxable \r\nyears beginning after December 31, 2027, the Secretary shall establish \r\na program under which, on the taxpayer's application with respect to \r\nthe child, the Secretary shall issue an EITC certificate for purposes \r\nof section 32 establishing such child's status as a qualifying child \r\nonly of the taxpayer for a taxable year.\r\n    ``(b) Application Requirements.--\r\n            ``(1) In general.--The Secretary shall not issue to a \r\n        taxpayer an EITC certificate with respect to a child for a \r\n        taxable year unless the taxpayer applies under the program with \r\n        respect to the child and provides such information and \r\n        supporting documentation as the Secretary shall by regulation \r\n        prescribe as necessary to establish such child as a qualifying \r\n        child only of the taxpayer for the taxable year.\r\n            ``(2) Time and manner of application.--Such application \r\n        shall be made, and such information and supporting \r\n        documentation shall be provided--\r\n                    ``(A) in such manner as may be provided by the \r\n                Secretary for purposes of this section (including \r\n                establishing an on-line portal), and\r\n                    ``(B) not later than the due date for the return of \r\n                tax for the taxable year or (if later) when the return \r\n                is filed.\r\n            ``(3) Competing claims.--In the case of more than 1 \r\n        taxpayer making an application with respect to a child under \r\n        the program for a taxable year beginning during a calendar \r\n        year, the Secretary shall not issue an EITC certificate to any \r\n        such taxpayer with respect to such child for such a taxable \r\n        year unless the Secretary can establish such child, based on \r\n        information and supporting documentation provided under \r\n        paragraph (1), as the qualifying child only of one such \r\n        taxpayer for such a taxable year.\r\n    ``(c) Treatment of Credit Without Certification Under Program.--For \r\ntaxable years beginning after December 31, 2027--\r\n            ``(1) In general.--In the case of a taxpayer who takes into \r\n        account as a qualifying child under section 32 a child for whom \r\n        an EITC certificate has not been issued for the taxable year to \r\n        the taxpayer--\r\n                    ``(A) the Secretary shall not credit the portion of \r\n                any overpayment for such taxable year that is \r\n                attributable to the taxpayer taking into account such \r\n                child as a qualifying child, unless the taxpayer \r\n                obtains, not later than the due date for the return for \r\n                the taxable year, an EITC certificate with respect to \r\n                such child for such taxable year, and\r\n                    ``(B) if the taxpayer fails to so obtain an EITC \r\n                certificate, such failure shall be treated--\r\n                            ``(i) as an omission of information \r\n                        required by section 32 with respect to such \r\n                        child, and\r\n                            ``(ii) as arising out of a mathematical or \r\n                        clerical error and assessed according to \r\n                        section 6213(b)(1).\r\n            ``(2) Termination of certification.--In the case of a \r\n        taxpayer who for a taxable year takes into account as a \r\n        qualifying child under section 32 a child for whom an EITC \r\n        certificate is terminated for such taxable year, such \r\n        termination shall be treated in the same manner as a failure to \r\n        obtain an EITC certificate under paragraph (1)(B).\r\n    ``(d) Transition Rules for Taxable Years Beginning Before 2028.--\r\n            ``(1) In general.--If for any taxable year beginning after \r\n        December 31, 2023, and before January 1, 2027, more than 1 \r\n        taxpayer makes a claim for credit under section 32 taking into \r\n        account the same child as a qualifying child, then the \r\n        Secretary shall send notice to each such taxpayer (by certified \r\n        or registered mail to the last known address of the taxpayer) \r\n        detailing the resultant treatment of such taxpayers under \r\n        paragraph (2) with respect to such child for any subsequent \r\n        taxable years beginning before 2028.\r\n            ``(2) Subsequent taxable years beginning before 2028.--In \r\n        the case of a child with respect to whom paragraph (1) applied \r\n        by reason of claims for credit for a taxable year, for any \r\n        subsequent taxable years beginning before January 1, 2028--\r\n                    ``(A) subject to subparagraph (B), the Secretary \r\n                shall not credit the portion of any overpayment for the \r\n                taxable year that is attributable to a taxpayer taking \r\n                into account such child as a qualifying child under \r\n                section 32 until the 15th day of October following the \r\n                end of the taxable year, and\r\n                    ``(B) if more than one taxpayer makes a claim for \r\n                such credit for the taxable year taking into account \r\n                such child as a qualifying child, so taking such child \r\n                into account shall be treated--\r\n                            ``(i) as an omission of information \r\n                        required by section 32 with respect to such \r\n                        child, and\r\n                            ``(ii) as arising out of a mathematical or \r\n                        clerical error and assessed according to \r\n                        section 6213(b)(1).\r\n    ``(e) Qualifying Child.--For purposes of this section, the term \r\n`qualifying child' has the meaning given such term under section \r\n32(c)(3).\r\n    ``(f) Rebuttal of Treatment.--Treatment under subsection (c) or \r\n(d)(2)(B) as having omitted information required by section 32 may be \r\nrebutted by providing such information and supporting documentation as \r\nsatisfactorily demonstrates the child is a qualifying child of the \r\ntaxpayer for the taxable year.\r\n    ``(g) Restrictions on Taxpayers Who Improperly Use Program.--\r\n            ``(1) In general.--A taxpayer shall not be permitted to \r\n        apply for an EITC certificate under the program for any taxable \r\n        year in the disallowance period.\r\n            ``(2) Disallowance period.--For purposes of paragraph (1), \r\n        the disallowance period is--\r\n                    ``(A) the period of 10 taxable years after the most \r\n                recent taxable year for which there was a penalty \r\n                imposed under 6720D on the taxpayer (but only if such \r\n                penalty has been imposed on such taxpayer more than \r\n                once, at least one instance of which was due to fraud \r\n                under section 6720D(b)),\r\n                    ``(B) the period of 2 taxable years after the most \r\n                recent taxable year for which there was a penalty \r\n                imposed under 6720D on the taxpayer (but only if such \r\n                penalty has been imposed on such taxpayer more than \r\n                once due to reckless or intentional disregard of rules \r\n                and regulations (but not imposed due to fraud)), and\r\n                    ``(C) any disallowance period with respect to the \r\n                taxpayer under section 32(k)(1).\r\n    ``(h) Regulations.--The Secretary shall prescribe such rules as may \r\nbe necessary or appropriate to carry out the program and purposes of \r\nthis section, including--\r\n            ``(1) a process for establishing alternating taxable year \r\n        treatment of a child as a qualifying child under a custodial \r\n        arrangement,\r\n            ``(2) notwithstanding subsection (d)(2), a process for--\r\n                    ``(A) establishing the status of a child as a \r\n                qualifying child of the taxpayer under section 32 for \r\n                taxable years to which such subsection applies, and\r\n                    ``(B) allowing credit or refunds attributable to \r\n                such status,\r\n            ``(3) a simplified process for re-certifying a child as a \r\n        qualifying child only of the taxpayer for a taxable year, and\r\n            ``(4) a process for terminating EITC certificates in the \r\n        case of competing claims with respect to a child or in cases in \r\n        which issuance of the certificate is determined by the \r\n        Secretary to be erroneous.''.\r\n                    (B) Conforming amendment.--Section 32 amended by \r\n                adding at the end the following new subsection:\r\n    ``(o) EITC Certificate With Respect to Qualifying Children.--For \r\nrules relating to EITC certificates with respect to qualifying children \r\nand duplicate claims for the credit allowed under this section, see \r\nsection 7531.''.\r\n                    (C) Clerical amendment.--The table of sections for \r\n                chapter 77 is amended by adding at the end the \r\n                following new item:\r\n\r\n``Sec. 7531. Earned income tax credit certification program.''.\r\n            (2) Penalties for improper use of eitc certificate \r\n        program.--\r\n                    (A) In general.--Part I of subchapter B of chapter \r\n                68 is amended by adding at the end the following new \r\n                section:\r\n\r\n``SEC. 6720D. PENALTIES WITH RESPECT TO EITC CERTIFICATE PROGRAM.\r\n\r\n    ``(a) Reckless or Intentional Disregard.--If--\r\n            ``(1) any person makes a material misstatement or \r\n        inaccurate representation in an application under section 7531 \r\n        for an EITC certificate, and\r\n            ``(2) such misstatement or representation was due to \r\n        reckless or intentional disregard of rules and regulations (but \r\n        not due to fraud),\r\nsuch person shall pay a penalty of $100 for each EITC certificate with \r\nrespect to which such misstatement or representation was made.\r\n    ``(b) Fraud.--If a misstatement or representation described in \r\nsubsection (a)(1) is due to fraud on the part of the person making such \r\nmisstatement or representation, in addition to any criminal penalty, \r\nsuch person shall pay a penalty of $500 for each EITC certificate with \r\nrespect to which such a misstatement or representation was made.''.\r\n                    (B) Clerical amendment.--The table of sections for \r\n                part I of subchapter B of chapter 68 is amended by \r\n                adding at the end the following new item:\r\n\r\n``Sec. 6720D. Penalties with respect to EITC certificate program.''.\r\n            (3) Effective date.--The amendments made by this subsection \r\n        shall apply to taxable years beginning after December 31, 2024.\r\n    (b) Task Force to Design a Private Data Bouncing System for \r\nImprovements to the Earned Income Tax Credit.--Out of any money in the \r\nTreasury not otherwise appropriated, there is hereby appropriated \r\n$10,000,000 for the fiscal year ending on September 30, 2026, for \r\nnecessary expenses of the Department of the Treasury, to establish, \r\nwithin 90 days following the date of the enactment of this Act, a task \r\nforce to provide to the Secretary of the Treasury a report on the \r\nfollowing with respect to the administration of the earned income tax \r\ncredit:\r\n            (1) Recommendations for improvement of the integrity of \r\n        such administration.\r\n            (2) The potential use of third-party payroll and \r\n        consumption datasets to verify income.\r\n            (3) The integration of automated databases to allow \r\n        horizontal verification to reduce improper payments, fraud, and \r\n        abuse.\r\n    (c) Increased Earned Income Tax Credit for Purple Heart Recipients \r\nWhose Social Security Disability Benefits Are Terminated by Reason of \r\nWork Activity.--\r\n            (1) In general.--Section 32, as amended by the preceding \r\n        provisions of this Act, is amended by adding at the end the \r\n        following new subsection:\r\n    ``(p) Increase in Credit for Purple Heart Recipients Whose Social \r\nSecurity Disability Benefits Are Terminated by Reason of Work \r\nActivity.--\r\n            ``(1) In general.--In the case of a specified Purple Heart \r\n        recipient, the credit otherwise determined under subsection (a) \r\n        for the taxable year shall be increased (whether or not such \r\n        specified Purple Heart recipient is an eligible individual) by \r\n        the sum of the SSDI benefit substitution amounts with respect \r\n        to qualified benefit termination months during such taxable \r\n        year.\r\n            ``(2) Specified purple heart recipient.--For purposes of \r\n        this subsection, the term `specified Purple Heart recipient' \r\n        means any individual--\r\n                    ``(A) who received the Purple Heart,\r\n                    ``(B) who received disability insurance benefit \r\n                payments under section 223(a) of the Social Security \r\n                Act, and\r\n                    ``(C) with respect to whom such disability \r\n                insurance benefit payments ceased to be payable by \r\n                reason of section 223(e)(1) of such Act.\r\n            ``(3) Qualified benefit termination month.--For purposes of \r\n        this subsection--\r\n                    ``(A) In general.--The term `qualified benefit \r\n                termination month' means, with respect to any specified \r\n                Purple Heart recipient, each month during the 12-month \r\n                period beginning with the first month with respect to \r\n                which disability insurance benefit payments described \r\n                in paragraph (2)(B) ceased to be payable as described \r\n                in paragraph (2)(C).\r\n                    ``(B) Exception for months for which benefits are \r\n                reinstated, etc.--Such term shall not include any month \r\n                if the specified Purple Heart recipient receives any \r\n                benefit payment under section 223(a) of the Social \r\n                Security Act with respect to such month.\r\n            ``(4) SSDI benefit substitution amount.--For purposes of \r\n        this subsection, the term `SSDI benefit substitution amount' \r\n        means, with respect to any specified Purple Heart recipient for \r\n        any qualified benefit termination month, an amount equal to the \r\n        disability insurance benefit payment received by such recipient \r\n        under section 223(a) of the Social Security Act for the month \r\n        immediately preceding the 12-month period described in \r\n        paragraph (3)(A).\r\n            ``(5) Certain eitc limitations not applicable.--Subsections \r\n        (a)(2), (d), (e), (f), and (i) shall not apply with respect to \r\n        the increase under paragraph (1).''.\r\n            (2) Effective date.--The amendment made by this subsection \r\n        shall apply to taxable years ending after the date of the \r\n        enactment of this Act.\r\n    (d) Social Security Number Defined.--\r\n            (1) In general.--Section 32(m) is amended by striking \r\n        ``issued to an individual'' and all that follows and inserting \r\n        ``(as defined section 24(h)(7))''.\r\n            (2) Effective date.--The amendment made by this section \r\n        shall apply to taxable years beginning after December 31, 2024.",
     "summary": "• **Mandatory ‘EITC certificate’ system (new §7531) starting TY 2028**: parents must pre‑verify a child’s qualifying‑child status; IRS will issue certificates, reject duplicative claims and delay refunds (Oct 15 release) where past conflicts exist.  Penalties ($100 reckless / $500 fraud) for mis‑statements; 2‑ or 10‑year disallowance for repeat offenders.\n• Treasury task‑force ($10 M) to explore private‑data income verification.\n• **Purple‑Heart SSDI earners** get temporary wage‑offset EITC supplement equal to lost disability payments for 12 months.\n• Clarifies SSN definition cross‑reference.",
-    "impact": "Could cut EITC over‑claims (currently ~25 % error rate per IRS) but at cost of *front‑loaded bureaucracy*: 19 M families would need certificates; risk of delayed refunds for the lowest‑income households.  Implementation price tag likely > $1 B; half of improper payments stem from complex residency tests that documentation may not conclusively resolve."
+    "impact": "Could cut EITC over‑claims (currently ~25 % error rate per IRS) but at cost of *front‑loaded bureaucracy*: 19 M families would need certificates; risk of delayed refunds for the lowest‑income households.  Implementation price tag likely > $1 B; half of improper payments stem from complex residency tests that documentation may not conclusively resolve.",
+    "tags": [
+      "EITC",
+      "fraud prevention",
+      "low-income",
+      "tax credits",
+      "residency verification",
+      "disability"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -558,7 +875,14 @@
     "sectionTitle": "TASK FORCE ON THE TERMINATION OF DIRECT FILE.",
     "sectionText": "SEC. 112207. TASK FORCE ON THE TERMINATION OF DIRECT FILE.\r\n\r\n    (a) Termination of Direct File.--As soon as practicable, and not \r\nlater than 30 days after the date of the enactment of this Act, the \r\nSecretary of the Treasury shall ensure that the Internal Revenue \r\nService Direct File program has been terminated.\r\n    (b) Appropriation for Task Force to Design a Better Public-private \r\nPartnership Between the IRS and Private Sector Tax Preparation Services \r\nto Provide for Free Tax Filing to Replace the Existing ``Free File'' \r\nProgram and Any ``Direct Efile'' Tax Return System.--Out of any money \r\nin the Treasury not otherwise appropriated, there is hereby \r\nappropriated for the fiscal year ending September 30, 2026, for \r\nnecessary expenses of the Department of the Treasury to deliver to \r\nCongress, within 90 days following the date of the enactment of this \r\nAct, a report on (1) the cost of a new public-private partnership to \r\nprovide for free tax filing for up to 70 percent of all taxpayers \r\ncalculated by adjusted gross income to replace free file and any IRS-\r\nrun direct file programs; (2) taxpayer opinions and preferences \r\nregarding a taxpayer-funded, government-run service or a free service \r\nprovided by the private sector; (3) assessment of the feasibility of a \r\nnew approach, how to make the options consistent and simple for \r\ntaxpayers across all participating providers, how to provide features \r\nto address taxpayer needs; and (4) the cost (including options for \r\ndifferential coverage based on taxpayer adjusted gross income and \r\nreturn complexity) of developing and running a free direct efile tax \r\nreturn system, including costs to build and administer each release, \r\n$15,000,000, to remain available until September 30, 2026.",
     "summary": "• Forces IRS to shut down the Direct File pilot within 30 days.  \n• Appropriates $15 M for a Treasury task‑force to design a new public‑private free‑filing arrangement covering up to 70 % of taxpayers and to cost‑out any future IRS run e‑file system.",
-    "impact": "Reverses 2023 Inflation‑Reduction Act directive; favors industry software.  Treasury must report within 90 days—tight timeline—and analyze consumer preferences and cost scenarios."
+    "impact": "Reverses 2023 Inflation‑Reduction Act directive; favors industry software.  Treasury must report within 90 days—tight timeline—and analyze consumer preferences and cost scenarios.",
+    "tags": [
+      "IRS",
+      "Direct File",
+      "free filing",
+      "tax preparation",
+      "public-private partnership"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -568,7 +892,14 @@
     "sectionTitle": "INCREASE IN PENALTIES FOR UNAUTHORIZED DISCLOSURES OF TAXPAYER INFORMATION.",
     "sectionText": "SEC. 112208. INCREASE IN PENALTIES FOR UNAUTHORIZED DISCLOSURES OF \r\n              TAXPAYER INFORMATION.\r\n\r\n    (a) In General.--Paragraphs (1), (2), (3), (4), and (5) of section \r\n7213(a) are each amended by striking ``$5,000, or imprisonment of not \r\nmore than 5 years'' and inserting ``$250,000, or imprisonment of not \r\nmore than 10 years''.\r\n    (b) Disclosures of Return Information of Multiple Taxpayers Treated \r\nas Multiple Violations.--Section 7213(a) is amended by adding at the \r\nend the following new paragraph:\r\n            ``(6) Disclosures of return information of multiple \r\n        taxpayers treated as multiple violations.--For purposes of this \r\n        subsection, a separate violation occurs with respect to each \r\n        taxpayer whose return or return information is disclosed in \r\n        violation of this subsection.''.\r\n    (c) Effective Date.--The amendments made by this section shall \r\napply to disclosures made after the date of the enactment of this Act.",
     "summary": "Multiplies §7213 criminal penalty from $5 k / 5 years to **$250 k / 10 years** per disclosure; treats each taxpayer’s data in a leak as a separate violation, greatly raising exposure for bulk leaks.",
-    "impact": "Addresses concern over high‑profile ProPublica releases; DOJ discretion remains but deterrent effect likely higher.  Could also chill whistle‑blowers unless §6103(f) safe‑harbor clarified."
+    "impact": "Addresses concern over high‑profile ProPublica releases; DOJ discretion remains but deterrent effect likely higher.  Could also chill whistle‑blowers unless §6103(f) safe‑harbor clarified.",
+    "tags": [
+      "IRS",
+      "data privacy",
+      "taxpayer information",
+      "penalties",
+      "whistleblower protections"
+    ]
   },
   {
     "titleNumber": "XI",
@@ -578,6 +909,13 @@
     "sectionTitle": "RESTRICTION ON REGULATION OF CONTINGENCY FEES WITH RESPECT TO TAX RETURNS, ETC.",
     "sectionText": "SEC. 112209. RESTRICTION ON REGULATION OF CONTINGENCY FEES WITH RESPECT \r\n              TO TAX RETURNS, ETC.\r\n\r\n    The Secretary of the Treasury may not regulate, prohibit, or \r\nrestrict the use of a contingent fee in connection with tax returns, \r\nclaims for refund, or documents in connection with tax returns or \r\nclaims for refund prepared on behalf of a taxpayer.\r\n\r\n                   Subtitle D--Increase in Debt Limit",
     "summary": "Bars Treasury from **restricting or regulating contingency‑fee arrangements** for tax‑return or refund‑claim preparation, overruling existing Circular 230 limits that currently prohibit such fees except for whistle‑blower or audit contexts.",
-    "impact": "Could encourage aggressive refund‑claim marketing (e.g., amended R&D, fuel‑tax credits).  IRS OPR loses oversight tool; taxpayer costs may increase via high percent‐of‑refund arrangements.  Beneficial for low‑income representation in some cases but widens promoter space."
+    "impact": "Could encourage aggressive refund‑claim marketing (e.g., amended R&D, fuel‑tax credits).  IRS OPR loses oversight tool; taxpayer costs may increase via high percent‐of‑refund arrangements.  Beneficial for low‑income representation in some cases but widens promoter space.",
+    "tags": [
+      "tax preparation",
+      "contingency fees",
+      "regulation",
+      "Circular 230",
+      "promoter compliance"
+    ]
   }
 ]

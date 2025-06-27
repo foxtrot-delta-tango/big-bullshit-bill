@@ -1,7 +1,8 @@
 <template>
     <div class="tags" :class='color'>
-        <span v-for="tag in tags" :key="tag" :class='{ "active": selectedTags.includes(tag) }'
-            @click.stop='toggleTag(tag)'>
+        <span v-for="tag in tags" :key="tag" class="tag"
+            :class='{ "active": selectedTags.includes(tag), "clickable": clickable }'
+            @click.stop='clickable ? toggleTag(tag) : undefined'>
             {{ tag }}
         </span>
     </div>
@@ -9,19 +10,21 @@
 
 <script setup lang="ts">
 import { computed, toRefs } from 'vue';
-import { useBill } from '../composables/bill';
+import { useMenu } from '../composables/menu';
 
-const { selectedTags, toggleTag } = useBill();
+const { selectedTags, toggleTag } = useMenu();
 
 const props = withDefaults(defineProps<{
     tags: string[];
     color?: 'default' | 'light';
     maxShown?: number;
     sort?: boolean;
+    clickable?: boolean;
 }>(), {
     color: 'default',
     activeTags: () => [],
     sort: true,
+    clickable: true,
 });
 
 const { sort } = toRefs(props);
@@ -55,13 +58,16 @@ const tags = computed(() => {
         background-color: var(--color-section-bg);
         border-radius: 0.5em;
         transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
-        cursor: pointer;
         user-select: none;
+        cursor: default;
 
-        &:hover,
-        &.active {
-            background-color: var(--color-bg);
-            filter: drop-shadow(0 0 0.1em var(--color-text));
+        &.clickable {
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-text);
+                filter: drop-shadow(0 0 0.1em var(--color-text));
+            }
         }
 
         &.active {

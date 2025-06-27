@@ -69,7 +69,7 @@ type SubpartToc = {
   title: string;
 }
 
-type SectionToc = {
+export type SectionToc = {
   number: string;
   title: string;
   subtitle?: string;
@@ -156,7 +156,6 @@ const selectedTitle = ref('');
 const selectedSubtitle = ref('');
 const selectedPart = ref('');
 const selectedSubpart = ref('');
-const selectedTags = ref<string[]>([]);
 
 const titleData = computed(() =>
   TITLE_FILES
@@ -223,33 +222,6 @@ const subparts = computed(() => {
 
 const subpartData = computed(() => partData.value.filter(s => !selectedSubpart.value || s.subpart === selectedSubpart.value));
 
-const currentTags = computed(() => {
-  let data = [] as BillSectionData[];
-
-  if (selectedSubpart.value) {
-    data = subpartData.value;
-  } else if (selectedPart.value) {
-    data = partData.value;
-  } else if (selectedSubtitle.value) {
-    data = subtitleData.value;
-  } else {
-    data = titleData.value;
-  }
-
-  const tags: string[] = [];
-  data.forEach(section => {
-    if (section.tags) {
-      section.tags.forEach(tag => {
-        if (!tags.includes(tag)) {
-          tags.push(tag);
-        }
-      });
-    }
-  });
-
-  return tags;
-});
-
 const selectTitle = (title: string) => {
   selectedTitle.value = title;
   selectedSubtitle.value = '';
@@ -272,66 +244,20 @@ const selectSubpart = (subpart: string) => {
   selectedSubpart.value = subpart;
 };
 
-const setTags = (tags: string[]) => {
-  selectedTags.value = tags;
-};
-
 const getSection = (sectionNumber: string) => {
   return TITLE_FILES.flatMap(t => t.sections).find(t => t.sectionNumber === sectionNumber);
-};
-
-const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
-  const tags: { tag: string, count: number }[] = [];
-
-  const sections = TITLE_FILES.filter(t => t.title === title.number)
-    .flatMap(t => t.sections)
-    .filter(s => {
-      if (subtitle && s.subtitle !== subtitle) return false;
-      if (part && s.part !== part) return false;
-      if (subpart && s.subpart?.toLowerCase() !== subpart) return false;
-      return true;
-    });
-
-  sections.forEach(section => {
-    if (section.tags) {
-      section.tags.forEach(tag => {
-        const existingTag = tags.find(t => t.tag === tag)
-        if (existingTag) {
-          existingTag.count++;
-        } else {
-          tags.push({ tag, count: 1 });
-        }
-      });
-    }
-  });
-
-  tags.sort((a, b) => b.count - a.count);
-  return tags;
-};
-
-const toggleTag = (tag: string) => {
-  const index = selectedTags.value.indexOf(tag);
-  const tags = [...selectedTags.value];
-  if (index > -1) {
-    tags.splice(index, 1);
-  } else {
-    tags.push(tag);
-  }
-
-  setTags(tags);
 };
 
 export function useBill() {
   return {
     TABLE_OF_CONTENTS,
     TITLE_FILES,
-    ALL_TAGS,
     TITLES,
+    ALL_TAGS,
     selectedTitle,
     selectedSubtitle,
     selectedPart,
     selectedSubpart,
-    selectedTags,
     titleData,
     subtitles,
     subtitleData,
@@ -339,14 +265,10 @@ export function useBill() {
     partData,
     subparts,
     subpartData,
-    currentTags,
     selectTitle,
     selectSubtitle,
     selectPart,
     selectSubpart,
-    setTags,
     getSection,
-    getTags,
-    toggleTag,
   };
 } 

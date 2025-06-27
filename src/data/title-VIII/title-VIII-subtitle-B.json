@@ -11,6 +11,14 @@
     "additionalReferences": [
       "https://www.noaa.gov/inflation-reduction-act/coastal-resilience",
       "https://coast.noaa.gov/states/"
+    ],
+    "tags": [
+      "coastal resilience",
+      "climate mitigation",
+      "disaster preparedness",
+      "infrastructure",
+      "environmental justice",
+      "defunding"
     ]
   },
   {
@@ -25,6 +33,14 @@
     "additionalReferences": [
       "https://sanctuaries.noaa.gov/news/sep22/ira-investments.html",
       "https://www.noaa.gov/infrastructure-upgrades"
+    ],
+    "tags": [
+      "NOAA",
+      "marine conservation",
+      "infrastructure",
+      "environmental monitoring",
+      "climate science",
+      "defunding"
     ]
   },
   {
@@ -39,6 +55,14 @@
     "additionalReferences": [
       "https://usbr.gov/projects",
       "https://www.gao.gov/assets/gao-23-106933.pdf"
+    ],
+    "tags": [
+      "water infrastructure",
+      "Bureau of Reclamation",
+      "irrigation",
+      "climate resilience",
+      "subsidies",
+      "western water"
     ]
   },
   {
@@ -53,6 +77,14 @@
     "additionalReferences": [
       "https://www.usbr.gov/watersmart/canal/",
       "https://www.nature.com/articles/s41560-023-01281-9"
+    ],
+    "tags": [
+      "canals and aqueducts",
+      "infrastructure",
+      "Bureau of Reclamation",
+      "irrigation",
+      "environmental risk",
+      "western water"
     ]
   }
 ]

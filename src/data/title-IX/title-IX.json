@@ -10,6 +10,14 @@
     "additionalReferences": [
       "https://www.cbo.gov/publication/61381",
       "https://www.narfe.org/blog/2025/05/27/house-passed-budget-bill-included-several-cuts-to-federal-benefits-excluded-others/"
+    ],
+    "tags": [
+      "federal workforce",
+      "retirement benefits",
+      "budget cuts",
+      "law enforcement",
+      "firefighters",
+      "air traffic control"
     ]
   },
   {
@@ -23,6 +31,15 @@
     "additionalReferences": [
       "https://www.fedsmith.com/2025/05/15/additional-details-regarding-proposed-cuts-to-federal-employee-benefits/",
       "https://everycrsreport.com/reports/IF13020.html"
+    ],
+    "tags": [
+      "federal workforce",
+      "civil service protections",
+      "retirement benefits",
+      "at-will employment",
+      "union rights",
+      "whistleblowers",
+      "personnel reform"
     ]
   },
   {
@@ -36,6 +53,14 @@
     "additionalReferences": [
       "https://prospect.org/politics/2025-06-03-republican-mega-bill-charges-federal-workers-for-basic-rights/",
       "https://www.cbo.gov/budget-options (see “Charge Fees for MSPB Appeals”)"
+    ],
+    "tags": [
+      "federal workforce",
+      "access to justice",
+      "civil service protections",
+      "merit systems",
+      "whistleblowers",
+      "administrative due process"
     ]
   },
   {
@@ -49,6 +74,15 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-105222",
       "https://federalnewsnetwork.com/open-season/2024/06/centralized-fehb-database-key-to-opm-cost-savings-gao-says/"
+    ],
+    "tags": [
+      "federal workforce",
+      "healthcare",
+      "federal employee benefits",
+      "OPM",
+      "program integrity",
+      "privacy",
+      "fraud prevention"
     ]
   }
 ]

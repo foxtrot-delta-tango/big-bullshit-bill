@@ -11,6 +11,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2023/jcx-17-23/",
       "https://home.treasury.gov/system/files/131/Summary-of-Section-15.pdf"
+    ],
+    "tags": [
+      "IRC",
+      "withholding",
+      "federalism",
+      "revenue"
     ]
   },
   {
@@ -25,6 +31,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-13-24/",
       "https://www.taxpolicycenter.org/sites/default/files/publication/167031/2025_tcja_sunset_options.pdf"
+    ],
+    "tags": [
+      "tax rates",
+      "deficit",
+      "distribution",
+      "federal revenue"
     ]
   },
   {
@@ -39,6 +51,12 @@
     "additionalReferences": [
       "https://www.crfb.org/blogs/what-happens-if-tcja-individual-provisions-are-extended",
       "https://www.cbpp.org/research/federal-tax/standard-deduction-increases-and-who-benefits"
+    ],
+    "tags": [
+      "standard deduction",
+      "itemization",
+      "revenue",
+      "equity"
     ]
   },
   {
@@ -53,6 +71,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2017/jcx-69-17/",
       "https://www.taxpolicycenter.org/taxvox/what-will-expire-2025-and-how-would-extensions-affect-families"
+    ],
+    "tags": [
+      "personal exemptions",
+      "large families",
+      "TCJA",
+      "revenue"
     ]
   },
   {
@@ -68,6 +92,13 @@
       "https://www.jct.gov/publications/2024/jcx-13-24/",
       "https://www.cbpp.org/research/federal-tax/permanent-extension-of-ctc-without-full-refundability-would-leave-millions-of",
       "https://www.crfb.org/blogs/extending-expanded-child-tax-credit-would-cost-950-billion"
+    ],
+    "tags": [
+      "child tax credit",
+      "family benefits",
+      "Latino families",
+      "refundable credits",
+      "poverty"
     ]
   },
   {
@@ -83,6 +114,13 @@
       "https://www.jct.gov/publications/2024/jcx-28-24/",
       "https://taxfoundation.org/research/all/federal/what-is-the-qualified-business-income-deduction/",
       "https://www.treasury.gov/tigta/auditreports/2023reports/202330020fr.pdf"
+    ],
+    "tags": [
+      "QBI",
+      "small business",
+      "pass-throughs",
+      "private credit",
+      "tax sheltering"
     ]
   },
   {
@@ -97,6 +135,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-13-24/",
       "https://www.taxpolicycenter.org/publications/options-reforming-estate-tax/full"
+    ],
+    "tags": [
+      "estate tax",
+      "inheritance",
+      "wealth inequality",
+      "state taxes"
     ]
   },
   {
@@ -111,6 +155,12 @@
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2023-12/59033-LTBO.pdf",
       "https://www.gao.gov/products/gao-22-104266"
+    ],
+    "tags": [
+      "AMT",
+      "middle-income",
+      "compliance burden",
+      "revenue"
     ]
   },
   {
@@ -125,6 +175,11 @@
     "additionalReferences": [
       "https://www.taxpolicycenter.org/taxvox/mortgage-interest-deduction-after-tcja",
       "https://faculty.wharton.upenn.edu/wp-content/uploads/2019/10/FRB_wp202040r1.pdf"
+    ],
+    "tags": [
+      "mortgage deduction",
+      "housing policy",
+      "home equity"
     ]
   },
   {
@@ -139,6 +194,11 @@
     "additionalReferences": [
       "https://home.treasury.gov/system/files/131/Tax-Expenditure-Report-2024.pdf#page=25",
       "https://www.tigta.gov/reports/2023/202310055"
+    ],
+    "tags": [
+      "casualty losses",
+      "disaster relief",
+      "tax fairness"
     ]
   },
   {
@@ -153,6 +213,11 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-13-24/",
       "https://www.treasury.gov/tigta/auditreports/2023reports/202330038fr.pdf"
+    ],
+    "tags": [
+      "miscellaneous deductions",
+      "audit risk",
+      "employee costs"
     ]
   },
   {
@@ -167,6 +232,12 @@
     "additionalReferences": [
       "https://www.crfb.org/papers/pease-limitation-and-other-itemized-deduction-phase-outs",
       "https://lfspp.indiana.edu/news/2024/charitable-deduction-elasticity.pdf"
+    ],
+    "tags": [
+      "itemized deductions",
+      "SALT",
+      "charitable giving",
+      "complexity"
     ]
   },
   {
@@ -181,6 +252,11 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-13-24/#page=48",
       "https://www.transportation.gov/sites/dot.gov/files/2022-01/NRSS_ExecutiveSummary_508.pdf"
+    ],
+    "tags": [
+      "commuter benefits",
+      "bicycles",
+      "transportation equity"
     ]
   },
   {
@@ -195,6 +271,11 @@
     "additionalReferences": [
       "https://www.cbo.gov/budget-options/2023/58926",
       "https://www.brookings.edu/articles/the-decline-in-interstate-migration-how-we-got-here-and-what-it-means/"
+    ],
+    "tags": [
+      "moving expenses",
+      "geographic mobility",
+      "labor market"
     ]
   },
   {
@@ -209,6 +290,11 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-13-24/#page=49",
       "https://www.irs.gov/pub/irs-pdf/p529.pdf"
+    ],
+    "tags": [
+      "gambling",
+      "miscellaneous deductions",
+      "audit risk"
     ]
   },
   {
@@ -223,6 +309,11 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R43587",
       "https://www.gao.gov/products/gao-22-104180"
+    ],
+    "tags": [
+      "ABLE accounts",
+      "disability",
+      "savings"
     ]
   },
   {
@@ -237,6 +328,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2023/jcx-17-23/#page=61",
       "https://www.urban.org/sites/default/files/publication/105001/the-savers-credit-a-closer-look.pdf"
+    ],
+    "tags": [
+      "saver's credit",
+      "ABLE accounts",
+      "retirement",
+      "low-income workers"
     ]
   },
   {
@@ -251,6 +348,12 @@
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2023-05/hr3462_0.pdf",
       "https://www.nast.org/wp-content/uploads/2022/09/529-to-ABLE-Fact-Sheet-NAST-2022.pdf"
+    ],
+    "tags": [
+      "529 plans",
+      "ABLE rollovers",
+      "disability",
+      "education savings"
     ]
   },
   {
@@ -265,6 +368,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2018/jcx-67-18/#page=37",
       "https://www.gao.gov/products/gao-22-104583"
+    ],
+    "tags": [
+      "combat zone",
+      "military",
+      "income exclusion",
+      "Africa"
     ]
   },
   {
@@ -279,6 +388,12 @@
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2023-12/58573-EdLoanForgiveness_CBO.pdf",
       "https://crsreports.congress.gov/product/pdf/IN/IN11990"
+    ],
+    "tags": [
+      "student loans",
+      "disability",
+      "debt relief",
+      "tax exclusion"
     ]
   },
   {
@@ -295,6 +410,12 @@
       "https://www.crfb.org/blogs/donald-trumps-proposal-exempt-tip-income-federal-taxes",
       "https://www.congress.gov/bill/119th-congress/house-bill/482/text",
       "https://waysandmeans.house.gov/wp-content/uploads/2025/05/JCT-Description-of-AINS-to-WM-Committee-Report-Green-Sheet.pdf"
+    ],
+    "tags": [
+      "tip income",
+      "hospitality",
+      "tax compliance",
+      "low-income workers"
     ]
   },
   {
@@ -311,6 +432,12 @@
       "https://crfb.org/blogs/costs-and-effects-proposed-overtime-wage-deduction",
       "https://www.epi.org/publication/overtime-pay-and-the-flsa/",
       "https://www.americanpayroll.org/news-resources/apa-news/news-detail/2024/06/12/apa-to-congress-overtime-deduction-reporting-deadline-not-feasible"
+    ],
+    "tags": [
+      "overtime",
+      "labor",
+      "tax fairness",
+      "compliance"
     ]
   },
   {
@@ -325,6 +452,11 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2025/jcx-15-25/",
       "https://crsreports.congress.gov/product/pdf/R/R47002"
+    ],
+    "tags": [
+      "seniors",
+      "standard deduction",
+      "retirement income"
     ]
   },
   {
@@ -340,6 +472,12 @@
       "https://www.jct.gov/publications/2025/jcx-16-25/",
       "https://www.coxautoinc.com/market-insights/auto-loan-deduction-impact-2025/",
       "https://afsaonline.org/wp-content/uploads/AFSA-Letter-No-Tax-On-Car-Loan-Interest.pdf"
+    ],
+    "tags": [
+      "car loans",
+      "transportation",
+      "consumer credit",
+      "domestic manufacturing"
     ]
   },
   {
@@ -354,6 +492,11 @@
     "additionalReferences": [
       "https://www.gao.gov/assets/gao-23-105183.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF11877"
+    ],
+    "tags": [
+      "childcare",
+      "employer tax credit",
+      "workforce participation"
     ]
   },
   {
@@ -368,6 +511,12 @@
     "additionalReferences": [
       "https://home.treasury.gov/system/files/131/Tax-Expenditures-FY2026.pdf#page=32",
       "https://www.urban.org/sites/default/files/publication/105222/paid-family-leave-tax-credit-evaluation.pdf"
+    ],
+    "tags": [
+      "paid leave",
+      "employer tax credit",
+      "workforce",
+      "insurance"
     ]
   },
   {
@@ -383,6 +532,12 @@
       "https://crsreports.congress.gov/product/pdf/R/R44745",
       "https://www.jct.gov/publications/2025/jcx-18-25/",
       "https://www.gao.gov/assets/gao-22-105189.pdf"
+    ],
+    "tags": [
+      "adoption",
+      "child welfare",
+      "tax credit",
+      "refundability"
     ]
   },
   {
@@ -397,6 +552,12 @@
     "additionalReferences": [
       "https://www.nicwa.org/wp-content/uploads/2024/03/NICWA-Adoption-Credit-Issue-Brief.pdf",
       "https://www.congress.gov/118/meeting/house/116186/documents/HHRG-118-WM04-20250305-SD008.pdf"
+    ],
+    "tags": [
+      "tribal policy",
+      "adoption",
+      "Native children",
+      "child welfare"
     ]
   },
   {
@@ -413,6 +574,13 @@
       "https://crsreports.congress.gov/product/pdf/R/R46874",
       "https://www.cbpp.org/research/state-budget-and-tax/proposed-federal-tax-credit-voucher-program-would-divert-funds-from-public-education",
       "https://www.gao.gov/products/gao-13-7"
+    ],
+    "tags": [
+      "school choice",
+      "scholarships",
+      "private education",
+      "tax credit",
+      "religious schools"
     ]
   },
   {
@@ -429,6 +597,12 @@
       "https://crsreports.congress.gov/product/pdf/IN/IN10837",
       "https://www.cbpp.org/research/federal-tax/expanding-529-plans-would-give-big-tax-breaks-to-upper-income-families",
       "https://www.gao.gov/products/gao-13-64"
+    ],
+    "tags": [
+      "529 plans",
+      "private school",
+      "homeschool",
+      "K-12 education"
     ]
   },
   {
@@ -443,6 +617,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2022/jcx-16-22/",
       "https://www.gao.gov/products/gao-23-105375"
+    ],
+    "tags": [
+      "529 plans",
+      "credentials",
+      "apprenticeship",
+      "continuing education"
     ]
   },
   {
@@ -457,6 +637,11 @@
     "additionalReferences": [
       "https://lfs.ppf.indiana.edu/news/2023/covid-universal-deduction-study.pdf",
       "https://www.jct.gov/publications/2023/jcx-21-23/"
+    ],
+    "tags": [
+      "charitable deductions",
+      "nonprofits",
+      "universal deduction"
     ]
   },
   {
@@ -472,6 +657,11 @@
       "https://www.jct.gov/publications/2024/jcx-14-24/",
       "https://www.shrm.org/hr-today/news/all-things-work/pages/student-loan-repayment-benefits.aspx",
       "https://www.tigta.gov/reports/2023/202330054"
+    ],
+    "tags": [
+      "student loans",
+      "employer benefits",
+      "education debt"
     ]
   },
   {
@@ -486,6 +676,11 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2021/jcx-32-21/",
       "https://www.taxpolicycenter.org/taxvox/how-tax-code-helps-and-hurts-disaster-victims"
+    ],
+    "tags": [
+      "disaster relief",
+      "casualty losses",
+      "itemized deductions"
     ]
   },
   {
@@ -501,6 +696,12 @@
       "https://crfb.org/blogs/what-would-trump-account-tax-preference-cost",
       "https://www.taxfoundation.org/analysis-trump-child-savings-accounts/",
       "https://www.cbpp.org/research/federal-tax/trump-account-proposal-would-primarily-benefit-high-income-families"
+    ],
+    "tags": [
+      "Trump accounts",
+      "children",
+      "savings",
+      "wealth inequality"
     ]
   },
   {
@@ -516,6 +717,12 @@
       "https://www.cdc.gov/nchs/fastats/births.htm",
       "https://crfb.org/blogs/what-would-trump-account-tax-preference-cost",
       "https://www.cbpp.org/research/federal-tax/trump-account-proposal-would-primarily-benefit-high-income-families"
+    ],
+    "tags": [
+      "Trump accounts",
+      "baby bonds",
+      "children",
+      "wealth building"
     ]
   },
   {
@@ -530,6 +737,12 @@
     "additionalReferences": [
       "https://www.kff.org/health-reform/issue-brief/early-experience-with-ichras-and-the-individual-market/",
       "https://www.brookings.edu/articles/why-individual-coverage-hras-could-undermine-the-employer-health-insurance-market/"
+    ],
+    "tags": [
+      "healthcare",
+      "HRAs",
+      "ACA",
+      "employer coverage"
     ]
   },
   {
@@ -544,6 +757,12 @@
     "additionalReferences": [
       "https://www.cbo.gov/publication/58848",
       "https://www.healthaffairs.org/content/forefront/ichra-expansion-and-tax-implications"
+    ],
+    "tags": [
+      "exchange premiums",
+      "pretax benefits",
+      "cafeteria plans",
+      "HRAs"
     ]
   },
   {
@@ -558,6 +777,12 @@
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2025-04/choicehra_taxcredits.pdf",
       "https://www.treasury.gov/resource-center/tax-policy/Documents/Understanding-ICHRA-Employer-Behavior-UrbanInstitute.pdf"
+    ],
+    "tags": [
+      "small business",
+      "HRAs",
+      "tax credit",
+      "employer coverage"
     ]
   },
   {
@@ -572,6 +797,12 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2024/jcx-19-24/",
       "https://www.kff.org/medicare/issue-brief/working-past-65-implications-for-hsa-eligibility/"
+    ],
+    "tags": [
+      "HSAs",
+      "Medicare",
+      "retirement",
+      "savings"
     ]
   },
   {
@@ -586,6 +817,12 @@
     "additionalReferences": [
       "https://www.milliman.com/en/briefs/direct-primary-care-market-analysis-2023",
       "https://crsreports.congress.gov/product/pdf/IF/IF11818"
+    ],
+    "tags": [
+      "HSAs",
+      "DPC",
+      "primary care",
+      "healthcare access"
     ]
   },
   {
@@ -600,6 +837,12 @@
     "additionalReferences": [
       "https://www.cbo.gov/system/files/2024-05/hsa_bronze_plans_cbo.pdf",
       "https://www.kff.org/private-insurance/issue-brief/aca-enrollment-2024-metal-levels/"
+    ],
+    "tags": [
+      "HSAs",
+      "ACA",
+      "Bronze plans",
+      "tax shelters"
     ]
   },
   {
@@ -615,6 +858,12 @@
       "https://www.jct.gov/publications/2023/jcx-30-23/",
       "https://www.kff.org/report-section/employer-health-benefits-2023-summary-of-findings/",
       "https://www.irs.gov/pub/irs-drop/n-19-45.pdf"
+    ],
+    "tags": [
+      "HSAs",
+      "onsite clinics",
+      "employer healthcare",
+      "preventive care"
     ]
   },
   {
@@ -630,6 +879,12 @@
       "https://sgp.fas.org/crs/misc/IF11051.pdf",
       "https://www.parl.ca/DocumentViewer/en/42-1/bill/C-210/first-reading",
       "https://www.cbpp.org/research/federal-tax/tax-break-for-gym-memberships-would-mostly-benefit-high-income-people"
+    ],
+    "tags": [
+      "HSAs",
+      "fitness",
+      "preventive care",
+      "gym memberships"
     ]
   },
   {
@@ -644,6 +899,11 @@
     "additionalReferences": [
       "https://www.jct.gov/publications/2023/jcx-12-23/",
       "https://www.treasury.gov/resource-center/tax-policy/Documents/Report-Health-Savings-Accounts-GAO.pdf"
+    ],
+    "tags": [
+      "HSAs",
+      "catch-up contributions",
+      "retirement savings"
     ]
   },
   {
@@ -658,6 +918,12 @@
     "additionalReferences": [
       "https://www.ebri.org/docs/default-source/ebri-issue-brief/ebri_ib_566_hsa-12apr23.pdf",
       "https://www.jct.gov/publications/2022/jcx-17-22/"
+    ],
+    "tags": [
+      "HSAs",
+      "FSAs",
+      "rollovers",
+      "employee benefits"
     ]
   },
   {
@@ -672,6 +938,11 @@
     "additionalReferences": [
       "https://www.irs.gov/pub/irs-drop/n-2004-50.pdf",
       "https://www.jct.gov/publications/2024/jcx-19-24/"
+    ],
+    "tags": [
+      "HSAs",
+      "medical expenses",
+      "coverage timing"
     ]
   },
   {
@@ -686,6 +957,12 @@
     "additionalReferences": [
       "https://www.kff.org/report-section/employer-health-benefits-2023-section-9-prescription-drug-benefits/",
       "https://www.treasury.gov/resource-center/tax-policy/Documents/Report-Health-Savings-Accounts-GAO.pdf"
+    ],
+    "tags": [
+      "HSAs",
+      "spouse",
+      "FSA",
+      "contribution eligibility"
     ]
   },
   {
@@ -700,6 +977,12 @@
     "additionalReferences": [
       "https://www.irs.gov/publications/p969",
       "https://www.jct.gov/publications/2023/jcx-12-23/"
+    ],
+    "tags": [
+      "HSAs",
+      "income phase-out",
+      "middle class",
+      "savings"
     ]
   },
   {
@@ -714,6 +997,12 @@
     "additionalReferences": [
       "https://www.federalregister.gov/agencies/internal-revenue-service",
       "https://www.hhs.gov/regulations/"
+    ],
+    "tags": [
+      "regulations",
+      "Treasury",
+      "HHS",
+      "implementation"
     ]
   }
 ]

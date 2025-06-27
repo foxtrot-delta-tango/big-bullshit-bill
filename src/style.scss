@@ -114,8 +114,63 @@ button {
   &:focus-visible {
     outline: 2px solid var(--color-primary);
   }
+
+  &.text-button {
+    border: none;
+    background: none;
+    color: var(--color-text-light);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: smaller;
+    transition: color 0.2s ease-in-out;
+
+    i {
+      margin-left: 0.5em;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color-primary);
+      font-style: italic;
+      outline: none;
+    }
+
+    &:active {
+      transition-duration: 0.1s;
+      color: var(--color-text);
+    }
+  }
 }
 
-.card {
-  padding: 2em;
+.modal {
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--color-primary) 0 0 7px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  top: 3vh !important;
+  left: 20vw;
+  right: 20vw;
+  max-height: calc(97vh - 120px);
+  margin: auto;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 72vw !important;
+    left: 11vw !important;
+    right: 11vw !important;
+    transform: none !important;
+  }
 }

@@ -11,6 +11,12 @@
     "additionalReferences": [
       "https://www.unhcr.org/media/unhcr-comments-fees-charged-asylum-procedures",
       "https://crsreports.congress.gov/product/pdf/R/R47077"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "federal pre-emption",
+      "rulemaking"
     ]
   },
   {
@@ -25,6 +31,15 @@
     "additionalReferences": [
       "https://www.reuters.com/world/us/republicans-seek-cement-trumps-immigration-legacy-sweeping-bill-2025-05-29/",
       "https://www.gao.gov/products/gao-25-106867"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "asylum",
+      "access",
+      "poverty",
+      "civil rights",
+      "refugees"
     ]
   },
   {
@@ -39,6 +54,14 @@
     "additionalReferences": [
       "https://www.boundless.com/blog/house-republicans-immigration-fee-hike/",
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-10/OIG-24-02-Oct23.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "employment",
+      "workforce",
+      "fraud prevention",
+      "access"
     ]
   },
   {
@@ -53,6 +76,13 @@
     "additionalReferences": [
       "https://www.reuters.com/world/us/republicans-seek-cement-trumps-immigration-legacy-sweeping-bill-2025-05-29/",
       "https://crsreports.congress.gov/product/pdf/IN/IN12417"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "refugees",
+      "civil rights",
+      "access"
     ]
   },
   {
@@ -67,6 +97,13 @@
     "additionalReferences": [
       "https://www.americanbar.org/groups/litigation/committees/childrens-rights/practice/2024/si_j/",
       "https://www.gao.gov/products/gao-25-106867"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "children",
+      "civil rights",
+      "family income"
     ]
   },
   {
@@ -81,6 +118,12 @@
     "additionalReferences": [
       "https://www.dhs.gov/sites/default/files/2023-10/tps-econimpact.pdf",
       "https://www.migrationpolicy.org/article/temporary-protected-status-fact-sheet"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "poverty",
+      "access"
     ]
   },
   {
@@ -95,6 +138,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-105124",
       "https://www.npr.org/2023/05/25/1178274388/unaccompanied-minors-migrant-children-sponsors"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "children",
+      "poverty",
+      "public assistance",
+      "family income"
     ]
   },
   {
@@ -109,6 +160,14 @@
     "additionalReferences": [
       "https://www.us-travel.org/system/files/media/uploads/2024/10/ustravel_forecast2024.pdf",
       "https://www.gao.gov/products/gao-23-105974"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "commerce",
+      "tourism",
+      "CBP",
+      "compliance"
     ]
   },
   {
@@ -123,6 +182,13 @@
     "additionalReferences": [
       "https://www.airlines.org/wp-content/uploads/2023/11/A4A-I94-Modernization-Comment.pdf",
       "https://www.dhs.gov/i-94-program-update-2024"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "CBP",
+      "technology",
+      "public reporting"
     ]
   },
   {
@@ -137,6 +203,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-25-106867",
       "https://www.boundless.com/blog/house-republicans-immigration-fee-hike/"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "asylum",
+      "program administration",
+      "access",
+      "civil rights"
     ]
   },
   {
@@ -151,6 +225,13 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/LSB/LSB10512",
       "https://www.justice.gov/eoir/page/file/1104846/download"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "judicial review",
+      "civil rights",
+      "access"
     ]
   },
   {
@@ -165,6 +246,14 @@
     "additionalReferences": [
       "https://www.dhs.gov/sites/default/files/2024-01/parole-work-memo.pdf",
       "https://www.gao.gov/products/gao-23-105974"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "employment",
+      "compliance",
+      "ICE",
+      "workforce"
     ]
   },
   {
@@ -179,6 +268,14 @@
     "additionalReferences": [
       "https://www.dol.gov/sites/dolgov/files/OASP/evaluation/pdf/ImmWorkStudy2024.pdf",
       "https://www.boundless.com/blog/house-republicans-immigration-fee-hike/"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "asylum",
+      "employment",
+      "workforce",
+      "poverty"
     ]
   },
   {
@@ -193,6 +290,14 @@
     "additionalReferences": [
       "https://www.migrationpolicy.org/article/temporary-protected-status-remittances-2023",
       "https://www.dhs.gov/sites/default/files/2023-10/tps-econimpact.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "employment",
+      "TPS",
+      "poverty",
+      "foreign policy"
     ]
   },
   {
@@ -207,6 +312,14 @@
     "additionalReferences": [
       "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa/dv2024-results.html",
       "https://www.reuters.com/world/us/republicans-seek-cement-trumps-immigration-legacy-sweeping-bill-2025-05-29/"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "diversity visa",
+      "access",
+      "poverty",
+      "civil rights"
     ]
   },
   {
@@ -221,6 +334,14 @@
     "additionalReferences": [
       "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202404&RIN=1125-AA98",
       "https://crsreports.congress.gov/product/pdf/IF/IF11813"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "judicial review",
+      "access",
+      "program funding",
+      "civil rights"
     ]
   },
   {
@@ -235,6 +356,13 @@
     "additionalReferences": [
       "https://www.thebrandusa.com/about/brand-usa-overview-2024",
       "https://www.us-travel.org/system/files/media/uploads/2024/10/ustravel_forecast2024.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "tourism",
+      "commerce",
+      "public investment"
     ]
   },
   {
@@ -249,6 +377,14 @@
     "additionalReferences": [
       "https://www.airlines.org/wp-content/uploads/2023/11/A4A-I94-Modernization-Comment.pdf",
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-02/OIG-23-18-Feb23.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "CBP",
+      "commerce",
+      "transportation",
+      "border security"
     ]
   },
   {
@@ -263,6 +399,14 @@
     "additionalReferences": [
       "https://www.regulations.gov/document/CBP-2022-0022-0001",
       "https://www.us-travel.org/sites/default/files/media_root/document/Research_China-Market_2024.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "CBP",
+      "commerce",
+      "tourism",
+      "compliance"
     ]
   },
   {
@@ -277,6 +421,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-105124",
       "https://www.npr.org/2023/05/25/1178274388/unaccompanied-minors-migrant-children-sponsors"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "children",
+      "civil rights",
+      "poverty",
+      "public assistance"
     ]
   },
   {
@@ -291,6 +443,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-105974",
       "https://trac.syr.edu/immigration/reports/705/"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "ICE",
+      "law enforcement",
+      "enforcement",
+      "civil rights"
     ]
   },
   {
@@ -305,6 +465,14 @@
     "additionalReferences": [
       "https://www.unhcr.org/us/publications/legal/2022/12/635f93d24/unhcr-commentary-restrictions-or-penalties.html",
       "https://www.cbp.gov/sites/default/files/assets/documents/2024-Feb/CBP-Performance-FY24.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "CBP",
+      "refugees",
+      "law enforcement",
+      "civil rights"
     ]
   },
   {
@@ -319,6 +487,14 @@
     "additionalReferences": [
       "https://www.justice.gov/eoir/page/file/1517216/download",
       "https://www.reuters.com/world/us/republicans-seek-cement-trumps-immigration-legacy-sweeping-bill-2025-05-29/"
+    ],
+    "tags": [
+      "immigration",
+      "fees",
+      "asylum",
+      "rulemaking",
+      "civil rights",
+      "refugees"
     ]
   },
   {
@@ -333,6 +509,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/R/R47077",
       "https://www.gao.gov/products/gao-24-106345"
+    ],
+    "tags": [
+      "immigration",
+      "appropriations",
+      "staffing",
+      "judicial review",
+      "infrastructure",
+      "facilities"
     ]
   },
   {
@@ -347,6 +531,14 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2024-03/OIG-24-43.pdf",
       "https://www.vera.org/downloads/publications/the-hidden-costs-of-immigration-detention.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "appropriations",
+      "detention",
+      "facilities",
+      "oversight",
+      "civil rights"
     ]
   },
   {
@@ -361,6 +553,13 @@
     "additionalReferences": [
       "https://www.opm.gov/policy-data-oversight/data-analysis-documentation/federal-employment-reports/",
       "https://www.gao.gov/products/gao-23-106121"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "personnel",
+      "compensation",
+      "accountability"
     ]
   },
   {
@@ -375,6 +574,13 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-10/OIG-24-02.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF12266"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "staffing",
+      "training",
+      "enforcement"
     ]
   },
   {
@@ -389,6 +595,13 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-22-105385",
       "https://www.dhs.gov/sites/default/files/2023-12/ice-workforce-strategy.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "recruitment",
+      "information systems",
+      "technology"
     ]
   },
   {
@@ -403,6 +616,14 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2022-05/OIG-22-45.pdf",
       "https://www.gao.gov/products/gao-21-144"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "transportation",
+      "removal",
+      "appropriations",
+      "fleet"
     ]
   },
   {
@@ -417,6 +638,13 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-09/OIG-23-54.pdf",
       "https://www.dhs.gov/sites/default/files/publications/dhs-tecs-modernization-2022.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "technology",
+      "information systems",
+      "compliance"
     ]
   },
   {
@@ -431,6 +659,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-23-105196",
       "https://www.dhs.gov/sites/default/files/2022-11/ice-detention-standards-2019.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "facilities",
+      "compliance",
+      "oversight",
+      "civil rights"
     ]
   },
   {
@@ -445,6 +681,14 @@
     "additionalReferences": [
       "https://www.dhs.gov/sites/default/files/2023-10/dhs-climate-action-plan-2023.pdf",
       "https://www.gsa.gov/vehicle-leasing-electrification"
+    ],
+    "tags": [
+      "immigration",
+      "ICE",
+      "fleet",
+      "maintenance",
+      "energy",
+      "GHG"
     ]
   },
   {
@@ -459,6 +703,13 @@
     "additionalReferences": [
       "https://www.aclu.org/documents/flores-v-reno-settlement",
       "https://crsreports.congress.gov/product/pdf/LSB/LSB10470"
+    ],
+    "tags": [
+      "immigration",
+      "detention",
+      "children",
+      "civil rights",
+      "family"
     ]
   },
   {
@@ -473,6 +724,13 @@
     "additionalReferences": [
       "https://www.justice.gov/crt/file/1462011/download",
       "https://www.oig.dhs.gov/sites/default/files/assets/2021-05/OIG-21-35-May21.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "states",
+      "law enforcement",
+      "civil rights",
+      "accountability"
     ]
   },
   {
@@ -487,6 +745,13 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF11599",
       "https://www.scotusblog.com/case-files/cases/national-federation-of-independent-business-v-sebelius/"
+    ],
+    "tags": [
+      "immigration",
+      "DOJ",
+      "state funding",
+      "law enforcement",
+      "civil rights"
     ]
   },
   {
@@ -501,6 +766,13 @@
     "additionalReferences": [
       "https://www.fedbar.org/section-article/immigration-law-opla-expansion-2024/",
       "https://www.gao.gov/products/gao-23-105968"
+    ],
+    "tags": [
+      "immigration",
+      "staffing",
+      "legal",
+      "due process",
+      "appropriations"
     ]
   },
   {
@@ -515,6 +787,13 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-105822",
       "https://www.humanrightsfirst.org/wp-content/uploads/2023/10/mpp2020-report.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "border enforcement",
+      "international relations",
+      "human rights",
+      "law enforcement"
     ]
   },
   {
@@ -529,6 +808,13 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-07/OIG-23-48.pdf",
       "https://crsreports.congress.gov/product/pdf/IF/IF12117"
+    ],
+    "tags": [
+      "immigration",
+      "states",
+      "law enforcement",
+      "trafficking",
+      "accountability"
     ]
   },
   {
@@ -543,6 +829,14 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-105124",
       "https://www.hhs.gov/sites/default/files/orr-uac-capacity-plan-2024.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "children",
+      "unaccompanied minors",
+      "ORR",
+      "detention",
+      "facilities"
     ]
   },
   {
@@ -557,6 +851,15 @@
     "additionalReferences": [
       "https://www.aclu.org/cases/diaz-v-homan",
       "https://crsreports.congress.gov/product/pdf/IF/IF12114"
+    ],
+    "tags": [
+      "immigration",
+      "children",
+      "unaccompanied minors",
+      "CBP",
+      "civil rights",
+      "gang enforcement",
+      "law enforcement"
     ]
   },
   {
@@ -571,6 +874,15 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-01/OIG-23-09.pdf",
       "https://www.hhs.gov/sites/default/files/uac-information-sharing-mou-2018.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "children",
+      "unaccompanied minors",
+      "ORR",
+      "interagency",
+      "gang enforcement",
+      "law enforcement"
     ]
   },
   {
@@ -585,6 +897,15 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-24-105124",
       "https://www.nytimes.com/2023/09/18/us/migrant-children-sponsor-policy.html"
+    ],
+    "tags": [
+      "immigration",
+      "children",
+      "unaccompanied minors",
+      "ORR",
+      "privacy",
+      "data sharing",
+      "law enforcement"
     ]
   },
   {
@@ -599,6 +920,15 @@
     "additionalReferences": [
       "https://www.unicef.org/documents/repatriation-best-interest-determinations",
       "https://www.oig.dhs.gov/sites/default/files/assets/2022-04/OIG-22-29.pdf"
+    ],
+    "tags": [
+      "immigration",
+      "children",
+      "unaccompanied minors",
+      "repatriation",
+      "trafficking",
+      "international relations",
+      "law enforcement"
     ]
   },
   {
@@ -613,6 +943,14 @@
     "additionalReferences": [
       "https://www.oig.dhs.gov/sites/default/files/assets/2023-06/OIG-23-46.pdf",
       "https://www.gao.gov/products/gao-23-105921"
+    ],
+    "tags": [
+      "homeland security",
+      "USSS",
+      "personnel",
+      "training",
+      "technology",
+      "law enforcement"
     ]
   },
   {
@@ -627,6 +965,14 @@
     "additionalReferences": [
       "https://www.dea.gov/sites/default/files/2024-02/DEA%20FY25%20CJ.pdf",
       "https://crsreports.congress.gov/product/pdf/R/R47198"
+    ],
+    "tags": [
+      "DOJ",
+      "drug enforcement",
+      "fentanyl",
+      "public health",
+      "appropriations",
+      "law enforcement"
     ]
   },
   {
@@ -641,6 +987,13 @@
     "additionalReferences": [
       "https://www.uscourts.gov/statistics-reports/federal-judicial-caseload-statistics-2023",
       "https://www.gao.gov/products/gao-22-105184"
+    ],
+    "tags": [
+      "DOJ",
+      "immigration",
+      "prosecution",
+      "fraud",
+      "law enforcement"
     ]
   },
   {
@@ -655,6 +1008,14 @@
     "additionalReferences": [
       "https://www.aila.org/advo-media/aila-policy-briefs/expedited-removal-policy-brief-2024",
       "https://www.gao.gov/products/gao-23-105822"
+    ],
+    "tags": [
+      "immigration",
+      "expedited removal",
+      "due process",
+      "CBP",
+      "criminal justice",
+      "law enforcement"
     ]
   },
   {
@@ -669,6 +1030,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/LSB/LSB10248",
       "https://www.justice.gov/eoir/page/file/1211661/download"
+    ],
+    "tags": [
+      "immigration",
+      "national security",
+      "ports of entry",
+      "due process",
+      "detention",
+      "law enforcement"
     ]
   }
 ]

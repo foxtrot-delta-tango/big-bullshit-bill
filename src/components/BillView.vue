@@ -3,61 +3,67 @@
     <span>{{ title.number }}</span>
     <span>{{ title.name }}</span>
   </h2>
+  <h3 class='subtitle' v-if='title.subtitles.length'>
+    <span class='collapsing-header-text' v-if='selectedSubtitle'>
+      <span>
+        Subtitle
+      </span>
+      <span>
+        {{ selectedSubtitleData?.letter }}
+      </span>
+    </span>
+    <span>
+      {{ selectedSubtitleData?.name }}
+    </span>
+  </h3>
   <div class="viewer">
-    <div v-if="!title.subtitles.length" class="sections">
-      <BillSection v-for="(section, key) in sections" :key :section />
-    </div>
+    <BillSections v-if='!title.subtitles.length' :sections />
     <template v-else>
       <template v-for="subtitle in title.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)">
-        <h3>
-          Subtitle
-          <span>
-            {{ subtitle.letter }}
-          </span>
-          <span>
-            {{ subtitle.name }}
-          </span>
-        </h3>
-        <div v-if="!subtitle.parts.length" class="sections">
-          <BillSection v-for="(section, key) in sections.filter(s => s.subtitle === subtitle.letter)" :key :section />
-        </div>
+        <BillSections v-if='!subtitle.parts.length' :sections='sections.filter(s => s.subtitle === subtitle.letter)' />
         <template v-else>
           <template v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
             :key="part.number">
-            <template v-if="!part.subparts.length">
+            <div v-if="!part.subparts.length" class='part'>
               <div class="headers">
-                <strong>
-                  Part {{ part.number }}
+                <strong class='collapsing-header-text'>
+                  <span>
+                    Part
+                  </span>
+                  <span>
+                    {{ part.number }}
+                  </span>
                 </strong>
                 <span class='highlight'>
                   {{ part.title }}
                 </span>
               </div>
-              <div class="sections">
-                <BillSection v-for="(section, key) in sections.filter(s => s.part === part.number)" :key :section />
-              </div>
-            </template>
+              <BillSections :sections='sections.filter(s => s.part === part.number)' />
+            </div>
             <template v-else>
-              <template
+              <div
                 v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())"
-                :key="subpart.letter">
+                :key="subpart.letter" class='subpart'>
                 <div class="headers">
-                  <strong>
-                    Part {{ part.number }}{{ subpart.letter }}
-                  </strong>
-                  <span class='highlight'>
-                    {{ part.title }}
-                  </span>
+                  <div>
+                    <strong class='collapsing-header-text'>
+                      <span>
+                        Part
+                      </span>
+                      <span>
+                        {{ part.number }}{{ subpart.letter }}
+                      </span>
+                    </strong>
+                    <span class='highlight'>
+                      {{ part.title }}
+                    </span>
+                  </div>
                   <span>
                     {{ subpart.title }}
                   </span>
                 </div>
-                <div class="sections">
-                  <BillSection
-                    v-for="(section, key) in sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)" :key
-                    :section />
-                </div>
-              </template>
+                <BillSections :sections='sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)' />
+              </div>
             </template>
           </template>
         </template>
@@ -67,13 +73,11 @@
 </template>
 
 <script setup lang="ts">
-import BillSection from './BillSection.vue';
+import BillSections from './BillSections.vue';
 import { useBill, type TitleToc } from '../composables/bill';
+import { useMenu } from '../composables/menu';
 import { computed } from 'vue';
-import { useRouter } from 'vue-router';
 import tocData from '../data/toc.json';
-
-const router = useRouter();
 
 const {
   subtitleData,
@@ -83,13 +87,20 @@ const {
   selectedSubpart,
 } = useBill();
 
+const {
+  selectedTags,
+} = useMenu();
+
 const sections = computed(() => subtitleData.value
   .filter(d => {
-    if (selectedPart.value && selectedSubpart.value) {
-      return d.part === selectedPart.value && d.subpart === selectedSubpart.value
-    } else if (selectedPart.value) {
-      return d.part === selectedPart.value;
-    }
+    if (selectedPart.value && d.part !== selectedPart.value)
+      return false;
+
+    if (selectedSubpart.value && d.subpart?.toLowerCase() !== selectedSubpart.value.toLowerCase())
+      return false;
+
+    if (selectedTags.value.length && !d.tags?.some(tag => selectedTags.value.includes(tag)))
+      return false;
 
     return true;
   })
@@ -113,20 +124,47 @@ const title = computed(() => {
   return result;
 });
 
-const navigateToTitle = (title: string) => {
-  router.push({ path: `/${title}` });
-};
+const selectedSubtitleData = computed(() => {
+  if (!selectedSubtitle.value) return null;
+  return title.value.subtitles.find(s => s.letter === selectedSubtitle.value);
+});
 
-const navigateToSubtitle = (subtitle: string) => {
-  router.push({ path: `/${selectedTitle.value}/${subtitle}` });
-};
+// I don't think we are going to use this, but just in case...it's here
+// const currentTags = computed(() => {
+//   let data = [] as BillSectionData[];
+
+//   if (selectedSubpart.value) {
+//     data = subpartData.value;
+//   } else if (selectedPart.value) {
+//     data = partData.value;
+//   } else if (selectedSubtitle.value) {
+//     data = subtitleData.value;
+//   } else {
+//     data = titleData.value;
+//   }
+
+//   const tags: string[] = [];
+//   data.forEach(section => {
+//     if (section.tags) {
+//       section.tags.forEach(tag => {
+//         if (!tags.includes(tag)) {
+//           tags.push(tag);
+//         }
+//       });
+//     }
+//   });
+
+//   return tags;
+// });
 </script>
 
 <style lang="scss" scoped>
 .viewer {
   display: flex;
   flex-direction: column;
-  overflow-y: hidden;
+  flex: auto;
+  overflow-y: auto;
+  position: relative;
 }
 
 .menu {
@@ -141,19 +179,6 @@ const navigateToSubtitle = (subtitle: string) => {
   >* {
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
-  }
-}
-
-.sections {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-sm);
-  overflow-y: auto;
-  padding: 0 var(--spacing-xs);
-
-  @media (max-width: 768px) {
-    gap: var(--spacing-xs);
   }
 }
 
@@ -178,7 +203,7 @@ const navigateToSubtitle = (subtitle: string) => {
   }
 }
 
-h3 {
+h3.subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,39 +211,84 @@ h3 {
   text-transform: uppercase;
   font-weight: bold;
   gap: var(--spacing-xs);
+  background-color: var(--color-bg);
 
-  span:first-child {
-    font-size: 1.5rem;
+  .collapsing-header-text {
+    max-width: 200px;
+    align-items: center;
+
+    span:last-child {
+      font-size: 1.1em;
+    }
   }
 
-  span:last-child {
+  >span:last-child {
     color: var(--color-primary);
   }
 }
 
-.headers {
+.part,
+.subpart {
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex: 1;
-  align-items: baseline;
-  justify-content: center;
-  text-align: center;
-  gap: var(--spacing-xs);
+  flex-direction: column;
+  flex: auto;
 
-  .highlight {
-    color: var(--color-primary);
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+  .headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    background-color: var(--color-bg);
 
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    row-gap: 0;
-
-    strong {
+    :first-child {
+      display: flex;
+      align-items: baseline;
+      gap: var(--spacing-xs);
       font-size: 1.25rem;
+    }
+
+    .highlight {
+      color: var(--color-primary);
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
 }
+
+.subpart {
+  .headers {
+    .collapsing-header-text {
+      max-width: 100px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 0 0.5em;
+
+      .collapsing-header-text {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.collapsing-header-text {
+  display: flex;
+  transition: max-width 0.25s ease-out;
+  gap: 0 var(--spacing-xs);
+
+  @media (max-width: 768px) {
+    gap: 0;
+
+    span:first-child {
+      overflow: hidden;
+      max-width: 0;
+    }
+  }
+}
+
 
 h2,
 h3,

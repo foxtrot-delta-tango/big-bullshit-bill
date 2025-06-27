@@ -65,10 +65,10 @@ import { computed, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { marked } from 'marked';
 import Tags from './Tags.vue';
-import { useBill } from '../composables/bill';
+import { useMenu } from '../composables/menu';
 
 const router = useRouter();
-const { selectedTags, toggleTag } = useBill();
+const { selectedTags, toggleTag } = useMenu();
 
 const props = defineProps<{
   section: BillSectionData;

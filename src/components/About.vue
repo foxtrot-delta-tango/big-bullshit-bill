@@ -49,9 +49,9 @@
         <section>
             <h1>Coming Soon</h1>
             <ul>
-                <li>Filtering by tag.</li>
                 <li>Viewing sections from more than one title/subtitle/part/subpart simultaneously.</li>
                 <li>Verification of all information by human reviewers.</li>
+                <li>Notes about which sections are subject to the Byrd Rule.</li>
             </ul>
         </section>
         <section class='contact'>

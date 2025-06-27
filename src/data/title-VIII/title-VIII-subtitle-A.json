@@ -11,6 +11,21 @@
     "additionalReferences": [
       "https://www.blm.gov/programs/energy-and-minerals/oil-and-gas/leasing",
       "https://crsreports.congress.gov/product/pdf/IF/IF11558"
+    ],
+    "tags": [
+      "oil and gas",
+      "federal leasing",
+      "BLM",
+      "NEPA",
+      "ESA",
+      "public lands",
+      "tribal rights",
+      "environment",
+      "lawsuits",
+      "natural resources",
+      "energy policy",
+      "climate",
+      "administrative law"
     ]
   },
   {
@@ -25,6 +40,19 @@
     "additionalReferences": [
       "https://www.gao.gov/assets/gao-21-138.pdf",
       "https://www.doi.gov/sites/doi.gov/files/report-on-the-federal-oil-and-gas-leasing-program-doi-eo-14008.pdf"
+    ],
+    "tags": [
+      "oil and gas",
+      "noncompetitive leasing",
+      "royalties",
+      "orphan wells",
+      "BLM",
+      "federal leasing",
+      "climate",
+      "public lands",
+      "accountability",
+      "natural resources",
+      "administrative law"
     ]
   },
   {
@@ -39,6 +67,18 @@
     "additionalReferences": [
       "https://www.blm.gov/sites/blm.gov/files/BLM_Permit_to_Drill_Fact_Sheet.pdf",
       "https://www.doi.gov/oig/reports/blm-oil-and-gas-royalty-debt"
+    ],
+    "tags": [
+      "oil and gas",
+      "fees",
+      "royalty collection",
+      "permit by rule",
+      "enforcement",
+      "Treasury",
+      "public lands",
+      "environment",
+      "natural resources",
+      "compliance"
     ]
   },
   {
@@ -53,6 +93,19 @@
     "additionalReferences": [
       "https://www.blm.gov/sites/blm.gov/files/energy_split_estate.pdf",
       "https://crsreports.congress.gov/product/pdf/R/R46404"
+    ],
+    "tags": [
+      "split estate",
+      "federal minerals",
+      "state regulation",
+      "bonding",
+      "trespass",
+      "BLM",
+      "environment",
+      "oil and gas",
+      "natural resources",
+      "regulatory fragmentation",
+      "property rights"
     ]
   },
   {
@@ -67,6 +120,18 @@
     "additionalReferences": [
       "https://www.doi.gov/sites/doi.gov/files/report-on-the-federal-oil-and-gas-leasing-program-doi-eo-14008.pdf",
       "https://www.cbo.gov/publication/57990"
+    ],
+    "tags": [
+      "royalties",
+      "inflation reduction act",
+      "federal leasing",
+      "oil and gas",
+      "climate",
+      "revenue",
+      "energy policy",
+      "Treasury",
+      "natural resources",
+      "fiscal policy"
     ]
   },
   {
@@ -81,6 +146,18 @@
     "additionalReferences": [
       "https://www.usgs.gov/faqs/what-geothermal-energy",
       "https://crsreports.congress.gov/product/pdf/R/R46156"
+    ],
+    "tags": [
+      "geothermal energy",
+      "BLM",
+      "renewables",
+      "permitting",
+      "wildlife",
+      "public lands",
+      "cultural resources",
+      "natural resources",
+      "energy policy",
+      "environment"
     ]
   },
   {
@@ -95,6 +172,16 @@
     "additionalReferences": [
       "https://www.blm.gov/programs/energy-and-minerals/renewable-energy/geothermal-energy",
       "https://www.energy.gov/eere/geothermal/articles/geothermal-faqs"
+    ],
+    "tags": [
+      "geothermal energy",
+      "royalties",
+      "renewables",
+      "BLM",
+      "energy policy",
+      "natural resources",
+      "climate",
+      "administrative burden"
     ]
   },
   {
@@ -109,6 +196,22 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF10708",
       "https://www.fws.gov/refuge/arctic"
+    ],
+    "tags": [
+      "ANWR",
+      "oil and gas",
+      "NEPA",
+      "ESA",
+      "judicial review",
+      "Alaska",
+      "revenue sharing",
+      "tribal rights",
+      "wildlife",
+      "climate",
+      "constitutional law",
+      "public lands",
+      "environment",
+      "energy policy"
     ]
   },
   {
@@ -123,6 +226,20 @@
     "additionalReferences": [
       "https://www.doi.gov/pressreleases/biden-harris-administration-approves-20-year-mineral-withdrawal-boundary-waters",
       "https://www.fs.usda.gov/sites/default/files/2023-01/boundary-waters-withdrawal-faq.pdf"
+    ],
+    "tags": [
+      "hard-rock mining",
+      "Boundary Waters",
+      "copper and nickel",
+      "watershed protection",
+      "Ojibwe rights",
+      "public lands",
+      "critical minerals",
+      "royalties",
+      "environment",
+      "federal lands",
+      "tribal rights",
+      "recreation economy"
     ]
   },
   {
@@ -137,6 +254,14 @@
     "additionalReferences": [
       "https://www.eia.gov/todayinenergy/detail.php?id=58579",
       "https://www.gao.gov/products/gao-21-299"
+    ],
+    "tags": [
+      "coal",
+      "leasing",
+      "energy",
+      "environmental review",
+      "tribal policy",
+      "public lands"
     ]
   },
   {
@@ -151,6 +276,13 @@
     "additionalReferences": [
       "https://doi.gov/sites/doi.gov/files/press-release/attachments/SecretarialOrder3338.pdf",
       "https://www.blm.gov/programs/energy-and-minerals/coal/coal-reform"
+    ],
+    "tags": [
+      "coal",
+      "climate",
+      "carbon",
+      "emissions",
+      "permitting"
     ]
   },
   {
@@ -165,6 +297,13 @@
     "additionalReferences": [
       "https://revenuedata.doi.gov/how-it-works/coal/",
       "https://crsreports.congress.gov/product/pdf/R/R46184"
+    ],
+    "tags": [
+      "coal",
+      "royalty",
+      "state funding",
+      "energy",
+      "revenue"
     ]
   },
   {
@@ -179,6 +318,13 @@
     "additionalReferences": [
       "https://www.doi.gov/sites/doi.gov/files/bull-mountain-memo-2020.pdf",
       "https://deq.mt.gov/files/Land/Coal/OpenCut/Environmental/Bull_Mountain_Mine.pdf"
+    ],
+    "tags": [
+      "coal",
+      "mining",
+      "judicial review",
+      "permitting",
+      "environmental review"
     ]
   },
   {
@@ -193,6 +339,14 @@
     "additionalReferences": [
       "https://www.supremecourt.gov/opinions/17pdf/16-498_b97c.pdf",
       "https://www.whitehouse.gov/wp-content/uploads/2023/01/NEPA-Fact-Sheet-CEQ.pdf"
+    ],
+    "tags": [
+      "NEPA",
+      "environmental review",
+      "permitting",
+      "fees",
+      "energy",
+      "rulemaking"
     ]
   },
   {
@@ -207,6 +361,15 @@
     "additionalReferences": [
       "https://www.epa.gov/inflation-reduction-act",
       "https://www.gao.gov/products/gao-22-106061"
+    ],
+    "tags": [
+      "emissions",
+      "EPA",
+      "climate",
+      "data collection",
+      "enforcement",
+      "air pollution",
+      "environmental review"
     ]
   },
   {
@@ -221,6 +384,14 @@
     "additionalReferences": [
       "https://www.gao.gov/assets/gao-21-138.pdf",
       "https://eplanning.blm.gov/public_projects/2015639/200495800/20069805/250076923/508Protests%20and%20Appeals.pdf"
+    ],
+    "tags": [
+      "oil and gas",
+      "public participation",
+      "administrative process",
+      "fees",
+      "permitting",
+      "tribal policy"
     ]
   },
   {
@@ -235,6 +406,17 @@
     "additionalReferences": [
       "https://www.boem.gov/sites/default/files/documents/energy-programs/2024-2029-proposed-final-program.pdf",
       "https://www.boem.gov/sites/default/files/documents/regions/gulf-mexico-ocs-region/Lease-Sale-261-Statistical-Report.pdf"
+    ],
+    "tags": [
+      "oil and gas",
+      "leasing",
+      "offshore",
+      "NEPA",
+      "ESA",
+      "courts",
+      "environmental review",
+      "revenue sharing",
+      "state funding"
     ]
   },
   {
@@ -249,6 +431,14 @@
     "additionalReferences": [
       "https://www.boem.gov/sites/default/files/uploadedFiles/BOEM/Oil_and_Gas_Energy_Program/Leasing/Fair_ways_and_Means/NTL-2011-G03.pdf",
       "https://www.onrr.gov/sites/default/files/2021-11/Royalty%20Measurement.pdf"
+    ],
+    "tags": [
+      "oil and gas",
+      "royalty",
+      "production",
+      "Gulf of Mexico",
+      "measurement",
+      "transparency"
     ]
   },
   {
@@ -263,6 +453,14 @@
     "additionalReferences": [
       "https://crsreports.congress.gov/product/pdf/IF/IF11416",
       "https://www.cbo.gov/system/files/2021-09/s_2130.pdf"
+    ],
+    "tags": [
+      "oil and gas",
+      "GOMESA",
+      "state funding",
+      "conservation",
+      "Land and Water Conservation Fund",
+      "revenue sharing"
     ]
   },
   {
@@ -277,6 +475,16 @@
     "additionalReferences": [
       "https://www.federalregister.gov/documents/2024/05/01/2024-08099/rights-of-way-leasing-and-operations-for-renewable-energy",
       "https://www.reuters.com/world/us/us-surpasses-renewable-energy-goal-public-lands-2024-04-11/"
+    ],
+    "tags": [
+      "renewable energy",
+      "fees",
+      "federal lands",
+      "public lands",
+      "leasing",
+      "rents",
+      "capacity fee",
+      "transparency"
     ]
   },
   {
@@ -291,6 +499,16 @@
     "additionalReferences": [
       "https://www.federalregister.gov/documents/2024/05/01/2024-08099/rights-of-way-leasing-and-operations-for-renewable-energy",
       "https://www.blm.gov/about/laws-and-regulations/renewable-energy-rule"
+    ],
+    "tags": [
+      "renewable energy",
+      "revenue sharing",
+      "state funding",
+      "counties",
+      "public lands",
+      "energy",
+      "GIS",
+      "implementation"
     ]
   }
 ]

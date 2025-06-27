@@ -24,11 +24,14 @@
           to="/about">About</router-link> page.
       </p>
     </div>
-    <button class="toggle-welcome" @click="toggleWelcomeMessage">
+    <button class="text-button toggle-welcome" @click="toggleWelcomeMessage">
       {{ showingWelcome ? 'Hide' : 'Show' }} Welcome
     </button>
     <div class="toc-content">
-      <ExpandableSection v-for="title in tocData.titles" :key="title.number"
+      <button v-if='selectedTags.length' class='text-button clear-all' @click.stop='setTags([])' title='Clear all tags'>
+        Clear Tags <i>✖</i>
+      </button>
+      <ExpandableSection v-for="title in visibleToc" :key="title.number"
         :title="`Title ${title.number} - ${title.name}`" class="title">
         <template #title>
           <div class="title-header">
@@ -101,43 +104,24 @@
                       </div>
                     </template>
 
-                    <template v-for="section in getSections(title, subtitle.letter, part.number, subpart.letter)">
-                      <div class="section" @click="navigateToSection(section.number)">
-                        <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
-                        <span>Sec. {{ section.number }}.</span> <span>{{ section.title }}</span>
-                      </div>
-                    </template>
+                    <TocSection v-for="section in getSections(title, subtitle.letter, part.number, subpart.letter)"
+                      :section />
                   </ExpandableSection>
                 </template>
 
                 <template v-else>
-                  <template v-for="section in getSections(title, subtitle.letter, part.number)">
-                    <div class="section" @click="navigateToSection(section.number)">
-                      <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
-                      <span>Sec. {{ section.number }}.</span> <span>{{ section.title }}</span>
-                    </div>
-                  </template>
+                  <TocSection v-for="section in getSections(title, subtitle.letter, part.number)" :section />
                 </template>
               </ExpandableSection>
             </template>
 
             <template v-else>
-              <template v-for="section in getSections(title, subtitle.letter)" :key="section.number">
-                <div class="section" @click="navigateToSection(section.number)">
-                  <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
-                  <span>Sec. {{ section.number }}.</span> <span>{{ section.title }}</span>
-                </div>
-              </template>
+              <TocSection v-for="section in getSections(title, subtitle.letter)" :section />
             </template>
           </ExpandableSection>
         </template>
         <template v-else>
-          <template v-for="section in title.sections" :key="section.number">
-            <div class="section" @click="navigateToSection(section.number)">
-              <!-- {{ getSection(section.number)?.checkedByHumansDate ? '✔' : '❔' }} -->
-              <span>Sec. {{ section.number }}.</span> <span>{{ section.title }}</span>
-            </div>
-          </template>
+          <TocSection v-for='section in getSections(title)' :section />
         </template>
       </ExpandableSection>
     </div>
@@ -149,20 +133,70 @@ import { useRouter, type Router } from 'vue-router';
 import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
 import { useBill, type TitleToc } from '../composables/bill';
+import { useMenu } from '../composables/menu';
 import Tags from './Tags.vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import TocSection from './TocSection.vue';
 
 const router: Router = useRouter();
-const { getSection, getTags } = useBill();
+const { getSection } = useBill();
+const { selectedTags, getTags, setTags } = useMenu();
 
 const WELCOME_SETTING_KEY = 'showWelcomeMessage';
 const showingWelcome = ref(localStorage.getItem(WELCOME_SETTING_KEY) !== 'false');
+
+const visibleToc = computed(() => {
+  if (!selectedTags.value.length) return tocData.titles;
+
+  const titles = tocData.titles.filter(t => hasSelectedTags(t));
+  if (!titles.length) return [];
+
+  titles.forEach(title => {
+    const subtitles = title.subtitles.filter(subtitle => hasSelectedTags(title, subtitle.letter));
+    if (!subtitles || !subtitles.length) return;
+
+    title.subtitles = subtitles;
+    title.subtitles.forEach(subtitle => {
+      const parts = subtitle.parts?.filter(part => hasSelectedTags(title, subtitle.letter, part.number));
+      if (!parts || !parts.length) return;
+
+      subtitle.parts = parts;
+      subtitle.parts.forEach(part => {
+        const subparts = part.subparts?.filter(subpart => hasSelectedTags(title, subtitle.letter, part.number, subpart.letter));
+        if (!subparts || !subparts.length) return;
+
+        part.subparts = subparts;
+      });
+    });
+
+    if (selectedTags.value.length) {
+      const sections = title.sections.filter(s => {
+        const section = getSection(s.number);
+        if (!section?.tags?.length) return false;
+        return selectedTags.value.some(tag => section.tags?.some(t => t === tag));
+      });
+
+      title.sections = sections;
+    }
+  });
+
+  return titles;
+});
+
+const hasSelectedTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
+  const tags = getTags(title, subtitle, part, subpart);
+  return selectedTags.value.some(tag => tags.some(t => t.tag.toLowerCase() === tag.toLowerCase()));
+};
 
 const getSections = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
   return title.sections.filter(s => {
     if (subtitle && s.subtitle !== subtitle) return false;
     if (part && s.part !== part) return false;
     if (subpart && s.subpart?.toLowerCase() !== subpart) return false;
+
+    const section = getSection(s.number);
+    if (selectedTags.value.length && !section?.tags?.some(tag => selectedTags.value.includes(tag))) return false;
+
     return true;
   });
 };
@@ -174,19 +208,6 @@ const getSectionListText = (title: TitleToc, subtitle?: string, part?: string, s
   if (sections.length === 1) return `Sec. ${sections[0].number}`;
 
   return `Sec. ${sections[0].number} - ${sections[sections.length - 1].number}`;
-};
-
-const navigateToSection = (sectionNumber: string) => {
-  const section = getSection(sectionNumber);
-  if (!section) return;
-
-  const { titleNumber: title, subtitle } = section;
-
-  router.push({
-    name: 'bill',
-    params: { title, subtitle },
-    query: { section: sectionNumber }
-  });
 };
 
 const toggleWelcomeMessage = () => {
@@ -206,6 +227,7 @@ const toggleWelcomeMessage = () => {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   overflow: auto;
+  flex: auto;
 
   .toc-intro {
     display: flex;
@@ -240,16 +262,8 @@ const toggleWelcomeMessage = () => {
   }
 
   button.toggle-welcome {
-    border: none;
-    background: transparent;
-    color: var(--color-text-light);
-    font-style: italic;
-    font-weight: normal;
-    outline: none;
-
-    &:hover {
-      color: var(--color-primary);
-    }
+    position: sticky;
+    top: 0;
   }
 
   h2 {
@@ -278,10 +292,17 @@ const toggleWelcomeMessage = () => {
   }
 
   .toc-content {
+    position: relative;
     padding: 0 var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: 1200px) {
       overflow-y: auto;
+    }
+
+    .clear-all {
+      margin-left: auto;
     }
 
     .title {
@@ -392,6 +413,11 @@ const toggleWelcomeMessage = () => {
         margin-left: var(--spacing-xs);
         margin-bottom: var(--spacing-xs);
       }
+
+      @media (max-width: 480px) {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
     }
 
     .part {
@@ -481,47 +507,6 @@ const toggleWelcomeMessage = () => {
       @media (max-width: 960px) {
         margin-left: var(--spacing-xs);
         margin-bottom: var(--spacing-xs);
-      }
-    }
-
-    .section {
-      padding: var(--spacing-xs) var(--spacing-md);
-      border-radius: 0.67rem;
-      color: var(--color-text);
-      cursor: pointer;
-      transition: background-color 0.1s ease-in-out;
-      display: flex;
-      align-items: baseline;
-      column-gap: var(--spacing-xs);
-
-      :first-child {
-        text-transform: uppercase;
-        font-weight: 500;
-        color: var(--color-text-light);
-        text-wrap: nowrap;
-      }
-
-      :last-child {
-        font-variant: small-caps;
-        font-size: 1.2em;
-        transition: color 0.1s ease-in-out;
-      }
-
-      &:hover {
-        background-color: var(--color-bg-secondary);
-
-        :first-child {
-          color: var(--color-text);
-        }
-
-        :last-child {
-          color: var(--color-primary);
-        }
-      }
-
-      @media (max-width: 768px) {
-        padding: var(--spacing-xs);
-        flex-direction: column;
       }
     }
 

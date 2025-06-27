@@ -10,6 +10,16 @@
     "additionalReferences": [
       "https://www.gao.gov/products/GAO-24-107488",
       "https://sgp.fas.org/crs/weapons/RL34391.pdf"
+    ],
+    "tags": [
+      "federal workforce",
+      "personnel",
+      "law enforcement",
+      "whistleblowers",
+      "cost estimates",
+      "compliance",
+      "administration",
+      "program integrity"
     ]
   },
   {
@@ -23,6 +33,16 @@
     "additionalReferences": [
       "https://www.congress.gov/crs-product/IF11645",
       "https://reason.org/wp-content/uploads/alternatives-reforming-harbor-maintenance-trust-fund.pdf"
+    ],
+    "tags": [
+      "federal workforce",
+      "Inspector General",
+      "enforcement",
+      "compliance",
+      "accountability",
+      "whistleblowers",
+      "public reporting",
+      "regulations"
     ]
   },
   {
@@ -36,6 +56,15 @@
     "additionalReferences": [
       "https://www.ncsl.org/transportation/special-registration-fees-for-electric-and-hybrid-vehicles",
       "https://taxfoundation.org/blog/ev-highway-trust-fund/"
+    ],
+    "tags": [
+      "federal workforce",
+      "appropriations",
+      "staffing",
+      "program funding",
+      "administration",
+      "state funding",
+      "metrics"
     ]
   },
   {
@@ -49,6 +78,16 @@
     "additionalReferences": [
       "https://bipartisanpolicy.org/blog/highway-trust-fund-impact-of-evs/",
       "https://crsreports.congress.gov/product/pdf/IF/IF11645"
+    ],
+    "tags": [
+      "Inspector General",
+      "personnel",
+      "staffing",
+      "administration",
+      "accountability",
+      "cost estimates",
+      "oversight",
+      "hiring"
     ]
   },
   {
@@ -62,6 +101,16 @@
     "additionalReferences": [
       "https://www.ccjdigital.com/regulations/article/15744362/budget-proposal-includes-funding-for-carrier-authority-confirmation",
       "https://www.gao.gov/products/gao-14-114"
+    ],
+    "tags": [
+      "whistleblowers",
+      "law enforcement",
+      "reporting",
+      "oversight",
+      "accountability",
+      "federal workforce",
+      "civil rights",
+      "compliance"
     ]
   },
   {
@@ -75,6 +124,16 @@
     "additionalReferences": [
       "https://iratracker.org/programs/1424/",
       "https://www.smartcitiesdive.com/news/house-republicans-rescind-reconnecting-communities-equity-grants/747089/"
+    ],
+    "tags": [
+      "Inspector General",
+      "compliance",
+      "metrics",
+      "evaluation",
+      "public reporting",
+      "administration",
+      "program evaluation",
+      "rulemaking"
     ]
   },
   {
@@ -88,6 +147,16 @@
     "additionalReferences": [
       "https://www.gao.gov/products/gao-25-108162",
       "https://www.oig.dot.gov/sites/default/files/library-items/FAA%20IT%20and%20Telecom%20Contracts%20Final%20Report%202.26.2024.pdf"
+    ],
+    "tags": [
+      "enforcement",
+      "compliance",
+      "Inspector General",
+      "public service",
+      "administration",
+      "regulations",
+      "program integrity",
+      "whistleblowers"
     ]
   },
   {
@@ -101,6 +170,16 @@
     "additionalReferences": [
       "https://www.gao.gov/assets/gao-21-446.pdf",
       "https://www.wsj.com/business/media/maga-kennedy-center-trump-b9cc7589"
+    ],
+    "tags": [
+      "federal workforce",
+      "public service",
+      "administration",
+      "reporting",
+      "accountability",
+      "evaluation",
+      "Inspector General",
+      "metrics"
     ]
   }
 ]
