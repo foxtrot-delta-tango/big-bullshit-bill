@@ -129,7 +129,6 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter, type Router } from 'vue-router';
 import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
 import { useBill, type TitleToc } from '../composables/bill';
@@ -138,7 +137,6 @@ import Tags from './Tags.vue';
 import { computed, ref } from 'vue';
 import TocSection from './TocSection.vue';
 
-const router: Router = useRouter();
 const { getSection } = useBill();
 const { selectedTags, getTags, setTags } = useMenu();
 
@@ -226,7 +224,7 @@ const toggleWelcomeMessage = () => {
   background: var(--color-section-bg);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  overflow: auto;
+  overflow: hidden;
   flex: auto;
 
   .toc-intro {
@@ -302,11 +300,14 @@ const toggleWelcomeMessage = () => {
     }
 
     .clear-all {
+      position: sticky;
+      top: 0;
       margin-left: auto;
     }
 
     .title {
       margin-bottom: var(--spacing-md);
+      overflow: visible;
 
       .title-header {
         display: flex;

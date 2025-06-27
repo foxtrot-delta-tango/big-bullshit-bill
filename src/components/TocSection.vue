@@ -82,5 +82,11 @@ const navigateToSection = (sectionNumber: string) => {
 .tags {
     margin-top: var(--spacing-xs);
     margin-left: auto;
+    max-width: 35%;
+    justify-content: flex-end;
+
+    >* {
+        white-space: nowrap;
+    }
 }
 </style>
