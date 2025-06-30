@@ -1,7 +1,8 @@
 import { computed, readonly, ref, watch } from 'vue';
 import { useBill, type TitleToc } from './bill';
+import tocData from '../data/toc.json';
 
-const { TITLE_FILES } = useBill();
+const { TITLE_FILES, getSection } = useBill();
 
 const SELECTED_FILTER_KEY = 'selectedFilter';
 
@@ -14,6 +15,43 @@ const selectedFilters = computed(() => {
     return {
         tags: selectedTags.value,
     }
+});
+
+const visibleToc = computed(() => {
+    if (!selectedTags.value.length) return tocData.titles;
+
+    const titles: TitleToc[] = [];
+    tocData.titles.forEach(title => {
+        const subtitles = title.subtitles.filter(subtitle => hasSelectedTags(title, subtitle.letter));
+        if (!subtitles || !subtitles.length) return;
+
+        subtitles.forEach(subtitle => {
+            const parts = subtitle.parts?.filter(part => hasSelectedTags(title, subtitle.letter, part.number));
+            if (!parts || !parts.length) return;
+
+            subtitle.parts = parts;
+            parts.forEach(part => {
+                const subparts = part.subparts?.filter(subpart => hasSelectedTags(title, subtitle.letter, part.number, subpart.letter));
+                if (!subparts || !subparts.length) return;
+
+                part.subparts = subparts;
+            });
+        });
+
+        const sections = title.sections.filter(s => {
+            const section = getSection(s.number);
+            if (!section?.tags?.length) return false;
+            return selectedTags.value.some(tag => section.tags?.some(t => t === tag));
+        });
+
+        titles.push({
+            ...title,
+            subtitles,
+            sections
+        });
+    });
+
+    return titles;
 });
 
 const toggleFilterMenu = (toSetting?: boolean) => {
@@ -53,6 +91,11 @@ const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: st
     return tags;
 };
 
+const hasSelectedTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
+    const tags = getTags(title, subtitle, part, subpart);
+    return selectedTags.value.some(tag => tags.some(t => t.tag.toLowerCase() === tag.toLowerCase()));
+};
+
 const toggleTag = (tag: string) => {
     const index = selectedTags.value.indexOf(tag);
     const tags = [...selectedTags.value];
@@ -73,6 +116,7 @@ export function useMenu() {
     return {
         showingFilterMenu: readonly(showingFilterMenu),
         selectedTags: readonly(selectedTags),
+        visibleToc,
         toggleFilterMenu,
         setTags,
         getTags,

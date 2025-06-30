@@ -129,62 +129,18 @@
 </template>
 
 <script setup lang="ts">
-import tocData from '../data/toc.json';
 import ExpandableSection from './ExpandableSection.vue';
 import { useBill, type TitleToc } from '../composables/bill';
 import { useMenu } from '../composables/menu';
 import Tags from './Tags.vue';
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 import TocSection from './TocSection.vue';
 
 const { getSection } = useBill();
-const { selectedTags, getTags, setTags } = useMenu();
+const { selectedTags, visibleToc, getTags, setTags } = useMenu();
 
 const WELCOME_SETTING_KEY = 'showWelcomeMessage';
 const showingWelcome = ref(localStorage.getItem(WELCOME_SETTING_KEY) !== 'false');
-
-const visibleToc = computed(() => {
-  if (!selectedTags.value.length) return tocData.titles;
-
-  const titles = tocData.titles.filter(t => hasSelectedTags(t));
-  if (!titles.length) return [];
-
-  titles.forEach(title => {
-    const subtitles = title.subtitles.filter(subtitle => hasSelectedTags(title, subtitle.letter));
-    if (!subtitles || !subtitles.length) return;
-
-    title.subtitles = subtitles;
-    title.subtitles.forEach(subtitle => {
-      const parts = subtitle.parts?.filter(part => hasSelectedTags(title, subtitle.letter, part.number));
-      if (!parts || !parts.length) return;
-
-      subtitle.parts = parts;
-      subtitle.parts.forEach(part => {
-        const subparts = part.subparts?.filter(subpart => hasSelectedTags(title, subtitle.letter, part.number, subpart.letter));
-        if (!subparts || !subparts.length) return;
-
-        part.subparts = subparts;
-      });
-    });
-
-    if (selectedTags.value.length) {
-      const sections = title.sections.filter(s => {
-        const section = getSection(s.number);
-        if (!section?.tags?.length) return false;
-        return selectedTags.value.some(tag => section.tags?.some(t => t === tag));
-      });
-
-      title.sections = sections;
-    }
-  });
-
-  return titles;
-});
-
-const hasSelectedTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
-  const tags = getTags(title, subtitle, part, subpart);
-  return selectedTags.value.some(tag => tags.some(t => t.tag.toLowerCase() === tag.toLowerCase()));
-};
 
 const getSections = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
   return title.sections.filter(s => {
@@ -230,7 +186,6 @@ const toggleWelcomeMessage = () => {
   .toc-intro {
     display: flex;
     flex-direction: column;
-    flex: auto;
     text-align: center;
     margin: 0 8em;
     color: var(--color-text-light);

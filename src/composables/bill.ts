@@ -52,19 +52,19 @@ export type TitleToc = {
   sections: SectionToc[];
 }
 
-type SubtitleToc = {
+export type SubtitleToc = {
   letter: string;
   name: string;
   parts: Array<PartToc>;
 }
 
-type PartToc = {
+export type PartToc = {
   number: string;
   title: string;
   subparts: Array<SubpartToc>;
 }
 
-type SubpartToc = {
+export type SubpartToc = {
   letter: string;
   title: string;
 }
