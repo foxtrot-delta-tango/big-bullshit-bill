@@ -28,9 +28,12 @@
       {{ showingWelcome ? 'Hide' : 'Show' }} Welcome
     </button>
     <div class="toc-content">
-      <button v-if='selectedTags.length' class='text-button clear-all' @click.stop='setTags([])' title='Clear all tags'>
-        Clear Tags <i>✖</i>
-      </button>
+      <header>
+        <button v-if='selectedTags.length' class='text-button clear-all' @click.stop='setTags([])'
+          title='Clear all tags'>
+          Clear Tags <i>✖</i>
+        </button>
+      </header>
       <ExpandableSection v-for="title in visibleToc" :key="title.number"
         :title="`Title ${title.number} - ${title.name}`" class="title">
         <template #title>
@@ -249,15 +252,18 @@ const toggleWelcomeMessage = () => {
     padding: 0 var(--spacing-sm);
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 
-    @media (min-width: 1200px) {
-      overflow-y: auto;
-    }
-
-    .clear-all {
+    header {
+      display: flex;
       position: sticky;
       top: 0;
-      margin-left: auto;
+      z-index: 1;
+      background-color: var(--color-section-bg);
+
+      .clear-all {
+        margin-left: auto;
+      }
     }
 
     .title {
