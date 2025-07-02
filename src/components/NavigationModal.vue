@@ -113,7 +113,17 @@ const subtitleToc = computed(() => titleToc.value?.subtitles.find(s => s.letter 
 const partToc = computed(() => subtitleToc.value?.parts.find(p => p.number === selectedPart.value));
 const subpartToc = computed(() => partToc.value?.subparts.find(sp => sp.letter === selectedSubpart.value?.toLowerCase()));
 
-const currentTags = computed(() => [...selectedTags.value, ...getTags(titleToc.value!, subtitleToc.value?.letter, partToc.value?.number, subpartToc.value?.letter).map(t => t.tag).filter(t => !selectedTags.value.includes(t))]);
+const currentTags = computed(() => {
+    let tags: string[] = [];
+    if (titleToc.value) {
+        tags = getTags(titleToc.value!, subtitleToc.value?.letter, partToc.value?.number, subpartToc.value?.letter).map(t => t.tag).filter(t => !selectedTags.value.includes(t));
+    } else {
+        tags = ALL_TAGS.filter(t => !selectedTags.value.includes(t));
+    }
+
+    tags.unshift(...selectedTags.value);
+    return tags;
+});
 
 const navigateToTitle = (title: string) => {
     router.push({ path: `/bill/${title}` });

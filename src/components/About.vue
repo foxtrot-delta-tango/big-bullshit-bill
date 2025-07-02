@@ -43,7 +43,7 @@
             </p>
             <p>
                 All Section Text was verified to be accurate by humans, but does not include the
-                most recent edits to the Bill from the Senate. Stay tuned for more updates as soon as we can add them.
+                most recent edits to the Bill as of 06/30/25. Stay tuned for more updates as soon as we can add them.
             </p>
             <p>
                 If you would like to volunteer to join us (please, please help 😀), just send us a message at one of
@@ -53,8 +53,9 @@
         <section>
             <h1>Coming Soon</h1>
             <ul>
-                <li>Viewing sections from the entire bill simultaneously, not just by title.</li>
-                <li>Updated Bill text with amendments.</li>
+                <li>Viewing sections from the entire bill simultaneously.</li>
+                <li>Notes about which sections are subject to the Byrd Rule.</li>
+                <li>Updated Bill text with Senate revisions.</li>
                 <li>Verification of all information by human reviewers.</li>
             </ul>
         </section>
