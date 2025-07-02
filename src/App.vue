@@ -99,7 +99,9 @@ const setDataFromUrl = () => {
       }
     });
   } else {
-    selectTitle(null);
+    // selectTitle(null);
+    if (router.currentRoute.value.name === 'bill')
+      router.push({ path: `/bill/${TITLES[0]}` })
   }
 };
 
