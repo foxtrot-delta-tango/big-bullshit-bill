@@ -5,7 +5,7 @@
     <div v-else class="no-sections">
         <p>No sections meet your filtering criteria.</p>
         <p>
-            <a class="link" @click.prevent='toggleFilterMenu'>Remove some tags</a>
+            <a class="link" @click.prevent='toggleFilterMenu()'>Remove some tags</a>
             or go back to the <router-link to='/'>Table of Contents</router-link>
             to find sections that match.
         </p>
