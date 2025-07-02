@@ -15,7 +15,7 @@ const stripQuery = (to: RouteLocationNormalized, next: NavigationGuardNext) => {
 
 const routes = [
   {
-    path: '/:title([IVX]{1,4})?/:subtitle([A-Z]{1})?',
+    path: '/bill/:title([IVX]{1,4})?/:subtitle([A-Z]{1})?',
     name: 'bill',
     query: { section: '' },
     component: BillView,
@@ -24,14 +24,14 @@ const routes = [
         next({ path: '/toc', query: {} });
         return;
       }
-      
+
       const queryParams = Object.keys(to.query);
       if (queryParams.length && (queryParams.length > 1 || queryParams[0] !== 'section')) {
-        const query = to.query.section ? { section: to.query.section } : {}; 
+        const query = to.query.section ? { section: to.query.section } : {};
         next({ query });
       } else {
         next();
-      }      
+      }
     }
   },
   {

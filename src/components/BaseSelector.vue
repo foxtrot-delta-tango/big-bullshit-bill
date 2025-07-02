@@ -3,8 +3,10 @@
     <label :for="label">
       {{ label }}
     </label>
-    <select :id="label" :value @change="handleChange" class="select-dropdown" :disabled="disabled"
-      :placeholder="placeholder">
+    <select :id="label" :value @change="handleChange" class="select-dropdown" :disabled :placeholder>
+      <option v-if="placeholder" value="">
+        {{ placeholder }}
+      </option>
       <option v-for="option in options" :key="option" :value="option">
         {{ option }}
       </option>
@@ -15,7 +17,7 @@
 <script setup lang="ts">
 defineProps<{
   options: string[];
-  value: string;
+  value: string | null;
   label?: string;
   disabled?: boolean;
   placeholder?: string;

@@ -56,12 +56,8 @@ const route = useRoute();
 const {
   TITLES,
   subtitles,
-  parts,
-  subparts,
   selectTitle,
   selectSubtitle,
-  selectPart,
-  selectSubpart,
 } = useBill();
 
 const {
@@ -99,12 +95,11 @@ const setDataFromUrl = () => {
       if (subtitle && subtitles.value.includes(subtitle)) {
         selectSubtitle(subtitle);
       } else {
-        const firstSubtitle = subtitles.value[0];
-        selectSubtitle(firstSubtitle || '');
+        selectSubtitle(null);
       }
     });
   } else {
-    selectTitle('');
+    selectTitle(null);
   }
 };
 
@@ -114,24 +109,6 @@ onMounted(() => {
 
 watch(route, () => {
   setDataFromUrl();
-});
-
-watch(subtitles, () => {
-  if (subtitles.value.length) {
-    selectSubtitle(subtitles.value[0]);
-  }
-});
-
-watch(parts, () => {
-  if (parts.value.length) {
-    selectPart(parts.value[0]);
-  }
-});
-
-watch(subparts, () => {
-  if (subparts.value.length) {
-    selectSubpart(subparts.value[0]);
-  }
 });
 </script>
 

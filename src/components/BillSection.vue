@@ -184,7 +184,7 @@ watch(sectionElement, () => {
   .title {
     font-size: 1.2rem;
     text-decoration: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 4px;
     text-decoration-color: var(--color-primary);
     text-transform: uppercase;
     max-width: 80%;
@@ -193,6 +193,14 @@ watch(sectionElement, () => {
       font-weight: 400;
       white-space: break-spaces;
       color: var(--color-primary);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+
+      .section-title {
+        font-weight: unset;
+      }
     }
   }
 

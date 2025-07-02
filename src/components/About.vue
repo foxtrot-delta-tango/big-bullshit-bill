@@ -36,10 +36,14 @@
                 and verifying them to ensure everything is both accurate and up-to-date.
             </p>
             <p class='inline'>
-                Sections which are already verified by human beings will have a <i class='verified'>✔</i> before them.
+                Sections which are already verified by human beings will have a <i class='verified'>✔</i>.
             </p>
             <p class='inline'>
                 Those which are unverified will have a <i>?</i>.
+            </p>
+            <p>
+                All Section Text was verified to be accurate by humans, but does not include the
+                most recent edits to the Bill from the Senate. Stay tuned for more updates as soon as we can add them.
             </p>
             <p>
                 If you would like to volunteer to join us (please, please help 😀), just send us a message at one of
@@ -49,9 +53,9 @@
         <section>
             <h1>Coming Soon</h1>
             <ul>
-                <li>Viewing sections from more than one title/subtitle/part/subpart simultaneously.</li>
+                <li>Viewing sections from the entire bill simultaneously, not just by title.</li>
+                <li>Updated Bill text with amendments.</li>
                 <li>Verification of all information by human reviewers.</li>
-                <li>Notes about which sections are subject to the Byrd Rule.</li>
             </ul>
         </section>
         <section class='contact'>

@@ -23,7 +23,7 @@
                     </span>
                 </div>
                 <BaseSelector :options="subtitles" :value="selectedSubtitle"
-                    :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" />
+                    :disabled="!selectedTitle || !subtitles.length" @update="navigateToSubtitle" placeholder='All' />
             </div>
 
             <div>
@@ -34,7 +34,7 @@
                     </span>
                 </div>
                 <BaseSelector :options="parts" :value="selectedPart" @update="selectPart"
-                    :disabled="!parts.length || !selectedSubtitle" />
+                    :disabled="!parts.length || !selectedSubtitle" placeholder='All' />
             </div>
 
             <div>
@@ -45,7 +45,7 @@
                     </span>
                 </div>
                 <BaseSelector :options="subparts" :value="selectedSubpart" @update="selectSubpart"
-                    :disabled="!subparts.length || !selectedPart" />
+                    :disabled="!subparts.length || !selectedPart" placeholder='All' />
             </div>
         </div>
 
@@ -53,11 +53,15 @@
             <h3>
                 Tags
             </h3>
-            <Tags :tags='ALL_TAGS' :active-tags='selectedTags' clickable @tag-clicked='toggleTag' :sort='false' />
-            <button v-if='selectedTags.length' class='text-button clear-all' @click.stop='setTags([])'
-                title='Clear all tags'>
-                Clear Tags <i>✖</i>
-            </button>
+            <header>
+                <Toggle :label='matchAllTags ? "Match All" : "Match Any"' :value='matchAllTags'
+                    @change='toggleMatchAllTags()' />
+                <button v-if='selectedTags.length' class='text-button clear-all' @click.stop='setTags([])'
+                    title='Clear all tags'>
+                    Clear Tags <i>✖</i>
+                </button>
+            </header>
+            <Tags :tags='currentTags' :active-tags='selectedTags' clickable @tag-clicked='toggleTag' :sort='false' />
         </div>
 
         <button @click='toggleFilterMenu()' class='close-button' title='Close navigation popup'>
@@ -73,6 +77,7 @@ import { useBill } from '../composables/bill';
 import { useMenu } from '../composables/menu';
 import { computed, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import Toggle from './Toggle.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -92,24 +97,30 @@ const {
     selectSubpart,
 } = useBill();
 
-const { showingFilterMenu,
+const {
+    showingFilterMenu,
     selectedTags,
+    matchAllTags,
     setTags,
+    getTags,
     toggleFilterMenu,
     toggleTag,
+    toggleMatchAllTags
 } = useMenu();
 
 const titleToc = computed(() => TABLE_OF_CONTENTS.find(t => t.number === selectedTitle.value));
 const subtitleToc = computed(() => titleToc.value?.subtitles.find(s => s.letter === selectedSubtitle.value));
 const partToc = computed(() => subtitleToc.value?.parts.find(p => p.number === selectedPart.value));
-const subpartToc = computed(() => partToc.value?.subparts.find(sp => sp.letter === selectedSubpart.value.toLowerCase()));
+const subpartToc = computed(() => partToc.value?.subparts.find(sp => sp.letter === selectedSubpart.value?.toLowerCase()));
+
+const currentTags = computed(() => [...selectedTags.value, ...getTags(titleToc.value!, subtitleToc.value?.letter, partToc.value?.number, subpartToc.value?.letter).map(t => t.tag).filter(t => !selectedTags.value.includes(t))]);
 
 const navigateToTitle = (title: string) => {
-    router.push({ path: `/${title}` });
+    router.push({ path: `/bill/${title}` });
 };
 
 const navigateToSubtitle = (subtitle: string) => {
-    router.push({ path: `/${selectedTitle.value}/${subtitle}` });
+    router.push({ path: `/bill/${selectedTitle.value}/${subtitle}` });
 };
 
 watch(route, (current, prior) => {
@@ -176,6 +187,13 @@ watch(route, (current, prior) => {
         padding: var(--spacing-xs);
         position: relative;
 
+        header {
+            position: absolute;
+            top: 1em;
+            left: 0;
+            right: 0;
+        }
+
         .tags {
             background-color: var(--color-bg-secondary);
             border-radius: var(--border-radius);
@@ -194,9 +212,41 @@ watch(route, (current, prior) => {
             }
         }
 
+        .toggle {
+            position: absolute;
+            left: 1em;
+        }
+
         .clear-all {
             position: absolute;
             right: 1em;
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+
+            header {
+                position: relative;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .toggle,
+                .clear-all {
+                    white-space: nowrap;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                }
+            }
+
+            .tags {
+                margin-top: 0;
+            }
         }
     }
 

@@ -4,7 +4,11 @@
     </div>
     <div v-else class="no-sections">
         <p>No sections meet your filtering criteria.</p>
-        <p>Remove some tags or go back to the Table of Contents to find sections that match.</p>
+        <p>
+            <a class="link" @click.prevent='toggleFilterMenu'>Remove some tags</a>
+            or go back to the <router-link to='/'>Table of Contents</router-link>
+            to find sections that match.
+        </p>
         <p>
             <i>🛸</i>
             <i>🌳<span class="cow">🐄</span>🌳</i>
@@ -15,6 +19,9 @@
 <script setup lang="ts">
 import type { BillSectionData } from '../composables/bill';
 import BillSection from './BillSection.vue';
+import { useMenu } from '../composables/menu';
+
+const { toggleFilterMenu } = useMenu();
 
 defineProps<{
     sections: BillSectionData[];
@@ -73,6 +80,10 @@ defineProps<{
             span.cow {
                 margin: 0 0.2em;
             }
+        }
+
+        a.link {
+            cursor: pointer;
         }
     }
 }

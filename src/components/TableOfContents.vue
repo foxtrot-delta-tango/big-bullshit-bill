@@ -29,104 +29,112 @@
     </button>
     <div class="toc-content">
       <header>
+        <Toggle :label='matchAllTags ? "Match All Tags" : "Match Any Tags"' :value='matchAllTags'
+          @change='toggleMatchAllTags()' />
         <button v-if='selectedTags.length' class='text-button clear-all' @click.stop='setTags([])'
           title='Clear all tags'>
           Clear Tags <i>✖</i>
         </button>
       </header>
-      <ExpandableSection v-for="title in visibleToc" :key="title.number"
-        :title="`Title ${title.number} - ${title.name}`" class="title">
-        <template #title>
-          <div class="title-header">
-            <span class="title-text">
-              <span class="title-number">
-                TITLE {{ title.number }}
-              </span>
-              <span class="title-name">
-                <span>COMMITTEE ON </span>
-                <span class='title-subject'>{{ title.name }}&nbsp;</span>
-              </span>
-            </span>
-            <span class="sections-list">
-              {{ getSectionListText(title) }}
-            </span>
-            <Tags :tags="getTags(title).map(t => t.tag)" :max-shown='5' color='light' />
-          </div>
-        </template>
-
-        <template v-if="title.subtitles.length > 0">
-          <ExpandableSection v-for="subtitle in title.subtitles" :key="subtitle.letter"
-            :title="`Subtitle ${subtitle.letter} - ${subtitle.name}`" class="subtitle">
-            <template #title>
-              <div class="subtitle-header">
-                <span class="subtitle-text">
-                  <span>Subtitle <span class="subtitle-letter">{{ subtitle.letter }}&nbsp;</span></span>
-                  <span class="subtitle-name">{{ subtitle.name }}</span>
+      <div v-if='!visibleToc.length'>
+        <!-- essentially a 404 -->
+        <BillSections :sections='[]' />
+      </div>
+      <template v-else>
+        <ExpandableSection v-for="title in visibleToc" :key="title.number"
+          :title="`Title ${title.number} - ${title.name}`" class="title">
+          <template #title>
+            <div class="title-header">
+              <span class="title-text">
+                <span class="title-number">
+                  TITLE {{ title.number }}
                 </span>
-                <span class="sections-list">
-                  {{ getSectionListText(title, subtitle.letter) }}
+                <span class="title-name">
+                  <span>COMMITTEE ON </span>
+                  <span class='title-subject'>{{ title.name }}&nbsp;</span>
                 </span>
-                <Tags :tags="getTags(title, subtitle.letter).map(t => t.tag)" :max-shown='5' color='light' />
-              </div>
-            </template>
+              </span>
+              <span class="sections-list">
+                {{ getSectionListText(title) }}
+              </span>
+              <Tags :tags="getTags(title).map(t => t.tag)" :max-shown='5' color='light' />
+            </div>
+          </template>
 
-            <template v-if="subtitle.parts && subtitle.parts.length > 0">
-              <ExpandableSection v-for="part in subtitle.parts" :key="part.number"
-                :title="`Part ${part.number}${part.title ? ` - ${part.title}` : ''}`" class="part">
-                <template #title>
-                  <div class="part-header">
-                    <span class="part-text">
-                      Part <span class="part-number">{{ part.number }}</span> <span class="part-title">
-                        {{ part.title }}
-                      </span>
-                    </span>
-                    <div class="sections-list">
-                      {{ getSectionListText(title, subtitle.letter, part.number) }}
-                    </div>
-                    <Tags :tags="getTags(title, subtitle.letter, part.number).map(t => t.tag)" :max-shown='5'
-                      color='light' />
-                  </div>
-                </template>
+          <template v-if="title.subtitles.length > 0">
+            <ExpandableSection v-for="subtitle in title.subtitles" :key="subtitle.letter"
+              :title="`Subtitle ${subtitle.letter} - ${subtitle.name}`" class="subtitle">
+              <template #title>
+                <div class="subtitle-header">
+                  <span class="subtitle-text">
+                    <span>Subtitle <span class="subtitle-letter">{{ subtitle.letter }}&nbsp;</span></span>
+                    <span class="subtitle-name">{{ subtitle.name }}</span>
+                  </span>
+                  <span class="sections-list">
+                    {{ getSectionListText(title, subtitle.letter) }}
+                  </span>
+                  <Tags :tags="getTags(title, subtitle.letter).map(t => t.tag)" :max-shown='5' color='light' />
+                </div>
+              </template>
 
-                <template v-if="part.subparts && part.subparts.length > 0">
-                  <ExpandableSection v-for="subpart in part.subparts" :key="subpart.letter"
-                    :title="`Subpart ${subpart.letter} - ${subpart.title}`" class="subpart">
-                    <template #title>
-                      <div class="subpart-header">
-                        <span class="subpart-text">
-                          <span>
-                            Subpart <span class="subpart-letter">{{ subpart.letter }}</span>
-                          </span>
-                          <span class="subpart-title">{{ subpart.title }}</span>
+              <template v-if="subtitle.parts && subtitle.parts.length > 0">
+                <ExpandableSection v-for="part in subtitle.parts" :key="part.number"
+                  :title="`Part ${part.number}${part.title ? ` - ${part.title}` : ''}`" class="part">
+                  <template #title>
+                    <div class="part-header">
+                      <span class="part-text">
+                        Part <span class="part-number">{{ part.number }}</span> <span class="part-title">
+                          {{ part.title }}
                         </span>
-                        <div class="sections-list">
-                          {{ getSectionListText(title, subtitle.letter, part.number, subpart.letter) }}
-                        </div>
-                        <Tags :tags="getTags(title, subtitle.letter, part.number, subpart.letter).map(t => t.tag)"
-                          :max-shown='5' color='light' />
+                      </span>
+                      <div class="sections-list">
+                        {{ getSectionListText(title, subtitle.letter, part.number) }}
                       </div>
-                    </template>
+                      <Tags :tags="getTags(title, subtitle.letter, part.number).map(t => t.tag)" :max-shown='5'
+                        color='light' />
+                    </div>
+                  </template>
 
-                    <TocSection v-for="section in getSections(title, subtitle.letter, part.number, subpart.letter)"
-                      :section />
-                  </ExpandableSection>
-                </template>
+                  <template v-if="part.subparts && part.subparts.length > 0">
+                    <ExpandableSection v-for="subpart in part.subparts" :key="subpart.letter"
+                      :title="`Subpart ${subpart.letter} - ${subpart.title}`" class="subpart">
+                      <template #title>
+                        <div class="subpart-header">
+                          <span class="subpart-text">
+                            <span>
+                              Subpart <span class="subpart-letter">{{ subpart.letter }}</span>
+                            </span>
+                            <span class="subpart-title">{{ subpart.title }}</span>
+                          </span>
+                          <div class="sections-list">
+                            {{ getSectionListText(title, subtitle.letter, part.number, subpart.letter) }}
+                          </div>
+                          <Tags :tags="getTags(title, subtitle.letter, part.number, subpart.letter).map(t => t.tag)"
+                            :max-shown='5' color='light' />
+                        </div>
+                      </template>
 
-                <template v-else>
-                  <TocSection v-for="section in getSections(title, subtitle.letter, part.number)" :section />
-                </template>
-              </ExpandableSection>
-            </template>
+                      <TocSection v-for="section in getSections(title, subtitle.letter, part.number, subpart.letter)"
+                        :section />
+                    </ExpandableSection>
+                  </template>
 
-            <template v-else>
-              <TocSection v-for="section in getSections(title, subtitle.letter)" :section />
-            </template>
-          </ExpandableSection>
-        </template>
-        <template v-else>
-          <TocSection v-for='section in getSections(title)' :section />
-        </template>
-      </ExpandableSection>
+                  <template v-else>
+                    <TocSection v-for="section in getSections(title, subtitle.letter, part.number)" :section />
+                  </template>
+                </ExpandableSection>
+              </template>
+
+              <template v-else>
+                <TocSection v-for="section in getSections(title, subtitle.letter)" :section />
+              </template>
+            </ExpandableSection>
+          </template>
+          <template v-else>
+            <TocSection v-for='section in getSections(title)' :section />
+          </template>
+        </ExpandableSection>
+      </template>
     </div>
   </div>
 </template>
@@ -138,9 +146,11 @@ import { useMenu } from '../composables/menu';
 import Tags from './Tags.vue';
 import { ref } from 'vue';
 import TocSection from './TocSection.vue';
+import Toggle from './Toggle.vue';
+import BillSections from './BillSections.vue';
 
 const { getSection } = useBill();
-const { selectedTags, visibleToc, getTags, setTags } = useMenu();
+const { selectedTags, visibleToc, getTags, setTags, matchAllTags, toggleMatchAllTags } = useMenu();
 
 const WELCOME_SETTING_KEY = 'showWelcomeMessage';
 const showingWelcome = ref(localStorage.getItem(WELCOME_SETTING_KEY) !== 'false');
@@ -252,6 +262,7 @@ const toggleWelcomeMessage = () => {
     padding: 0 var(--spacing-sm);
     display: flex;
     flex-direction: column;
+    flex: auto;
     overflow-y: auto;
 
     header {

@@ -152,10 +152,10 @@ const ALL_TAGS = TITLE_FILES.reduce((tags, currentTitle) => {
   return tags;
 }, [] as string[]).sort((a, b) => a.localeCompare(b));
 
-const selectedTitle = ref('');
-const selectedSubtitle = ref('');
-const selectedPart = ref('');
-const selectedSubpart = ref('');
+const selectedTitle = ref<string | null>(null);
+const selectedSubtitle = ref<string | null>(null);
+const selectedPart = ref<string | null>(null);
+const selectedSubpart = ref<string | null>(null);
 
 const titleData = computed(() =>
   TITLE_FILES
@@ -173,11 +173,9 @@ const subtitles = computed(() => {
     TITLE_FILES
       .filter(f => f.title === selectedTitle.value && f.subtitle)
       .forEach(f => subtitles.push(f.subtitle));
-
-    return subtitles;
   }
 
-  return [];
+  return subtitles;
 });
 
 const subtitleData = computed(() =>
@@ -222,25 +220,25 @@ const subparts = computed(() => {
 
 const subpartData = computed(() => partData.value.filter(s => !selectedSubpart.value || s.subpart === selectedSubpart.value));
 
-const selectTitle = (title: string) => {
+const selectTitle = (title: string | null) => {
   selectedTitle.value = title;
   selectedSubtitle.value = '';
   selectedPart.value = '';
   selectedSubpart.value = '';
 };
 
-const selectSubtitle = (subtitle: string) => {
+const selectSubtitle = (subtitle: string | null) => {
   selectedSubtitle.value = subtitle;
   selectedPart.value = '';
   selectedSubpart.value = '';
 };
 
-const selectPart = (part: string) => {
+const selectPart = (part: string | null) => {
   selectedPart.value = part;
   selectedSubpart.value = '';
 };
 
-const selectSubpart = (subpart: string) => {
+const selectSubpart = (subpart: string | null) => {
   selectedSubpart.value = subpart;
 };
 

@@ -4,17 +4,19 @@ import tocData from '../data/toc.json';
 
 const { TITLE_FILES, getSection } = useBill();
 
-const SELECTED_FILTER_KEY = 'selectedFilter';
+const SELECTED_FILTER_KEY = 'selectedFilters';
 
 const savedFiltering = JSON.parse(localStorage.getItem(SELECTED_FILTER_KEY) || '{}');
-const selectedTags = ref<string[]>(savedFiltering.tags || []);
+const selectedTags = ref<string[]>(savedFiltering.tags ?? []);
+const matchAllTags = ref(savedFiltering.matchAllTags ?? false);
 
 const showingFilterMenu = ref(false);
 
 const selectedFilters = computed(() => {
     return {
         tags: selectedTags.value,
-    }
+        matchAllTags: matchAllTags.value
+    };
 });
 
 const visibleToc = computed(() => {
@@ -22,27 +24,31 @@ const visibleToc = computed(() => {
 
     const titles: TitleToc[] = [];
     tocData.titles.forEach(title => {
-        const subtitles = title.subtitles.filter(subtitle => hasSelectedTags(title, subtitle.letter));
-        if (!subtitles || !subtitles.length) return;
-
-        subtitles.forEach(subtitle => {
-            const parts = subtitle.parts?.filter(part => hasSelectedTags(title, subtitle.letter, part.number));
-            if (!parts || !parts.length) return;
-
-            subtitle.parts = parts;
-            parts.forEach(part => {
-                const subparts = part.subparts?.filter(subpart => hasSelectedTags(title, subtitle.letter, part.number, subpart.letter));
-                if (!subparts || !subparts.length) return;
-
-                part.subparts = subparts;
-            });
-        });
+        if (!hasSelectedTags(matchAllTags.value, title)) return;
 
         const sections = title.sections.filter(s => {
             const section = getSection(s.number);
             if (!section?.tags?.length) return false;
-            return selectedTags.value.some(tag => section.tags?.some(t => t === tag));
+            return hasSelectedTags(false, title, section.subtitle, section.part, section.subpart);
         });
+
+        if (!sections.length) return;
+
+        const subtitles = title.subtitles.filter(subtitle => sections.some(s => s.subtitle === subtitle.letter));
+        if (subtitles.length) {
+            subtitles.forEach(subtitle => {
+                const parts = subtitle.parts?.filter(part => sections.some(s => s.part === part.number));
+                if (!parts?.length) return;
+
+                subtitle.parts = parts;
+                parts.forEach(part => {
+                    const subparts = part.subparts?.filter(subpart => sections.some(s => s.subpart?.toLowerCase() === subpart.letter.toLowerCase()));
+                    if (!subparts?.length) return;
+
+                    part.subparts = subparts;
+                });
+            });
+        }
 
         titles.push({
             ...title,
@@ -65,7 +71,7 @@ const setTags = (tags: string[]) => {
 const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
     const tags: { tag: string, count: number }[] = [];
 
-    const sections = TITLE_FILES.filter(t => t.title === title.number)
+    const sections = TITLE_FILES.filter(t => title && t.title === title.number)
         .flatMap(t => t.sections)
         .filter(s => {
             if (subtitle && s.subtitle !== subtitle) return false;
@@ -91,9 +97,14 @@ const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: st
     return tags;
 };
 
-const hasSelectedTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
+const hasSelectedTags = (matchAllTags: boolean, title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
     const tags = getTags(title, subtitle, part, subpart);
-    return selectedTags.value.some(tag => tags.some(t => t.tag.toLowerCase() === tag.toLowerCase()));
+
+    if (matchAllTags) {
+        return selectedTags.value.every(tag => tags.some(t => t.tag.toLowerCase() === tag.toLowerCase()));
+    } else {
+        return selectedTags.value.some(tag => tags.some(t => t.tag.toLowerCase() === tag.toLowerCase()));
+    }
 };
 
 const toggleTag = (tag: string) => {
@@ -108,6 +119,10 @@ const toggleTag = (tag: string) => {
     setTags(tags);
 };
 
+const toggleMatchAllTags = (trueOrFalse?: boolean) => {
+    matchAllTags.value = trueOrFalse ?? !matchAllTags.value;
+};
+
 watch(selectedFilters, () => {
     localStorage.setItem(SELECTED_FILTER_KEY, JSON.stringify(selectedFilters.value));
 }, { deep: true });
@@ -116,10 +131,13 @@ export function useMenu() {
     return {
         showingFilterMenu: readonly(showingFilterMenu),
         selectedTags: readonly(selectedTags),
+        matchAllTags: readonly(matchAllTags),
         visibleToc,
         toggleFilterMenu,
         setTags,
         getTags,
-        toggleTag
+        toggleTag,
+        toggleMatchAllTags,
+        hasSelectedTags,
     }
 }
