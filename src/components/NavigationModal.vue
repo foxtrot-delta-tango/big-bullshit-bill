@@ -11,7 +11,7 @@
                         {{ titleToc?.name }}
                     </span>
                 </div>
-                <BaseSelector v-if="TITLES.length > 0" :options="TITLES" :value="selectedTitle"
+                <BaseSelector v-if="titles.length > 0" :options="titles" :value="selectedTitle"
                     @update="navigateToTitle" />
             </div>
 
@@ -83,12 +83,12 @@ const router = useRouter();
 const route = useRoute();
 
 const {
-    TITLES,
-    TABLE_OF_CONTENTS,
+    titles,
+    tableOfContents,
     subtitles,
     parts,
     subparts,
-    ALL_TAGS,
+    allTags,
     selectedTitle,
     selectedSubtitle,
     selectedPart,
@@ -108,7 +108,7 @@ const {
     toggleMatchAllTags
 } = useMenu();
 
-const titleToc = computed(() => TABLE_OF_CONTENTS.find(t => t.number === selectedTitle.value));
+const titleToc = computed(() => tableOfContents.value.find(t => t.number === selectedTitle.value));
 const subtitleToc = computed(() => titleToc.value?.subtitles.find(s => s.letter === selectedSubtitle.value));
 const partToc = computed(() => subtitleToc.value?.parts.find(p => p.number === selectedPart.value));
 const subpartToc = computed(() => partToc.value?.subparts.find(sp => sp.letter === selectedSubpart.value?.toLowerCase()));
@@ -118,7 +118,7 @@ const currentTags = computed(() => {
     if (titleToc.value) {
         tags = getTags(titleToc.value!, subtitleToc.value?.letter, partToc.value?.number, subpartToc.value?.letter).map(t => t.tag).filter(t => !selectedTags.value.includes(t));
     } else {
-        tags = ALL_TAGS.filter(t => !selectedTags.value.includes(t));
+        tags = allTags.value.filter(t => !selectedTags.value.includes(t));
     }
 
     tags.unshift(...selectedTags.value);

@@ -54,10 +54,11 @@ const router = useRouter();
 const route = useRoute();
 
 const {
-  TITLES,
+  titles,
   subtitles,
   selectTitle,
   selectSubtitle,
+  loadBillData
 } = useBill();
 
 const {
@@ -88,7 +89,7 @@ const navigateToToc = () => {
 const setDataFromUrl = () => {
   const title = route.params.title as string;
   const subtitle = route.params.subtitle as string;
-  if (title && TITLES.includes(title)) {
+  if (title && titles.value.includes(title)) {
     selectTitle(title);
 
     nextTick(() => {
@@ -101,11 +102,12 @@ const setDataFromUrl = () => {
   } else {
     // selectTitle(null);
     if (router.currentRoute.value.name === 'bill')
-      router.push({ path: `/bill/${TITLES[0]}` })
+      router.push({ path: `/bill/${titles.value[0]}` })
   }
 };
 
 onMounted(() => {
+  loadBillData();
   setDataFromUrl();
 });
 

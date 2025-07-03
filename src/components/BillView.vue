@@ -18,79 +18,85 @@
     </span>
   </h3>
   <div class="viewer" :class="[stickyHeaderClass, selectedTitle ? `title-${selectedTitle.toLowerCase()}` : '']">
-    <section v-for="title in visibleToc.filter(t => !selectedTitle || t.number === selectedTitle)" class='title'>
-      <h2 v-if='!selectedTitle' class="title-header" :class='`title-${title.number.toLowerCase()}`'>
-        <span>{{ title.number }}</span>
-        <span>{{ title.name }}</span>
-      </h2>
-      <BillSections v-if='!title.subtitles.length' :sections />
-      <template v-else>
-        <section v-for="subtitle in title.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)"
-          class='subtitle'>
-          <h3 v-if='!selectedSubtitle' :class='`title-${title.number.toLowerCase()}`'>
-            <span class='collapsing-text'>
-              <span>
-                Subtitle
+    <div v-if="isLoading" class="loading-state">
+      <h3>Loading bill data...</h3>
+    </div>
+
+    <template v-else>
+      <section v-for="title in visibleToc.filter(t => !selectedTitle || t.number === selectedTitle)" class='title'>
+        <h2 v-if='!selectedTitle' class="title-header" :class='`title-${title.number.toLowerCase()}`'>
+          <span>{{ title.number }}</span>
+          <span>{{ title.name }}</span>
+        </h2>
+        <BillSections v-if='!title.subtitles.length' :sections />
+        <template v-else>
+          <section v-for="subtitle in title.subtitles.filter(s => !selectedSubtitle || s.letter === selectedSubtitle)"
+            class='subtitle'>
+            <h3 v-if='!selectedSubtitle' :class='`title-${title.number.toLowerCase()}`'>
+              <span class='collapsing-text'>
+                <span>
+                  Subtitle
+                </span>
+                <span>
+                  {{ subtitle.letter }}
+                </span>
               </span>
               <span>
-                {{ subtitle.letter }}
+                {{ subtitle.name }}
               </span>
-            </span>
-            <span>
-              {{ subtitle.name }}
-            </span>
-          </h3>
-          <BillSections v-if='!subtitle.parts.length'
-            :sections='sections.filter(s => s.subtitle === subtitle.letter)' />
-          <template v-else>
-            <section v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
-              :key="part.number" class='part'>
-              <template v-if="!part.subparts.length">
-                <header :class='`title-${title.number.toLowerCase()}`'>
-                  <strong class='collapsing-text'>
-                    <span>
-                      Part
-                    </span>
-                    <span>
-                      {{ part.number }}
-                    </span>
-                  </strong>
-                  <span class='highlight'>
-                    {{ part.title }}
-                  </span>
-                </header>
-                <BillSections :sections='sections.filter(s => s.part === part.number)' />
-              </template>
-              <template v-else>
-                <div
-                  v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())"
-                  :key="subpart.letter" class='subpart'>
+            </h3>
+            <BillSections v-if='!subtitle.parts.length'
+              :sections='sections.filter(s => s.subtitle === subtitle.letter)' />
+            <template v-else>
+              <section v-for="part in subtitle.parts.filter(p => !selectedPart || p.number === selectedPart)"
+                :key="part.number" class='part'>
+                <template v-if="!part.subparts.length">
                   <header :class='`title-${title.number.toLowerCase()}`'>
-                    <div>
-                      <strong class='collapsing-text'>
-                        <span>
-                          Part
-                        </span>
-                        <span>
-                          {{ part.number }}{{ subpart.letter }}
-                        </span>
-                      </strong>
-                      <span class='highlight'>
-                        {{ part.title }}
+                    <strong class='collapsing-text'>
+                      <span>
+                        Part
                       </span>
-                    </div>
-                    <span>
-                      {{ subpart.title }}
+                      <span>
+                        {{ part.number }}
+                      </span>
+                    </strong>
+                    <span class='highlight'>
+                      {{ part.title }}
                     </span>
                   </header>
-                  <BillSections :sections='sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)' />
-                </div>
-              </template>
-            </section>
-          </template>
-        </section>
-      </template>
-    </section>
+                  <BillSections :sections='sections.filter(s => s.part === part.number)' />
+                </template>
+                <template v-else>
+                  <div
+                    v-for="subpart in part.subparts.filter(s => !selectedSubpart || s.letter === selectedSubpart.toLowerCase())"
+                    :key="subpart.letter" class='subpart'>
+                    <header :class='`title-${title.number.toLowerCase()}`'>
+                      <div>
+                        <strong class='collapsing-text'>
+                          <span>
+                            Part
+                          </span>
+                          <span>
+                            {{ part.number }}{{ subpart.letter }}
+                          </span>
+                        </strong>
+                        <span class='highlight'>
+                          {{ part.title }}
+                        </span>
+                      </div>
+                      <span>
+                        {{ subpart.title }}
+                      </span>
+                    </header>
+                    <BillSections :sections='sections.filter(s => s.subpart?.toLowerCase() === subpart.letter)' />
+                  </div>
+                </template>
+              </section>
+            </template>
+          </section>
+        </template>
+      </section>
+    </template>
   </div>
 </template>
 
@@ -98,7 +104,7 @@
 import BillSections from './BillSections.vue';
 import { useBill, type TitleToc } from '../composables/bill';
 import { useMenu } from '../composables/menu';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const {
   subtitleData,
@@ -112,6 +118,8 @@ const {
   visibleToc,
   selectedTags,
 } = useMenu();
+
+const isLoading = ref(false);
 
 const sections = computed(() => subtitleData.value
   .filter(d => {
@@ -433,6 +441,26 @@ section.subtitle {
         }
       }
     }
+  }
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  text-align: center;
+  min-height: 200px;
+
+  h3 {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
   }
 }
 </style>

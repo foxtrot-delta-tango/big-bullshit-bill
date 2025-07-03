@@ -1,8 +1,7 @@
 import { computed, readonly, ref, watch } from 'vue';
 import { useBill, type TitleToc } from './bill';
-import tocData from '../data/toc.json';
 
-const { TITLE_FILES, getSection } = useBill();
+const { tocData, billData, getSection } = useBill();
 
 const SELECTED_FILTER_KEY = 'selectedFilters';
 
@@ -20,10 +19,10 @@ const selectedFilters = computed(() => {
 });
 
 const visibleToc = computed(() => {
-    if (!selectedTags.value.length) return tocData.titles;
+    if (!selectedTags.value.length) return tocData.value.titles;
 
     const titles: TitleToc[] = [];
-    tocData.titles.forEach(title => {
+    tocData.value.titles.forEach(title => {
         if (!hasSelectedTags(matchAllTags.value, title)) return;
 
         const sections = title.sections.filter(s => {
@@ -71,7 +70,7 @@ const setTags = (tags: string[]) => {
 const getTags = (title: TitleToc, subtitle?: string, part?: string, subpart?: string) => {
     const tags: { tag: string, count: number }[] = [];
 
-    const sections = TITLE_FILES.filter(t => title && t.title === title.number)
+    const sections = billData.value.filter(t => title && t.title === title.number)
         .flatMap(t => t.sections)
         .filter(s => {
             if (subtitle && s.subtitle !== subtitle) return false;

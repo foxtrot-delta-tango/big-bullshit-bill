@@ -1,34 +1,4 @@
-import { computed, ref } from 'vue';
-
-import tocData from '../data/toc.json';
-import titleISubtitleA from '../data/title-I/title-I-subtitle-A.json';
-import titleISubtitleB from '../data/title-I/title-I-subtitle-B.json';
-import titleII from '../data/title-II/title-II.json';
-import titleIIISubtitleA from '../data/title-III/title-III-subtitle-A.json';
-import titleIIISubtitleB from '../data/title-III/title-III-subtitle-B.json';
-import titleIIISubtitleC from '../data/title-III/title-III-subtitle-C.json';
-import titleIIISubtitleD from '../data/title-III/title-III-subtitle-D.json';
-import titleIIISubtitleE from '../data/title-III/title-III-subtitle-E.json';
-import titleIIISubtitleF from '../data/title-III/title-III-subtitle-F.json';
-import titleIIISubtitleG from '../data/title-III/title-III-subtitle-G.json';
-import titleIVSubtitleA from '../data/title-IV/title-IV-subtitle-A.json';
-import titleIVSubtitleB from '../data/title-IV/title-IV-subtitle-B.json';
-import titleIVSubtitleC from '../data/title-IV/title-IV-subtitle-C.json';
-import titleIVSubtitleD from '../data/title-IV/title-IV-subtitle-D.json';
-import titleV from '../data/title-V/title-V.json';
-import titleVI from '../data/title-VI/title-VI.json';
-import titleVIISubtitleA from '../data/title-VII/title-VII-subtitle-A.json';
-import titleVIISubtitleB from '../data/title-VII/title-VII-subtitle-B.json';
-import titleVIISubtitleC from '../data/title-VII/title-VII-subtitle-C.json';
-import titleVIIISubtitleA from '../data/title-VIII/title-VIII-subtitle-A.json';
-import titleVIIISubtitleB from '../data/title-VIII/title-VIII-subtitle-B.json';
-import titleVIIISubtitleC from '../data/title-VIII/title-VIII-subtitle-C.json';
-import titleIX from '../data/title-IX/title-IX.json';
-import titleX from '../data/title-X/title-X.json';
-import titleXISubtitleA from '../data/title-XI/title-XI-subtitle-A.json';
-import titleXISubtitleB from '../data/title-XI/title-XI-subtitle-B.json';
-import titleXISubtitleC from '../data/title-XI/title-XI-subtitle-C.json';
-import titleXISubtitleD from '../data/title-XI/title-XI-subtitle-D.json';
+import { computed, readonly, ref } from 'vue';
 
 export type BillSectionData = {
   titleNumber: string;
@@ -40,28 +10,28 @@ export type BillSectionData = {
   sectionText: string;
   summary: string;
   impact: string | string[];
-  additionalReferences?: string[];  // make not nullable after fixing the data files
-  tags?: string[];  // make not nullable after fixing the data files
+  additionalReferences?: string[];
+  tags?: string[];
   checkedByHumansDate?: string;
 }
 
 export type TitleToc = {
   number: string;
   name: string;
-  subtitles: Array<SubtitleToc>
+  subtitles: SubtitleToc[];
   sections: SectionToc[];
 }
 
 export type SubtitleToc = {
   letter: string;
   name: string;
-  parts: Array<PartToc>;
+  parts: PartToc[];
 }
 
 export type PartToc = {
   number: string;
   title: string;
-  subparts: Array<SubpartToc>;
+  subparts: SubpartToc[];
 }
 
 export type SubpartToc = {
@@ -77,8 +47,16 @@ export type SectionToc = {
   subpart?: string;
 }
 
-const TABLE_OF_CONTENTS: TitleToc[] =
-  tocData.titles.map(t => ({
+const tocData = ref<{ titles: TitleToc[] }>({ titles: [] });
+const billData = ref<{ title: string, subtitle: string, sections: BillSectionData[] }[]>([]);
+
+const selectedTitle = ref<string | null>(null);
+const selectedSubtitle = ref<string | null>(null);
+const selectedPart = ref<string | null>(null);
+const selectedSubpart = ref<string | null>(null);
+
+const tableOfContents = computed(() =>
+  tocData.value.titles.map(t => ({
     number: t.number,
     name: t.name,
     subtitles: t.subtitles.map(s => ({
@@ -94,71 +72,38 @@ const TABLE_OF_CONTENTS: TitleToc[] =
       })),
     })),
     sections: t.sections,
-  }));
+  }))
+);
 
-const TITLE_FILES: { title: string, subtitle: string, sections: BillSectionData[] }[] = [
-  { title: 'I', subtitle: 'A', sections: titleISubtitleA },
-  { title: 'I', subtitle: 'B', sections: titleISubtitleB },
-  { title: 'II', subtitle: '', sections: titleII },
-  { title: 'III', subtitle: 'A', sections: titleIIISubtitleA },
-  { title: 'III', subtitle: 'B', sections: titleIIISubtitleB },
-  { title: 'III', subtitle: 'C', sections: titleIIISubtitleC },
-  { title: 'III', subtitle: 'D', sections: titleIIISubtitleD },
-  { title: 'III', subtitle: 'E', sections: titleIIISubtitleE },
-  { title: 'III', subtitle: 'F', sections: titleIIISubtitleF },
-  { title: 'III', subtitle: 'G', sections: titleIIISubtitleG },
-  { title: 'IV', subtitle: 'A', sections: titleIVSubtitleA },
-  { title: 'IV', subtitle: 'B', sections: titleIVSubtitleB },
-  { title: 'IV', subtitle: 'C', sections: titleIVSubtitleC },
-  { title: 'IV', subtitle: 'D', sections: titleIVSubtitleD },
-  { title: 'V', subtitle: '', sections: titleV },
-  { title: 'VI', subtitle: '', sections: titleVI },
-  { title: 'VII', subtitle: 'A', sections: titleVIISubtitleA },
-  { title: 'VII', subtitle: 'B', sections: titleVIISubtitleB },
-  { title: 'VII', subtitle: 'C', sections: titleVIISubtitleC },
-  { title: 'VIII', subtitle: 'A', sections: titleVIIISubtitleA },
-  { title: 'VIII', subtitle: 'B', sections: titleVIIISubtitleB },
-  { title: 'VIII', subtitle: 'C', sections: titleVIIISubtitleC },
-  { title: 'IX', subtitle: '', sections: titleIX },
-  { title: 'X', subtitle: '', sections: titleX },
-  { title: 'XI', subtitle: 'A', sections: titleXISubtitleA },
-  { title: 'XI', subtitle: 'B', sections: titleXISubtitleB },
-  { title: 'XI', subtitle: 'C', sections: titleXISubtitleC },
-  { title: 'XI', subtitle: 'D', sections: titleXISubtitleD },
-];
+const titles = computed(() =>
+  billData.value.reduce((acc, curr) => {
+    if (!acc.includes(curr.title)) {
+      acc.push(curr.title);
+    }
+    return acc;
+  }, [] as string[])
+);
 
-const TITLES = TITLE_FILES.reduce((acc, curr) => {
-  if (!acc.includes(curr.title)) {
-    acc.push(curr.title);
-  }
-  return acc;
-}, [] as string[]);
-
-const ALL_TAGS = TITLE_FILES.reduce((tags, currentTitle) => {
-  const { sections } = currentTitle;
-
-  if (sections.length) {
-    sections.forEach(section => {
-      if (section.tags?.length) {
-        section.tags.forEach(tag => {
-          if (!tags.includes(tag)) {
-            tags.push(tag);
-          }
-        });
-      }
-    });
-  }
-
-  return tags;
-}, [] as string[]).sort((a, b) => a.localeCompare(b));
-
-const selectedTitle = ref<string | null>(null);
-const selectedSubtitle = ref<string | null>(null);
-const selectedPart = ref<string | null>(null);
-const selectedSubpart = ref<string | null>(null);
+const allTags = computed(() =>
+  billData.value.reduce((tags, currentTitle) => {
+    const { sections } = currentTitle;
+    if (sections.length) {
+      sections.forEach(section => {
+        if (section.tags?.length) {
+          section.tags.forEach(tag => {
+            if (!tags.includes(tag)) {
+              tags.push(tag);
+            }
+          });
+        }
+      });
+    }
+    return tags;
+  }, [] as string[]).sort((a, b) => a.localeCompare(b))
+);
 
 const titleData = computed(() =>
-  TITLE_FILES
+  billData.value
     .filter(f => f.title === selectedTitle.value)
     .reduce((acc, curr) => {
       acc.push(...curr.sections);
@@ -170,7 +115,7 @@ const subtitles = computed(() => {
   const subtitles: string[] = [];
 
   if (selectedTitle.value) {
-    TITLE_FILES
+    billData.value
       .filter(f => f.title === selectedTitle.value && f.subtitle)
       .forEach(f => subtitles.push(f.subtitle));
   }
@@ -179,7 +124,7 @@ const subtitles = computed(() => {
 });
 
 const subtitleData = computed(() =>
-  TITLE_FILES
+  billData.value
     .filter(f =>
       (!selectedTitle.value || f.title === selectedTitle.value)
       && (!selectedSubtitle.value || !f.subtitle || f.subtitle === selectedSubtitle.value)
@@ -220,6 +165,65 @@ const subparts = computed(() => {
 
 const subpartData = computed(() => partData.value.filter(s => !selectedSubpart.value || s.subpart === selectedSubpart.value));
 
+const fetchJson = async (url: string) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+  }
+  return response.json();
+};
+
+const DATA_ROOT = '/data';
+
+const loadBillData = async () => {
+  const titleFileMap = [
+    { title: 'I', subtitle: 'A' },
+    { title: 'I', subtitle: 'B' },
+    { title: 'II', subtitle: '' },
+    { title: 'III', subtitle: 'A' },
+    { title: 'III', subtitle: 'B' },
+    { title: 'III', subtitle: 'C' },
+    { title: 'III', subtitle: 'D' },
+    { title: 'III', subtitle: 'E' },
+    { title: 'III', subtitle: 'F' },
+    { title: 'III', subtitle: 'G' },
+    { title: 'IV', subtitle: 'A' },
+    { title: 'IV', subtitle: 'B' },
+    { title: 'IV', subtitle: 'C' },
+    { title: 'IV', subtitle: 'D' },
+    { title: 'V', subtitle: '' },
+    { title: 'VI', subtitle: '' },
+    { title: 'VII', subtitle: 'A' },
+    { title: 'VII', subtitle: 'B' },
+    { title: 'VII', subtitle: 'C' },
+    { title: 'VIII', subtitle: 'A' },
+    { title: 'VIII', subtitle: 'B' },
+    { title: 'VIII', subtitle: 'C' },
+    { title: 'IX', subtitle: '' },
+    { title: 'X', subtitle: '' },
+    { title: 'XI', subtitle: 'A' },
+    { title: 'XI', subtitle: 'B' },
+    { title: 'XI', subtitle: 'C' },
+    { title: 'XI', subtitle: 'D' },
+  ];
+
+  const tasks = titleFileMap.map(async (fileInfo) => {
+    let filename = `${DATA_ROOT}/title-${fileInfo.title}/title-${fileInfo.title}`;
+    if (fileInfo.subtitle) filename += `-subtitle-${fileInfo.subtitle}`;
+    filename += '.json';
+
+    const sections = await fetchJson(filename);
+    return {
+      title: fileInfo.title,
+      subtitle: fileInfo.subtitle,
+      sections
+    };
+  });
+
+  tocData.value = await fetchJson(DATA_ROOT + '/toc.json');
+  billData.value = (await Promise.all(tasks)).sort((first, second) => first.title.localeCompare(second.title));
+};
+
 const selectTitle = (title: string | null) => {
   selectedTitle.value = title;
   selectedSubtitle.value = '';
@@ -243,15 +247,16 @@ const selectSubpart = (subpart: string | null) => {
 };
 
 const getSection = (sectionNumber: string) => {
-  return TITLE_FILES.flatMap(t => t.sections).find(t => t.sectionNumber === sectionNumber);
+  return billData.value.flatMap(t => t.sections).find(t => t.sectionNumber === sectionNumber);
 };
 
 export function useBill() {
   return {
-    TABLE_OF_CONTENTS,
-    TITLE_FILES,
-    TITLES,
-    ALL_TAGS,
+    tocData,
+    billData,
+    tableOfContents,
+    titles,
+    allTags,
     selectedTitle,
     selectedSubtitle,
     selectedPart,
@@ -263,10 +268,11 @@ export function useBill() {
     partData,
     subparts,
     subpartData,
+    loadBillData,
     selectTitle,
     selectSubtitle,
     selectPart,
     selectSubpart,
     getSection,
   };
-} 
+}
