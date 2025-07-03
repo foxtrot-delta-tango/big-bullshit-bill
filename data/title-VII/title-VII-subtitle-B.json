@@ -1,0 +1,41 @@
+[
+  {
+    "titleNumber": "VII",
+    "subtitle": "B",
+    "sectionNumber": "70200",
+    "sectionText": "SEC. 70200. REVIEW OF AGENCY RULEMAKING.\r\n\r\n    (a) Deregulation Initiative.--\r\n            (1) Appropriation.--In addition to amounts otherwise \r\n        available, there is appropriated to the Director of the Office \r\n        of Management and Budget for fiscal year 2025, out of any money \r\n        in the Treasury not otherwise appropriated, $100,000,000 to \r\n        remain available through September 30, 2028, to carry out this \r\n        section.\r\n            (2) Use of funds.--The Director of the Office of Management \r\n        and Budget shall use amounts made available under paragraph (1) \r\n        to pay expenses associated with improving regulatory processes \r\n        and analyzing and reviewing rules issued by a covered agency.\r\n    (b) Definitions.--In this section:\r\n            (1) Covered agency.--The term ``covered agency''--\r\n                    (A) means--\r\n                            (i) the Department of Education;\r\n                            (ii) the Department of Energy;\r\n                            (iii) the Department of Health and Human \r\n                        Services;\r\n                            (iv) the Department of Homeland Security;\r\n                            (v) the Department of Justice;\r\n                            (vi) the Consumer Financial Protection \r\n                        Bureau; and\r\n                            (vii) the Environmental Protection Agency; \r\n                        and\r\n                    (B) does not include the Social Security \r\n                Administration.\r\n            (2) Rule.--The term ``rule'' has the meaning given the term \r\n        in section 551 of title 5, United States Code, only to the \r\n        extent such rule has been issued by a covered agency.",
+    "sectionTitle": "Review of Agency Rulemaking",
+    "summary": "Appropriates $100 million (available through FY 2028) to the Office of Management and Budget (OMB) for a new deregulation initiative administered by the Office of Information & Regulatory Affairs (OIRA).  Funds may be used only to strengthen regulatory analysis, streamline OMB‑level review procedures, and scrutinize rules issued by seven “covered agencies” (Education, Energy, HHS, DHS, DOJ, CFPB, and EPA).  The Social Security Administration is expressly excluded.  The section borrows the Administrative Procedure Act definition of a “rule,” but limits its application to rules from those covered agencies.",
+    "impact": "• **Expanded OIRA bandwidth.** Doubling OIRA’s effective resources with a one‑time $100 million infusion could markedly increase staff, contractor support, and data‑science capacity—yielding more exhaustive cost‑benefit reviews and potential delays for high‑impact rules.\n• **Stronger deregulatory leverage.** Concentrating new analytic firepower on environmental, consumer‑finance, health, and homeland‑security regulations may facilitate stricter cost‑benefit thresholds or rescissions reminiscent of prior deregulatory campaigns.\n• **Policy uncertainty for regulated entities.** Deeper, lengthier reviews may slow final rule publication, prompting businesses to hedge compliance investments; conversely, a more robust analytical record could reduce litigation risk once rules are finalized.\n• **Targeted scope.** By omitting SSA and independent commissions (e.g., SEC, FCC), the initiative focuses on executive agencies already subject to presidential oversight, leaving finance‑market and communications rules largely untouched.",
+    "additionalReferences": [
+      "https://www.gao.gov/assets/gao-19-99.pdf",
+      "https://crsreports.congress.gov/product/pdf/R/R42821",
+      "https://www.whitehouse.gov/wp-content/uploads/2023/10/ap_5_regulatory_reform_fy2024.pdf"
+    ],
+    "tags": [
+      "regulations",
+      "rulemaking",
+      "deregulation",
+      "OMB",
+      "OIRA",
+      "executive agencies",
+      "consumer protection",
+      "EPA",
+      "CFPB",
+      "DOJ",
+      "HHS",
+      "DHS",
+      "Department of Education",
+      "DOE",
+      "health",
+      "environment",
+      "homeland security",
+      "education",
+      "energy",
+      "administration",
+      "accountability",
+      "compliance",
+      "law enforcement"
+    ]
+  }
+]
